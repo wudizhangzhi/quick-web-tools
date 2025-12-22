@@ -4,6 +4,7 @@ interface VideoInfo {
   videoUrl: string
   poster?: string
   title?: string
+  username?: string
 }
 
 export async function POST(request: NextRequest) {
@@ -94,7 +95,12 @@ function extractVideoFromNextData(data: unknown): VideoInfo | null {
     if (!props) return null
 
     // 获取标题
-    const title = props.replyDetail?.title || ''
+    const title = props.replyDetail?.title || props.threadDetail?.title || ''
+
+    // 获取用户名
+    const username = props.replyDetail?.post?.user?.username
+      || props.threadDetail?.post?.user?.username
+      || ''
 
     // 尝试从多个位置获取内容
     const contentSources = [
@@ -110,35 +116,19 @@ function extractVideoFromNextData(data: unknown): VideoInfo | null {
       // 解码 HTML 实体
       const decodedContent = decodeHtmlEntities(content)
 
-      // 从 video 标签中提取 src 和 poster
-      const videoMatch = decodedContent.match(/<video[^>]*\ssrc=['"]([^'"]+)['"][^>]*(?:\sposter=['"]([^'"]+)['"])?[^>]*>/)
+      // 检查是否包含 video 标签
+      if (!decodedContent.includes('<video')) continue
 
-      if (videoMatch && videoMatch[1]) {
-        return {
-          videoUrl: videoMatch[1],
-          poster: videoMatch[2] || undefined,
-          title: title || undefined,
-        }
-      }
-
-      // 备用：尝试另一种属性顺序 (poster 在 src 前面)
-      const videoMatch2 = decodedContent.match(/<video[^>]*\sposter=['"]([^'"]+)['"][^>]*\ssrc=['"]([^'"]+)['"][^>]*>/)
-      if (videoMatch2 && videoMatch2[2]) {
-        return {
-          videoUrl: videoMatch2[2],
-          poster: videoMatch2[1] || undefined,
-          title: title || undefined,
-        }
-      }
-
-      // 再次备用：只提取 src
+      // 分别提取 src 和 poster
       const srcMatch = decodedContent.match(/src=['"]([^'"]*\.mp4[^'"]*)['"]/i)
+      const posterMatch = decodedContent.match(/poster=['"]([^'"]+)['"]/i)
+
       if (srcMatch && srcMatch[1]) {
-        const posterMatch = decodedContent.match(/poster=['"]([^'"]+)['"]/)
         return {
           videoUrl: srcMatch[1],
           poster: posterMatch?.[1] || undefined,
           title: title || undefined,
+          username: username || undefined,
         }
       }
     }
@@ -153,10 +143,12 @@ function extractVideoFromNextData(data: unknown): VideoInfo | null {
       const srcMatch = decodedContent.match(/src=['"]([^'"]*\.mp4[^'"]*)['"]/i)
       if (srcMatch && srcMatch[1]) {
         const posterMatch = decodedContent.match(/poster=['"]([^'"]+)['"]/)
+        const replyUsername = reply.user?.username || username
         return {
           videoUrl: srcMatch[1],
           poster: posterMatch?.[1] || undefined,
           title: title || undefined,
+          username: replyUsername || undefined,
         }
       }
     }

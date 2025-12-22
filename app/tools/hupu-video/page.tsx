@@ -7,6 +7,7 @@ interface VideoInfo {
   videoUrl: string
   poster?: string
   title?: string
+  username?: string
 }
 
 export default function HupuVideoPage() {
@@ -54,27 +55,6 @@ export default function HupuVideoPage() {
       setError(err instanceof Error ? err.message : '解析失败，请稍后重试')
     } finally {
       setLoading(false)
-    }
-  }
-
-  const handleDownload = async () => {
-    if (!videoInfo?.videoUrl) return
-
-    try {
-      // 尝试通过 fetch 下载以获得更好的文件名
-      const response = await fetch(videoInfo.videoUrl)
-      const blob = await response.blob()
-      const downloadUrl = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = downloadUrl
-      a.download = `${videoInfo.title || 'hupu_video'}_${Date.now()}.mp4`
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      window.URL.revokeObjectURL(downloadUrl)
-    } catch {
-      // 如果 fetch 失败（可能是跨域），直接打开链接
-      window.open(videoInfo.videoUrl, '_blank')
     }
   }
 
@@ -156,32 +136,42 @@ export default function HupuVideoPage() {
           <div className="flex items-center gap-2 text-green-600 mb-4">
             <CheckCircle size={18} />
             <span className="font-medium">解析成功</span>
+          </div>
+
+          {/* 发布者和标题 */}
+          <div className="mb-4">
+            {videoInfo.username && (
+              <p className="text-sm text-gray-500 mb-1">
+                发布者：<span className="text-gray-700">{videoInfo.username}</span>
+              </p>
+            )}
             {videoInfo.title && (
-              <span className="text-gray-500 text-sm ml-2">- {videoInfo.title}</span>
+              <p className="text-gray-700 font-medium">{videoInfo.title}</p>
             )}
           </div>
 
-          {/* 视频播放器 */}
-          <div className="mb-4 rounded-lg overflow-hidden bg-black">
-            <video
-              src={videoInfo.videoUrl}
-              poster={videoInfo.poster}
-              controls
-              playsInline
-              preload="metadata"
-              className="w-full max-h-[400px] object-contain"
-            />
-          </div>
+          {/* 封面图 */}
+          {videoInfo.poster && (
+            <div className="mb-4 rounded-lg overflow-hidden bg-black">
+              <img
+                src={videoInfo.poster}
+                alt="视频封面"
+                className="w-full max-h-[300px] object-contain"
+              />
+            </div>
+          )}
 
           {/* 操作按钮 */}
           <div className="flex gap-3 mb-4">
-            <button
-              onClick={handleDownload}
+            <a
+              href={videoInfo.videoUrl}
+              target="_blank"
+              rel="noreferrer noopener"
               className="flex-1 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
             >
               <Download size={18} />
               下载视频
-            </button>
+            </a>
             <button
               onClick={handleCopyUrl}
               className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
@@ -207,6 +197,11 @@ export default function HupuVideoPage() {
               {videoInfo.videoUrl}
             </p>
           </div>
+
+          {/* 下载提示 */}
+          <p className="text-xs text-gray-400 mt-3">
+            提示：点击下载视频后，在新标签页右键选择「另存为」即可保存
+          </p>
         </div>
       )}
 
