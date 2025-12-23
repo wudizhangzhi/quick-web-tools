@@ -92,23 +92,23 @@ export default function HupuVideoPage() {
       </div>
 
       {/* 输入区域 */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-4">
+      <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-4">
         <label className="block text-sm font-medium text-gray-700 mb-2">
           虎扑链接
         </label>
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="text"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="https://m.hupu.com/reply/..."
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-base"
             onKeyDown={(e) => e.key === 'Enter' && handleParse()}
           />
           <button
             onClick={handleParse}
             disabled={loading}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 sm:w-auto"
           >
             {loading ? (
               <>
@@ -132,7 +132,7 @@ export default function HupuVideoPage() {
 
       {/* 结果区域 */}
       {videoInfo && (
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6">
           <div className="flex items-center gap-2 text-green-600 mb-4">
             <CheckCircle size={18} />
             <span className="font-medium">解析成功</span>
@@ -162,7 +162,7 @@ export default function HupuVideoPage() {
           )}
 
           {/* 操作按钮 */}
-          <div className="flex gap-3 mb-4">
+          <div className="flex flex-col sm:flex-row gap-3 mb-4">
             <a
               href={videoInfo.videoUrl}
               target="_blank"
@@ -174,7 +174,7 @@ export default function HupuVideoPage() {
             </a>
             <button
               onClick={handleCopyUrl}
-              className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+              className="py-3 px-6 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
             >
               {copied ? (
                 <>
