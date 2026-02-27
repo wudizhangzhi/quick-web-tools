@@ -167,10 +167,15 @@ function parseVless(uri: string): ClashProxy | null {
       const sid = params.get('sid');
       if (sid) realityOpts['short-id'] = sid;
       proxy['reality-opts'] = realityOpts;
+
+      // VLESS Reality TCP typically requires xtls-rprx-vision flow
+      if (!flow && (!params.get('type') || params.get('type') === 'tcp')) {
+        proxy.flow = 'xtls-rprx-vision';
+      }
     }
 
     const type = params.get('type') || 'tcp';
-    if (type !== 'tcp') proxy.network = type;
+    proxy.network = type;
 
     if (type === 'ws') {
       const wsOpts: Record<string, unknown> = {};

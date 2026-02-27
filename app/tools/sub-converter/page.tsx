@@ -36,6 +36,7 @@ const PRESETS = [
   { value: 'acl4ssr-lite', label: 'ACL4SSR 精简 — 国内直连 + 广告拦截 + 国外代理' },
   { value: 'acl4ssr-full', label: 'ACL4SSR 全分组 — Google/YouTube/Netflix/Telegram 等分组' },
   { value: 'adblock', label: '去广告增强 — 默认规则 + 增强广告拦截' },
+  { value: 'sub-v1mk', label: '仿 sub.v1.mk — ACL4SSR 全分组无自动测速 (24组)' },
 ]
 
 export default function SubConverterPage() {
