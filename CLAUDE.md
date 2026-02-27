@@ -31,6 +31,7 @@ This is a Next.js 14 (App Router) + TypeScript + Tailwind CSS project for buildi
 ### Current Tools
 
 - **Hupu Video Download** (`/tools/hupu-video`): Parses Hupu share links to extract video URLs. Backend scrapes the page, extracts `__NEXT_DATA__` JSON, and finds video info from multiple content sources.
+- **Subscription Converter** (`/tools/sub-converter`): Converts proxy subscription URLs (from 3x-ui etc.) to Clash/FiClash YAML configs. Supports VMess, VLESS, Trojan, Shadowsocks protocols. Features preset rule configs (ACL4SSR) and advanced options (filter, emoji, UDP, rename, sort). Backend: `app/api/sub-converter/` with `parsers.ts`, `presets.ts`, `clash.ts`, `route.ts`.
 
 ### Styling
 
