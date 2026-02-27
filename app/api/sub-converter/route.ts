@@ -192,7 +192,8 @@ export async function GET(request: NextRequest) {
       status: 200,
       headers: {
         'Content-Type': 'text/yaml; charset=utf-8',
-        'Content-Disposition': `attachment; filename="${filename}.yaml"`,
+        'Content-Disposition': `attachment; filename=${filename}.yaml`,
+        'profile-update-interval': '24',
       },
     });
   } catch (err) {
