@@ -40,6 +40,7 @@ const PRESETS = [
 
 export default function SubConverterPage() {
   const [urls, setUrls] = useState('')
+  const [configName, setConfigName] = useState('clash-config')
   const [preset, setPreset] = useState('default')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -60,7 +61,8 @@ export default function SubConverterPage() {
 
   const buildSubscriptionUrl = () => {
     const origin = typeof window !== 'undefined' ? window.location.origin : ''
-    let url = `${origin}/api/sub-converter?url=${encodeURIComponent(urls.trim())}&preset=${preset}`
+    const name = configName.trim() || 'clash-config'
+    let url = `${origin}/api/sub-converter?url=${encodeURIComponent(urls.trim())}&preset=${preset}&filename=${encodeURIComponent(name)}`
     if (advanced.emoji) url += '&emoji=1'
     if (advanced.udp) url += '&udp=1'
     if (advanced.scert) url += '&scert=1'
@@ -122,7 +124,8 @@ export default function SubConverterPage() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'clash-config.yaml'
+    const filename = configName.trim() || 'clash-config'
+    a.download = `${filename}.yaml`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -188,8 +191,21 @@ export default function SubConverterPage() {
         </p>
       </div>
 
-      {/* 订阅链接 */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-4">
+      {/* 配置名称 + 订阅链接 */}
+      <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 mb-4 space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            配置名称
+          </label>
+          <input
+            type="text"
+            value={configName}
+            onChange={(e) => setConfigName(e.target.value)}
+            placeholder="clash-config"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-base"
+          />
+        </div>
+        <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
           订阅链接
         </label>
@@ -200,6 +216,7 @@ export default function SubConverterPage() {
           placeholder="支持订阅链接或单节点链接，多个链接每行一个或用 | 分隔"
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-base resize-none"
         />
+        </div>
       </div>
 
       {/* 远程配置 */}

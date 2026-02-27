@@ -186,10 +186,13 @@ export async function GET(request: NextRequest) {
       hasAdvanced ? advanced : undefined,
     );
 
+    const filename = searchParams.get('filename') || 'clash-config';
+
     return new Response(result.yaml, {
       status: 200,
       headers: {
         'Content-Type': 'text/yaml; charset=utf-8',
+        'Content-Disposition': `attachment; filename="${filename}.yaml"`,
       },
     });
   } catch (err) {
