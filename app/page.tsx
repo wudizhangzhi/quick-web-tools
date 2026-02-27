@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw } from 'lucide-react'
 
 const tools = [
   {
@@ -8,6 +8,13 @@ const tools = [
     icon: Video,
     description: '粘贴虎扑分享链接，一键下载视频',
     color: 'bg-red-500',
+  },
+  {
+    name: '订阅转换',
+    href: '/tools/sub-converter',
+    icon: RefreshCw,
+    description: '将订阅地址转换为 Clash/FiClash 配置',
+    color: 'bg-purple-500',
   },
 ]
 

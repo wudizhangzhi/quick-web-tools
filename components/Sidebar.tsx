@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw } from 'lucide-react'
 
 const tools = [
   {
@@ -12,7 +12,12 @@ const tools = [
     icon: Video,
     description: '下载虎扑分享链接中的视频',
   },
-  // 未来在这里添加更多工具
+  {
+    name: '订阅转换',
+    href: '/tools/sub-converter',
+    icon: RefreshCw,
+    description: '将订阅地址转换为 Clash 配置',
+  },
 ]
 
 export default function Sidebar() {
