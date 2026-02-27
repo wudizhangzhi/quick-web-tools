@@ -8,17 +8,24 @@ export interface ClashProxy {
   [key: string]: unknown;
 }
 
+export interface SubscriptionResult {
+  uris: string[];
+  headers: Record<string, string>;
+}
+
 /**
  * Fetch and decode subscription content from one or more URLs.
  * URLs are separated by newlines or '|'.
+ * Also captures upstream headers (subscription-userinfo, profile-update-interval, etc.)
  */
-export async function fetchSubscription(urls: string): Promise<string[]> {
+export async function fetchSubscription(urls: string): Promise<SubscriptionResult> {
   const urlList = urls
     .split(/[\n|]/)
     .map((u) => u.trim())
     .filter(Boolean);
 
   const allUris: string[] = [];
+  const headers: Record<string, string> = {};
 
   for (const url of urlList) {
     const response = await fetch(url, {
@@ -27,6 +34,17 @@ export async function fetchSubscription(urls: string): Promise<string[]> {
     if (!response.ok) {
       throw new Error(`获取订阅失败 (${url}): HTTP ${response.status}`);
     }
+
+    // Capture upstream subscription headers (use first URL's headers)
+    if (Object.keys(headers).length === 0) {
+      const subInfo = response.headers.get('subscription-userinfo');
+      if (subInfo) headers['subscription-userinfo'] = subInfo;
+      const updateInterval = response.headers.get('profile-update-interval');
+      if (updateInterval) headers['profile-update-interval'] = updateInterval;
+      const webPage = response.headers.get('profile-web-page-url');
+      if (webPage) headers['profile-web-page-url'] = webPage;
+    }
+
     const raw = (await response.text()).trim();
 
     // Detect if content is already plain text (starts with a protocol URI)
@@ -46,7 +64,7 @@ export async function fetchSubscription(urls: string): Promise<string[]> {
     allUris.push(...uris);
   }
 
-  return allUris;
+  return { uris: allUris, headers };
 }
 
 /**

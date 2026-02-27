@@ -13,6 +13,7 @@ interface ConvertResult {
   yaml: string;
   count: number;
   errors: string[];
+  upstreamHeaders: Record<string, string>;
 }
 
 async function convert(
@@ -20,8 +21,8 @@ async function convert(
   preset: string = 'default',
   advanced?: AdvancedOptions,
 ): Promise<ConvertResult> {
-  // 1. Fetch subscription URIs
-  const uris = await fetchSubscription(urls);
+  // 1. Fetch subscription URIs and upstream headers
+  const { uris, headers: upstreamHeaders } = await fetchSubscription(urls);
 
   // 2. Parse each URI
   const proxies: ClashProxy[] = [];
@@ -56,6 +57,7 @@ async function convert(
     yaml: yamlOutput,
     count: finalProxies.length,
     errors: errors.length > 0 ? errors : [],
+    upstreamHeaders,
   };
 }
 
@@ -188,13 +190,20 @@ export async function GET(request: NextRequest) {
 
     const filename = searchParams.get('filename') || 'clash-config';
 
+    const responseHeaders: Record<string, string> = {
+      'Content-Type': 'text/yaml; charset=utf-8',
+      'Content-Disposition': `attachment; filename=${filename}.yaml`,
+      'profile-update-interval': '24',
+    };
+
+    // Pass through upstream subscription headers (traffic info, etc.)
+    for (const [key, value] of Object.entries(result.upstreamHeaders)) {
+      responseHeaders[key] = value;
+    }
+
     return new Response(result.yaml, {
       status: 200,
-      headers: {
-        'Content-Type': 'text/yaml; charset=utf-8',
-        'Content-Disposition': `attachment; filename=${filename}.yaml`,
-        'profile-update-interval': '24',
-      },
+      headers: responseHeaders,
     });
   } catch (err) {
     if (err instanceof ConvertError) {
