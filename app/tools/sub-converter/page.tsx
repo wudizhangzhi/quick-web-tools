@@ -51,7 +51,7 @@ export default function SubConverterPage() {
     exclude: '',
     renameRegex: '',
     renameReplace: '',
-    emoji: false,
+    emoji: true,
     udp: false,
     scert: false,
     sort: 'none',
