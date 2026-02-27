@@ -27,9 +27,19 @@ export async function fetchSubscription(urls: string): Promise<string[]> {
     if (!response.ok) {
       throw new Error(`获取订阅失败 (${url}): HTTP ${response.status}`);
     }
-    const raw = await response.text();
-    const decoded = Buffer.from(raw.trim(), 'base64').toString('utf-8');
-    const uris = decoded
+    const raw = (await response.text()).trim();
+
+    // Detect if content is already plain text (starts with a protocol URI)
+    // or base64-encoded
+    const PROTOCOLS = /^(vmess|vless|trojan|ss|ssr):\/\//;
+    let text: string;
+    if (PROTOCOLS.test(raw)) {
+      text = raw;
+    } else {
+      text = Buffer.from(raw, 'base64').toString('utf-8');
+    }
+
+    const uris = text
       .split('\n')
       .map((l) => l.trim())
       .filter(Boolean);
