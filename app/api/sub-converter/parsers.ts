@@ -138,6 +138,10 @@ function parseVless(uri: string): ClashProxy | null {
     const fp = params.get('fp');
     if (fp) proxy['client-fingerprint'] = fp;
 
+    // Encryption (supports ML-KEM post-quantum encryption in mihomo)
+    const encryption = params.get('encryption');
+    if (encryption && encryption !== 'none') proxy.encryption = encryption;
+
     if (params.get('security') === 'reality') {
       const realityOpts: Record<string, string> = {};
       const pbk = params.get('pbk');
