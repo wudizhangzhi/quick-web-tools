@@ -1,7 +1,7 @@
 // app/api/sub-converter/route.ts
 
 import { NextRequest, NextResponse } from 'next/server';
-import { fetchSubscription, parseProxyURI, ClashProxy } from './parsers';
+import { fetchSubscription, parseProxyURI, ClashProxy, PROXY_PROTOCOLS } from './parsers';
 import { AdvancedOptions, applyAdvancedOptions } from './presets';
 import { generateClashConfig } from './clash';
 
@@ -101,6 +101,8 @@ export async function POST(request: NextRequest) {
       .filter(Boolean);
 
     for (const url of urlList) {
+      // Proxy URIs (vless://, vmess://, etc.) are valid input, skip URL validation for them
+      if (PROXY_PROTOCOLS.test(url)) continue;
       try {
         new URL(url);
       } catch {
@@ -192,7 +194,7 @@ export async function GET(request: NextRequest) {
 
     const responseHeaders: Record<string, string> = {
       'Content-Type': 'text/yaml; charset=utf-8',
-      'Content-Disposition': `attachment; filename=${filename}.yaml`,
+      'Content-Disposition': `attachment; filename*=UTF-8''${encodeURIComponent(filename)}.yaml`,
       'profile-update-interval': '24',
     };
 

@@ -18,6 +18,8 @@ export interface SubscriptionResult {
  * URLs are separated by newlines or '|'.
  * Also captures upstream headers (subscription-userinfo, profile-update-interval, etc.)
  */
+export const PROXY_PROTOCOLS = /^(vmess|vless|trojan|ss|ssr):\/\//;
+
 export async function fetchSubscription(urls: string): Promise<SubscriptionResult> {
   const urlList = urls
     .split(/[\n|]/)
@@ -27,7 +29,17 @@ export async function fetchSubscription(urls: string): Promise<SubscriptionResul
   const allUris: string[] = [];
   const headers: Record<string, string> = {};
 
+  // Separate raw proxy URIs from subscription URLs
+  const subscriptionUrls: string[] = [];
   for (const url of urlList) {
+    if (PROXY_PROTOCOLS.test(url)) {
+      allUris.push(url);
+    } else {
+      subscriptionUrls.push(url);
+    }
+  }
+
+  for (const url of subscriptionUrls) {
     const response = await fetch(url, {
       headers: { 'User-Agent': 'ClashForAndroid/2.5.12' },
     });
@@ -47,11 +59,8 @@ export async function fetchSubscription(urls: string): Promise<SubscriptionResul
 
     const raw = (await response.text()).trim();
 
-    // Detect if content is already plain text (starts with a protocol URI)
-    // or base64-encoded
-    const PROTOCOLS = /^(vmess|vless|trojan|ss|ssr):\/\//;
     let text: string;
-    if (PROTOCOLS.test(raw)) {
+    if (PROXY_PROTOCOLS.test(raw)) {
       text = raw;
     } else {
       text = Buffer.from(raw, 'base64').toString('utf-8');

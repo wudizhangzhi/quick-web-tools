@@ -63,7 +63,9 @@ export default function SubConverterPage() {
   const buildSubscriptionUrl = () => {
     const origin = typeof window !== 'undefined' ? window.location.origin : ''
     const name = configName.trim() || 'clash-config'
-    let url = `${origin}/api/sub-converter?url=${encodeURIComponent(urls.trim())}&preset=${preset}&filename=${encodeURIComponent(name)}`
+    // Use '|' as separator instead of newline to avoid %0A breaking URL routing
+    const urlParam = urls.trim().split(/\n/).map(u => u.trim()).filter(Boolean).join('|')
+    let url = `${origin}/api/sub-converter?url=${encodeURIComponent(urlParam)}&preset=${preset}&filename=${encodeURIComponent(name)}`
     if (advanced.emoji) url += '&emoji=1'
     if (advanced.udp) url += '&udp=1'
     if (advanced.scert) url += '&scert=1'
