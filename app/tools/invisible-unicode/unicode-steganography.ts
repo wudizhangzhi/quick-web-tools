@@ -14,8 +14,8 @@ const INVISIBLE_CHARS = new Set([START_MARKER, ZERO_BIT, ONE_BIT, END_MARKER]);
 export function encode(text: string): string {
   let result = START_MARKER;
 
-  for (let i = 0; i < text.length; i++) {
-    const code = text.charCodeAt(i);
+  for (const char of text) {
+    const code = char.charCodeAt(0);
     const binary = code.toString(2).padStart(16, "0");
 
     for (const bit of binary) {
@@ -51,8 +51,12 @@ export function decode(invisible: string): string {
     }
   }
 
+  if (bits.length === 0 || bits.length % 16 !== 0) {
+    return "";
+  }
+
   let result = "";
-  for (let i = 0; i + 16 <= bits.length; i += 16) {
+  for (let i = 0; i < bits.length; i += 16) {
     const charCode = parseInt(bits.slice(i, i + 16), 2);
     result += String.fromCharCode(charCode);
   }
