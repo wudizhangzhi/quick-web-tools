@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff } from 'lucide-react'
 
 const tools = [
   {
@@ -15,6 +15,13 @@ const tools = [
     icon: RefreshCw,
     description: '将订阅地址转换为 Clash/FiClash 配置',
     color: 'bg-purple-500',
+  },
+  {
+    name: '隐形 Unicode 文本',
+    href: '/tools/invisible-unicode',
+    icon: EyeOff,
+    description: '使用零宽字符隐藏文本、检测隐藏内容',
+    color: 'bg-indigo-500',
   },
 ]
 

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff } from 'lucide-react'
 
 const tools = [
   {
@@ -17,6 +17,12 @@ const tools = [
     href: '/tools/sub-converter',
     icon: RefreshCw,
     description: '将订阅地址转换为 Clash 配置',
+  },
+  {
+    name: '隐形 Unicode',
+    href: '/tools/invisible-unicode',
+    icon: EyeOff,
+    description: '隐形文本编码/解码/检测',
   },
 ]
 
