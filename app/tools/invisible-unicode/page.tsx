@@ -15,12 +15,23 @@ interface DetectResult {
 
 export default function InvisibleUnicodePage() {
   const [mode, setMode] = useState<Mode>('encode')
-  const [input, setInput] = useState('')
+  const [encodeInput, setEncodeInput] = useState('')
+  const [decodeInput, setDecodeInput] = useState('')
+  const [detectInput, setDetectInput] = useState('')
+  const [embedSecret, setEmbedSecret] = useState('')
   const [carrier, setCarrier] = useState('')
   const [output, setOutput] = useState('')
   const [detectResult, setDetectResult] = useState<DetectResult | null>(null)
   const [copied, setCopied] = useState(false)
   const [error, setError] = useState('')
+
+  const inputMap: Record<Mode, [string, (v: string) => void]> = {
+    encode: [encodeInput, setEncodeInput],
+    decode: [decodeInput, setDecodeInput],
+    detect: [detectInput, setDetectInput],
+    embed: [embedSecret, setEmbedSecret],
+  }
+  const [currentInput, setCurrentInput] = inputMap[mode]
 
   const handleCopy = async (text: string) => {
     try {
@@ -45,7 +56,7 @@ export default function InvisibleUnicodePage() {
     setOutput('')
     setDetectResult(null)
 
-    if (!input.trim()) {
+    if (!currentInput.trim()) {
       setError('请输入内容')
       return
     }
@@ -53,12 +64,12 @@ export default function InvisibleUnicodePage() {
     try {
       switch (mode) {
         case 'encode': {
-          const result = encode(input)
+          const result = encode(encodeInput)
           setOutput(result)
           break
         }
         case 'decode': {
-          const result = decode(input)
+          const result = decode(decodeInput)
           if (!result) {
             setError('未检测到有效的隐藏内容，请确认输入包含编码后的不可见字符')
             return
@@ -67,7 +78,7 @@ export default function InvisibleUnicodePage() {
           break
         }
         case 'detect': {
-          const result = detect(input)
+          const result = detect(detectInput)
           setDetectResult(result)
           break
         }
@@ -76,7 +87,7 @@ export default function InvisibleUnicodePage() {
             setError('请输入载体文本')
             return
           }
-          const result = embed(carrier, input)
+          const result = embed(carrier, embedSecret)
           setOutput(result)
           setDetectResult(detect(result))
           break
@@ -179,8 +190,8 @@ export default function InvisibleUnicodePage() {
           {getInputLabel()}
         </label>
         <textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          value={currentInput}
+          onChange={(e) => setCurrentInput(e.target.value)}
           placeholder={getInputPlaceholder()}
           rows={4}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all text-base resize-vertical mb-3"
