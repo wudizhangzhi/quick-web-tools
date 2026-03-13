@@ -78,6 +78,7 @@ export default function InvisibleUnicodePage() {
           }
           const result = embed(carrier, input)
           setOutput(result)
+          setDetectResult(detect(result))
           break
         }
       }
@@ -256,12 +257,12 @@ export default function InvisibleUnicodePage() {
           <div className="mb-3">
             <p className="text-xs text-gray-400 mb-1">可见效果：</p>
             <div className="bg-gray-50 p-3 rounded-lg">
-              <p className="text-base text-gray-900">{detect(output).cleanText}</p>
+              <p className="text-base text-gray-900">{detectResult?.cleanText}</p>
             </div>
           </div>
 
           <p className="text-xs text-gray-500 mb-3">
-            隐藏了 {detect(output).invisibleCount} 个不可见字符
+            隐藏了 {detectResult?.invisibleCount} 个不可见字符
           </p>
 
           <button
