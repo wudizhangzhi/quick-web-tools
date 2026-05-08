@@ -12,6 +12,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from 'lucide-react'
+import { event as gaEvent } from '@/lib/gtag'
 
 interface ConvertResult {
   yaml: string
@@ -114,8 +115,15 @@ export default function SubConverterPage() {
       }
 
       setResult(data)
+      gaEvent('sub_convert', {
+        status: 'success',
+        preset,
+        node_count: typeof data?.count === 'number' ? data.count : undefined,
+      })
     } catch (err) {
-      setError(err instanceof Error ? err.message : '转换失败，请稍后重试')
+      const message = err instanceof Error ? err.message : '转换失败，请稍后重试'
+      setError(message)
+      gaEvent('sub_convert', { status: 'fail', preset, error: message })
     } finally {
       setLoading(false)
     }

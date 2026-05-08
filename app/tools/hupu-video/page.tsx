@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Video, Download, Loader2, AlertCircle, CheckCircle, Copy, Check } from 'lucide-react'
+import { event as gaEvent } from '@/lib/gtag'
 
 interface VideoInfo {
   videoUrl: string
@@ -48,11 +49,15 @@ export default function HupuVideoPage() {
 
       if (data.videoUrl) {
         setVideoInfo(data)
+        gaEvent('hupu_parse', { status: 'success' })
       } else {
         setError('未找到视频地址，请确认链接包含视频')
+        gaEvent('hupu_parse', { status: 'fail', error: 'no_video_url' })
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : '解析失败，请稍后重试')
+      const message = err instanceof Error ? err.message : '解析失败，请稍后重试'
+      setError(message)
+      gaEvent('hupu_parse', { status: 'fail', error: message })
     } finally {
       setLoading(false)
     }

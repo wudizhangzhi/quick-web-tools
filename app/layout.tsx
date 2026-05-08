@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Sidebar from '@/components/Sidebar'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'Quick Web Tools',
@@ -29,6 +30,7 @@ export default function RootLayout({
           </main>
         </div>
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   )

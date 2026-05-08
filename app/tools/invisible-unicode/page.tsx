@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { EyeOff, Eye, Copy, Check, AlertCircle, Search, ArrowRightLeft } from 'lucide-react'
 import { encode, decode, detect, embed } from './unicode-steganography'
+import { event as gaEvent } from '@/lib/gtag'
 
 type Mode = 'encode' | 'decode' | 'detect' | 'embed'
 
@@ -58,6 +59,7 @@ export default function InvisibleUnicodePage() {
 
     if (!currentInput.trim()) {
       setError('请输入内容')
+      gaEvent('invisible_unicode_action', { mode, status: 'fail', error: 'empty_input' })
       return
     }
 
@@ -66,35 +68,43 @@ export default function InvisibleUnicodePage() {
         case 'encode': {
           const result = encode(encodeInput)
           setOutput(result)
+          gaEvent('invisible_unicode_action', { mode, status: 'success' })
           break
         }
         case 'decode': {
           const result = decode(decodeInput)
           if (!result) {
             setError('未检测到有效的隐藏内容，请确认输入包含编码后的不可见字符')
+            gaEvent('invisible_unicode_action', { mode, status: 'fail', error: 'no_hidden_content' })
             return
           }
           setOutput(result)
+          gaEvent('invisible_unicode_action', { mode, status: 'success' })
           break
         }
         case 'detect': {
           const result = detect(detectInput)
           setDetectResult(result)
+          gaEvent('invisible_unicode_action', { mode, status: 'success' })
           break
         }
         case 'embed': {
           if (!carrier.trim()) {
             setError('请输入载体文本')
+            gaEvent('invisible_unicode_action', { mode, status: 'fail', error: 'empty_carrier' })
             return
           }
           const result = embed(carrier, embedSecret)
           setOutput(result)
           setDetectResult(detect(result))
+          gaEvent('invisible_unicode_action', { mode, status: 'success' })
           break
         }
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : '处理失败，请检查输入内容')
+      const message = err instanceof Error ? err.message : '处理失败，请检查输入内容'
+      setError(message)
+      gaEvent('invisible_unicode_action', { mode, status: 'fail', error: message })
     }
   }
 

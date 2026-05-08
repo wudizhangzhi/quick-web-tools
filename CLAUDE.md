@@ -37,3 +37,7 @@ This is a Next.js 14 (App Router) + TypeScript + Tailwind CSS project for buildi
 ### Styling
 
 Uses Tailwind CSS with mobile-first responsive design. Breakpoint `md:` (768px) switches between mobile and desktop layouts.
+
+### Analytics
+
+GA4 通过 `NEXT_PUBLIC_GA_ID` 注入，仅生产环境启用（dev 不发请求）。`components/GoogleAnalytics.tsx` 注入 gtag.js 并在路由切换时手动上报 PV；`lib/gtag.ts` 暴露 `event(name, params)` 给工具页埋点（`hupu_parse` / `sub_convert` / `invisible_unicode_action`），仅上报状态枚举与必要元数据，不上报用户输入内容。
