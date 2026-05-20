@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake } from 'lucide-react'
 
 const tools = [
   {
@@ -23,6 +23,12 @@ const tools = [
     href: '/tools/invisible-unicode',
     icon: EyeOff,
     description: '隐形文本编码/解码/检测',
+  },
+  {
+    name: '钦定 yes',
+    href: '/tools/force-yes',
+    icon: HeartHandshake,
+    description: '生成强制选中 yes 的整蛊链接',
   },
 ]
 

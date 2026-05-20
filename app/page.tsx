@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake } from 'lucide-react'
 
 const tools = [
   {
@@ -22,6 +22,13 @@ const tools = [
     icon: EyeOff,
     description: '使用零宽字符隐藏文本、检测隐藏内容',
     color: 'bg-indigo-500',
+  },
+  {
+    name: '钦定 yes',
+    href: '/tools/force-yes',
+    icon: HeartHandshake,
+    description: '生成强制选中 yes 的整蛊链接',
+    color: 'bg-pink-500',
   },
 ]
 
