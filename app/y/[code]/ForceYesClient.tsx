@@ -16,6 +16,7 @@ import { event as gaEvent } from '@/lib/gtag'
 type Props = {
   code: string
   isOwner: boolean
+  questionText: string
   yesText: string
   noText: string
   yesEffectText: string
@@ -26,6 +27,7 @@ type Props = {
 export default function ForceYesClient({
   code,
   isOwner,
+  questionText,
   yesText,
   noText,
   yesEffectText,
@@ -123,14 +125,17 @@ export default function ForceYesClient({
           `}</style>
         </div>
       ) : (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-4">
+        <div className="flex min-h-screen flex-col items-center justify-start gap-6 px-4 pt-16 sm:pt-20">
+          <div className="max-w-xl text-center text-2xl font-bold text-gray-800 whitespace-pre-wrap sm:text-3xl">
+            {questionText}
+          </div>
           <div className="text-6xl">{currentNoMeme?.emoji}</div>
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
             <button
               type="button"
               onClick={onYesClick}
-              style={{ transform: `scale(${yesScale})`, transformOrigin: 'center' }}
-              className="rounded-2xl bg-yellow-500 px-8 py-4 text-xl font-bold text-white shadow-lg transition-transform duration-200 hover:bg-yellow-600"
+              style={{ transform: `scale(${yesScale})`, transformOrigin: 'top center' }}
+              className="rounded-2xl bg-green-500 px-8 py-4 text-xl font-bold text-white shadow-lg transition-transform duration-200 hover:bg-green-600"
             >
               {yesText}
             </button>
@@ -145,14 +150,11 @@ export default function ForceYesClient({
                   ? { position: 'fixed', left: noPos.x, top: noPos.y, transition: 'left 0.2s, top 0.2s' }
                   : undefined
               }
-              className="rounded-2xl bg-gray-200 px-6 py-3 text-base text-gray-700 shadow hover:bg-gray-300"
+              className="rounded-2xl bg-red-500 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-600"
             >
               {noText}
             </button>
           </div>
-          {noCount > 0 && (
-            <div className="text-xs text-gray-400">已经犹豫 {noCount} 次了哦</div>
-          )}
         </div>
       )}
     </div>

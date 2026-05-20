@@ -39,6 +39,7 @@ export default async function ForceYesPage({ params }: Props) {
     <ForceYesClient
       code={params.code}
       isOwner={isOwner}
+      questionText={cfg.questionText ?? '你愿意做我女朋友吗？'}
       yesText={cfg.yesText}
       noText={cfg.noText}
       yesEffectText={cfg.yesEffectText}

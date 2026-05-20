@@ -9,9 +9,11 @@ import {
   YES_TEXT_MAX,
   NO_TEXT_MAX,
   YES_EFFECT_TEXT_MAX,
+  QUESTION_TEXT_MAX,
 } from '@/lib/force-yes/constants'
 
 type CreateBody = {
+  questionText?: string
   yesText?: string
   noText?: string
   yesEffectText?: string
@@ -32,6 +34,7 @@ export async function POST(req: NextRequest) {
     return badRequest('invalid_json')
   }
 
+  const questionText = (body.questionText ?? '').trim()
   const yesText = (body.yesText ?? '').trim()
   const noText = (body.noText ?? '').trim()
   const yesEffectText = (body.yesEffectText ?? '').trim()
@@ -39,6 +42,7 @@ export async function POST(req: NextRequest) {
   const noMemes = body.noMemes ?? []
   const turnstileToken = body.turnstileToken ?? ''
 
+  if (!questionText || questionText.length > QUESTION_TEXT_MAX) return badRequest('invalid_question_text')
   if (!yesText || yesText.length > YES_TEXT_MAX) return badRequest('invalid_yes_text')
   if (!noText || noText.length > NO_TEXT_MAX) return badRequest('invalid_no_text')
   if (!yesEffectText || yesEffectText.length > YES_EFFECT_TEXT_MAX) return badRequest('invalid_effect_text')
@@ -81,6 +85,7 @@ export async function POST(req: NextRequest) {
   }
 
   const cfg: StoredConfig = {
+    questionText,
     yesText,
     noText,
     yesEffectText,

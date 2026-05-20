@@ -19,6 +19,7 @@ export const CFG_PREFIX = 'fy:cfg:'
 export const OWNER_PREFIX = 'fy:owner:'
 
 export type StoredConfig = {
+  questionText: string
   yesText: string
   noText: string
   yesEffectText: string

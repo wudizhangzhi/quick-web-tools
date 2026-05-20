@@ -8,6 +8,7 @@ import {
   YES_TEXT_MAX,
   NO_TEXT_MAX,
   YES_EFFECT_TEXT_MAX,
+  QUESTION_TEXT_MAX,
 } from '@/lib/force-yes/constants'
 import { event as gaEvent } from '@/lib/gtag'
 
@@ -47,9 +48,10 @@ export default function ForceYesCreatePage() {
   const router = useRouter()
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ''
 
+  const [questionText, setQuestionText] = useState('你愿意做我女朋友吗？')
   const [yesText, setYesText] = useState('我愿意')
   const [noText, setNoText] = useState('再想想')
-  const [yesEffectText, setYesEffectText] = useState('谢谢你，从今天起我们就是好朋友啦 ✨')
+  const [yesEffectText, setYesEffectText] = useState('收到！老婆！')
   const [yesMeme, setYesMeme] = useState<string | null>(null)
   const [noMemes, setNoMemes] = useState<(string | null)[]>([null, null, null])
   const [token, setToken] = useState<string>('')
@@ -77,6 +79,8 @@ export default function ForceYesCreatePage() {
   const noMemesDisabled = useMemo(() => noMemes.filter(Boolean) as string[], [noMemes])
 
   const ready =
+    questionText.trim().length > 0 &&
+    questionText.length <= QUESTION_TEXT_MAX &&
     yesText.trim().length > 0 &&
     yesText.length <= YES_TEXT_MAX &&
     noText.trim().length > 0 &&
@@ -96,6 +100,7 @@ export default function ForceYesCreatePage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          questionText: questionText.trim(),
           yesText: yesText.trim(),
           noText: noText.trim(),
           yesEffectText: yesEffectText.trim(),
@@ -134,6 +139,18 @@ export default function ForceYesCreatePage() {
       )}
 
       <section className="space-y-3">
+        <label className="block">
+          <span className="text-sm font-medium">问题文案（显示在按钮上方）</span>
+          <textarea
+            value={questionText}
+            onChange={(e) => setQuestionText(e.target.value)}
+            maxLength={QUESTION_TEXT_MAX}
+            rows={2}
+            className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2"
+          />
+          <span className="mt-1 text-xs text-gray-500">{questionText.length}/{QUESTION_TEXT_MAX}</span>
+        </label>
+
         <label className="block">
           <span className="text-sm font-medium">Yes 按钮文字</span>
           <input

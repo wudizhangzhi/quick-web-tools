@@ -5,6 +5,7 @@ export const OWNER_COOKIE_NAME = 'force_yes_owner'
 export const YES_TEXT_MAX = 40
 export const NO_TEXT_MAX = 40
 export const YES_EFFECT_TEXT_MAX = 80
+export const QUESTION_TEXT_MAX = 80
 
 export const YES_SCALE_STEP = 1.25
 export const YES_SCALE_MAX = 2.5
