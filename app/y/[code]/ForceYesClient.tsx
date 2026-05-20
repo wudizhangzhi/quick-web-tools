@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import confetti from 'canvas-confetti'
 import { findMeme } from '@/lib/force-yes/memes'
 import {
@@ -36,6 +36,7 @@ export default function ForceYesClient({
   const [won, setWon] = useState(false)
   const [noPos, setNoPos] = useState<{ x: number; y: number } | null>(null)
   const [copied, setCopied] = useState(false)
+  const noButtonRef = useRef<HTMLButtonElement>(null)
   const yesScale = useMemo(
     () => Math.min(YES_SCALE_MAX, Math.pow(YES_SCALE_STEP, noCount)),
     [noCount],
@@ -49,8 +50,13 @@ export default function ForceYesClient({
     const w = window.innerWidth
     const h = window.innerHeight
     const margin = Math.min(w, h) * NO_FLEE_MARGIN
-    const x = margin + Math.random() * (w - margin * 2 - 80)
-    const y = margin + Math.random() * (h - margin * 2 - 40)
+    const rect = noButtonRef.current?.getBoundingClientRect()
+    const btnW = rect?.width ?? 80
+    const btnH = rect?.height ?? 40
+    const maxX = Math.max(margin, w - margin - btnW)
+    const maxY = Math.max(margin, h - margin - btnH)
+    const x = margin + Math.random() * Math.max(0, maxX - margin)
+    const y = margin + Math.random() * Math.max(0, maxY - margin)
     setNoPos({ x, y })
   }, [])
 
@@ -129,6 +135,7 @@ export default function ForceYesClient({
               {yesText}
             </button>
             <button
+              ref={noButtonRef}
               type="button"
               onMouseEnter={onNoEnter}
               onTouchStart={onNoEnter}
