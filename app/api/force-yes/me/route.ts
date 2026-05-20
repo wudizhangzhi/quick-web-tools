@@ -10,6 +10,7 @@ export async function GET(req: NextRequest) {
     if (!code) return NextResponse.json({})
     return NextResponse.json({ code })
   } catch (e) {
+    console.warn('[force-yes/me] redis lookup failed:', e)
     return NextResponse.json({}, { status: 200 })
   }
 }
