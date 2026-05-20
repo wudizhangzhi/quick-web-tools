@@ -18,6 +18,11 @@ type Props = { siteKey: string; onToken: (token: string) => void }
 export default function TurnstileWidget({ siteKey, onToken }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const widgetIdRef = useRef<string | null>(null)
+  const onTokenRef = useRef(onToken)
+
+  useEffect(() => {
+    onTokenRef.current = onToken
+  }, [onToken])
 
   useEffect(() => {
     if (!siteKey) return
@@ -25,9 +30,9 @@ export default function TurnstileWidget({ siteKey, onToken }: Props) {
       if (!containerRef.current || !window.turnstile) return
       widgetIdRef.current = window.turnstile.render(containerRef.current, {
         sitekey: siteKey,
-        callback: (token: string) => onToken(token),
-        'error-callback': () => onToken(''),
-        'expired-callback': () => onToken(''),
+        callback: (token: string) => onTokenRef.current(token),
+        'error-callback': () => onTokenRef.current(''),
+        'expired-callback': () => onTokenRef.current(''),
         theme: 'auto',
       })
     }
@@ -53,7 +58,7 @@ export default function TurnstileWidget({ siteKey, onToken }: Props) {
         widgetIdRef.current = null
       }
     }
-  }, [siteKey, onToken])
+  }, [siteKey])
 
   return <div ref={containerRef} />
 }

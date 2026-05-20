@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import TurnstileWidget from '@/components/TurnstileWidget'
-import { HAPPY_MEMES, SAD_MEMES, findMeme, type MemeDef } from '@/lib/force-yes/memes'
+import { HAPPY_MEMES, SAD_MEMES, type MemeDef } from '@/lib/force-yes/memes'
 import {
   YES_TEXT_MAX,
   NO_TEXT_MAX,
