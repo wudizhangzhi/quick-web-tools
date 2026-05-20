@@ -93,14 +93,12 @@ export async function POST(req: NextRequest) {
   await redis.set(`${OWNER_PREFIX}${ownerId!}`, code, { ex: CONFIG_TTL_SECONDS })
 
   const res = NextResponse.json({ code, mode })
-  if (mode === 'create') {
-    res.cookies.set(OWNER_COOKIE_NAME, ownerId!, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
-      maxAge: CONFIG_TTL_SECONDS,
-      path: '/',
-    })
-  }
+  res.cookies.set(OWNER_COOKIE_NAME, ownerId!, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    maxAge: CONFIG_TTL_SECONDS,
+    path: '/',
+  })
   return res
 }
