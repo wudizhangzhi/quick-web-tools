@@ -27,6 +27,7 @@ This is a Next.js 14 (App Router) + TypeScript + Tailwind CSS project for buildi
 1. Create `app/tools/[tool-name]/page.tsx` for the frontend
 2. Create `app/api/[tool-name]/route.ts` if backend processing is needed
 3. Add entry to `tools` array in both `components/Sidebar.tsx` and `app/page.tsx`
+4. **必做：埋点审计** — 见下方 Analytics 段。新页面/新组件落地后，跑一遍 `grep -nE "onClick|onSubmit|onCopy|<a [^>]*href" <新文件>`，对每一处反问"这是不是需要被监测的转化点？"如果是，按命名规范在 handler 里 / onClick 里加 `gaEvent(...)`。审计也适用于在已有页面上新增任何按钮、外链、复制/下载入口。
 
 ### Current Tools
 
@@ -41,4 +42,33 @@ Uses Tailwind CSS with mobile-first responsive design. Breakpoint `md:` (768px) 
 
 ### Analytics
 
-GA4 通过 `NEXT_PUBLIC_GA_ID` 注入，仅生产环境启用（dev 不发请求）。`components/GoogleAnalytics.tsx` 注入 gtag.js 并在路由切换时手动上报 PV；`lib/gtag.ts` 暴露 `event(name, params)` 给工具页埋点，仅上报状态枚举与必要元数据，不上报用户输入内容。事件清单：核心动作 `hupu_parse` / `sub_convert` / `invisible_unicode_action` / `force_yes_create` / `force_yes_choice`；结果二次操作 `hupu_share` / `sub_share` / `invisible_unicode_share` / `force_yes_post_win`。
+GA4 通过 `NEXT_PUBLIC_GA_ID` 注入，仅生产环境启用（dev 不发请求）。`components/GoogleAnalytics.tsx` 注入 gtag.js 并在路由切换时手动上报 PV；`lib/gtag.ts` 暴露 `event(name, params)` 给工具页埋点，仅上报状态枚举与必要元数据，**不上报用户输入内容**（URL / 文本 / token / 配置等永远不进 params）。
+
+**命名规范**
+- 核心动作：`<tool>_<verb>` —— 表单提交 / 主流程触发，例：`hupu_parse`, `sub_convert`, `invisible_unicode_action`, `force_yes_create`, `force_yes_choice`
+- 结果二次操作：`<tool>_share` —— 对产物的复制/下载/分享，用 `status` 枚举区分，例：`sub_share` `{ status: 'copy_yaml' | 'download' | 'copy_url' }`
+- CTA / 其他离散场景：自取语义化名，例：`force_yes_post_win`
+- 状态字段统一用 `status: 'success' | 'fail' | <动作枚举>`，失败时附简短 `error` 标识
+
+**必埋点的动作（新页面、新组件、给已有页面加交互时都要审计）**
+- 表单提交 / API 触发 / 主功能执行
+- 任何"复制到剪贴板"按钮（每一个都单独 event，区分复制的内容种类）
+- 文件下载、外链跳转下载（`<a target="_blank">` 也要 onClick 加 gaEvent，PV 不会捕获跳出）
+- 分享类 CTA、社交分享、用户引导按钮
+- 主流程关键决策点（force-yes 的 yes/no、未来类似的二选一交互）
+
+**故意不打**
+- 站内导航 `Link`（PV 已覆盖目的路由）
+- 表单 `onChange` / 文本框输入
+- preset / 模式 / 折叠面板 / 主题等纯 UI 切换
+- hover、tooltip、focus
+
+**审计 checklist（每次提交前）**
+```bash
+grep -nE "onClick|onSubmit|onCopy|<a [^>]*href" <改动的文件>
+```
+逐项问：这个动作产生用户主动的"完成"或"分享"效果吗？是 → 加 event；否（纯 UI / 内部导航）→ 跳过。落实时优先写到 handler 函数里，外链点击型加 inline onClick。
+
+**当前事件清单**
+- 核心：`hupu_parse` / `sub_convert` / `invisible_unicode_action` / `force_yes_create` / `force_yes_choice`
+- 二次：`hupu_share` / `sub_share` / `invisible_unicode_share` / `force_yes_post_win`
