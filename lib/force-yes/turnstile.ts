@@ -15,11 +15,16 @@ export async function verifyTurnstile(token: string, remoteIp?: string): Promise
   form.set('response', token)
   if (remoteIp) form.set('remoteip', remoteIp)
 
-  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-    method: 'POST',
-    body: form,
-  })
-  if (!res.ok) return false
-  const data = (await res.json()) as SiteverifyResponse
-  return data.success === true
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      body: form,
+      signal: AbortSignal.timeout(5000),
+    })
+    if (!res.ok) return false
+    const data = (await res.json()) as SiteverifyResponse
+    return data.success === true
+  } catch {
+    return false
+  }
 }
