@@ -1,11 +1,16 @@
 import { notFound } from 'next/navigation'
-import { getRedis, CFG_PREFIX, type StoredConfig } from '@/lib/force-yes/redis'
+import { cookies } from 'next/headers'
+import { getRedis, CFG_PREFIX, OWNER_PREFIX, type StoredConfig } from '@/lib/force-yes/redis'
 import { isValidShortCode } from '@/lib/force-yes/codes'
+import { OWNER_COOKIE_NAME } from '@/lib/force-yes/constants'
 import ForceYesClient from './ForceYesClient'
 
 type Props = {
   params: { code: string }
-  searchParams: { owner?: string }
+}
+
+export const metadata = {
+  robots: { index: false, follow: false },
 }
 
 async function loadConfig(code: string): Promise<StoredConfig | null> {
@@ -17,13 +22,23 @@ async function loadConfig(code: string): Promise<StoredConfig | null> {
   }
 }
 
-export default async function ForceYesPage({ params, searchParams }: Props) {
+export default async function ForceYesPage({ params }: Props) {
   const cfg = await loadConfig(params.code)
   if (!cfg) notFound()
+
+  const ownerId = cookies().get(OWNER_COOKIE_NAME)?.value
+  let isOwner = false
+  if (ownerId) {
+    try {
+      const ownedCode = await getRedis().get<string>(`${OWNER_PREFIX}${ownerId}`)
+      isOwner = ownedCode === params.code
+    } catch {}
+  }
+
   return (
     <ForceYesClient
       code={params.code}
-      isOwner={searchParams.owner === '1'}
+      isOwner={isOwner}
       yesText={cfg.yesText}
       noText={cfg.noText}
       yesEffectText={cfg.yesEffectText}

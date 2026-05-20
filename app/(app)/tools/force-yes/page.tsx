@@ -112,7 +112,7 @@ export default function ForceYesCreatePage() {
         return
       }
       gaEvent('force_yes_create', { status: data.mode === 'overwrite' ? 'overwrite_success' : 'success' })
-      router.push(`/y/${data.code}?owner=1`)
+      router.push(`/y/${data.code}`)
     } catch (e) {
       gaEvent('force_yes_create', { status: 'network_error' })
       setError('网络错误')
