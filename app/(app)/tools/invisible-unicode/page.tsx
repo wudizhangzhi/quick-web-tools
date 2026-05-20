@@ -34,7 +34,8 @@ export default function InvisibleUnicodePage() {
   }
   const [currentInput, setCurrentInput] = inputMap[mode]
 
-  const handleCopy = async (text: string) => {
+  const handleCopy = async (text: string, kind: 'copy_output' | 'copy_clean' = 'copy_output') => {
+    gaEvent('invisible_unicode_share', { status: kind, mode })
     try {
       await navigator.clipboard.writeText(text)
       setCopied(true)
@@ -340,7 +341,7 @@ export default function InvisibleUnicodePage() {
               </div>
 
               <button
-                onClick={() => handleCopy(detectResult.cleanText)}
+                onClick={() => handleCopy(detectResult.cleanText, 'copy_clean')}
                 className="py-2 px-4 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center gap-2 text-sm"
               >
                 {copied ? (

@@ -131,6 +131,7 @@ export default function SubConverterPage() {
 
   const handleDownload = () => {
     if (!result?.yaml) return
+    gaEvent('sub_share', { status: 'download', preset })
     const blob = new Blob([result.yaml], { type: 'text/yaml;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -404,7 +405,10 @@ export default function SubConverterPage() {
               下载配置
             </button>
             <button
-              onClick={() => copyToClipboard(result.yaml, setCopiedConfig)}
+              onClick={() => {
+                gaEvent('sub_share', { status: 'copy_yaml', preset })
+                copyToClipboard(result.yaml, setCopiedConfig)
+              }}
               className="py-3 px-6 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
             >
               {copiedConfig ? (
@@ -420,7 +424,10 @@ export default function SubConverterPage() {
               )}
             </button>
             <button
-              onClick={() => copyToClipboard(buildSubscriptionUrl(), setCopiedLink)}
+              onClick={() => {
+                gaEvent('sub_share', { status: 'copy_url', preset })
+                copyToClipboard(buildSubscriptionUrl(), setCopiedLink)
+              }}
               className="py-3 px-6 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
             >
               {copiedLink ? (

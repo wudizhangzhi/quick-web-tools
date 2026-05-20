@@ -65,6 +65,7 @@ export default function HupuVideoPage() {
 
   const handleCopyUrl = async () => {
     if (!videoInfo?.videoUrl) return
+    gaEvent('hupu_share', { status: 'copy_url' })
     try {
       await navigator.clipboard.writeText(videoInfo.videoUrl)
       setCopied(true)
@@ -172,6 +173,7 @@ export default function HupuVideoPage() {
               href={videoInfo.videoUrl}
               target="_blank"
               rel="noreferrer noopener"
+              onClick={() => gaEvent('hupu_share', { status: 'download_click' })}
               className="flex-1 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
             >
               <Download size={18} />
