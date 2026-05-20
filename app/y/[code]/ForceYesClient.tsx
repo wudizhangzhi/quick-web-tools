@@ -172,7 +172,7 @@ export default function ForceYesClient({
                   ? { position: 'fixed', left: noPos.x, top: noPos.y, transition: 'left 0.2s, top 0.2s' }
                   : undefined
               }
-              className="rounded-2xl bg-red-500 px-6 py-3 text-base font-semibold text-white shadow hover:bg-red-600"
+              className="rounded-2xl bg-red-500 px-8 py-4 text-xl font-bold text-white shadow-lg hover:bg-red-600"
             >
               {noText}
             </button>
