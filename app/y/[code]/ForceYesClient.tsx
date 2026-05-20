@@ -146,13 +146,17 @@ export default function ForceYesClient({
               href="/tools/force-yes"
               target="_blank"
               rel="noopener"
+              onClick={() => gaEvent('force_yes_post_win', { status: 'make_own_clicked' })}
               className="inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white/70 px-4 py-2 text-sm text-gray-600 shadow-sm backdrop-blur transition hover:border-pink-300 hover:bg-pink-50 hover:text-pink-700"
             >
               ✨ 前往制作自己的版本 →
             </Link>
             <button
               type="button"
-              onClick={copyLink}
+              onClick={() => {
+                gaEvent('force_yes_post_win', { status: 'share_clicked' })
+                copyLink()
+              }}
               className="inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white/70 px-4 py-2 text-sm text-gray-600 shadow-sm backdrop-blur transition hover:border-pink-300 hover:bg-pink-50 hover:text-pink-700"
             >
               {copied ? '✅ 链接已复制' : '🔗 分享给别人'}
