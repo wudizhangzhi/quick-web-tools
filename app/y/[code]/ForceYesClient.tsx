@@ -198,7 +198,7 @@ export default function ForceYesClient({
             {questionText}
           </div>
           <div className="text-6xl">{currentNoMeme?.emoji}</div>
-          <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
+          <div className="flex flex-col items-center justify-center gap-24 pt-4 sm:flex-row sm:gap-32">
             <button
               type="button"
               onClick={onYesClick}
