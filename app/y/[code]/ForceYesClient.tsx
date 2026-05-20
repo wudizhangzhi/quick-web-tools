@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useMemo, useRef, useState } from 'react'
+import Link from 'next/link'
 import confetti from 'canvas-confetti'
 import { findMeme } from '@/lib/force-yes/memes'
 import {
@@ -140,6 +141,14 @@ export default function ForceYesClient({
         <div className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
           <div className="text-8xl animate-[pop_0.5s_ease-out]">{yesMemeDef?.emoji}</div>
           <div className="mt-6 max-w-xl text-2xl font-bold text-gray-800 whitespace-pre-wrap">{yesEffectText}</div>
+          <Link
+            href="/tools/force-yes"
+            target="_blank"
+            rel="noopener"
+            className="mt-10 inline-flex items-center gap-1 rounded-full border border-gray-300 bg-white/70 px-4 py-2 text-sm text-gray-600 shadow-sm backdrop-blur transition hover:border-pink-300 hover:bg-pink-50 hover:text-pink-700"
+          >
+            ✨ 前往制作自己的版本 →
+          </Link>
           <style>{`
             @keyframes pop {
               0% { transform: scale(0); }
