@@ -42,7 +42,7 @@ Uses Tailwind CSS with mobile-first responsive design. Breakpoint `md:` (768px) 
 
 ### Analytics
 
-GA4 通过 `NEXT_PUBLIC_GA_ID` 注入，仅生产环境启用（dev 不发请求）。`components/GoogleAnalytics.tsx` 注入 gtag.js 并在路由切换时手动上报 PV；`lib/gtag.ts` 暴露 `event(name, params)` 给工具页埋点，仅上报状态枚举与必要元数据，**不上报用户输入内容**（URL / 文本 / token / 配置等永远不进 params）。
+GA4 通过 `NEXT_PUBLIC_GA_ID` 注入，仅生产环境启用（dev 不发请求）。`components/GoogleAnalytics.tsx` 注入 gtag.js 并在路由切换时手动上报 PV；`lib/gtag.ts` 暴露 `event(name, params)` 给工具页埋点，仅上报状态枚举与必要元数据，**不上报用户输入内容**（URL / 文本 / token / 配置等永远不进 params）。Vercel Web Analytics 默认关闭，由 `VERCEL_ANALYTICS_ENABLED=true` 显式开启（Hobby 档 2.5k events/月易爆，跟 GA4 重复，按需才开）。
 
 **命名规范**
 - 核心动作：`<tool>_<verb>` —— 表单提交 / 主流程触发，例：`hupu_parse`, `sub_convert`, `invisible_unicode_action`, `force_yes_create`, `force_yes_choice`

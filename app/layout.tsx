@@ -14,6 +14,8 @@ export const viewport: Viewport = {
   maximumScale: 1,
 }
 
+const vercelAnalyticsEnabled = process.env.VERCEL_ANALYTICS_ENABLED === 'true'
+
 export default function RootLayout({
   children,
 }: {
@@ -23,7 +25,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className="bg-gray-50">
         {children}
-        <Analytics />
+        {vercelAnalyticsEnabled && <Analytics />}
         <GoogleAnalytics />
       </body>
     </html>
