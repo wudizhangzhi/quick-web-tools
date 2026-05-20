@@ -56,14 +56,20 @@ export default function ForceYesCreatePage() {
   const [noMemes, setNoMemes] = useState<(string | null)[]>([null, null, null])
   const [token, setToken] = useState<string>('')
   const [existingCode, setExistingCode] = useState<string | null>(null)
+  const [existingStats, setExistingStats] = useState<{ yesCount: number; noCount: number } | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     fetch('/api/force-yes/me')
       .then((r) => r.json())
-      .then((d: { code?: string }) => {
-        if (d.code) setExistingCode(d.code)
+      .then((d: { code?: string; yesCount?: number; noCount?: number }) => {
+        if (d.code) {
+          setExistingCode(d.code)
+          if (typeof d.yesCount === 'number' && typeof d.noCount === 'number') {
+            setExistingStats({ yesCount: d.yesCount, noCount: d.noCount })
+          }
+        }
       })
       .catch(() => {})
   }, [])
@@ -134,7 +140,14 @@ export default function ForceYesCreatePage() {
 
       {existingCode && (
         <div className="rounded-lg border border-yellow-300 bg-yellow-50 px-4 py-3 text-sm text-yellow-900">
-          你已有链接 <code className="font-mono">/y/{existingCode}</code>。再次提交将<strong>覆盖</strong>它的配置（短码不变）。
+          <div>
+            你已有链接 <code className="font-mono">/y/{existingCode}</code>。再次提交将<strong>覆盖</strong>它的配置（短码不变）。
+          </div>
+          {existingStats && (
+            <div className="mt-1 text-yellow-800">
+              当前点击 — ✅ Yes <strong>{existingStats.yesCount}</strong> · ❌ No <strong>{existingStats.noCount}</strong>
+            </div>
+          )}
         </div>
       )}
 

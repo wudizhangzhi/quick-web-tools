@@ -16,6 +16,7 @@ import { event as gaEvent } from '@/lib/gtag'
 type Props = {
   code: string
   isOwner: boolean
+  ownerStats: { yesCount: number; noCount: number } | null
   questionText: string
   yesText: string
   noText: string
@@ -24,9 +25,21 @@ type Props = {
   noMemes: [string, string, string]
 }
 
+function reportClick(code: string, choice: 'yes' | 'no') {
+  try {
+    fetch(`/api/force-yes/${code}/click`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ choice }),
+      keepalive: true,
+    }).catch(() => {})
+  } catch {}
+}
+
 export default function ForceYesClient({
   code,
   isOwner,
+  ownerStats,
   questionText,
   yesText,
   noText,
@@ -76,11 +89,13 @@ export default function ForceYesClient({
       gaEvent('force_yes_choice', { status: 'no_clicked', no_count_bucket: noCountBucket(next) })
       return next
     })
-  }, [noCount, triggerNoFlee])
+    reportClick(code, 'no')
+  }, [noCount, triggerNoFlee, code])
 
   const onYesClick = useCallback(() => {
     setWon(true)
     gaEvent('force_yes_choice', { status: 'yes_clicked', no_count_bucket: noCountBucket(noCount) })
+    reportClick(code, 'yes')
     confetti({
       particleCount: 200,
       spread: 90,
@@ -90,7 +105,7 @@ export default function ForceYesClient({
     if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
       try { navigator.vibrate?.(200) } catch {}
     }
-  }, [noCount])
+  }, [noCount, code])
 
   const copyLink = async () => {
     const url = `${window.location.origin}/y/${code}`
@@ -104,11 +119,18 @@ export default function ForceYesClient({
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-pink-50 to-white overflow-hidden">
       {isOwner && !won && (
-        <div className="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-white/80 px-4 py-2 text-xs shadow backdrop-blur z-10">
-          你的专属链接：<code className="font-mono">/y/{code}</code>
-          <button onClick={copyLink} className="ml-2 rounded bg-yellow-500 px-2 py-0.5 text-white">
+        <div className="absolute left-1/2 top-4 -translate-x-1/2 flex flex-wrap items-center justify-center gap-2 rounded-full bg-white/80 px-4 py-2 text-xs shadow backdrop-blur z-10">
+          <span>你的专属链接：<code className="font-mono">/y/{code}</code></span>
+          <button onClick={copyLink} className="rounded bg-yellow-500 px-2 py-0.5 text-white">
             {copied ? '已复制' : '复制'}
           </button>
+          {ownerStats && (
+            <span className="text-gray-700">
+              ✅ <strong>{ownerStats.yesCount}</strong>
+              <span className="mx-1 text-gray-300">·</span>
+              ❌ <strong>{ownerStats.noCount}</strong>
+            </span>
+          )}
         </div>
       )}
 

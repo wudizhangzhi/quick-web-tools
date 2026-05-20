@@ -17,6 +17,11 @@ export function getRedis(): Redis {
 
 export const CFG_PREFIX = 'fy:cfg:'
 export const OWNER_PREFIX = 'fy:owner:'
+export const STATS_PREFIX = 'fy:stats:'
+
+export function statsKey(code: string, choice: 'yes' | 'no'): string {
+  return `${STATS_PREFIX}${code}:${choice}`
+}
 
 export type StoredConfig = {
   questionText: string
