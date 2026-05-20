@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import confetti from 'canvas-confetti'
 import { findMeme } from '@/lib/force-yes/memes'
@@ -14,10 +14,10 @@ import {
 } from '@/lib/force-yes/constants'
 import { event as gaEvent } from '@/lib/gtag'
 
+type OwnerStats = { yesCount: number; noCount: number; yesFirstCount: number }
+
 type Props = {
   code: string
-  isOwner: boolean
-  ownerStats: { yesCount: number; noCount: number; yesFirstCount: number } | null
   questionText: string
   yesText: string
   noText: string
@@ -39,8 +39,6 @@ function reportClick(code: string, choice: 'yes' | 'no', firstShot = false) {
 
 export default function ForceYesClient({
   code,
-  isOwner,
-  ownerStats,
   questionText,
   yesText,
   noText,
@@ -52,7 +50,31 @@ export default function ForceYesClient({
   const [won, setWon] = useState(false)
   const [noPos, setNoPos] = useState<{ x: number; y: number } | null>(null)
   const [copied, setCopied] = useState(false)
+  const [isOwner, setIsOwner] = useState(false)
+  const [ownerStats, setOwnerStats] = useState<OwnerStats | null>(null)
   const noButtonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/force-yes/me', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((d: { code?: string; yesCount?: number; noCount?: number; yesFirstCount?: number }) => {
+        if (cancelled) return
+        if (d.code !== code) return
+        setIsOwner(true)
+        if (typeof d.yesCount === 'number' && typeof d.noCount === 'number') {
+          setOwnerStats({
+            yesCount: d.yesCount,
+            noCount: d.noCount,
+            yesFirstCount: typeof d.yesFirstCount === 'number' ? d.yesFirstCount : 0,
+          })
+        }
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [code])
   const yesScale = useMemo(
     () => Math.min(YES_SCALE_MAX, Math.pow(YES_SCALE_STEP, noCount)),
     [noCount],
