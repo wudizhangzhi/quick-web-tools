@@ -35,14 +35,19 @@ export default async function ForceYesPage({ params }: Props) {
     } catch {}
   }
 
-  let stats: { yesCount: number; noCount: number } | null = null
+  let stats: { yesCount: number; noCount: number; yesFirstCount: number } | null = null
   if (isOwner) {
     try {
-      const [yesRaw, noRaw] = await getRedis().mget<(number | string | null)[]>(
+      const [yesRaw, noRaw, yesFirstRaw] = await getRedis().mget<(number | string | null)[]>(
         statsKey(params.code, 'yes'),
         statsKey(params.code, 'no'),
+        statsKey(params.code, 'yes_first'),
       )
-      stats = { yesCount: Number(yesRaw ?? 0), noCount: Number(noRaw ?? 0) }
+      stats = {
+        yesCount: Number(yesRaw ?? 0),
+        noCount: Number(noRaw ?? 0),
+        yesFirstCount: Number(yesFirstRaw ?? 0),
+      }
     } catch {}
   }
 

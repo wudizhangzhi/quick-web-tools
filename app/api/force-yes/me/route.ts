@@ -9,14 +9,16 @@ export async function GET(req: NextRequest) {
     const redis = getRedis()
     const code = await redis.get<string>(`${OWNER_PREFIX}${ownerId}`)
     if (!code) return NextResponse.json({})
-    const [yesRaw, noRaw] = await redis.mget<(number | string | null)[]>(
+    const [yesRaw, noRaw, yesFirstRaw] = await redis.mget<(number | string | null)[]>(
       statsKey(code, 'yes'),
       statsKey(code, 'no'),
+      statsKey(code, 'yes_first'),
     )
     return NextResponse.json({
       code,
       yesCount: Number(yesRaw ?? 0),
       noCount: Number(noRaw ?? 0),
+      yesFirstCount: Number(yesFirstRaw ?? 0),
     })
   } catch (e) {
     console.warn('[force-yes/me] redis lookup failed:', e)

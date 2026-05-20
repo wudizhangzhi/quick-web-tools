@@ -16,7 +16,7 @@ import { event as gaEvent } from '@/lib/gtag'
 type Props = {
   code: string
   isOwner: boolean
-  ownerStats: { yesCount: number; noCount: number } | null
+  ownerStats: { yesCount: number; noCount: number; yesFirstCount: number } | null
   questionText: string
   yesText: string
   noText: string
@@ -25,12 +25,12 @@ type Props = {
   noMemes: [string, string, string]
 }
 
-function reportClick(code: string, choice: 'yes' | 'no') {
+function reportClick(code: string, choice: 'yes' | 'no', firstShot = false) {
   try {
     fetch(`/api/force-yes/${code}/click`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ choice }),
+      body: JSON.stringify({ choice, firstShot }),
       keepalive: true,
     }).catch(() => {})
   } catch {}
@@ -95,7 +95,7 @@ export default function ForceYesClient({
   const onYesClick = useCallback(() => {
     setWon(true)
     gaEvent('force_yes_choice', { status: 'yes_clicked', no_count_bucket: noCountBucket(noCount) })
-    reportClick(code, 'yes')
+    reportClick(code, 'yes', noCount === 0)
     confetti({
       particleCount: 200,
       spread: 90,
@@ -129,6 +129,8 @@ export default function ForceYesClient({
               ✅ <strong>{ownerStats.yesCount}</strong>
               <span className="mx-1 text-gray-300">·</span>
               ❌ <strong>{ownerStats.noCount}</strong>
+              <span className="mx-1 text-gray-300">·</span>
+              <span title="第一次点击就选 yes">⚡ <strong>{ownerStats.yesFirstCount}</strong></span>
             </span>
           )}
         </div>
