@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film } from 'lucide-react'
 
 const tools = [
   {
@@ -29,6 +29,12 @@ const tools = [
     href: '/tools/force-yes',
     icon: HeartHandshake,
     description: '生成强制选中 yes 的整蛊链接',
+  },
+  {
+    name: '视频帧拼图',
+    href: '/tools/video-frame-stitch',
+    icon: Film,
+    description: '抽取视频帧拼成带序号的网格图',
   },
 ]
 

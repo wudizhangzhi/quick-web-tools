@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film } from 'lucide-react'
 
 const tools = [
   {
@@ -29,6 +29,13 @@ const tools = [
     icon: HeartHandshake,
     description: '生成强制选中 yes 的整蛊链接',
     color: 'bg-pink-500',
+  },
+  {
+    name: '视频帧拼图',
+    href: '/tools/video-frame-stitch',
+    icon: Film,
+    description: '从视频中抽取多个时间点的帧，拼成一张带序号的网格大图',
+    color: 'bg-emerald-500',
   },
 ]
 
