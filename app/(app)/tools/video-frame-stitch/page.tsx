@@ -43,20 +43,31 @@ function formatTime(seconds: number): string {
   return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${cs.toString().padStart(2, '0')}`
 }
 
-// 支持 `1.5` / `mm:ss(.xxx)?` / `hh:mm:ss(.xxx)?`
+// 支持 `1.5` / `mm:ss(.xxx)?` / `mm:ss:fff` (第三段为小数子秒，如 00:01:00 => 1.00s)
 function parseTimeString(s: string): number | null {
   const trimmed = s.trim()
   if (!trimmed) return null
   const parts = trimmed.split(':')
   if (parts.length === 0 || parts.length > 3) return null
+
+  if (parts.length === 3) {
+    for (const p of parts) {
+      if (!/^\d+$/.test(p)) return null
+    }
+    const minutes = Number(parts[0])
+    const seconds = Number(parts[1])
+    const fraction = Number(parts[2]) / Math.pow(10, parts[2].length)
+    if (!Number.isFinite(minutes + seconds + fraction)) return null
+    return minutes * 60 + seconds + fraction
+  }
+
   for (const p of parts) {
     if (!/^\d+(\.\d+)?$/.test(p)) return null
   }
   const nums = parts.map(Number)
   if (nums.some((n) => !Number.isFinite(n) || n < 0)) return null
   if (nums.length === 1) return nums[0]
-  if (nums.length === 2) return nums[0] * 60 + nums[1]
-  return nums[0] * 3600 + nums[1] * 60 + nums[2]
+  return nums[0] * 60 + nums[1]
 }
 
 function makeThumb(source: HTMLCanvasElement, maxEdge: number): string {
@@ -568,7 +579,7 @@ export default function VideoFrameStitchPage() {
                           handleBatchAdd()
                         }
                       }}
-                      placeholder="批量时间：00:01, 00:02, 00:04.123"
+                      placeholder="批量时间：00:00:00, 00:01:00, 00:04:10"
                       className="flex-1 min-w-[200px] px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none font-mono"
                     />
                     <button
