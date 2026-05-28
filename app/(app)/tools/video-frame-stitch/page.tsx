@@ -43,22 +43,28 @@ function formatTime(seconds: number): string {
   return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${cs.toString().padStart(2, '0')}`
 }
 
-// 支持 `1.5` / `mm:ss(.xxx)?` / `mm:ss:fff` (第三段为小数子秒，如 00:01:00 => 1.00s)
-function parseTimeString(s: string): number | null {
+// SMPTE 工业标准：
+//   3 段 mm:ss:ff       (分:秒:帧)
+//   4 段 hh:mm:ss:ff    (时:分:秒:帧)
+// 兼容旧式 1 段 (纯秒) / 2 段 mm:ss(.xxx)?
+function parseTimeString(s: string, fps: number): number | null {
   const trimmed = s.trim()
   if (!trimmed) return null
   const parts = trimmed.split(':')
-  if (parts.length === 0 || parts.length > 3) return null
+  if (parts.length === 0 || parts.length > 4) return null
 
-  if (parts.length === 3) {
+  if (parts.length >= 3) {
+    if (fps <= 0) return null
     for (const p of parts) {
       if (!/^\d+$/.test(p)) return null
     }
-    const minutes = Number(parts[0])
-    const seconds = Number(parts[1])
-    const fraction = Number(parts[2]) / Math.pow(10, parts[2].length)
-    if (!Number.isFinite(minutes + seconds + fraction)) return null
-    return minutes * 60 + seconds + fraction
+    const nums = parts.map(Number)
+    const h = parts.length === 4 ? nums[0] : 0
+    const m = parts.length === 4 ? nums[1] : nums[0]
+    const sec = parts.length === 4 ? nums[2] : nums[1]
+    const frames = parts.length === 4 ? nums[3] : nums[2]
+    if (frames >= fps) return null
+    return h * 3600 + m * 60 + sec + frames / fps
   }
 
   for (const p of parts) {
@@ -202,6 +208,7 @@ export default function VideoFrameStitchPage() {
   const [quality, setQuality] = useState(85)
   const [showIndex, setShowIndex] = useState(true)
   const [showTimestamp, setShowTimestamp] = useState(false)
+  const [fps, setFps] = useState(30)
   const [capturing, setCapturing] = useState(false)
   const [exporting, setExporting] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -307,7 +314,7 @@ export default function VideoFrameStitchPage() {
     const times: number[] = []
     const invalid: string[] = []
     for (const e of entries) {
-      const t = parseTimeString(e)
+      const t = parseTimeString(e, fps)
       if (t === null || t < 0 || t > duration) {
         invalid.push(e)
       } else {
@@ -323,7 +330,7 @@ export default function VideoFrameStitchPage() {
     setError('')
     times.forEach((t) => enqueueCapture(t))
     setBatchInput('')
-  }, [batchInput, videoReady, enqueueCapture])
+  }, [batchInput, videoReady, enqueueCapture, fps])
 
   const handleFrameClick = (time: number) => {
     const video = videoRef.current
@@ -579,9 +586,24 @@ export default function VideoFrameStitchPage() {
                           handleBatchAdd()
                         }
                       }}
-                      placeholder="批量时间：00:00:00, 00:01:00, 00:04:10"
+                      placeholder="批量时间：00:01:00, 00:02:12 (分:秒:帧)"
                       className="flex-1 min-w-[200px] px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none font-mono"
                     />
+                    <label className="flex items-center gap-1 text-xs text-gray-500 shrink-0">
+                      FPS
+                      <input
+                        type="number"
+                        min={1}
+                        max={240}
+                        step={1}
+                        value={fps}
+                        onChange={(e) => {
+                          const n = Number(e.target.value)
+                          if (Number.isFinite(n) && n > 0) setFps(n)
+                        }}
+                        className="w-14 px-2 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none font-mono"
+                      />
+                    </label>
                     <button
                       type="button"
                       onClick={handleBatchAdd}
