@@ -36,16 +36,17 @@ const COLS_OPTIONS = [1, 2, 3, 4, 5, 6]
 const LARGE_VIDEO_PIXELS = 1920 * 1080
 
 function formatTime(seconds: number): string {
-  if (!Number.isFinite(seconds) || seconds < 0) return '00:00.00'
+  if (!Number.isFinite(seconds) || seconds < 0) return '00:00.000'
   const m = Math.floor(seconds / 60)
   const s = Math.floor(seconds % 60)
-  const cs = Math.floor((seconds * 100) % 100)
-  return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${cs.toString().padStart(2, '0')}`
+  const ms = Math.floor((seconds * 1000) % 1000)
+  return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${ms.toString().padStart(3, '0')}`
 }
 
 // SMPTE 工业标准：
 //   3 段 mm:ss:ff       (分:秒:帧)
 //   4 段 hh:mm:ss:ff    (时:分:秒:帧)
+// 末段按位数自适应：1~2 位 = 帧 (需 fps)，3 位 = 毫秒 (例 00:01:123)
 // 兼容旧式 1 段 (纯秒) / 2 段 mm:ss(.xxx)?
 function parseTimeString(s: string, fps: number): number | null {
   const trimmed = s.trim()
@@ -54,7 +55,6 @@ function parseTimeString(s: string, fps: number): number | null {
   if (parts.length === 0 || parts.length > 4) return null
 
   if (parts.length >= 3) {
-    if (fps <= 0) return null
     for (const p of parts) {
       if (!/^\d+$/.test(p)) return null
     }
@@ -62,9 +62,18 @@ function parseTimeString(s: string, fps: number): number | null {
     const h = parts.length === 4 ? nums[0] : 0
     const m = parts.length === 4 ? nums[1] : nums[0]
     const sec = parts.length === 4 ? nums[2] : nums[1]
-    const frames = parts.length === 4 ? nums[3] : nums[2]
-    if (frames >= fps) return null
-    return h * 3600 + m * 60 + sec + frames / fps
+    const lastStr = parts[parts.length - 1]
+    const last = nums[nums.length - 1]
+    // 3 位末段视为毫秒，否则视为帧
+    let sub: number
+    if (lastStr.length === 3) {
+      if (last >= 1000) return null
+      sub = last / 1000
+    } else {
+      if (fps <= 0 || last >= fps) return null
+      sub = last / fps
+    }
+    return h * 3600 + m * 60 + sec + sub
   }
 
   for (const p of parts) {
@@ -586,7 +595,7 @@ export default function VideoFrameStitchPage() {
                           handleBatchAdd()
                         }
                       }}
-                      placeholder="批量时间：00:01:00, 00:02:12 (分:秒:帧)"
+                      placeholder="批量时间：00:01:12 (分:秒:帧) 或 00:01:123 (分:秒:毫秒)"
                       className="flex-1 min-w-[200px] px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none font-mono"
                     />
                     <label className="flex items-center gap-1 text-xs text-gray-500 shrink-0">
