@@ -1,0 +1,1982 @@
+{
+  "competitionId": "17",
+  "title": "2026 美加墨世界杯",
+  "matches": [
+    {
+      "id": "fifa-400021443",
+      "stage": "group",
+      "group": "A",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-11T19:00:00Z",
+      "home": {
+        "code": "MEX",
+        "name": "墨西哥",
+        "placeholder": null
+      },
+      "away": {
+        "code": "RSA",
+        "name": "南非",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021441",
+      "stage": "group",
+      "group": "A",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-12T02:00:00Z",
+      "home": {
+        "code": "KOR",
+        "name": "韩国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CZE",
+        "name": "捷克",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021449",
+      "stage": "group",
+      "group": "B",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-12T19:00:00Z",
+      "home": {
+        "code": "CAN",
+        "name": "加拿大",
+        "placeholder": null
+      },
+      "away": {
+        "code": "BIH",
+        "name": "波斯尼亚和黑塞哥维那",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021458",
+      "stage": "group",
+      "group": "D",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-13T01:00:00Z",
+      "home": {
+        "code": "USA",
+        "name": "美国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "PAR",
+        "name": "巴拉圭",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021447",
+      "stage": "group",
+      "group": "B",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-13T19:00:00Z",
+      "home": {
+        "code": "QAT",
+        "name": "卡塔尔",
+        "placeholder": null
+      },
+      "away": {
+        "code": "SUI",
+        "name": "瑞士",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021456",
+      "stage": "group",
+      "group": "C",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-13T22:00:00Z",
+      "home": {
+        "code": "BRA",
+        "name": "巴西",
+        "placeholder": null
+      },
+      "away": {
+        "code": "MAR",
+        "name": "摩洛哥",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021453",
+      "stage": "group",
+      "group": "C",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-14T01:00:00Z",
+      "home": {
+        "code": "HAI",
+        "name": "海地",
+        "placeholder": null
+      },
+      "away": {
+        "code": "SCO",
+        "name": "苏格兰",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021463",
+      "stage": "group",
+      "group": "D",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-14T04:00:00Z",
+      "home": {
+        "code": "AUS",
+        "name": "澳大利亚",
+        "placeholder": null
+      },
+      "away": {
+        "code": "TUR",
+        "name": "土耳其",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021464",
+      "stage": "group",
+      "group": "E",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-14T17:00:00Z",
+      "home": {
+        "code": "GER",
+        "name": "德国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CUW",
+        "name": "库拉索",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021470",
+      "stage": "group",
+      "group": "F",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-14T20:00:00Z",
+      "home": {
+        "code": "NED",
+        "name": "荷兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "JPN",
+        "name": "日本",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021467",
+      "stage": "group",
+      "group": "E",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-14T23:00:00Z",
+      "home": {
+        "code": "CIV",
+        "name": "科特迪瓦",
+        "placeholder": null
+      },
+      "away": {
+        "code": "ECU",
+        "name": "厄瓜多尔",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021474",
+      "stage": "group",
+      "group": "F",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-15T02:00:00Z",
+      "home": {
+        "code": "SWE",
+        "name": "瑞典",
+        "placeholder": null
+      },
+      "away": {
+        "code": "TUN",
+        "name": "突尼斯",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021482",
+      "stage": "group",
+      "group": "H",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-15T16:00:00Z",
+      "home": {
+        "code": "ESP",
+        "name": "西班牙",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CPV",
+        "name": "佛得角",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021478",
+      "stage": "group",
+      "group": "G",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-15T19:00:00Z",
+      "home": {
+        "code": "BEL",
+        "name": "比利时",
+        "placeholder": null
+      },
+      "away": {
+        "code": "EGY",
+        "name": "埃及",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021486",
+      "stage": "group",
+      "group": "H",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-15T22:00:00Z",
+      "home": {
+        "code": "KSA",
+        "name": "沙特阿拉伯",
+        "placeholder": null
+      },
+      "away": {
+        "code": "URU",
+        "name": "乌拉圭",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021476",
+      "stage": "group",
+      "group": "G",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-16T01:00:00Z",
+      "home": {
+        "code": "IRN",
+        "name": "伊朗",
+        "placeholder": null
+      },
+      "away": {
+        "code": "NZL",
+        "name": "新西兰",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021490",
+      "stage": "group",
+      "group": "I",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-16T19:00:00Z",
+      "home": {
+        "code": "FRA",
+        "name": "法国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "SEN",
+        "name": "塞内加尔",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021488",
+      "stage": "group",
+      "group": "I",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-16T22:00:00Z",
+      "home": {
+        "code": "IRQ",
+        "name": "伊拉克",
+        "placeholder": null
+      },
+      "away": {
+        "code": "NOR",
+        "name": "挪威",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021496",
+      "stage": "group",
+      "group": "J",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-17T01:00:00Z",
+      "home": {
+        "code": "ARG",
+        "name": "阿根廷",
+        "placeholder": null
+      },
+      "away": {
+        "code": "ALG",
+        "name": "阿尔及利亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021498",
+      "stage": "group",
+      "group": "J",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-17T04:00:00Z",
+      "home": {
+        "code": "AUT",
+        "name": "奥地利",
+        "placeholder": null
+      },
+      "away": {
+        "code": "JOR",
+        "name": "约旦",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021502",
+      "stage": "group",
+      "group": "K",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-17T17:00:00Z",
+      "home": {
+        "code": "POR",
+        "name": "葡萄牙",
+        "placeholder": null
+      },
+      "away": {
+        "code": "COD",
+        "name": "刚果民主共和国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021507",
+      "stage": "group",
+      "group": "L",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-17T20:00:00Z",
+      "home": {
+        "code": "ENG",
+        "name": "英格兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CRO",
+        "name": "克罗地亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021510",
+      "stage": "group",
+      "group": "L",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-17T23:00:00Z",
+      "home": {
+        "code": "GHA",
+        "name": "加纳",
+        "placeholder": null
+      },
+      "away": {
+        "code": "PAN",
+        "name": "巴拿马",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021504",
+      "stage": "group",
+      "group": "K",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-18T02:00:00Z",
+      "home": {
+        "code": "UZB",
+        "name": "乌兹别克斯坦",
+        "placeholder": null
+      },
+      "away": {
+        "code": "COL",
+        "name": "哥伦比亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021440",
+      "stage": "group",
+      "group": "A",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-18T16:00:00Z",
+      "home": {
+        "code": "CZE",
+        "name": "捷克",
+        "placeholder": null
+      },
+      "away": {
+        "code": "RSA",
+        "name": "南非",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021446",
+      "stage": "group",
+      "group": "B",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-18T19:00:00Z",
+      "home": {
+        "code": "SUI",
+        "name": "瑞士",
+        "placeholder": null
+      },
+      "away": {
+        "code": "BIH",
+        "name": "波斯尼亚和黑塞哥维那",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021450",
+      "stage": "group",
+      "group": "B",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-18T22:00:00Z",
+      "home": {
+        "code": "CAN",
+        "name": "加拿大",
+        "placeholder": null
+      },
+      "away": {
+        "code": "QAT",
+        "name": "卡塔尔",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021442",
+      "stage": "group",
+      "group": "A",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-19T01:00:00Z",
+      "home": {
+        "code": "MEX",
+        "name": "墨西哥",
+        "placeholder": null
+      },
+      "away": {
+        "code": "KOR",
+        "name": "韩国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021462",
+      "stage": "group",
+      "group": "D",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-19T19:00:00Z",
+      "home": {
+        "code": "USA",
+        "name": "美国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "AUS",
+        "name": "澳大利亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021454",
+      "stage": "group",
+      "group": "C",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-19T22:00:00Z",
+      "home": {
+        "code": "SCO",
+        "name": "苏格兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "MAR",
+        "name": "摩洛哥",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021457",
+      "stage": "group",
+      "group": "C",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-20T00:30:00Z",
+      "home": {
+        "code": "BRA",
+        "name": "巴西",
+        "placeholder": null
+      },
+      "away": {
+        "code": "HAI",
+        "name": "海地",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021460",
+      "stage": "group",
+      "group": "D",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-20T03:00:00Z",
+      "home": {
+        "code": "TUR",
+        "name": "土耳其",
+        "placeholder": null
+      },
+      "away": {
+        "code": "PAR",
+        "name": "巴拉圭",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021472",
+      "stage": "group",
+      "group": "F",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-20T17:00:00Z",
+      "home": {
+        "code": "NED",
+        "name": "荷兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "SWE",
+        "name": "瑞典",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021469",
+      "stage": "group",
+      "group": "E",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-20T20:00:00Z",
+      "home": {
+        "code": "GER",
+        "name": "德国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CIV",
+        "name": "科特迪瓦",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021465",
+      "stage": "group",
+      "group": "E",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-21T00:00:00Z",
+      "home": {
+        "code": "ECU",
+        "name": "厄瓜多尔",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CUW",
+        "name": "库拉索",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021475",
+      "stage": "group",
+      "group": "F",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-21T04:00:00Z",
+      "home": {
+        "code": "TUN",
+        "name": "突尼斯",
+        "placeholder": null
+      },
+      "away": {
+        "code": "JPN",
+        "name": "日本",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021483",
+      "stage": "group",
+      "group": "H",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-21T16:00:00Z",
+      "home": {
+        "code": "ESP",
+        "name": "西班牙",
+        "placeholder": null
+      },
+      "away": {
+        "code": "KSA",
+        "name": "沙特阿拉伯",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021477",
+      "stage": "group",
+      "group": "G",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-21T19:00:00Z",
+      "home": {
+        "code": "BEL",
+        "name": "比利时",
+        "placeholder": null
+      },
+      "away": {
+        "code": "IRN",
+        "name": "伊朗",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021487",
+      "stage": "group",
+      "group": "H",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-21T22:00:00Z",
+      "home": {
+        "code": "URU",
+        "name": "乌拉圭",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CPV",
+        "name": "佛得角",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021480",
+      "stage": "group",
+      "group": "G",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-22T01:00:00Z",
+      "home": {
+        "code": "NZL",
+        "name": "新西兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "EGY",
+        "name": "埃及",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021494",
+      "stage": "group",
+      "group": "J",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-22T17:00:00Z",
+      "home": {
+        "code": "ARG",
+        "name": "阿根廷",
+        "placeholder": null
+      },
+      "away": {
+        "code": "AUT",
+        "name": "奥地利",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021492",
+      "stage": "group",
+      "group": "I",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-22T21:00:00Z",
+      "home": {
+        "code": "FRA",
+        "name": "法国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "IRQ",
+        "name": "伊拉克",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021491",
+      "stage": "group",
+      "group": "I",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-23T00:00:00Z",
+      "home": {
+        "code": "NOR",
+        "name": "挪威",
+        "placeholder": null
+      },
+      "away": {
+        "code": "SEN",
+        "name": "塞内加尔",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021499",
+      "stage": "group",
+      "group": "J",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-23T03:00:00Z",
+      "home": {
+        "code": "JOR",
+        "name": "约旦",
+        "placeholder": null
+      },
+      "away": {
+        "code": "ALG",
+        "name": "阿尔及利亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021503",
+      "stage": "group",
+      "group": "K",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-23T17:00:00Z",
+      "home": {
+        "code": "POR",
+        "name": "葡萄牙",
+        "placeholder": null
+      },
+      "away": {
+        "code": "UZB",
+        "name": "乌兹别克斯坦",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021506",
+      "stage": "group",
+      "group": "L",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-23T20:00:00Z",
+      "home": {
+        "code": "ENG",
+        "name": "英格兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "GHA",
+        "name": "加纳",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021511",
+      "stage": "group",
+      "group": "L",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-23T23:00:00Z",
+      "home": {
+        "code": "PAN",
+        "name": "巴拿马",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CRO",
+        "name": "克罗地亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021501",
+      "stage": "group",
+      "group": "K",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-24T02:00:00Z",
+      "home": {
+        "code": "COL",
+        "name": "哥伦比亚",
+        "placeholder": null
+      },
+      "away": {
+        "code": "COD",
+        "name": "刚果民主共和国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021448",
+      "stage": "group",
+      "group": "B",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-24T19:00:00Z",
+      "home": {
+        "code": "BIH",
+        "name": "波斯尼亚和黑塞哥维那",
+        "placeholder": null
+      },
+      "away": {
+        "code": "QAT",
+        "name": "卡塔尔",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021451",
+      "stage": "group",
+      "group": "B",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-24T19:00:00Z",
+      "home": {
+        "code": "SUI",
+        "name": "瑞士",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CAN",
+        "name": "加拿大",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021452",
+      "stage": "group",
+      "group": "C",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-24T22:00:00Z",
+      "home": {
+        "code": "MAR",
+        "name": "摩洛哥",
+        "placeholder": null
+      },
+      "away": {
+        "code": "HAI",
+        "name": "海地",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021455",
+      "stage": "group",
+      "group": "C",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-24T22:00:00Z",
+      "home": {
+        "code": "SCO",
+        "name": "苏格兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "BRA",
+        "name": "巴西",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021444",
+      "stage": "group",
+      "group": "A",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-25T01:00:00Z",
+      "home": {
+        "code": "CZE",
+        "name": "捷克",
+        "placeholder": null
+      },
+      "away": {
+        "code": "MEX",
+        "name": "墨西哥",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021445",
+      "stage": "group",
+      "group": "A",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-25T01:00:00Z",
+      "home": {
+        "code": "RSA",
+        "name": "南非",
+        "placeholder": null
+      },
+      "away": {
+        "code": "KOR",
+        "name": "韩国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021466",
+      "stage": "group",
+      "group": "E",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-25T20:00:00Z",
+      "home": {
+        "code": "ECU",
+        "name": "厄瓜多尔",
+        "placeholder": null
+      },
+      "away": {
+        "code": "GER",
+        "name": "德国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021468",
+      "stage": "group",
+      "group": "E",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-25T20:00:00Z",
+      "home": {
+        "code": "CUW",
+        "name": "库拉索",
+        "placeholder": null
+      },
+      "away": {
+        "code": "CIV",
+        "name": "科特迪瓦",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021471",
+      "stage": "group",
+      "group": "F",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-25T23:00:00Z",
+      "home": {
+        "code": "JPN",
+        "name": "日本",
+        "placeholder": null
+      },
+      "away": {
+        "code": "SWE",
+        "name": "瑞典",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021473",
+      "stage": "group",
+      "group": "F",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-25T23:00:00Z",
+      "home": {
+        "code": "TUN",
+        "name": "突尼斯",
+        "placeholder": null
+      },
+      "away": {
+        "code": "NED",
+        "name": "荷兰",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021459",
+      "stage": "group",
+      "group": "D",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-26T02:00:00Z",
+      "home": {
+        "code": "TUR",
+        "name": "土耳其",
+        "placeholder": null
+      },
+      "away": {
+        "code": "USA",
+        "name": "美国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021461",
+      "stage": "group",
+      "group": "D",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-26T02:00:00Z",
+      "home": {
+        "code": "PAR",
+        "name": "巴拉圭",
+        "placeholder": null
+      },
+      "away": {
+        "code": "AUS",
+        "name": "澳大利亚",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021489",
+      "stage": "group",
+      "group": "I",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-26T19:00:00Z",
+      "home": {
+        "code": "NOR",
+        "name": "挪威",
+        "placeholder": null
+      },
+      "away": {
+        "code": "FRA",
+        "name": "法国",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021493",
+      "stage": "group",
+      "group": "I",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-26T19:00:00Z",
+      "home": {
+        "code": "SEN",
+        "name": "塞内加尔",
+        "placeholder": null
+      },
+      "away": {
+        "code": "IRQ",
+        "name": "伊拉克",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021484",
+      "stage": "group",
+      "group": "H",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T00:00:00Z",
+      "home": {
+        "code": "URU",
+        "name": "乌拉圭",
+        "placeholder": null
+      },
+      "away": {
+        "code": "ESP",
+        "name": "西班牙",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021485",
+      "stage": "group",
+      "group": "H",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T00:00:00Z",
+      "home": {
+        "code": "CPV",
+        "name": "佛得角",
+        "placeholder": null
+      },
+      "away": {
+        "code": "KSA",
+        "name": "沙特阿拉伯",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021479",
+      "stage": "group",
+      "group": "G",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T03:00:00Z",
+      "home": {
+        "code": "EGY",
+        "name": "埃及",
+        "placeholder": null
+      },
+      "away": {
+        "code": "IRN",
+        "name": "伊朗",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021481",
+      "stage": "group",
+      "group": "G",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T03:00:00Z",
+      "home": {
+        "code": "NZL",
+        "name": "新西兰",
+        "placeholder": null
+      },
+      "away": {
+        "code": "BEL",
+        "name": "比利时",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021508",
+      "stage": "group",
+      "group": "L",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T21:00:00Z",
+      "home": {
+        "code": "PAN",
+        "name": "巴拿马",
+        "placeholder": null
+      },
+      "away": {
+        "code": "ENG",
+        "name": "英格兰",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021509",
+      "stage": "group",
+      "group": "L",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T21:00:00Z",
+      "home": {
+        "code": "CRO",
+        "name": "克罗地亚",
+        "placeholder": null
+      },
+      "away": {
+        "code": "GHA",
+        "name": "加纳",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021500",
+      "stage": "group",
+      "group": "K",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T23:30:00Z",
+      "home": {
+        "code": "COD",
+        "name": "刚果民主共和国",
+        "placeholder": null
+      },
+      "away": {
+        "code": "UZB",
+        "name": "乌兹别克斯坦",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021505",
+      "stage": "group",
+      "group": "K",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-27T23:30:00Z",
+      "home": {
+        "code": "COL",
+        "name": "哥伦比亚",
+        "placeholder": null
+      },
+      "away": {
+        "code": "POR",
+        "name": "葡萄牙",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021495",
+      "stage": "group",
+      "group": "J",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-28T02:00:00Z",
+      "home": {
+        "code": "JOR",
+        "name": "约旦",
+        "placeholder": null
+      },
+      "away": {
+        "code": "ARG",
+        "name": "阿根廷",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021497",
+      "stage": "group",
+      "group": "J",
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-06-28T02:00:00Z",
+      "home": {
+        "code": "ALG",
+        "name": "阿尔及利亚",
+        "placeholder": null
+      },
+      "away": {
+        "code": "AUT",
+        "name": "奥地利",
+        "placeholder": null
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021518",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 0,
+      "kickoff": "2026-06-28T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021516",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 1,
+      "kickoff": "2026-06-29T17:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021513",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 2,
+      "kickoff": "2026-06-29T20:30:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021522",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 3,
+      "kickoff": "2026-06-30T01:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021514",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 4,
+      "kickoff": "2026-06-30T17:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021523",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 5,
+      "kickoff": "2026-06-30T21:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021520",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 6,
+      "kickoff": "2026-07-01T01:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021512",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 7,
+      "kickoff": "2026-07-01T16:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021525",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 8,
+      "kickoff": "2026-07-01T20:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021524",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 9,
+      "kickoff": "2026-07-02T00:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021519",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 10,
+      "kickoff": "2026-07-02T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021526",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 11,
+      "kickoff": "2026-07-02T23:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021527",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 12,
+      "kickoff": "2026-07-03T03:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021515",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 13,
+      "kickoff": "2026-07-03T18:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021521",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 14,
+      "kickoff": "2026-07-03T22:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021517",
+      "stage": "r32",
+      "group": null,
+      "round": 0,
+      "slot": 15,
+      "kickoff": "2026-07-04T01:30:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021530",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 0,
+      "kickoff": "2026-07-04T17:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021533",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 1,
+      "kickoff": "2026-07-04T21:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021532",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 2,
+      "kickoff": "2026-07-05T20:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021531",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 3,
+      "kickoff": "2026-07-06T00:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021529",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 4,
+      "kickoff": "2026-07-06T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021534",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 5,
+      "kickoff": "2026-07-07T00:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021528",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 6,
+      "kickoff": "2026-07-07T16:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021535",
+      "stage": "r16",
+      "group": null,
+      "round": 1,
+      "slot": 7,
+      "kickoff": "2026-07-07T20:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021536",
+      "stage": "qf",
+      "group": null,
+      "round": 2,
+      "slot": 0,
+      "kickoff": "2026-07-09T20:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021538",
+      "stage": "qf",
+      "group": null,
+      "round": 2,
+      "slot": 1,
+      "kickoff": "2026-07-10T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021539",
+      "stage": "qf",
+      "group": null,
+      "round": 2,
+      "slot": 2,
+      "kickoff": "2026-07-11T21:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021537",
+      "stage": "qf",
+      "group": null,
+      "round": 2,
+      "slot": 3,
+      "kickoff": "2026-07-12T01:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021541",
+      "stage": "sf",
+      "group": null,
+      "round": 3,
+      "slot": 0,
+      "kickoff": "2026-07-14T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021540",
+      "stage": "sf",
+      "group": null,
+      "round": 3,
+      "slot": 1,
+      "kickoff": "2026-07-15T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021542",
+      "stage": "third",
+      "group": null,
+      "round": null,
+      "slot": null,
+      "kickoff": "2026-07-18T21:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    },
+    {
+      "id": "fifa-400021543",
+      "stage": "final",
+      "group": null,
+      "round": 4,
+      "slot": 0,
+      "kickoff": "2026-07-19T19:00:00Z",
+      "home": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "away": {
+        "code": null,
+        "name": "待定",
+        "placeholder": "待定"
+      },
+      "result": null
+    }
+  ]
+}

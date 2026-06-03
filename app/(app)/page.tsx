@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy } from 'lucide-react'
 
 const tools = [
   {
@@ -36,6 +36,13 @@ const tools = [
     icon: Film,
     description: '从视频中抽取多个时间点的帧，拼成一张带序号的网格大图',
     color: 'bg-emerald-500',
+  },
+  {
+    name: '世界杯竞猜',
+    href: '/tools/world-cup-predict',
+    icon: Trophy,
+    description: '随机猜比赛胜平负，统计命中率，生成专属晋级树分享',
+    color: 'bg-amber-500',
   },
 ]
 

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy } from 'lucide-react'
 
 const tools = [
   {
@@ -35,6 +35,12 @@ const tools = [
     href: '/tools/video-frame-stitch',
     icon: Film,
     description: '抽取视频帧拼成带序号的网格图',
+  },
+  {
+    name: '世界杯竞猜',
+    href: '/tools/world-cup-predict',
+    icon: Trophy,
+    description: '猜比赛结果，生成专属晋级树',
   },
 ]
 
