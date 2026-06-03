@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { Share2, Check, ArrowLeft } from 'lucide-react'
+import { Share2, Check, ArrowRight } from 'lucide-react'
 import type { Choice, Predictions, WorldCupData } from '@/lib/world-cup/types'
 import { computeStats } from '@/lib/world-cup/scoring'
 import { event as gaEvent } from '@/lib/gtag'
@@ -63,15 +63,15 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
     <div className="mx-auto max-w-2xl space-y-6">
       <header className="flex items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">我的晋级树</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{data.title}竞猜</h1>
           <p className="mt-1 text-sm text-gray-500">你的预测战绩与晋级树，随真实赛果每天更新</p>
         </div>
         <Link
-          href="/tools/world-cup-predict"
-          className="flex shrink-0 items-center gap-1 rounded-full bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-emerald-700 md:text-sm"
+          href="/tools/world-cup-predict/play"
+          className="flex shrink-0 items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-700"
         >
-          <ArrowLeft size={14} />
-          继续竞猜
+          {hasPredictions ? '继续竞猜' : '开始竞猜'}
+          <ArrowRight size={16} />
         </Link>
       </header>
 
@@ -99,7 +99,7 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
         {ready && !hasPredictions && (
           <p className="mt-3 text-xs text-gray-400">
             还没有预测。
-            <Link href="/tools/world-cup-predict" className="text-amber-600 hover:underline">
+            <Link href="/tools/world-cup-predict/play" className="text-amber-600 hover:underline">
               去猜几场
             </Link>
             后再来分享。

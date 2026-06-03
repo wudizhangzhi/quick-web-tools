@@ -7,7 +7,7 @@ import Flag from '@/components/world-cup/Flag'
 function TeamBlock({ code, name }: { code: string | null; name: string }) {
   return (
     <div className="flex flex-1 flex-col items-center gap-2">
-      <Flag code={code} className="h-16 w-16 rounded-2xl shadow-md ring-1 ring-black/5 md:h-20 md:w-20" />
+      <Flag code={code} className="h-14 w-20 rounded-xl shadow-md ring-1 ring-black/5 md:h-16 md:w-24" />
       <span className="text-center text-base font-extrabold leading-tight text-gray-900 md:text-xl">
         {name}
       </span>
@@ -83,28 +83,28 @@ export default function GuessCard({
       {isGroup ? (
         <div className="grid grid-cols-3 gap-2 md:gap-3">
           <PickButton onClick={() => onPick('home')} selected={selected === 'home'} tone="home">
-            <Flag code={match.home.code} className="h-7 w-7 rounded-md" />
+            <Flag code={match.home.code} className="h-5 w-8 rounded-sm" />
             <span className="text-xs font-bold md:text-sm">{match.home.name}胜</span>
           </PickButton>
           <PickButton onClick={() => onPick('draw')} selected={selected === 'draw'} tone="draw">
-            <span className="flex h-7 w-7 items-center justify-center rounded-md bg-slate-200 text-sm font-black">
+            <span className="flex h-5 w-8 items-center justify-center rounded-sm bg-slate-200 text-sm font-black">
               =
             </span>
             <span className="text-xs font-bold md:text-sm">平局</span>
           </PickButton>
           <PickButton onClick={() => onPick('away')} selected={selected === 'away'} tone="away">
-            <Flag code={match.away.code} className="h-7 w-7 rounded-md" />
+            <Flag code={match.away.code} className="h-5 w-8 rounded-sm" />
             <span className="text-xs font-bold md:text-sm">{match.away.name}胜</span>
           </PickButton>
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-3">
           <PickButton onClick={() => onPick('home')} selected={selected === 'home'} tone="home">
-            <Flag code={match.home.code} className="h-8 w-8 rounded-md" />
+            <Flag code={match.home.code} className="h-6 w-9 rounded-sm" />
             <span className="text-sm font-bold">{match.home.name}晋级</span>
           </PickButton>
           <PickButton onClick={() => onPick('away')} selected={selected === 'away'} tone="away">
-            <Flag code={match.away.code} className="h-8 w-8 rounded-md" />
+            <Flag code={match.away.code} className="h-6 w-9 rounded-sm" />
             <span className="text-sm font-bold">{match.away.name}晋级</span>
           </PickButton>
         </div>

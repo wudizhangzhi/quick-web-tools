@@ -62,7 +62,7 @@ export default async function SharePage({ params }: { params: { code: string } }
 
       <div className="mt-6 text-center">
         <Link
-          href="/tools/world-cup-predict"
+          href="/tools/world-cup-predict/play"
           className="inline-flex items-center gap-1.5 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-amber-600"
         >
           我也来猜

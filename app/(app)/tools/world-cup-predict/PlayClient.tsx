@@ -92,7 +92,7 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
           </p>
         </div>
         <Link
-          href="/tools/world-cup-predict/me"
+          href="/tools/world-cup-predict"
           className="flex shrink-0 items-center gap-1 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur transition-colors hover:bg-white/25 md:text-sm"
         >
           我的晋级树
@@ -119,7 +119,7 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
             <p className="text-base font-bold text-gray-800">你已经猜完所有可以预测的比赛 🎉</p>
             <p className="mt-1 text-xs text-gray-400">等淘汰赛对阵确定后回来继续补猜</p>
             <Link
-              href="/tools/world-cup-predict/me"
+              href="/tools/world-cup-predict"
               className="mt-5 inline-flex items-center gap-1.5 rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-amber-600"
             >
               查看我的晋级树

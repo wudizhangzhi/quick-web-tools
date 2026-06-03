@@ -31,7 +31,7 @@ function TeamRow({
 
   return (
     <div className={`flex items-center gap-1.5 rounded px-2 py-1 ${tone}`}>
-      <Flag code={team.code} className="h-4 w-4 shrink-0 rounded-sm" />
+      <Flag code={team.code} className="h-3.5 w-5 shrink-0 rounded-[2px]" />
       <span className="flex-1 truncate">{isPlaceholderTeam(team) ? '待定' : team.name}</span>
       {picked && <span className="shrink-0 text-[10px] opacity-70">你猜</span>}
     </div>
