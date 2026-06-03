@@ -67,7 +67,7 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
           <p className="mt-1 text-sm text-gray-500">你的预测战绩与晋级树，随真实赛果每天更新</p>
         </div>
         <Link
-          href="/tools/world-cup-predict/play"
+          href="/wc"
           className="flex shrink-0 items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-700"
         >
           {hasPredictions ? '继续竞猜' : '开始竞猜'}
@@ -99,7 +99,7 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
         {ready && !hasPredictions && (
           <p className="mt-3 text-xs text-gray-400">
             还没有预测。
-            <Link href="/tools/world-cup-predict/play" className="text-amber-600 hover:underline">
+            <Link href="/wc" className="text-amber-600 hover:underline">
               去猜几场
             </Link>
             后再来分享。
