@@ -1,5 +1,6 @@
 import type { Choice, Match, Stage, Team, WorldCupData } from '@/lib/world-cup/types'
 import { stageLabel } from '@/lib/world-cup/labels'
+import Flag from './Flag'
 
 const ROUND_STAGES: Stage[] = ['r32', 'r16', 'qf', 'sf', 'final']
 
@@ -29,8 +30,9 @@ function TeamRow({
   else if (picked) tone = 'bg-amber-50 text-amber-900 font-semibold'
 
   return (
-    <div className={`flex items-center justify-between gap-1 rounded px-2 py-1 ${tone}`}>
-      <span className="truncate">{isPlaceholderTeam(team) ? '待定' : team.name}</span>
+    <div className={`flex items-center gap-1.5 rounded px-2 py-1 ${tone}`}>
+      <Flag code={team.code} className="h-4 w-4 shrink-0 rounded-sm" />
+      <span className="flex-1 truncate">{isPlaceholderTeam(team) ? '待定' : team.name}</span>
       {picked && <span className="shrink-0 text-[10px] opacity-70">你猜</span>}
     </div>
   )
