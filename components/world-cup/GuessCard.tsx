@@ -68,7 +68,7 @@ function PickButton({
   return (
     <button
       onClick={onClick}
-      className={`relative flex flex-col items-center gap-1.5 rounded-2xl border-2 px-2 py-4 transition-all duration-150 hover:-translate-y-0.5 active:scale-95 ${
+      className={`relative flex flex-col items-center gap-1 rounded-2xl border-2 px-2 py-3 transition-all duration-150 hover:-translate-y-0.5 active:scale-95 ${
         selected ? 'border-amber-400 bg-amber-100 text-amber-900 ring-4 ring-amber-200' : tones[tone]
       }`}
     >
@@ -122,28 +122,41 @@ export default function GuessCard({
           <div className="grid grid-cols-3 gap-2 md:gap-3">
             <PickButton onClick={() => onPick('home')} selected={selected === 'home'} tone="home">
               <Flag code={match.home.code} className="h-5 w-8 rounded-sm" />
-              <span className="text-xs font-bold md:text-sm">{match.home.name}胜</span>
+              <span className="max-w-full truncate text-[11px] font-medium leading-tight opacity-70">
+                {match.home.name}
+              </span>
+              <span className="text-lg font-black leading-none">胜</span>
             </PickButton>
             <PickButton onClick={() => onPick('draw')} selected={selected === 'draw'} tone="draw">
-              <span className="flex h-5 w-8 items-center justify-center rounded-sm bg-slate-200 text-sm font-black">
+              <span className="flex h-5 w-8 items-center justify-center rounded-sm bg-slate-200 text-sm font-black text-slate-600">
                 =
               </span>
-              <span className="text-xs font-bold md:text-sm">平局</span>
+              <span className="text-[11px] leading-tight opacity-0">平</span>
+              <span className="text-lg font-black leading-none">平局</span>
             </PickButton>
             <PickButton onClick={() => onPick('away')} selected={selected === 'away'} tone="away">
               <Flag code={match.away.code} className="h-5 w-8 rounded-sm" />
-              <span className="text-xs font-bold md:text-sm">{match.away.name}胜</span>
+              <span className="max-w-full truncate text-[11px] font-medium leading-tight opacity-70">
+                {match.away.name}
+              </span>
+              <span className="text-lg font-black leading-none">胜</span>
             </PickButton>
           </div>
         ) : (
           <div className="grid grid-cols-2 gap-3">
             <PickButton onClick={() => onPick('home')} selected={selected === 'home'} tone="home">
               <Flag code={match.home.code} className="h-6 w-9 rounded-sm" />
-              <span className="text-sm font-bold">{match.home.name}晋级</span>
+              <span className="max-w-full truncate text-xs font-medium leading-tight opacity-70">
+                {match.home.name}
+              </span>
+              <span className="text-lg font-black leading-none">晋级</span>
             </PickButton>
             <PickButton onClick={() => onPick('away')} selected={selected === 'away'} tone="away">
               <Flag code={match.away.code} className="h-6 w-9 rounded-sm" />
-              <span className="text-sm font-bold">{match.away.name}晋级</span>
+              <span className="max-w-full truncate text-xs font-medium leading-tight opacity-70">
+                {match.away.name}
+              </span>
+              <span className="text-lg font-black leading-none">晋级</span>
             </PickButton>
           </div>
         )}
