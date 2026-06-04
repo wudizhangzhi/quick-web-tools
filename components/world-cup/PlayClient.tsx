@@ -117,6 +117,7 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
             </div>
           ) : current ? (
             <GuessCard
+              key={current.id}
               match={current}
               onPick={pick}
               onSkip={skip}
