@@ -125,7 +125,7 @@ export default function GuessCard({
               <span className="max-w-full truncate text-[11px] font-medium leading-tight opacity-70">
                 {match.home.name}
               </span>
-              <span className="text-lg font-black leading-none">胜</span>
+              <span className="text-lg font-black uppercase leading-none text-red-600">Win</span>
             </PickButton>
             <PickButton onClick={() => onPick('draw')} selected={selected === 'draw'} tone="draw">
               <span className="flex h-5 w-8 items-center justify-center rounded-sm bg-slate-200 text-sm font-black text-slate-600">
@@ -139,7 +139,7 @@ export default function GuessCard({
               <span className="max-w-full truncate text-[11px] font-medium leading-tight opacity-70">
                 {match.away.name}
               </span>
-              <span className="text-lg font-black leading-none">胜</span>
+              <span className="text-lg font-black uppercase leading-none text-red-600">Win</span>
             </PickButton>
           </div>
         ) : (
@@ -149,14 +149,14 @@ export default function GuessCard({
               <span className="max-w-full truncate text-xs font-medium leading-tight opacity-70">
                 {match.home.name}
               </span>
-              <span className="text-lg font-black leading-none">晋级</span>
+              <span className="text-lg font-black uppercase leading-none text-red-600">Win</span>
             </PickButton>
             <PickButton onClick={() => onPick('away')} selected={selected === 'away'} tone="away">
               <Flag code={match.away.code} className="h-6 w-9 rounded-sm" />
               <span className="max-w-full truncate text-xs font-medium leading-tight opacity-70">
                 {match.away.name}
               </span>
-              <span className="text-lg font-black leading-none">晋级</span>
+              <span className="text-lg font-black uppercase leading-none text-red-600">Win</span>
             </PickButton>
           </div>
         )}
