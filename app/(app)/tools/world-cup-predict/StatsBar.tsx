@@ -12,7 +12,7 @@ function Cell({ label, value }: { label: string; value: string | number }) {
 export default function StatsBar({ stats }: { stats: Stats }) {
   const pct = stats.resolved > 0 ? `${Math.round(stats.accuracy * 100)}%` : '—'
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
       <Cell label="已猜" value={stats.predicted} />
       <Cell label="已出结果" value={stats.resolved} />
       <Cell label="猜对" value={stats.correct} />

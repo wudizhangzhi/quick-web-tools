@@ -7,6 +7,7 @@ import type { Choice, Predictions, WorldCupData } from '@/lib/world-cup/types'
 import { computeStats } from '@/lib/world-cup/scoring'
 import { event as gaEvent } from '@/lib/gtag'
 import StatsBar from './StatsBar'
+import AccuracyBadge from '@/components/world-cup/AccuracyBadge'
 import BracketTree from '@/components/world-cup/BracketTree'
 
 export default function DashboardClient({ data }: { data: WorldCupData }) {
@@ -60,26 +61,28 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
   }
 
   return (
-    <div className="mx-auto max-w-2xl space-y-6">
-      <header className="flex items-center justify-between gap-3">
+    <div className="mx-auto max-w-4xl space-y-6">
+      <header className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">{data.title}竞猜</h1>
           <p className="mt-1 text-sm text-gray-500">你的预测战绩与晋级树，随真实赛果每天更新</p>
         </div>
         <Link
           href="/wc"
-          className="flex shrink-0 items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-700"
+          className="flex shrink-0 items-center justify-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-700"
         >
           {hasPredictions ? '继续竞猜' : '开始竞猜'}
           <ArrowRight size={16} />
         </Link>
       </header>
 
+      <AccuracyBadge stats={stats} />
+
       <StatsBar stats={stats} />
 
       {/* Share */}
-      <div className="rounded-2xl border border-gray-200 bg-white p-5">
-        <div className="flex items-center justify-between gap-3">
+      <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-semibold text-gray-900">分享我的预测</p>
             <p className="text-xs text-gray-500">生成专属晋级树链接，朋友也能来猜</p>
@@ -87,7 +90,7 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
           <button
             onClick={share}
             disabled={!hasPredictions || sharing}
-            className="flex shrink-0 items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-50"
+            className="flex shrink-0 items-center justify-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {copied ? <Check size={16} /> : <Share2 size={16} />}
             {copied ? '已复制' : sharing ? '生成中…' : '分享'}
@@ -108,8 +111,8 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
       </div>
 
       {/* Bracket */}
-      <div className="rounded-2xl border border-gray-200 bg-white p-5">
-        <h2 className="mb-4 text-sm font-semibold text-gray-900">晋级树</h2>
+      <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
+        <h2 className="mb-4 text-sm font-semibold text-gray-900">我的预测全景</h2>
         <BracketTree data={data} predictions={predictions} />
       </div>
     </div>

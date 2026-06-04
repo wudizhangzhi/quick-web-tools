@@ -4,6 +4,37 @@ import type { Choice, Match } from '@/lib/world-cup/types'
 import { matchLabel, kickoffLabel } from '@/lib/world-cup/labels'
 import Flag from '@/components/world-cup/Flag'
 
+const SHARD_COLORS = ['bg-amber-400', 'bg-orange-500', 'bg-red-500', 'bg-yellow-300']
+
+// The blast over the loser's flag: a white core flash, two shockwave rings, and a
+// ring of shrapnel flung outward (each shard's direction/distance set inline).
+function FlagExplosion() {
+  return (
+    <span className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
+      <span className="wc-flash absolute h-20 w-20 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.95)_0%,rgba(255,221,128,0.7)_45%,transparent_70%)]" />
+      <span className="wc-burst-ring absolute h-14 w-14 rounded-full border-2 border-amber-300" />
+      <span className="wc-burst-ring-2 absolute h-14 w-14 rounded-full border-2 border-orange-400/70" />
+      {Array.from({ length: 16 }, (_, i) => {
+        const ang = (i / 16) * Math.PI * 2
+        const dist = 62 + (i % 3) * 18 // 62 / 80 / 98 px
+        const size = i % 4 === 0 ? 'h-2.5 w-2.5' : 'h-1.5 w-1.5'
+        return (
+          <span
+            key={i}
+            className={`wc-shard absolute rounded-[1px] ${size} ${SHARD_COLORS[i % SHARD_COLORS.length]}`}
+            style={
+              {
+                '--tx': `${Math.cos(ang) * dist}px`,
+                '--ty': `${Math.sin(ang) * dist}px`,
+              } as React.CSSProperties
+            }
+          />
+        )
+      })}
+    </span>
+  )
+}
+
 function TeamBlock({
   code,
   name,
@@ -20,23 +51,28 @@ function TeamBlock({
   const isDraw = selected === 'draw'
   const entrance = side === 'home' ? 'wc-clash-left' : 'wc-clash-right'
 
-  const state = isWinner
-    ? 'scale-125 z-10'
-    : isLoser
-      ? 'scale-90 opacity-40 grayscale'
-      : isDraw
-        ? 'scale-95 opacity-80'
-        : ''
+  // Outer wrapper carries the horizontal motion: entrance on mount, then a lunge
+  // toward the loser once a winner is chosen.
+  const outerAnim = isWinner ? (side === 'home' ? 'wc-charge-right' : 'wc-charge-left') : entrance
+
+  // Inner wrapper carries scale/opacity: winner zooms, loser detonates.
+  let innerCls = 'transition-all duration-300 ease-out'
+  if (isWinner) innerCls = 'transition-all duration-300 ease-out scale-125 z-10'
+  else if (isLoser) innerCls = 'wc-flag-explode'
+  else if (isDraw) innerCls = 'transition-all duration-300 ease-out scale-95 opacity-80'
 
   return (
-    <div className={`flex flex-1 flex-col items-center gap-2 ${entrance}`}>
-      <div className={`transition-all duration-300 ease-out ${state}`}>
-        <Flag
-          code={code}
-          className={`h-14 w-20 rounded-xl shadow-md ring-1 ring-black/5 md:h-16 md:w-24 ${
-            isWinner ? 'shadow-lg shadow-amber-400/50 ring-4 ring-amber-300' : ''
-          } ${selected == null ? 'wc-float' : ''}`}
-        />
+    <div className={`flex flex-1 flex-col items-center gap-2 ${outerAnim}`}>
+      <div className="relative">
+        <div className={innerCls}>
+          <Flag
+            code={code}
+            className={`h-14 w-20 rounded-xl shadow-md ring-1 ring-black/5 md:h-16 md:w-24 ${
+              isWinner ? 'shadow-lg shadow-amber-400/50 ring-4 ring-amber-300' : ''
+            } ${selected == null ? 'wc-float' : ''}`}
+          />
+        </div>
+        {isLoser && <FlagExplosion />}
       </div>
       <span
         className={`text-center text-base font-extrabold leading-tight transition-colors duration-300 md:text-xl ${
@@ -96,9 +132,14 @@ export default function GuessCard({
   selected: Choice | null
 }) {
   const isGroup = match.stage === 'group'
+  const winnerPicked = selected === 'home' || selected === 'away'
 
   return (
-    <div className="w-full overflow-hidden rounded-3xl bg-white p-5 shadow-2xl md:p-8">
+    <div
+      className={`w-full overflow-hidden rounded-3xl bg-white p-5 shadow-2xl md:p-8 ${
+        winnerPicked ? 'wc-impact-shake' : ''
+      }`}
+    >
       <div className="mb-5 flex items-center justify-between text-xs">
         <span className="rounded-full bg-amber-100 px-3 py-1 font-bold text-amber-700">
           {matchLabel(match)}

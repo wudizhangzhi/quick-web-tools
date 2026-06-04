@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import confetti from 'canvas-confetti'
-import { Trophy, ArrowLeft, ArrowRight } from 'lucide-react'
+import { Trophy, ArrowLeft, ArrowRight, Share2, Check } from 'lucide-react'
 import type { Choice, Predictions, WorldCupData } from '@/lib/world-cup/types'
 import { event as gaEvent } from '@/lib/gtag'
 import GuessCard from './GuessCard'
@@ -22,6 +22,8 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
   const [queue, setQueue] = useState<string[]>([])
   const [ready, setReady] = useState(false)
   const [selected, setSelected] = useState<Choice | null>(null)
+  const [sharing, setSharing] = useState(false)
+  const [shareCopied, setShareCopied] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -65,16 +67,46 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ matchId: id, choice }),
     }).catch(() => {})
+    // Hold long enough for the flag charge + explosion to play out before advancing.
     setTimeout(() => {
       setPredictions((p) => ({ ...p, [id]: choice }))
       setQueue((q) => q.slice(1))
       setSelected(null)
-    }, 550)
+    }, 950)
   }
 
   function skip() {
     if (selected) return
     setQueue((q) => (q.length > 1 ? [...q.slice(1), q[0]] : q))
+  }
+
+  async function share() {
+    if (sharing) return
+    setSharing(true)
+    try {
+      const res = await fetch('/api/world-cup/share', { method: 'POST' })
+      const d = (await res.json()) as { code?: string }
+      if (res.ok && d.code) {
+        const url = `${window.location.origin}/p/${d.code}`
+        gaEvent('wc_share', { status: 'copy_link' })
+        if (typeof navigator !== 'undefined' && navigator.share) {
+          // Native share sheet — the most direct path on mobile.
+          await navigator.share({ title: `我的${data.title}预测`, url }).catch(() => {})
+        } else {
+          await navigator.clipboard.writeText(url).then(
+            () => {
+              setShareCopied(true)
+              setTimeout(() => setShareCopied(false), 2000)
+            },
+            () => {},
+          )
+        }
+      }
+    } catch {
+      /* ignore — retryable */
+    } finally {
+      setSharing(false)
+    }
   }
 
   return (
@@ -97,8 +129,20 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
           <ArrowLeft size={14} />
           我的晋级树
         </Link>
-        <div className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
-          已猜 <b className="text-amber-300">{predictedCount}</b> 场
+        <div className="flex items-center gap-2">
+          {predictedCount > 0 && (
+            <button
+              onClick={share}
+              disabled={sharing}
+              className="flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1.5 text-xs font-bold text-emerald-950 shadow-sm transition-colors hover:bg-amber-300 disabled:opacity-60"
+            >
+              {shareCopied ? <Check size={14} /> : <Share2 size={14} />}
+              {shareCopied ? '已复制' : '分享战绩'}
+            </button>
+          )}
+          <div className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+            已猜 <b className="text-amber-300">{predictedCount}</b> 场
+          </div>
         </div>
       </header>
 

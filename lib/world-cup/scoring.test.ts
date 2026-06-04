@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { isCorrect, computeStats } from './scoring'
+import { isCorrect, computeStats, accuracyTitle } from './scoring'
 import type { Match, Predictions, WorldCupData } from './types'
 
 function m(id: string, result: Match['result'], stage: Match['stage'] = 'group'): Match {
@@ -54,5 +54,26 @@ describe('computeStats', () => {
 
   it('empty predictions', () => {
     expect(computeStats({}, data)).toEqual({ predicted: 0, resolved: 0, correct: 0, accuracy: 0 })
+  })
+})
+
+describe('accuracyTitle', () => {
+  it('maps each tier boundary to its rank', () => {
+    expect(accuracyTitle(100).title).toBe('你是穿越来的吧？')
+    expect(accuracyTitle(90).title).toBe('绝世预言家')
+    expect(accuracyTitle(80).title).toBe('神算子')
+    expect(accuracyTitle(70).title).toBe('资深球探')
+    expect(accuracyTitle(60).title).toBe('懂球老炮')
+    expect(accuracyTitle(50).title).toBe('半仙在世')
+    expect(accuracyTitle(40).title).toBe('跟着感觉走')
+    expect(accuracyTitle(25).title).toBe('重在参与')
+    expect(accuracyTitle(1).title).toBe('偶尔蒙对')
+    expect(accuracyTitle(0).title).toBe('反向预言家')
+  })
+
+  it('picks the tier just below a boundary', () => {
+    expect(accuracyTitle(99).title).toBe('绝世预言家')
+    expect(accuracyTitle(89).title).toBe('神算子')
+    expect(accuracyTitle(24).title).toBe('偶尔蒙对')
   })
 })

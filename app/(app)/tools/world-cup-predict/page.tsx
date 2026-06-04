@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { loadData } from '@/lib/world-cup/fixtures'
+import { loadDisplayData } from '@/lib/world-cup/fixtures'
 import DashboardClient from './DashboardClient'
 
 export const metadata: Metadata = {
@@ -8,6 +8,6 @@ export const metadata: Metadata = {
 }
 
 export default function WorldCupPredictPage() {
-  const data = loadData()
+  const data = loadDisplayData()
   return <DashboardClient data={data} />
 }
