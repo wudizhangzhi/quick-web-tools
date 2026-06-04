@@ -131,41 +131,66 @@ function captureFrame(video: HTMLVideoElement, time: number): Promise<HTMLCanvas
   })
 }
 
+type LabelPos = 'below' | 'corner'
+
+// Height of the label band drawn beneath each frame in "below" mode (0 otherwise).
+function labelBandHeight(frameH: number, hasLabel: boolean, labelPos: LabelPos): number {
+  if (labelPos !== 'below' || !hasLabel) return 0
+  const fontSize = Math.max(10, Math.min(24, Math.round(frameH * 0.028)))
+  return fontSize + Math.round(fontSize * 0.25) * 2
+}
+
 function drawStitch(
   out: HTMLCanvasElement,
   frames: Frame[],
   cols: number,
-  cellW: number,
-  cellH: number,
-  opts: { showIndex: boolean; showTimestamp: boolean },
+  frameW: number,
+  frameH: number,
+  opts: { showIndex: boolean; showTimestamp: boolean; labelPos: LabelPos; gap: number },
 ) {
+  const { showIndex, showTimestamp, labelPos, gap } = opts
+  const hasLabel = showIndex || showTimestamp
   const rows = Math.ceil(frames.length / cols)
-  out.width = cellW * cols
-  out.height = cellH * rows
+
+  const fontSize = Math.max(10, Math.min(24, Math.round(frameH * 0.028)))
+  const padX = Math.round(fontSize * 0.5)
+  const padY = Math.round(fontSize * 0.25)
+  const offset = Math.round(fontSize * 0.5)
+  const bandH = labelBandHeight(frameH, hasLabel, labelPos)
+  const cellH = frameH + bandH
+
+  out.width = frameW * cols + gap * (cols - 1)
+  out.height = cellH * rows + gap * (rows - 1)
 
   const ctx = out.getContext('2d')!
   ctx.fillStyle = '#000'
   ctx.fillRect(0, 0, out.width, out.height)
-
-  const fontSize = Math.max(10, Math.min(24, Math.round(cellH * 0.028)))
-  const padX = Math.round(fontSize * 0.5)
-  const padY = Math.round(fontSize * 0.25)
-  const offset = Math.round(fontSize * 0.5)
+  ctx.font = `600 ${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`
 
   frames.forEach((f, i) => {
     const col = i % cols
     const row = Math.floor(i / cols)
-    const x = col * cellW
-    const y = row * cellH
-    ctx.drawImage(f.canvas, x, y, cellW, cellH)
+    const x = col * (frameW + gap)
+    const y = row * (cellH + gap)
+    ctx.drawImage(f.canvas, x, y, frameW, frameH)
 
     const parts: string[] = []
-    if (opts.showIndex) parts.push(`#${i + 1}`)
-    if (opts.showTimestamp) parts.push(formatTime(f.time))
+    if (showIndex) parts.push(`#${i + 1}`)
+    if (showTimestamp) parts.push(formatTime(f.time))
     if (parts.length === 0) return
-
     const labelText = parts.join('  ')
-    ctx.font = `600 ${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`
+
+    if (labelPos === 'below') {
+      // White label centered in the band beneath the frame.
+      ctx.fillStyle = '#fff'
+      ctx.textBaseline = 'middle'
+      ctx.textAlign = 'center'
+      ctx.fillText(labelText, x + frameW / 2, y + frameH + bandH / 2 + 1)
+      ctx.textAlign = 'left'
+      return
+    }
+
+    // Corner: rounded translucent chip over the frame's top-left.
     const metrics = ctx.measureText(labelText)
     const boxW = Math.round(metrics.width + padX * 2)
     const boxH = Math.round(fontSize + padY * 2)
@@ -185,6 +210,7 @@ function drawStitch(
 
     ctx.fillStyle = '#fff'
     ctx.textBaseline = 'middle'
+    ctx.textAlign = 'left'
     ctx.fillText(labelText, boxX + padX, boxY + boxH / 2 + 1)
   })
 }
@@ -217,6 +243,8 @@ export default function VideoFrameStitchPage() {
   const [quality, setQuality] = useState(85)
   const [showIndex, setShowIndex] = useState(true)
   const [showTimestamp, setShowTimestamp] = useState(false)
+  const [labelPos, setLabelPos] = useState<LabelPos>('below')
+  const [gap, setGap] = useState(10)
   const [fps, setFps] = useState(30)
   const [capturing, setCapturing] = useState(false)
   const [exporting, setExporting] = useState(false)
@@ -408,17 +436,25 @@ export default function VideoFrameStitchPage() {
     const userScale = frameScale / 100
     const effW = videoDim.w * userScale
     const effH = videoDim.h * userScale
-    const totalW = effW * cols
-    const totalH = effH * rows
+    const hasLabel = showIndex || showTimestamp
+    const bandH = labelBandHeight(effH, hasLabel, labelPos)
+    const totalW = effW * cols + gap * (cols - 1)
+    const totalH = (effH + bandH) * rows + gap * (rows - 1)
     const previewScale = Math.min(1, MAX_PREVIEW_LONGEST_EDGE / Math.max(totalW, totalH))
     const cellW = Math.max(1, Math.round(effW * previewScale))
     const cellH = Math.max(1, Math.round(effH * previewScale))
+    const gapPx = Math.round(gap * previewScale)
 
     const handle = window.setTimeout(() => {
-      drawStitch(canvas, frames, cols, cellW, cellH, { showIndex, showTimestamp })
+      drawStitch(canvas, frames, cols, cellW, cellH, {
+        showIndex,
+        showTimestamp,
+        labelPos,
+        gap: gapPx,
+      })
     }, 80)
     return () => window.clearTimeout(handle)
-  }, [frames, cols, videoDim, frameScale, showIndex, showTimestamp])
+  }, [frames, cols, videoDim, frameScale, showIndex, showTimestamp, labelPos, gap])
 
   const runExport = async (
     kind: 'download_png' | 'download_jpeg' | 'copy',
@@ -440,7 +476,12 @@ export default function VideoFrameStitchPage() {
       const userScale = frameScale / 100
       const exportCellW = Math.max(1, Math.round(videoDim.w * userScale))
       const exportCellH = Math.max(1, Math.round(videoDim.h * userScale))
-      drawStitch(out, frames, cols, exportCellW, exportCellH, { showIndex, showTimestamp })
+      drawStitch(out, frames, cols, exportCellW, exportCellH, {
+        showIndex,
+        showTimestamp,
+        labelPos,
+        gap,
+      })
 
       if (kind === 'download_png') {
         await new Promise<void>((resolve, reject) => {
@@ -477,6 +518,8 @@ export default function VideoFrameStitchPage() {
         status: kind,
         frame_count: frames.length,
         cols,
+        label_pos: labelPos,
+        gap,
       })
     } catch (err) {
       const msg = err instanceof Error ? err.message : '导出失败'
@@ -490,6 +533,19 @@ export default function VideoFrameStitchPage() {
     () => (frames.length ? Math.ceil(frames.length / cols) : 0),
     [frames.length, cols],
   )
+
+  const exportDims = useMemo(() => {
+    if (!videoDim || frames.length === 0) return null
+    const userScale = frameScale / 100
+    const cw = Math.max(1, Math.round(videoDim.w * userScale))
+    const ch = Math.max(1, Math.round(videoDim.h * userScale))
+    const rows = Math.ceil(frames.length / cols)
+    const bandH = labelBandHeight(ch, showIndex || showTimestamp, labelPos)
+    return {
+      w: cw * cols + gap * (cols - 1),
+      h: (ch + bandH) * rows + gap * (rows - 1),
+    }
+  }, [videoDim, frames.length, frameScale, cols, showIndex, showTimestamp, labelPos, gap])
 
   const hasFrames = frames.length > 0
 
@@ -710,11 +766,35 @@ export default function VideoFrameStitchPage() {
                   </label>
                 </div>
 
-                {videoDim && hasFrames && (
+                <label className="flex items-center gap-2 text-sm text-gray-700">
+                  <span className="shrink-0 w-20">标签位置：</span>
+                  <select
+                    value={labelPos}
+                    onChange={(e) => setLabelPos(e.target.value as LabelPos)}
+                    className="px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none"
+                  >
+                    <option value="below">图片下方</option>
+                    <option value="corner">左上角</option>
+                  </select>
+                </label>
+
+                <label className="flex items-center gap-2 text-sm text-gray-700">
+                  <span className="shrink-0 w-20">图片间隙：</span>
+                  <input
+                    type="range"
+                    min={0}
+                    max={40}
+                    step={2}
+                    value={gap}
+                    onChange={(e) => setGap(Number(e.target.value))}
+                    className="flex-1 accent-emerald-600"
+                  />
+                  <span className="font-mono text-gray-500 w-12 text-right shrink-0">{gap}px</span>
+                </label>
+
+                {exportDims && (
                   <p className="text-xs text-gray-400">
-                    导出尺寸：
-                    {Math.round(videoDim.w * (frameScale / 100)) * cols} ×{' '}
-                    {Math.round(videoDim.h * (frameScale / 100)) * rowsForGrid} px
+                    导出尺寸：{exportDims.w} × {exportDims.h} px
                   </p>
                 )}
               </div>
