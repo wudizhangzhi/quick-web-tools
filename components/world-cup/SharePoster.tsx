@@ -32,7 +32,6 @@ export default function SharePoster({
   const [hint, setHint] = useState<Hint>(null)
 
   const champion = useMemo(() => championPick(predictions, data), [predictions, data])
-  const host = url ? new URL(url).host : ''
   const copyImageSupported = canCopyImage()
 
   useEffect(() => {
@@ -119,7 +118,6 @@ export default function SharePoster({
             stats={stats}
             champion={champion}
             qrDataUrl={qr}
-            host={host}
           />
         </div>
       </div>
