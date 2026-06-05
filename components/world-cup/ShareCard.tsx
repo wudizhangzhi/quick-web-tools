@@ -17,9 +17,8 @@ const ShareCard = forwardRef<
     stats: Stats
     champion: Team | null
     qrDataUrl: string | null
-    host: string
   }
->(function ShareCard({ title, stats, champion, qrDataUrl, host }, ref) {
+>(function ShareCard({ title, stats, champion, qrDataUrl }, ref) {
   const hasResults = stats.resolved > 0
   const pct = Math.round(stats.accuracy * 100)
   const tier = hasResults ? accuracyTitle(pct) : null
@@ -86,7 +85,7 @@ const ShareCard = forwardRef<
         )}
         <div className="flex flex-col">
           <span className="text-sm font-bold text-amber-300">扫码也来猜 →</span>
-          <span className="text-[11px] text-white/60">{host}</span>
+          <span className="text-[11px] text-white/60">看看你能猜对几场</span>
         </div>
       </div>
     </div>
