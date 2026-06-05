@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import QRCode from 'qrcode'
-import { Download, Copy, Link2, Check, ImageIcon } from 'lucide-react'
+import { Download, Copy, Link2, Check, ImageIcon, Loader2 } from 'lucide-react'
 import type { Predictions, WorldCupData } from '@/lib/world-cup/types'
 import type { Stats } from '@/lib/world-cup/scoring'
 import { championPick } from '@/lib/world-cup/champion'
@@ -125,34 +125,42 @@ export default function SharePoster({
       </div>
 
       <div className="flex w-full max-w-[280px] flex-col gap-2">
-        <button
-          onClick={save}
-          disabled={busy || !url}
-          className="flex items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          {hint === 'saved' ? <Check size={16} /> : <Download size={16} />}
-          {hint === 'saved' ? '已保存' : busy ? '生成中…' : '保存图片'}
-        </button>
+        {!url ? (
+          <div className="flex items-center justify-center gap-2 rounded-lg bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-500">
+            <Loader2 size={16} className="animate-spin" />
+            生成分享链接中…
+          </div>
+        ) : (
+          <>
+            <button
+              onClick={save}
+              disabled={busy}
+              className="flex items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {hint === 'saved' ? <Check size={16} /> : <Download size={16} />}
+              {hint === 'saved' ? '已保存' : busy ? '生成中…' : '保存图片'}
+            </button>
 
-        {copyImageSupported && (
-          <button
-            onClick={copyImage}
-            disabled={busy || !url}
-            className="flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-600 transition-colors hover:bg-emerald-50 disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {hint === 'copied_image' ? <Check size={16} /> : <Copy size={16} />}
-            {hint === 'copied_image' ? '已复制图片' : '复制图片'}
-          </button>
+            {copyImageSupported && (
+              <button
+                onClick={copyImage}
+                disabled={busy}
+                className="flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-600 transition-colors hover:bg-emerald-50 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {hint === 'copied_image' ? <Check size={16} /> : <Copy size={16} />}
+                {hint === 'copied_image' ? '已复制图片' : '复制图片'}
+              </button>
+            )}
+
+            <button
+              onClick={copyLink}
+              className="flex items-center justify-center gap-2 rounded-lg bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200"
+            >
+              {hint === 'copied_link' ? <Check size={16} /> : <Link2 size={16} />}
+              {hint === 'copied_link' ? '已复制链接' : '复制链接'}
+            </button>
+          </>
         )}
-
-        <button
-          onClick={copyLink}
-          disabled={!url}
-          className="flex items-center justify-center gap-2 rounded-lg bg-gray-100 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          {hint === 'copied_link' ? <Check size={16} /> : <Link2 size={16} />}
-          {hint === 'copied_link' ? '已复制链接' : '复制链接'}
-        </button>
       </div>
 
       {url && (
