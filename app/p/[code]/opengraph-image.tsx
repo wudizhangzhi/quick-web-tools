@@ -2,6 +2,8 @@ import { ImageResponse } from 'next/og'
 import { loadDisplayData } from '@/lib/world-cup/fixtures'
 import { computeStats, accuracyTitle } from '@/lib/world-cup/scoring'
 import { championPick } from '@/lib/world-cup/champion'
+import { featuredMatch } from '@/lib/world-cup/featured'
+import { matchLabel } from '@/lib/world-cup/labels'
 import { loadPredictionsByCode } from '@/lib/world-cup/share-data'
 import { flagUrl } from '@/lib/world-cup/flags'
 
@@ -34,21 +36,65 @@ async function loadFont(family: string, text: string, weight: number): Promise<A
 // Every Chinese glyph the poster can render, so the subset request covers them.
 const TIER_TITLES =
   '你是穿越来的吧绝世预言家神算子资深球探懂球老炮半仙在世跟着感觉走重在参与偶尔蒙对反向预言家'
-const STATIC_TEXT = `预测战报我的正确率猜对场已揭晓冠军赛果揭晓后见真章扫码也来猜世界杯竞${TIER_TITLES}`
+const STAGE_TEXT = '小组赛季军战决半强我猜这场平ABCDEFGHIJKL0123456789'
+const STATIC_TEXT = `预测战报我的正确率猜对场已揭晓冠军赛果揭晓后见真章扫码也来猜世界杯竞${TIER_TITLES}${STAGE_TEXT}`
+
+// One side of the featured matchup, Satori-flavoured (inline styles + remote
+// flag image). The picked side gets an amber border + check and stays opaque.
+function ogTeamSide(name: string, flag: string | null, picked: boolean, dimmed: boolean) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        opacity: dimmed ? 0.5 : 1,
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {flag && (
+        <img
+          src={flag}
+          width={72}
+          height={48}
+          alt=""
+          style={{ borderRadius: 6, border: picked ? '3px solid #fcd34d' : '3px solid transparent' }}
+        />
+      )}
+      <div
+        style={{
+          display: 'flex',
+          marginTop: 8,
+          fontSize: 26,
+          fontWeight: 700,
+          color: picked ? '#fcd34d' : '#fff',
+        }}
+      >
+        {picked ? `${name} ✓` : name}
+      </div>
+    </div>
+  )
+}
 
 export default async function OgImage({ params }: { params: { code: string } }) {
   const predictions = (await loadPredictionsByCode(params.code)) ?? {}
   const data = loadDisplayData()
   const stats = computeStats(predictions, data)
   const champion = championPick(predictions, data)
+  const featured = featuredMatch(predictions, data)
 
   const hasResults = stats.resolved > 0
   const pct = Math.round(stats.accuracy * 100)
   const tier = hasResults ? accuracyTitle(pct) : null
 
-  const text = STATIC_TEXT + data.title + (champion?.name ?? '')
+  const text =
+    STATIC_TEXT +
+    data.title +
+    (champion?.name ?? '') +
+    (featured ? featured.match.home.name + featured.match.away.name + matchLabel(featured.match) : '')
   const font = await loadFont('Noto+Sans+SC', text, 700)
   const champFlag = champion ? flagUrl(champion.code, 80) : null
+  const choice = featured?.choice
 
   return new ImageResponse(
     (
@@ -119,27 +165,68 @@ export default async function OgImage({ params }: { params: { code: string } }) 
             </div>
           )}
 
-          {champion && champFlag && (
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                padding: '20px 28px',
-                borderRadius: 24,
-                background: 'rgba(255,255,255,0.1)',
-              }}
-            >
-              <div style={{ display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.7)' }}>
-                我的冠军
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16 }}>
+            {featured && (
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  padding: '18px 28px',
+                  borderRadius: 24,
+                  background: 'rgba(255,255,255,0.1)',
+                }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    fontSize: 22,
+                    color: 'rgba(255,255,255,0.6)',
+                    marginBottom: 14,
+                  }}
+                >
+                  我猜这场 · {matchLabel(featured.match)}
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
+                  {ogTeamSide(
+                    featured.match.home.name,
+                    flagUrl(featured.match.home.code, 80),
+                    choice === 'home',
+                    choice === 'away',
+                  )}
+                  <div style={{ display: 'flex', fontSize: 24, fontWeight: 700, color: 'rgba(255,255,255,0.85)' }}>
+                    {choice === 'draw' ? '我猜平' : 'VS'}
+                  </div>
+                  {ogTeamSide(
+                    featured.match.away.name,
+                    flagUrl(featured.match.away.code, 80),
+                    choice === 'away',
+                    choice === 'home',
+                  )}
+                </div>
               </div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={champFlag} width={108} height={72} style={{ marginTop: 12, borderRadius: 6 }} alt="" />
-              <div style={{ display: 'flex', marginTop: 12, fontSize: 36, fontWeight: 700 }}>
-                {champion.name}
+            )}
+
+            {champion && champFlag && (
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 12,
+                  padding: '10px 22px',
+                  borderRadius: 999,
+                  background: 'rgba(255,255,255,0.1)',
+                }}
+              >
+                <div style={{ display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.7)' }}>
+                  我的冠军
+                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={champFlag} width={48} height={32} style={{ borderRadius: 4 }} alt="" />
+                <div style={{ display: 'flex', fontSize: 28, fontWeight: 700 }}>{champion.name}</div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', fontSize: 26, color: '#fcd34d' }}>
