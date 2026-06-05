@@ -1,12 +1,14 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import confetti from 'canvas-confetti'
-import { Trophy, ArrowLeft, ArrowRight, Share2, Check } from 'lucide-react'
+import { Trophy, ArrowLeft, ArrowRight, Share2, X } from 'lucide-react'
 import type { Choice, Predictions, WorldCupData } from '@/lib/world-cup/types'
+import { computeStats } from '@/lib/world-cup/scoring'
 import { event as gaEvent } from '@/lib/gtag'
 import GuessCard from './GuessCard'
+import SharePoster from './SharePoster'
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
@@ -22,8 +24,7 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
   const [queue, setQueue] = useState<string[]>([])
   const [ready, setReady] = useState(false)
   const [selected, setSelected] = useState<Choice | null>(null)
-  const [sharing, setSharing] = useState(false)
-  const [shareCopied, setShareCopied] = useState(false)
+  const [showShare, setShowShare] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -80,29 +81,7 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
     setQueue((q) => (q.length > 1 ? [...q.slice(1), q[0]] : q))
   }
 
-  async function share() {
-    if (sharing) return
-    setSharing(true)
-    try {
-      const res = await fetch('/api/world-cup/share', { method: 'POST' })
-      const d = (await res.json()) as { code?: string }
-      if (res.ok && d.code) {
-        const url = `${window.location.origin}/p/${d.code}`
-        gaEvent('wc_share', { status: 'copy_link' })
-        await navigator.clipboard.writeText(url).then(
-          () => {
-            setShareCopied(true)
-            setTimeout(() => setShareCopied(false), 2000)
-          },
-          () => {},
-        )
-      }
-    } catch {
-      /* ignore — retryable */
-    } finally {
-      setSharing(false)
-    }
-  }
+  const stats = useMemo(() => computeStats(predictions, data), [predictions, data])
 
   return (
     <div className="relative flex min-h-[100dvh] flex-col overflow-hidden bg-gradient-to-br from-emerald-500 via-emerald-700 to-green-900">
@@ -127,12 +106,11 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
         <div className="flex items-center gap-2">
           {predictedCount > 0 && (
             <button
-              onClick={share}
-              disabled={sharing}
-              className="flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1.5 text-xs font-bold text-emerald-950 shadow-sm transition-colors hover:bg-amber-300 disabled:opacity-60"
+              onClick={() => setShowShare(true)}
+              className="flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1.5 text-xs font-bold text-emerald-950 shadow-sm transition-colors hover:bg-amber-300"
             >
-              {shareCopied ? <Check size={14} /> : <Share2 size={14} />}
-              {shareCopied ? '已复制' : '分享战绩'}
+              <Share2 size={14} />
+              分享战绩
             </button>
           )}
           <div className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
@@ -179,6 +157,29 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
           )}
         </div>
       </main>
+
+      {/* share overlay */}
+      {showShare && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+          onClick={() => setShowShare(false)}
+        >
+          <div
+            className="relative w-full max-w-sm rounded-3xl bg-white p-5 shadow-2xl sm:p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowShare(false)}
+              aria-label="关闭"
+              className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
+            >
+              <X size={18} />
+            </button>
+            <h2 className="mb-4 text-center text-base font-bold text-gray-900">分享我的战报</h2>
+            <SharePoster data={data} predictions={predictions} stats={stats} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
