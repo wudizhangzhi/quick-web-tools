@@ -6,6 +6,7 @@ import { Download, Copy, Link2, Check, ImageIcon, Loader2 } from 'lucide-react'
 import type { Predictions, WorldCupData } from '@/lib/world-cup/types'
 import type { Stats } from '@/lib/world-cup/scoring'
 import { championPick } from '@/lib/world-cup/champion'
+import { featuredMatch } from '@/lib/world-cup/featured'
 import { event as gaEvent } from '@/lib/gtag'
 import { canCopyImage, copyBlobToClipboard, downloadBlob, nodeToPngBlob } from '@/lib/share-image'
 import ShareCard from './ShareCard'
@@ -32,6 +33,9 @@ export default function SharePoster({
   const [hint, setHint] = useState<Hint>(null)
 
   const champion = useMemo(() => championPick(predictions, data), [predictions, data])
+  // Computed once per panel open so the spotlighted pick stays stable while the
+  // user saves / copies (and varies between opens when it falls back to random).
+  const featured = useMemo(() => featuredMatch(predictions, data), [predictions, data])
   const copyImageSupported = canCopyImage()
 
   useEffect(() => {
@@ -117,6 +121,7 @@ export default function SharePoster({
             title={data.title}
             stats={stats}
             champion={champion}
+            featured={featured}
             qrDataUrl={qr}
           />
         </div>
