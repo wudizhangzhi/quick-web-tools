@@ -2,13 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Trophy, ArrowRight, Sparkles } from 'lucide-react'
-import { getRedis, codeKey, predKey } from '@/lib/world-cup/redis'
-import { isValidShareCode } from '@/lib/world-cup/codes'
 import { loadDisplayData } from '@/lib/world-cup/fixtures'
 import { computeStats } from '@/lib/world-cup/scoring'
+import { loadPredictionsByCode } from '@/lib/world-cup/share-data'
 import BracketTree from '@/components/world-cup/BracketTree'
 import AccuracyBadge from '@/components/world-cup/AccuracyBadge'
-import type { Choice, Predictions } from '@/lib/world-cup/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -17,21 +15,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-async function loadPredictions(code: string): Promise<Predictions | null> {
-  if (!isValidShareCode(code)) return null
-  try {
-    const redis = getRedis()
-    const uid = await redis.get<string>(codeKey(code))
-    if (!uid) return null
-    const preds = await redis.hgetall<Record<string, Choice>>(predKey(uid))
-    return preds ?? {}
-  } catch {
-    return null
-  }
-}
-
 export default async function SharePage({ params }: { params: { code: string } }) {
-  const predictions = await loadPredictions(params.code)
+  const predictions = await loadPredictionsByCode(params.code)
   if (predictions === null) notFound()
 
   const data = loadDisplayData()

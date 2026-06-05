@@ -2,20 +2,18 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { Share2, Check, ArrowRight } from 'lucide-react'
-import type { Choice, Predictions, WorldCupData } from '@/lib/world-cup/types'
+import { Share2, ArrowRight } from 'lucide-react'
+import type { Predictions, WorldCupData } from '@/lib/world-cup/types'
 import { computeStats } from '@/lib/world-cup/scoring'
-import { event as gaEvent } from '@/lib/gtag'
 import StatsBar from './StatsBar'
 import AccuracyBadge from '@/components/world-cup/AccuracyBadge'
 import BracketTree from '@/components/world-cup/BracketTree'
+import SharePoster from '@/components/world-cup/SharePoster'
 
 export default function DashboardClient({ data }: { data: WorldCupData }) {
   const [predictions, setPredictions] = useState<Predictions>({})
   const [ready, setReady] = useState(false)
-  const [shareUrl, setShareUrl] = useState<string | null>(null)
-  const [sharing, setSharing] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const [showShare, setShowShare] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -35,30 +33,6 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
 
   const stats = useMemo(() => computeStats(predictions, data), [predictions, data])
   const hasPredictions = stats.predicted > 0
-
-  async function share() {
-    setSharing(true)
-    try {
-      const res = await fetch('/api/world-cup/share', { method: 'POST' })
-      const d = (await res.json()) as { code?: string }
-      if (res.ok && d.code) {
-        const url = `${window.location.origin}/p/${d.code}`
-        setShareUrl(url)
-        try {
-          await navigator.clipboard.writeText(url)
-          setCopied(true)
-          setTimeout(() => setCopied(false), 2000)
-        } catch {
-          /* clipboard blocked — url still shown for manual copy */
-        }
-        gaEvent('wc_share', { status: 'copy_link' })
-      }
-    } catch {
-      /* ignore — retryable */
-    } finally {
-      setSharing(false)
-    }
-  }
 
   return (
     <div className="mx-auto max-w-4xl space-y-6">
@@ -85,19 +59,21 @@ export default function DashboardClient({ data }: { data: WorldCupData }) {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-semibold text-gray-900">分享我的预测</p>
-            <p className="text-xs text-gray-500">生成专属晋级树链接，朋友也能来猜</p>
+            <p className="text-xs text-gray-500">生成战报图与专属链接，朋友也能来猜</p>
           </div>
           <button
-            onClick={share}
-            disabled={!hasPredictions || sharing}
+            onClick={() => setShowShare((s) => !s)}
+            disabled={!hasPredictions}
             className="flex shrink-0 items-center justify-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {copied ? <Check size={16} /> : <Share2 size={16} />}
-            {copied ? '已复制' : sharing ? '生成中…' : '分享'}
+            <Share2 size={16} />
+            {showShare ? '收起' : '分享'}
           </button>
         </div>
-        {shareUrl && (
-          <div className="mt-3 break-all rounded-lg bg-gray-50 px-3 py-2 text-xs text-gray-600">{shareUrl}</div>
+        {showShare && hasPredictions && (
+          <div className="mt-4">
+            <SharePoster data={data} predictions={predictions} stats={stats} />
+          </div>
         )}
         {ready && !hasPredictions && (
           <p className="mt-3 text-xs text-gray-400">
