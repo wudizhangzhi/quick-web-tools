@@ -3,7 +3,7 @@ import { loadDisplayData } from '@/lib/world-cup/fixtures'
 import { computeStats, accuracyTitle } from '@/lib/world-cup/scoring'
 import { championPick } from '@/lib/world-cup/champion'
 import { featuredMatch } from '@/lib/world-cup/featured'
-import { matchLabel } from '@/lib/world-cup/labels'
+import { matchLabel, kickoffLabel } from '@/lib/world-cup/labels'
 import { loadPredictionsByCode } from '@/lib/world-cup/share-data'
 import { flagUrl } from '@/lib/world-cup/flags'
 
@@ -36,7 +36,7 @@ async function loadFont(family: string, text: string, weight: number): Promise<A
 // Every Chinese glyph the poster can render, so the subset request covers them.
 const TIER_TITLES =
   '你是穿越来的吧绝世预言家神算子资深球探懂球老炮半仙在世跟着感觉走重在参与偶尔蒙对反向预言家'
-const STAGE_TEXT = '小组赛季军战决半强我猜这场平ABCDEFGHIJKL0123456789'
+const STAGE_TEXT = '小组赛季军战决半强我猜这场平北京时间月日（）·：:ABCDEFGHIJKL0123456789'
 const STATIC_TEXT = `预测战报我的正确率猜对场已揭晓冠军赛果揭晓后见真章扫码也来猜世界杯竞${TIER_TITLES}${STAGE_TEXT}`
 
 // One side of the featured matchup, Satori-flavoured (inline styles + remote
@@ -180,12 +180,17 @@ export default async function OgImage({ params }: { params: { code: string } }) 
                 <div
                   style={{
                     display: 'flex',
-                    fontSize: 22,
-                    color: 'rgba(255,255,255,0.6)',
+                    flexDirection: 'column',
+                    alignItems: 'center',
                     marginBottom: 14,
                   }}
                 >
-                  我猜这场 · {matchLabel(featured.match)}
+                  <div style={{ display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.6)' }}>
+                    我猜这场 · {matchLabel(featured.match)}
+                  </div>
+                  <div style={{ display: 'flex', fontSize: 18, color: 'rgba(255,255,255,0.45)', marginTop: 4 }}>
+                    {kickoffLabel(featured.match.kickoff)}（北京时间）
+                  </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
                   {ogTeamSide(

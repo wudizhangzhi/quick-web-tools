@@ -2,7 +2,7 @@ import { forwardRef } from 'react'
 import { Trophy } from 'lucide-react'
 import type { Stats } from '@/lib/world-cup/scoring'
 import { accuracyTitle } from '@/lib/world-cup/scoring'
-import { matchLabel } from '@/lib/world-cup/labels'
+import { matchLabel, kickoffLabel } from '@/lib/world-cup/labels'
 import type { FeaturedMatch } from '@/lib/world-cup/featured'
 import type { Team } from '@/lib/world-cup/types'
 import Flag from './Flag'
@@ -97,10 +97,15 @@ const ShareCard = forwardRef<
         {/* featured pick — shows the user's guess, never the real result */}
         {featured && (
           <div className="w-full rounded-2xl bg-white/10 px-4 py-3">
-            <div className="mb-2 flex items-center justify-center gap-1.5 text-[11px] text-white/60">
-              <span>我猜这场</span>
-              <span>·</span>
-              <span>{matchLabel(featured.match)}</span>
+            <div className="mb-2 flex flex-col items-center gap-0.5">
+              <div className="flex items-center gap-1.5 text-[11px] text-white/60">
+                <span>我猜这场</span>
+                <span>·</span>
+                <span>{matchLabel(featured.match)}</span>
+              </div>
+              <div className="text-[10px] text-white/45">
+                {kickoffLabel(featured.match.kickoff)}（北京时间）
+              </div>
             </div>
             <div className="flex items-center justify-between gap-2">
               <TeamSide
