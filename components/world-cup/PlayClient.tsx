@@ -89,18 +89,13 @@ export default function PlayClient({ data }: { data: WorldCupData }) {
       if (res.ok && d.code) {
         const url = `${window.location.origin}/p/${d.code}`
         gaEvent('wc_share', { status: 'copy_link' })
-        if (typeof navigator !== 'undefined' && navigator.share) {
-          // Native share sheet — the most direct path on mobile.
-          await navigator.share({ title: `我的${data.title}预测`, url }).catch(() => {})
-        } else {
-          await navigator.clipboard.writeText(url).then(
-            () => {
-              setShareCopied(true)
-              setTimeout(() => setShareCopied(false), 2000)
-            },
-            () => {},
-          )
-        }
+        await navigator.clipboard.writeText(url).then(
+          () => {
+            setShareCopied(true)
+            setTimeout(() => setShareCopied(false), 2000)
+          },
+          () => {},
+        )
       }
     } catch {
       /* ignore — retryable */
