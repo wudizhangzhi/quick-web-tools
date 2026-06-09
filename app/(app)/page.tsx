@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser } from 'lucide-react'
 
 const tools = [
   {
@@ -43,6 +43,13 @@ const tools = [
     icon: Trophy,
     description: '随机猜比赛胜平负，统计命中率，生成专属晋级树分享',
     color: 'bg-amber-500',
+  },
+  {
+    name: '视频去台标命令',
+    href: '/tools/video-delogo',
+    icon: Eraser,
+    description: '选视频、框选台标/水印区域，生成 ffmpeg delogo 命令拿去本地跑',
+    color: 'bg-sky-500',
   },
 ]
 
