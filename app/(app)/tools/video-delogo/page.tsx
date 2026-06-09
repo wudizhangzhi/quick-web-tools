@@ -29,6 +29,7 @@ import {
   wasClamped,
   type Region,
 } from '@/lib/video-delogo/command'
+import { pointerToReal, toPercent } from '@/lib/video-delogo/geometry'
 
 interface UIRegion extends Region {
   id: string
@@ -59,6 +60,7 @@ export default function VideoDelogoPage() {
   const overlayRef = useRef<HTMLDivElement>(null)
   const blobUrlRef = useRef<string | null>(null)
   const interactionRef = useRef<Interaction | null>(null)
+  const draftRef = useRef<Region | null>(null)
 
   const [videoUrl, setVideoUrl] = useState<string | null>(null)
   const [videoSize, setVideoSize] = useState<{ w: number; h: number } | null>(null)
@@ -154,11 +156,7 @@ export default function VideoDelogoPage() {
       const overlay = overlayRef.current
       if (!overlay || !videoSize) return { x: 0, y: 0 }
       const rect = overlay.getBoundingClientRect()
-      const scale = videoSize.w / rect.width
-      return {
-        x: (e.clientX - rect.left) * scale,
-        y: (e.clientY - rect.top) * scale,
-      }
+      return pointerToReal(e.clientX, e.clientY, rect, videoSize.w, videoSize.h)
     },
     [videoSize],
   )
@@ -169,7 +167,9 @@ export default function VideoDelogoPage() {
     const p = realFromEvent(e)
     interactionRef.current = { mode: 'create', startX: p.x, startY: p.y }
     setActiveId(null)
-    setDraft({ x: p.x, y: p.y, w: 0, h: 0 })
+    const start = { x: p.x, y: p.y, w: 0, h: 0 }
+    draftRef.current = start
+    setDraft(start)
     overlayRef.current?.setPointerCapture(e.pointerId)
   }
 
@@ -200,12 +200,14 @@ export default function VideoDelogoPage() {
     if (!it || !videoSize) return
     const p = realFromEvent(e)
     if (it.mode === 'create') {
-      setDraft({
+      const next = {
         x: Math.min(it.startX, p.x),
         y: Math.min(it.startY, p.y),
         w: Math.abs(p.x - it.startX),
         h: Math.abs(p.y - it.startY),
-      })
+      }
+      draftRef.current = next
+      setDraft(next)
     } else if (it.mode === 'move' && it.orig && it.id) {
       const dx = p.x - it.startX
       const dy = p.y - it.startY
@@ -224,14 +226,17 @@ export default function VideoDelogoPage() {
     interactionRef.current = null
     overlayRef.current?.releasePointerCapture(e.pointerId)
     if (it?.mode === 'create') {
-      setDraft((d) => {
-        if (d && d.w >= MIN_SIZE && d.h >= MIN_SIZE) {
-          const id = nanoid(6)
-          setRegions((prev) => [...prev, { id, ...d }])
-          setActiveId(id)
-        }
-        return null
-      })
+      // Commit with plain, top-level state calls — never inside an updater
+      // function (React StrictMode double-invokes updaters, which would add
+      // the region twice and leave two overlapping copies).
+      const d = draftRef.current
+      if (d && d.w >= MIN_SIZE && d.h >= MIN_SIZE) {
+        const region = { id: nanoid(6), ...d }
+        setRegions((prev) => [...prev, region])
+        setActiveId(region.id)
+      }
+      draftRef.current = null
+      setDraft(null)
     }
   }
 
@@ -266,10 +271,10 @@ export default function VideoDelogoPage() {
   const boxStyle = (r: Region) =>
     videoSize
       ? {
-          left: `${(r.x / videoSize.w) * 100}%`,
-          top: `${(r.y / videoSize.h) * 100}%`,
-          width: `${(r.w / videoSize.w) * 100}%`,
-          height: `${(r.h / videoSize.h) * 100}%`,
+          left: `${toPercent(r.x, videoSize.w)}%`,
+          top: `${toPercent(r.y, videoSize.h)}%`,
+          width: `${toPercent(r.w, videoSize.w)}%`,
+          height: `${toPercent(r.h, videoSize.h)}%`,
         }
       : {}
 
@@ -324,7 +329,10 @@ export default function VideoDelogoPage() {
           {/* 左：取帧 + 框选 */}
           <div className="space-y-3">
             <div className="bg-white rounded-xl border border-gray-200 p-3 space-y-3">
-              <div className="relative select-none bg-black rounded-lg overflow-hidden">
+              {/* w-fit + max-w-full shrink-wraps the wrapper to the video's
+                  real displayed rect (intrinsic aspect preserved), so the
+                  absolute overlay coincides exactly with the visible frame. */}
+              <div className="relative select-none w-fit max-w-full mx-auto bg-black rounded-lg overflow-hidden">
                 <video
                   ref={videoRef}
                   src={videoUrl}
@@ -340,7 +348,7 @@ export default function VideoDelogoPage() {
                   }}
                   onPlay={() => setPlaying(true)}
                   onPause={() => setPlaying(false)}
-                  className="block w-full h-auto max-h-[55vh] mx-auto"
+                  className="block max-w-full max-h-[55vh] h-auto"
                 />
                 {/* 绘制覆盖层 */}
                 <div
