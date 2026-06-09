@@ -35,6 +35,7 @@ This is a Next.js 14 (App Router) + TypeScript + Tailwind CSS project for buildi
 - **Subscription Converter** (`/tools/sub-converter`): Converts proxy subscription URLs (from 3x-ui etc.) to Clash/FiClash YAML configs. Supports VMess, VLESS, Trojan, Shadowsocks protocols. Features preset rule configs (ACL4SSR) and advanced options (filter, emoji, UDP, rename, sort). Backend: `app/api/sub-converter/` with `parsers.ts`, `presets.ts`, `clash.ts`, `route.ts`.
 - **Invisible Unicode Text** (`/tools/invisible-unicode`): Encodes text into invisible zero-width Unicode characters (steganography). Supports encode, decode, detect hidden chars, and embed secret text in carrier text. Pure client-side, no API needed.
 - **Force Yes** (`/tools/force-yes`): 创建者配置 yes/no 文案与表情包，生成专属链接 `/y/[code]`。访问者点 no 会让 yes 按钮放大、no 按钮逃跑；点 yes 后撒花 + 震动 + 成功文案。Upstash Redis 存配置，Cloudflare Turnstile 防机器人，覆盖式 cookie 限制每人一条。
+- **Video Delogo Command** (`/tools/video-delogo`): 选本地视频 → 在画面上拖框选台标/水印区域（可多框、拖动/缩放/删除）→ 生成对应的 ffmpeg `delogo` 命令拿去本地跑。纯客户端，视频不上传（`URL.createObjectURL` 喂 `<video>`），覆盖层用 pointer events 画框、`backdrop-blur` 近似预览效果；框存视频真实像素坐标，渲染时按百分比换算回显示坐标。纯逻辑在 `lib/video-delogo/command.ts`（坐标取整/贴边 clamp、链式 `delogo=...,delogo=...` 拼接、文件名加引号、输出名默认 `_delogo` 后缀），有 vitest 覆盖。不做真实视频处理 / 不做时间段裁剪。
 - **World Cup Predict** (`/tools/world-cup-predict`): 世界杯竞猜。随机推一场未开赛的比赛让用户猜（小组赛胜/平/负，淘汰赛猜晋级方），匿名 cookie 记录预测，每天跑抓取脚本更新真实赛果并统计命中率。可生成专属链接 `/p/[code]` 以晋级树形式展示预测，访客可自行竞猜。分享支持出「战报海报」图：`components/world-cup/SharePoster.tsx` 用 `html-to-image` 把 `ShareCard.tsx` 截成 PNG（保存/复制图片/复制链接），`/p/[code]/opengraph-image.tsx` 用 `next/og`（Satori）出链接预览卡（构建时抓 Noto Sans SC 子集 + twemoji）；冠军预测由 `lib/world-cup/champion.ts` 从 final 选择推出（淘汰赛球队未定时为 null）；海报还会展示一场「精选竞猜对阵」（`lib/world-cup/featured.ts`：优先未出结果、kickoff 时间最近的预测对阵，全部已出结果则随机一场，只显示用户的猜测不显示真实赛果）。数据为 `data/worldcup-2026.json`（仓库内、可版本控制、换届只需换文件）；预测存 Upstash Redis；`npm run fetch:wc`（`scripts/fetch-worldcup.ts`）从 FIFA 官方 API 抓赛程/赛果。纯逻辑在 `lib/world-cup/`，有 vitest 覆盖（`npm test`）。
 
 ### Styling
@@ -72,4 +73,4 @@ grep -nE "onClick|onSubmit|onCopy|<a [^>]*href" <改动的文件>
 
 **当前事件清单**
 - 核心：`hupu_parse` / `sub_convert` / `invisible_unicode_action` / `force_yes_create` / `force_yes_choice` / `wc_predict`（`{ stage, choice }`）
-- 二次：`hupu_share` / `sub_share` / `invisible_unicode_share` / `force_yes_post_win` / `wc_share`（`{ status: 'save_image' | 'copy_image' | 'copy_link' }`）
+- 二次：`hupu_share` / `sub_share` / `invisible_unicode_share` / `force_yes_post_win` / `wc_share`（`{ status: 'save_image' | 'copy_image' | 'copy_link' }`）/ `video_delogo_share`（`{ status: 'copy_command', regions }`）

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser } from 'lucide-react'
 
 const tools = [
   {
@@ -41,6 +41,12 @@ const tools = [
     href: '/tools/world-cup-predict',
     icon: Trophy,
     description: '猜比赛结果，生成专属晋级树',
+  },
+  {
+    name: '视频去台标命令',
+    href: '/tools/video-delogo',
+    icon: Eraser,
+    description: '框选区域生成 ffmpeg delogo 命令',
   },
 ]
 
