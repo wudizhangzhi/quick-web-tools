@@ -72,6 +72,7 @@ export default function VideoDelogoPage() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [inputName, setInputName] = useState('input.mp4')
   const [outputName, setOutputName] = useState('input_delogo.mp4')
+  const [reduceQuality, setReduceQuality] = useState(false)
   const [dragOver, setDragOver] = useState(false)
   const [copied, setCopied] = useState(false)
   const [error, setError] = useState('')
@@ -247,8 +248,8 @@ export default function VideoDelogoPage() {
 
   const command = useMemo(() => {
     if (!videoSize) return ''
-    return buildCommand({ inputName, outputName, regions, videoW: videoSize.w, videoH: videoSize.h })
-  }, [inputName, outputName, regions, videoSize])
+    return buildCommand({ inputName, outputName, regions, videoW: videoSize.w, videoH: videoSize.h, reduceQuality })
+  }, [inputName, outputName, regions, videoSize, reduceQuality])
 
   const edgeWarning = useMemo(() => {
     if (!videoSize) return false
@@ -480,6 +481,17 @@ export default function VideoDelogoPage() {
                   {copied ? '已复制' : '复制命令'}
                 </button>
               </div>
+
+              <label className="flex items-center gap-2 text-sm text-gray-700 select-none">
+                <input
+                  type="checkbox"
+                  checked={reduceQuality}
+                  onChange={(e) => setReduceQuality(e.target.checked)}
+                  className="h-4 w-4 accent-sky-600 rounded border-gray-300"
+                />
+                降低视频质量（默认编码，文件更小，画质通常会下降）
+              </label>
+
               {command ? (
                 <pre className="text-xs bg-gray-900 text-gray-100 rounded-lg p-3 overflow-x-auto whitespace-pre-wrap break-all font-mono">
                   {command}
@@ -496,7 +508,10 @@ export default function VideoDelogoPage() {
                 </p>
               )}
               <p className="text-xs text-gray-400">
-                delogo 默认抹掉整段视频的该区域；多个区域会用逗号链式处理。
+                {reduceQuality
+                  ? '未指定编码参数，ffmpeg 默认重新编码（CRF ~23），画质通常会下降。'
+                  : '默认使用 -c:v libx264 -crf 18 -preset slow -c:a copy 保留较高画质（文件体积可能更大）。'}
+                {' '}delogo 默认抹掉整段视频的该区域；多个区域会用逗号链式处理。
               </p>
             </div>
           </div>

@@ -15,6 +15,8 @@ export interface BuildCommandOptions {
   regions: Region[]
   videoW: number
   videoH: number
+  /** When true, emit a minimal command that lets ffmpeg use its default (lower) quality settings. Default false: emit flags for high-quality re-encode. */
+  reduceQuality?: boolean
 }
 
 // delogo interpolates a region from the ring of pixels just outside it, so the
@@ -67,7 +69,15 @@ export function buildCommand(opts: BuildCommandOptions): string {
     .filter(isValidRegion)
   const filter = buildDelogoFilter(clamped)
   if (!filter) return ''
-  return `ffmpeg -i ${quoteArg(opts.inputName)} -vf "${filter}" ${quoteArg(opts.outputName)}`
+  const base = `ffmpeg -i ${quoteArg(opts.inputName)} -vf "${filter}"`
+  if (opts.reduceQuality) {
+    // Minimal flags: ffmpeg will use its defaults (typically CRF 23 / medium preset), which lowers quality.
+    return `${base} ${quoteArg(opts.outputName)}`
+  }
+  // Default (preserve quality): use a high-quality encode.
+  // CRF 18 = very high quality (lower = better); slow preset for better efficiency.
+  // -c:a copy avoids re-encoding audio.
+  return `${base} -c:v libx264 -crf 18 -preset slow -c:a copy ${quoteArg(opts.outputName)}`
 }
 
 export function defaultOutputName(inputName: string): string {

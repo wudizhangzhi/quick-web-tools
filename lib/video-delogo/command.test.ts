@@ -84,10 +84,21 @@ describe('buildDelogoFilter', () => {
 describe('buildCommand', () => {
   const base = { inputName: 'input.mp4', outputName: 'out.mp4', videoW: 1920, videoH: 1080 }
 
-  it('builds a full ffmpeg command, clamping regions', () => {
+  it('builds a full ffmpeg command (default: high quality), clamping regions', () => {
     expect(
       buildCommand({ ...base, regions: [{ x: 0, y: 0, w: 120, h: 60 }] }),
+    ).toBe('ffmpeg -i input.mp4 -vf "delogo=x=1:y=1:w=120:h=60" -c:v libx264 -crf 18 -preset slow -c:a copy out.mp4')
+  })
+
+  it('when reduceQuality=true emits minimal command (allows default lower-quality encode)', () => {
+    expect(
+      buildCommand({ ...base, regions: [{ x: 0, y: 0, w: 120, h: 60 }], reduceQuality: true }),
     ).toBe('ffmpeg -i input.mp4 -vf "delogo=x=1:y=1:w=120:h=60" out.mp4')
+  })
+
+  it('default (reduceQuality false/omitted) uses high quality flags', () => {
+    expect(buildCommand({ ...base, regions: [{ x: 10, y: 10, w: 50, h: 50 }] })).toContain('-crf 18 -preset slow')
+    expect(buildCommand({ ...base, regions: [{ x: 10, y: 10, w: 50, h: 50 }], reduceQuality: false })).toContain('-crf 18')
   })
 
   it('returns empty string when no valid regions remain', () => {
@@ -104,7 +115,7 @@ describe('buildCommand', () => {
         videoH: 1080,
         regions: [{ x: 10, y: 10, w: 50, h: 50 }],
       }),
-    ).toBe('ffmpeg -i "my clip.mp4" -vf "delogo=x=10:y=10:w=50:h=50" "my clip_delogo.mp4"')
+    ).toBe('ffmpeg -i "my clip.mp4" -vf "delogo=x=10:y=10:w=50:h=50" -c:v libx264 -crf 18 -preset slow -c:a copy "my clip_delogo.mp4"')
   })
 })
 
