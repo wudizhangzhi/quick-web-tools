@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText } from 'lucide-react'
 
 const tools = [
   {
@@ -23,6 +23,12 @@ const tools = [
     href: '/tools/invisible-unicode',
     icon: EyeOff,
     description: '隐形文本编码/解码/检测',
+  },
+  {
+    name: 'Markdown 预览',
+    href: '/tools/markdown-preview',
+    icon: FileText,
+    description: '拖拽或粘贴 Markdown，实时预览与分屏编辑',
   },
   {
     name: '钦定 yes',

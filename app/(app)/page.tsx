@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText } from 'lucide-react'
 
 const tools = [
   {
@@ -22,6 +22,13 @@ const tools = [
     icon: EyeOff,
     description: '使用零宽字符隐藏文本、检测隐藏内容',
     color: 'bg-indigo-500',
+  },
+  {
+    name: 'Markdown 预览',
+    href: '/tools/markdown-preview',
+    icon: FileText,
+    description: '拖拽或粘贴 Markdown 文件，实时预览格式化内容，支持分屏与全预览',
+    color: 'bg-violet-500',
   },
   {
     name: '钦定 yes',
