@@ -1,4 +1,4 @@
-// Pure coordinate helpers shared by the video-delogo UI.
+// Pure coordinate helpers shared by the video crop UI.
 // The overlay that captures pointer events sits exactly on top of the
 // displayed video. We map between three spaces:
 //   - pointer/client space (clientX/clientY, viewport pixels)

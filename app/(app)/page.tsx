@@ -52,10 +52,10 @@ const tools = [
     color: 'bg-amber-500',
   },
   {
-    name: '视频去台标命令',
+    name: '视频去台标 / 裁切',
     href: '/tools/video-delogo',
     icon: Eraser,
-    description: '选视频、框选台标/水印区域，生成 ffmpeg delogo 命令拿去本地跑',
+    description: '选视频、框选区域，生成 ffmpeg delogo（去水印）或 crop（裁切保留区域）命令',
     color: 'bg-sky-500',
   },
 ]

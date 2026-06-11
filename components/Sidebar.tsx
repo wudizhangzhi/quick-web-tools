@@ -49,10 +49,10 @@ const tools = [
     description: '猜比赛结果，生成专属晋级树',
   },
   {
-    name: '视频去台标命令',
+    name: '视频去台标 / 裁切',
     href: '/tools/video-delogo',
     icon: Eraser,
-    description: '框选区域生成 ffmpeg delogo 命令',
+    description: '框选区域，生成 ffmpeg delogo（去水印）或 crop（裁切）命令',
   },
 ]
 

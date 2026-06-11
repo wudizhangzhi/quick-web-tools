@@ -12,6 +12,7 @@ import {
 } from 'react'
 import {
   Eraser,
+  Crop,
   Upload,
   X,
   Copy,
@@ -73,6 +74,7 @@ export default function VideoDelogoPage() {
   const [inputName, setInputName] = useState('input.mp4')
   const [outputName, setOutputName] = useState('input_delogo.mp4')
   const [reduceQuality, setReduceQuality] = useState(false)
+  const [mode, setMode] = useState<'delogo' | 'crop'>('delogo')
   const [dragOver, setDragOver] = useState(false)
   const [copied, setCopied] = useState(false)
   const [error, setError] = useState('')
@@ -101,7 +103,7 @@ export default function VideoDelogoPage() {
     setPlaying(false)
     setVideoUrl(url)
     setInputName(file.name)
-    setOutputName(defaultOutputName(file.name))
+    setOutputName(defaultOutputName(file.name, mode))
   }, [])
 
   const handleFileInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -227,14 +229,19 @@ export default function VideoDelogoPage() {
     interactionRef.current = null
     overlayRef.current?.releasePointerCapture(e.pointerId)
     if (it?.mode === 'create') {
-      // Commit with plain, top-level state calls — never inside an updater
-      // function (React StrictMode double-invokes updaters, which would add
-      // the region twice and leave two overlapping copies).
       const d = draftRef.current
       if (d && d.w >= MIN_SIZE && d.h >= MIN_SIZE) {
         const region = { id: nanoid(6), ...d }
-        setRegions((prev) => [...prev, region])
+        if (mode === 'crop') {
+          // crop: only one region allowed (replaces)
+          setRegions([region])
+        } else {
+          setRegions((prev) => [...prev, region])
+        }
         setActiveId(region.id)
+      } else if (mode === 'crop') {
+        setRegions([])
+        setActiveId(null)
       }
       draftRef.current = null
       setDraft(null)
@@ -248,13 +255,13 @@ export default function VideoDelogoPage() {
 
   const command = useMemo(() => {
     if (!videoSize) return ''
-    return buildCommand({ inputName, outputName, regions, videoW: videoSize.w, videoH: videoSize.h, reduceQuality })
-  }, [inputName, outputName, regions, videoSize, reduceQuality])
+    return buildCommand({ inputName, outputName, regions, videoW: videoSize.w, videoH: videoSize.h, mode, reduceQuality })
+  }, [inputName, outputName, regions, videoSize, mode, reduceQuality])
 
   const edgeWarning = useMemo(() => {
-    if (!videoSize) return false
-    return regions.some((r) => wasClamped(r, videoSize.w, videoSize.h))
-  }, [regions, videoSize])
+    if (!videoSize || mode !== 'delogo') return false
+    return regions.some((r) => wasClamped(r, videoSize.w, videoSize.h, mode))
+  }, [regions, videoSize, mode])
 
   const copyCommand = async () => {
     if (!command) return
@@ -262,7 +269,7 @@ export default function VideoDelogoPage() {
       await navigator.clipboard.writeText(command)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-      gaEvent('video_delogo_share', { status: 'copy_command', regions: regions.length })
+      gaEvent('video_crop_share', { status: 'copy_command', regions: regions.length })
     } catch {
       setError('复制失败，请手动选择命令复制')
     }
@@ -284,14 +291,12 @@ export default function VideoDelogoPage() {
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center">
-            <Eraser className="text-white" size={20} />
+            {mode === 'delogo' ? <Eraser className="text-white" size={20} /> : <Crop className="text-white" size={20} />}
           </div>
-          <h1 className="text-xl font-bold text-gray-900">视频去台标命令</h1>
+          <h1 className="text-xl font-bold text-gray-900">视频去台标 / 裁切命令</h1>
         </div>
         <p className="text-gray-500 text-sm">
-          选视频、在画面上框选要抹掉的台标/水印区域，生成对应的 ffmpeg{' '}
-          <code className="px-1 bg-gray-100 rounded text-gray-700">delogo</code>{' '}
-          命令拿去本地跑。视频不会上传，全程在浏览器中完成。
+          选视频、在画面上框选区域，生成 ffmpeg <code className="px-1 bg-gray-100 rounded text-gray-700">delogo</code>（去水印，可多框）或 <code className="px-1 bg-gray-100 rounded text-gray-700">crop</code>（裁切保留区域）命令拿去本地跑。视频不会上传，全程在浏览器中完成。
         </p>
       </div>
 
@@ -426,7 +431,7 @@ export default function VideoDelogoPage() {
               <div className="flex items-center justify-between text-xs text-gray-400">
                 <span>
                   {videoSize ? `视频尺寸：${videoSize.w} × ${videoSize.h}` : '加载中…'}
-                  {regions.length > 0 && ` · ${regions.length} 个区域`}
+                  {regions.length > 0 && (mode === 'crop' ? ' · 已选裁切区域' : ` · ${regions.length} 个区域`)}
                 </span>
                 <button
                   type="button"
@@ -440,12 +445,56 @@ export default function VideoDelogoPage() {
             </div>
 
             <p className="text-xs text-gray-400 px-1">
-              在画面上拖拽画框；可画多个，拖动框体移动、拖右下角缩放、点右上角 ✕ 删除。
+              {mode === 'delogo'
+                ? '拖拽画框选择要抹掉的区域（支持多个框，链式处理）；拖动/缩放/删除。'
+                : '拖拽画框选择要保留的区域（仅单个区域，新框替换旧框）；拖动/缩放/删除。'}
             </p>
           </div>
 
           {/* 右：命令 + 文件名 */}
           <div className="space-y-4">
+            {/* 模式切换 */}
+            <div className="bg-white rounded-xl border border-gray-200 p-1 flex">
+              <button
+                type="button"
+                onClick={() => {
+                  const newMode: 'delogo' | 'crop' = 'delogo'
+                  if (newMode !== mode) {
+                    setMode(newMode)
+                    if (inputName) setOutputName(defaultOutputName(inputName, newMode))
+                    if (regions.length > 1) {
+                      setRegions([regions[0]])
+                      setActiveId(regions[0].id)
+                    }
+                  }
+                }}
+                className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  mode === 'delogo' ? 'bg-sky-600 text-white' : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                <Eraser size={14} /> 去台标 (delogo)
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const newMode: 'delogo' | 'crop' = 'crop'
+                  if (newMode !== mode) {
+                    setMode(newMode)
+                    if (inputName) setOutputName(defaultOutputName(inputName, newMode))
+                    if (regions.length > 1) {
+                      setRegions([regions[0]])
+                      setActiveId(regions[0].id)
+                    }
+                  }
+                }}
+                className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 text-sm rounded-lg transition-colors ${
+                  mode === 'crop' ? 'bg-sky-600 text-white' : 'text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                <Crop size={14} /> 裁切区域 (crop)
+              </button>
+            </div>
+
             <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
               <h2 className="text-sm font-medium text-gray-700">文件名</h2>
               <label className="block text-xs text-gray-500">
@@ -498,7 +547,7 @@ export default function VideoDelogoPage() {
                 </pre>
               ) : (
                 <p className="text-sm text-gray-400 py-4 text-center bg-gray-50 rounded-lg">
-                  在左侧画面上框选至少一个区域
+                  {mode === 'delogo' ? '在左侧画面上框选至少一个区域' : '在左侧画面上框选一个区域'}
                 </p>
               )}
               {edgeWarning && (
@@ -511,7 +560,9 @@ export default function VideoDelogoPage() {
                 {reduceQuality
                   ? '未指定编码参数，ffmpeg 默认重新编码（CRF ~23），画质通常会下降。'
                   : '默认使用 -c:v libx264 -crf 18 -preset slow -c:a copy 保留较高画质（文件体积可能更大）。'}
-                {' '}delogo 默认抹掉整段视频的该区域；多个区域会用逗号链式处理。
+                {mode === 'delogo'
+                  ? ' delogo 抹掉选定区域（可多个，用逗号链式）；输出分辨率不变。'
+                  : ' crop 将输出裁切为选定区域尺寸（仅用第一个框）；必须重新编码视频。'}
               </p>
             </div>
           </div>
