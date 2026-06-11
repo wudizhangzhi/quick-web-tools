@@ -52,7 +52,7 @@ const tools = [
     name: '视频去台标 / 裁切',
     href: '/tools/video-delogo',
     icon: Eraser,
-    description: '框选区域，生成 ffmpeg delogo（去水印）或 crop（裁切）命令',
+    description: '框选区域，生成 ffmpeg delogo（去水印，可控制时间段）或 crop（裁切）命令',
   },
 ]
 

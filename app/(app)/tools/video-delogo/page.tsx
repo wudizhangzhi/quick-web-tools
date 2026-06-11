@@ -253,6 +253,24 @@ export default function VideoDelogoPage() {
     if (activeId === id) setActiveId(null)
   }
 
+  // Set or clear time bounds on the currently active region (delogo only).
+  // These are explicit user decisions about the main output → we emit gaEvent.
+  const setActiveRegionTime = (which: 'start' | 'end' | 'clear') => {
+    if (!activeId) return
+    setRegions((prev) =>
+      prev.map((r) => {
+        if (r.id !== activeId) return r
+        if (which === 'clear') {
+          const { startSec: _s, endSec: _e, ...rest } = r
+          return rest as UIRegion
+        }
+        const t = Math.max(0, Math.round(currentTime * 100) / 100) // 2 decimals is plenty
+        return { ...r, [which === 'start' ? 'startSec' : 'endSec']: t }
+      }),
+    )
+    gaEvent('video_delogo_time', { action: which === 'clear' ? 'clear' : `set_${which}`, mode: 'delogo' })
+  }
+
   const command = useMemo(() => {
     if (!videoSize) return ''
     return buildCommand({ inputName, outputName, regions, videoW: videoSize.w, videoH: videoSize.h, mode, reduceQuality })
@@ -263,13 +281,28 @@ export default function VideoDelogoPage() {
     return regions.some((r) => wasClamped(r, videoSize.w, videoSize.h, mode))
   }, [regions, videoSize, mode])
 
+  const timedRegionsCount = useMemo(
+    () => regions.filter((r) => r.startSec != null || r.endSec != null).length,
+    [regions],
+  )
+
+  const activeRegion = useMemo(
+    () => regions.find((r) => r.id === activeId) ?? null,
+    [regions, activeId],
+  )
+
   const copyCommand = async () => {
     if (!command) return
     try {
       await navigator.clipboard.writeText(command)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
-      gaEvent('video_crop_share', { status: 'copy_command', regions: regions.length })
+      gaEvent('video_delogo_share', {
+        status: 'copy_command',
+        regions: regions.length,
+        mode,
+        timedRegions: regions.filter((r) => r.startSec != null || r.endSec != null).length,
+      })
     } catch {
       setError('复制失败，请手动选择命令复制')
     }
@@ -296,7 +329,7 @@ export default function VideoDelogoPage() {
           <h1 className="text-xl font-bold text-gray-900">视频去台标 / 裁切命令</h1>
         </div>
         <p className="text-gray-500 text-sm">
-          选视频、在画面上框选区域，生成 ffmpeg <code className="px-1 bg-gray-100 rounded text-gray-700">delogo</code>（去水印，可多框）或 <code className="px-1 bg-gray-100 rounded text-gray-700">crop</code>（裁切保留区域）命令拿去本地跑。视频不会上传，全程在浏览器中完成。
+          选视频、在画面上框选区域，生成 ffmpeg <code className="px-1 bg-gray-100 rounded text-gray-700">delogo</code>（去水印，可多框、可分别控制时间段）或 <code className="px-1 bg-gray-100 rounded text-gray-700">crop</code>（裁切保留区域）命令拿去本地跑。视频不会上传，全程在浏览器中完成。
         </p>
       </div>
 
@@ -431,7 +464,11 @@ export default function VideoDelogoPage() {
               <div className="flex items-center justify-between text-xs text-gray-400">
                 <span>
                   {videoSize ? `视频尺寸：${videoSize.w} × ${videoSize.h}` : '加载中…'}
-                  {regions.length > 0 && (mode === 'crop' ? ' · 已选裁切区域' : ` · ${regions.length} 个区域`)}
+                  {regions.length > 0 && (
+                    mode === 'crop'
+                      ? ' · 已选裁切区域'
+                      : ` · ${regions.length} 个区域${timedRegionsCount > 0 ? `（${timedRegionsCount} 个带时间限制）` : ''}`
+                  )}
                 </span>
                 <button
                   type="button"
@@ -446,7 +483,7 @@ export default function VideoDelogoPage() {
 
             <p className="text-xs text-gray-400 px-1">
               {mode === 'delogo'
-                ? '拖拽画框选择要抹掉的区域（支持多个框，链式处理）；拖动/缩放/删除。'
+                ? '拖拽画框选择要抹掉的区域（支持多个框，链式处理；可分别为每个框设置生效时间段）；拖动/缩放/删除。'
                 : '拖拽画框选择要保留的区域（仅单个区域，新框替换旧框）；拖动/缩放/删除。'}
             </p>
           </div>
@@ -517,6 +554,105 @@ export default function VideoDelogoPage() {
               </label>
             </div>
 
+            {/* 时间范围控制 —— 仅 delogo 模式 + 有区域时显示。针对当前选中的区域（activeId）。 */}
+            {mode === 'delogo' && regions.length > 0 && (
+              <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
+                <div>
+                  <h2 className="text-sm font-medium text-gray-700">时间范围（可选）</h2>
+                  <p className="text-xs text-gray-500 mt-0.5">仅对「去台标」生效。留空 = 全程。点击画面中的框来编辑对应区域。</p>
+                </div>
+
+                {activeRegion ? (
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-2 gap-3">
+                      <label className="block text-xs text-gray-500">
+                        开始（秒）
+                        <input
+                          type="number"
+                          step="0.1"
+                          min={0}
+                          value={activeRegion.startSec ?? ''}
+                          onChange={(e) => {
+                            const v = e.target.value.trim()
+                            const num = v === '' ? undefined : parseFloat(v)
+                            const safe = Number.isFinite(num as number) ? (num as number) : undefined
+                            setRegions((prev) =>
+                              prev.map((r) => (r.id === activeId ? { ...r, startSec: safe } : r)),
+                            )
+                            // 表单 onChange 按规范不埋点
+                          }}
+                          className="mt-1 w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none font-mono"
+                          placeholder="从头"
+                        />
+                      </label>
+                      <label className="block text-xs text-gray-500">
+                        结束（秒）
+                        <input
+                          type="number"
+                          step="0.1"
+                          min={0}
+                          value={activeRegion.endSec ?? ''}
+                          onChange={(e) => {
+                            const v = e.target.value.trim()
+                            const num = v === '' ? undefined : parseFloat(v)
+                            const safe = Number.isFinite(num as number) ? (num as number) : undefined
+                            setRegions((prev) =>
+                              prev.map((r) => (r.id === activeId ? { ...r, endSec: safe } : r)),
+                            )
+                          }}
+                          className="mt-1 w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none font-mono"
+                          placeholder="到尾"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setActiveRegionTime('start')}
+                        className="px-2.5 py-1 text-xs rounded-md border border-gray-300 hover:bg-gray-50 text-gray-700 flex items-center gap-1"
+                      >
+                        用当前时刻作起点
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setActiveRegionTime('end')}
+                        className="px-2.5 py-1 text-xs rounded-md border border-gray-300 hover:bg-gray-50 text-gray-700 flex items-center gap-1"
+                      >
+                        用当前时刻作终点
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setActiveRegionTime('clear')}
+                        className="px-2.5 py-1 text-xs rounded-md border border-gray-300 hover:bg-gray-50 text-gray-700"
+                      >
+                        清除时间限制
+                      </button>
+                    </div>
+
+                    <div className="text-xs text-gray-500 font-mono">
+                      {activeRegion.startSec != null || activeRegion.endSec != null
+                        ? `生效：${activeRegion.startSec != null ? formatTime(activeRegion.startSec) : '00:00.0'} → ${activeRegion.endSec != null ? formatTime(activeRegion.endSec) : '结束'}`
+                        : '生效：全程'}
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-xs text-gray-500 py-1">点击左侧画面上的一个区域来设置它的时间范围。</p>
+                )}
+
+                {timedRegionsCount > 0 && (
+                  <p className="text-[10px] text-amber-600">已为 {timedRegionsCount} 个区域设置了时间限制（ffmpeg enable）。</p>
+                )}
+              </div>
+            )}
+
+            {/* crop 模式提示：不提供时间控制 */}
+            {mode === 'crop' && regions.length > 0 && (
+              <div className="bg-white rounded-xl border border-gray-200 p-3 text-xs text-gray-500">
+                crop 模式暂不支持时间段限制（中途分辨率变化会导致播放问题）。需要只处理片段时，可在命令前自行加上 <code className="px-1 bg-gray-100">-ss 起始 -t 时长</code>。
+              </div>
+            )}
+
             <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <h2 className="text-sm font-medium text-gray-700">ffmpeg 命令</h2>
@@ -561,7 +697,7 @@ export default function VideoDelogoPage() {
                   ? '未指定编码参数，ffmpeg 默认重新编码（CRF ~23），画质通常会下降。'
                   : '默认使用 -c:v libx264 -crf 18 -preset slow -c:a copy 保留较高画质（文件体积可能更大）。'}
                 {mode === 'delogo'
-                  ? ' delogo 抹掉选定区域（可多个，用逗号链式）；输出分辨率不变。'
+                  ? ' delogo 抹掉选定区域（可多个，用逗号链式；可各自加 :enable 时间段）；输出分辨率不变。'
                   : ' crop 将输出裁切为选定区域尺寸（仅用第一个框）；必须重新编码视频。'}
               </p>
             </div>

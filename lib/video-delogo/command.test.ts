@@ -7,6 +7,7 @@ import {
   buildCropFilter,
   buildCommand,
   defaultOutputName,
+  buildEnableExpr,
   type ToolMode,
 } from './command'
 
@@ -207,5 +208,129 @@ describe('defaultOutputName (mode-aware)', () => {
   it('no-ext and dotfile cases', () => {
     expect(defaultOutputName('video', 'crop')).toBe('video_crop')
     expect(defaultOutputName('.gitignore', 'delogo')).toBe('.gitignore_delogo')
+  })
+})
+
+describe('buildEnableExpr', () => {
+  it('returns empty for no bounds (full duration)', () => {
+    expect(buildEnableExpr()).toBe('')
+    expect(buildEnableExpr(undefined, undefined)).toBe('')
+    expect(buildEnableExpr(0, 0)).toBe('')
+    expect(buildEnableExpr(-5)).toBe('')
+  })
+
+  it('start only (>0) produces gte', () => {
+    expect(buildEnableExpr(10)).toBe("enable='gte(t,10)'")
+    expect(buildEnableExpr(12.5)).toBe("enable='gte(t,12.5)'")
+    expect(buildEnableExpr(0.1)).toBe("enable='gte(t,0.1)'")
+  })
+
+  it('end only (>0) produces lt', () => {
+    expect(buildEnableExpr(undefined, 30)).toBe("enable='lt(t,30)'")
+    expect(buildEnableExpr(undefined, 45.75)).toBe("enable='lt(t,45.75)'")
+  })
+
+  it('both valid produces between (end > start)', () => {
+    expect(buildEnableExpr(5, 25)).toBe("enable='between(t,5,25)'")
+    expect(buildEnableExpr(10.25, 60)).toBe("enable='between(t,10.25,60)'")
+  })
+
+  it('inverted or equal range produces empty (safe no-op)', () => {
+    expect(buildEnableExpr(30, 10)).toBe('')
+    expect(buildEnableExpr(15, 15)).toBe('')
+  })
+
+  it('cleans formatting (no trailing zeros)', () => {
+    expect(buildEnableExpr(10.0)).toBe("enable='gte(t,10)'")
+    expect(buildEnableExpr(3.5, 8.0)).toBe("enable='between(t,3.5,8)'")
+  })
+})
+
+describe('buildDelogoFilter + buildCommand with time ranges (per-region enable)', () => {
+  it('single region, start only', () => {
+    expect(
+      buildDelogoFilter([{ x: 10, y: 10, w: 120, h: 60, startSec: 12 }]),
+    ).toBe("delogo=x=10:y=10:w=120:h=60:enable='gte(t,12)'")
+  })
+
+  it('single region, end only', () => {
+    expect(
+      buildDelogoFilter([{ x: 10, y: 10, w: 120, h: 60, endSec: 45 }]),
+    ).toBe("delogo=x=10:y=10:w=120:h=60:enable='lt(t,45)'")
+  })
+
+  it('single region, both', () => {
+    expect(
+      buildDelogoFilter([{ x: 10, y: 10, w: 120, h: 60, startSec: 8, endSec: 30 }]),
+    ).toBe("delogo=x=10:y=10:w=120:h=60:enable='between(t,8,30)'")
+  })
+
+  it('multiple regions, mixed times (some full, some restricted)', () => {
+    const out = buildDelogoFilter([
+      { x: 10, y: 10, w: 120, h: 60, startSec: 5, endSec: 20 },
+      { x: 800, y: 600, w: 90, h: 40 }, // full duration
+      { x: 200, y: 100, w: 50, h: 30, endSec: 60 },
+    ])
+    expect(out).toBe(
+      "delogo=x=10:y=10:w=120:h=60:enable='between(t,5,20)',delogo=x=800:y=600:w=90:h=40,delogo=x=200:y=100:w=50:h=30:enable='lt(t,60)'",
+    )
+  })
+
+  it('invalid time range on a region falls back to no enable (still emits the delogo)', () => {
+    expect(
+      buildDelogoFilter([{ x: 10, y: 10, w: 120, h: 60, startSec: 50, endSec: 10 }]),
+    ).toBe('delogo=x=10:y=10:w=120:h=60')
+  })
+
+  it('buildCommand delogo with time + high quality flags', () => {
+    const cmd = buildCommand({
+      inputName: 'in.mp4',
+      outputName: 'out.mp4',
+      videoW: 1920,
+      videoH: 1080,
+      regions: [{ x: 100, y: 50, w: 200, h: 80, startSec: 3.5, endSec: 15 }],
+    })
+    expect(cmd).toBe(
+      "ffmpeg -i in.mp4 -vf \"delogo=x=100:y=50:w=200:h=80:enable='between(t,3.5,15)'\" -c:v libx264 -crf 18 -preset slow -c:a copy out.mp4",
+    )
+  })
+
+  it('buildCommand with times + reduceQuality still works', () => {
+    const cmd = buildCommand({
+      inputName: 'clip.mp4',
+      outputName: 'clip_delogo.mp4',
+      videoW: 1280,
+      videoH: 720,
+      mode: 'delogo',
+      reduceQuality: true,
+      regions: [{ x: 20, y: 20, w: 100, h: 40, startSec: 0, endSec: 10 }], // start=0 treated as none
+    })
+    expect(cmd).toBe(
+      'ffmpeg -i clip.mp4 -vf "delogo=x=20:y=20:w=100:h=40:enable=\'lt(t,10)\'" clip_delogo.mp4',
+    )
+  })
+
+  it('no-time delogo command is identical to pre-time behavior (exact string match)', () => {
+    const base = { inputName: 'input.mp4', outputName: 'out.mp4', videoW: 1920, videoH: 1080 }
+    const noTime = buildCommand({ ...base, regions: [{ x: 0, y: 0, w: 120, h: 60 }] })
+    // This literal is the exact expected output from the original tests.
+    expect(noTime).toBe(
+      'ffmpeg -i input.mp4 -vf "delogo=x=1:y=1:w=120:h=60" -c:v libx264 -crf 18 -preset slow -c:a copy out.mp4',
+    )
+  })
+
+  it('crop mode: times on the region object are ignored (no enable in output)', () => {
+    const cmd = buildCommand({
+      inputName: 'in.mp4',
+      outputName: 'out.mp4',
+      videoW: 1920,
+      videoH: 1080,
+      mode: 'crop',
+      regions: [{ x: 100, y: 100, w: 400, h: 300, startSec: 10, endSec: 30 }],
+    })
+    expect(cmd).toBe(
+      'ffmpeg -i in.mp4 -vf "crop=400:300:100:100" -c:v libx264 -crf 18 -preset slow -c:a copy out.mp4',
+    )
+    expect(cmd).not.toContain('enable')
   })
 })

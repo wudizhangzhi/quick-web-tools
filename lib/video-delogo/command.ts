@@ -1,6 +1,9 @@
 // Pure logic for the video-delogo tool (supports two modes):
-// - 'delogo': remove watermarks/logos by interpolation (supports multiple regions, chained delogo filters)
-// - 'crop': extract only the selected rectangular region (single region, changes output resolution)
+// - 'delogo': remove watermarks/logos by interpolation (supports multiple regions, chained delogo filters).
+//   Each region may optionally carry startSec / endSec. When present a matching :enable='...' expression
+//   (using ffmpeg timeline editing) is appended so the delogo only runs during that time window.
+// - 'crop': extract only the selected rectangular region (single region, changes output resolution).
+//   Time ranges are ignored for crop (mid-stream resolution change is almost never desirable).
 // The tool never processes video — it only generates the corresponding ffmpeg command.
 
 export type ToolMode = 'delogo' | 'crop'
@@ -10,6 +13,17 @@ export interface Region {
   y: number
   w: number
   h: number
+  /**
+   * Optional start time (in seconds) for this delogo region.
+   * Only meaningful in 'delogo' mode. Undefined or <= 0 means "from the beginning".
+   * The generated filter will include an enable expression when this (or endSec) restricts the range.
+   */
+  startSec?: number
+  /**
+   * Optional end time (in seconds) for this delogo region.
+   * Only meaningful in 'delogo' mode. Undefined or non-positive means "until the end".
+   */
+  endSec?: number
 }
 
 export interface BuildCommandOptions {
@@ -74,10 +88,48 @@ export function wasClamped(r: Region, videoW: number, videoH: number, mode: Tool
   return c.x !== Math.round(r.x) || c.y !== Math.round(r.y) || c.w !== Math.round(r.w) || c.h !== Math.round(r.h)
 }
 
+/**
+ * Build the ffmpeg timeline enable expression fragment (without the leading colon).
+ * Returns '' when no meaningful restriction (full duration).
+ *
+ * - start only (>0): gte(t, start)
+ * - end only (>0): lt(t, end)
+ * - both with end > start: between(t, start, end)
+ * - inverted/empty: '' (region applies for full duration)
+ *
+ * Numbers are formatted cleanly (max 3 decimals, trailing zeros stripped).
+ */
+export function buildEnableExpr(start?: number, end?: number): string {
+  const s = (typeof start === 'number' && Number.isFinite(start) && start > 0) ? start : undefined
+  const e = (typeof end === 'number' && Number.isFinite(end) && end > 0) ? end : undefined
+
+  if (s != null && e != null && e <= s) {
+    // Invalid (inverted) range — treat as "no restriction" so we don't emit a never-enabled filter.
+    return ''
+  }
+
+  const fmt = (n: number) => n.toFixed(3).replace(/\.?0+$/, '')
+
+  if (s != null && e != null) {
+    return `enable='between(t,${fmt(s)},${fmt(e)})'`
+  }
+  if (s != null) {
+    return `enable='gte(t,${fmt(s)})'`
+  }
+  if (e != null) {
+    return `enable='lt(t,${fmt(e)})'`
+  }
+  return ''
+}
+
 export function buildDelogoFilter(regions: Region[]): string {
   return regions
     .filter(isValidRegion)
-    .map((r) => `delogo=x=${r.x}:y=${r.y}:w=${r.w}:h=${r.h}`)
+    .map((r) => {
+      const base = `delogo=x=${r.x}:y=${r.y}:w=${r.w}:h=${r.h}`
+      const en = buildEnableExpr(r.startSec, r.endSec)
+      return en ? `${base}:${en}` : base
+    })
     .join(',')
 }
 
