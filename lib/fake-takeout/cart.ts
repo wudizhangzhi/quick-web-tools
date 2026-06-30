@@ -1,4 +1,7 @@
-import type { Shop, Dish } from './types'
+import type { Shop, Dish, Promotion } from './types'
+
+/** 每份餐盒费，单位元（美团确认订单页常见的「餐盒费」）。 */
+export const PACKAGING_FEE_PER_ITEM = 1
 
 /** 购物车里一个菜品的数量记录 */
 export interface CartItem {
@@ -67,8 +70,56 @@ export function amountToMinOrder(shop: Shop, items: CartItem[]): number {
   return Math.max(0, shop.minOrder - subtotal(shop, items))
 }
 
-/** 应付总额：菜品小计 + 配送费（购物车为空时为 0）。 */
+/** 餐盒费：每份 PACKAGING_FEE_PER_ITEM 元。 */
+export function packagingFee(items: CartItem[]): number {
+  return cartCount(items) * PACKAGING_FEE_PER_ITEM
+}
+
+/** 解析「满30减5」式文案，解析不出返回 null。 */
+export function parseManjian(text: string): { threshold: number; minus: number } | null {
+  const m = text.match(/满\s*(\d+(?:\.\d+)?)\s*减\s*(\d+(?:\.\d+)?)/)
+  if (!m) return null
+  return { threshold: Number(m[1]), minus: Number(m[2]) }
+}
+
+/**
+ * 按菜品小计能享受的最大满减额（只看 manjian 类促销，取门槛达标里减得最多的一条）。
+ * 美团满减按商品小计判定（不含配送费/餐盒费）。
+ */
+export function bestManjianDiscount(shop: Shop, items: CartItem[]): number {
+  const sub = subtotal(shop, items)
+  let best = 0
+  for (const p of shop.promotions as Promotion[]) {
+    if (p.type !== 'manjian') continue
+    const parsed = parseManjian(p.text)
+    if (parsed && sub >= parsed.threshold) best = Math.max(best, parsed.minus)
+  }
+  return best
+}
+
+export interface FeeBreakdown {
+  subtotal: number
+  deliveryFee: number
+  packagingFee: number
+  discount: number
+  /** 实付，最低 0 */
+  payable: number
+}
+
+/** 确认订单页的费用明细。购物车为空时全为 0。 */
+export function feeBreakdown(shop: Shop, items: CartItem[]): FeeBreakdown {
+  if (cartCount(items) === 0) {
+    return { subtotal: 0, deliveryFee: 0, packagingFee: 0, discount: 0, payable: 0 }
+  }
+  const sub = subtotal(shop, items)
+  const delivery = shop.deliveryFee
+  const packaging = packagingFee(items)
+  const discount = bestManjianDiscount(shop, items)
+  const payable = Math.max(0, sub + delivery + packaging - discount)
+  return { subtotal: sub, deliveryFee: delivery, packagingFee: packaging, discount, payable }
+}
+
+/** 应付总额（含配送费、餐盒费，减满减），购物车为空时为 0。 */
 export function total(shop: Shop, items: CartItem[]): number {
-  if (cartCount(items) === 0) return 0
-  return subtotal(shop, items) + shop.deliveryFee
+  return feeBreakdown(shop, items).payable
 }

@@ -9,24 +9,39 @@ import {
   subtotal,
   meetsMinOrder,
   amountToMinOrder,
+  packagingFee,
+  parseManjian,
+  bestManjianDiscount,
+  feeBreakdown,
   total,
 } from './cart'
 
 const shop: Shop = {
   id: 's1',
   name: '测试店',
-  emoji: '🍜',
-  notice: '',
+  logo: '🍜',
   rating: 4.8,
   monthlySales: 999,
+  perCapita: 25,
   deliveryMinutes: 30,
   deliveryFee: 5,
   minOrder: 20,
   distanceKm: 1.2,
+  notice: '',
+  badges: [],
+  promotions: [
+    { type: 'manjian', text: '满30减8' },
+    { type: 'manjian', text: '满50减15' },
+    { type: 'discount', text: '限时8折' },
+  ],
+  categories: [{ id: 'c1', name: '招牌' }],
   reviews: [],
+  reviewTags: [],
+  scores: { taste: 4.8, packaging: 4.7, delivery: 2.1 },
+  channel: '美食',
   dishes: [
-    { id: 'a', name: 'A', desc: '', price: 12, monthlySales: 1, rating: 5, emoji: '🍲' },
-    { id: 'b', name: 'B', desc: '', price: 8, monthlySales: 1, rating: 5, emoji: '🥟' },
+    { id: 'a', categoryId: 'c1', name: 'A', desc: '', price: 12, monthlySales: 1, goodRate: 99, emoji: '🍲' },
+    { id: 'b', categoryId: 'c1', name: 'B', desc: '', price: 8, monthlySales: 1, goodRate: 99, emoji: '🥟' },
   ],
 }
 
@@ -74,13 +89,80 @@ describe('totals', () => {
   it('sums subtotal without delivery fee', () => {
     expect(subtotal(shop, items)).toBe(32)
   })
+})
 
-  it('adds delivery fee to grand total', () => {
-    expect(total(shop, items)).toBe(37)
+describe('packaging fee', () => {
+  it('is 1 yuan per portion', () => {
+    expect(packagingFee([{ dishId: 'a', qty: 2 }, { dishId: 'b', qty: 1 }])).toBe(3)
   })
 
-  it('grand total is 0 for an empty cart (no phantom delivery fee)', () => {
+  it('is 0 for empty cart', () => {
+    expect(packagingFee([])).toBe(0)
+  })
+})
+
+describe('parseManjian', () => {
+  it('parses 满X减Y', () => {
+    expect(parseManjian('满30减8')).toEqual({ threshold: 30, minus: 8 })
+    expect(parseManjian('满 50 减 15')).toEqual({ threshold: 50, minus: 15 })
+  })
+
+  it('returns null for non-manjian text', () => {
+    expect(parseManjian('限时8折')).toBeNull()
+  })
+})
+
+describe('bestManjianDiscount', () => {
+  it('picks the largest applicable 满减', () => {
+    // subtotal 32 -> only 满30减8 applies
+    expect(bestManjianDiscount(shop, [{ dishId: 'a', qty: 2 }, { dishId: 'b', qty: 1 }])).toBe(8)
+  })
+
+  it('applies the higher tier once threshold is met', () => {
+    // subtotal 60 (a x5 = 60) -> 满50减15 applies
+    expect(bestManjianDiscount(shop, [{ dishId: 'a', qty: 5 }])).toBe(15)
+  })
+
+  it('is 0 when below all thresholds', () => {
+    // subtotal 8 -> none
+    expect(bestManjianDiscount(shop, [{ dishId: 'b', qty: 1 }])).toBe(0)
+  })
+})
+
+describe('feeBreakdown / total', () => {
+  const items = [
+    { dishId: 'a', qty: 2 }, // 24
+    { dishId: 'b', qty: 1 }, // 8  => subtotal 32, 3 portions
+  ]
+
+  it('breaks fees down: subtotal + delivery + packaging - discount', () => {
+    expect(feeBreakdown(shop, items)).toEqual({
+      subtotal: 32,
+      deliveryFee: 5,
+      packagingFee: 3,
+      discount: 8, // 满30减8
+      payable: 32 + 5 + 3 - 8, // 32
+    })
+  })
+
+  it('total equals payable', () => {
+    expect(total(shop, items)).toBe(32)
+  })
+
+  it('all zero for an empty cart (no phantom fees)', () => {
+    expect(feeBreakdown(shop, [])).toEqual({
+      subtotal: 0,
+      deliveryFee: 0,
+      packagingFee: 0,
+      discount: 0,
+      payable: 0,
+    })
     expect(total(shop, [])).toBe(0)
+  })
+
+  it('never goes negative', () => {
+    const cheap: Shop = { ...shop, promotions: [{ type: 'manjian', text: '满5减100' }] }
+    expect(total(cheap, [{ dishId: 'b', qty: 1 }])).toBe(0)
   })
 })
 
