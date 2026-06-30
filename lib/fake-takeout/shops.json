@@ -69,7 +69,7 @@
         "monthlySales": 4210,
         "goodRate": 98,
         "emoji": "🍲",
-        "image": "/fake-takeout/malatang.png",
+        "image": "/fake-takeout/malatang.webp",
         "tags": [
           "招牌",
           "必点"
@@ -400,7 +400,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "美食"
+    "channel": "美食",
+    "logoImage": "/fake-takeout/malatang.webp"
   },
   {
     "id": "mlt-2",
@@ -466,7 +467,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-2.webp"
       },
       {
         "id": "mlt-2-d2",
@@ -798,7 +800,8 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "美食"
+    "channel": "美食",
+    "logoImage": "/fake-takeout/mlt-2.webp"
   },
   {
     "id": "fc-1",
@@ -870,7 +873,7 @@
         "monthlySales": 12450,
         "goodRate": 98,
         "emoji": "🍗",
-        "image": "/fake-takeout/fried-chicken.png",
+        "image": "/fake-takeout/fried-chicken.webp",
         "tags": [
           "招牌",
           "必点",
@@ -1219,7 +1222,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "汉堡披萨"
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/fried-chicken.webp"
   },
   {
     "id": "fc-2",
@@ -1290,7 +1294,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2.webp"
       },
       {
         "id": "fc-2-d2",
@@ -1628,7 +1633,8 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "汉堡披萨"
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/fc-2.webp"
   },
   {
     "id": "lsf-wangmei",
@@ -1700,7 +1706,7 @@
         "monthlySales": 4210,
         "goodRate": 98,
         "emoji": "🍜",
-        "image": "/fake-takeout/luosifen.png",
+        "image": "/fake-takeout/luosifen.webp",
         "tags": [
           "招牌",
           "必点"
@@ -2024,7 +2030,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "米粉面"
+    "channel": "米粉面",
+    "logoImage": "/fake-takeout/luosifen.webp"
   },
   {
     "id": "lsf-kongqi",
@@ -2099,7 +2106,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi.webp"
       },
       {
         "id": "lsf-kongqi-d2",
@@ -2438,7 +2446,8 @@
       "packaging": 4.6,
       "delivery": 1.9
     },
-    "channel": "米粉面"
+    "channel": "米粉面",
+    "logoImage": "/fake-takeout/lsf-kongqi.webp"
   },
   {
     "id": "mt-huabing-cha",
@@ -2506,7 +2515,7 @@
         "monthlySales": 8820,
         "goodRate": 98,
         "emoji": "🧋",
-        "image": "/fake-takeout/milk-tea.png",
+        "image": "/fake-takeout/milk-tea.webp",
         "tags": [
           "招牌",
           "必点",
@@ -2835,7 +2844,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "甜点饮品"
+    "channel": "甜点饮品",
+    "logoImage": "/fake-takeout/milk-tea.webp"
   },
   {
     "id": "mt-konggair-coffee",
@@ -2906,7 +2916,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mt-konggair-coffee.webp"
       },
       {
         "id": "mt-air-coffee-d2",
@@ -3259,7 +3270,8 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "甜点饮品"
+    "channel": "甜点饮品",
+    "logoImage": "/fake-takeout/mt-konggair-coffee.webp"
   },
   {
     "id": "bbq-1",
@@ -3329,7 +3341,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-1.webp"
       },
       {
         "id": "bbq-1-d2",
@@ -3660,7 +3673,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "烧烤夜宵"
+    "channel": "烧烤夜宵",
+    "logoImage": "/fake-takeout/bbq-1.webp"
   },
   {
     "id": "bbq-2",
@@ -3730,7 +3744,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-2.webp"
       },
       {
         "id": "bbq-2-d2",
@@ -4072,7 +4087,8 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "烧烤夜宵"
+    "channel": "烧烤夜宵",
+    "logoImage": "/fake-takeout/bbq-2.webp"
   },
   {
     "id": "hp-mlxg",
@@ -4142,7 +4158,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/hp-mlxg.webp"
       },
       {
         "id": "hp-mlxg-d2",
@@ -4468,7 +4485,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "火锅"
+    "channel": "火锅",
+    "logoImage": "/fake-takeout/hp-mlxg.webp"
   },
   {
     "id": "hp-kongqi",
@@ -4541,7 +4559,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi.webp"
       },
       {
         "id": "hp-kongqi-d2",
@@ -4896,7 +4915,8 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "火锅"
+    "channel": "火锅",
+    "logoImage": "/fake-takeout/hp-kongqi.webp"
   },
   {
     "id": "rice-1",
@@ -4971,7 +4991,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/rice-1.webp"
       },
       {
         "id": "rice-1-d2",
@@ -5292,7 +5313,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "美食"
+    "channel": "美食",
+    "logoImage": "/fake-takeout/rice-1.webp"
   },
   {
     "id": "rice-2",
@@ -5363,7 +5385,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/rice-2.webp"
       },
       {
         "id": "rice-2-d2",
@@ -5699,7 +5722,8 @@
       "packaging": 4.8,
       "delivery": 2.1
     },
-    "channel": "美食"
+    "channel": "美食",
+    "logoImage": "/fake-takeout/rice-2.webp"
   },
   {
     "id": "bf-baozi",
@@ -5770,7 +5794,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bf-baozi.webp"
       },
       {
         "id": "bf-baozi-d2",
@@ -6107,7 +6132,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "早餐"
+    "channel": "早餐",
+    "logoImage": "/fake-takeout/bf-baozi.webp"
   },
   {
     "id": "bf-jianbing",
@@ -6178,7 +6204,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bf-jianbing.webp"
       },
       {
         "id": "bf-jianbing-d2",
@@ -6549,7 +6576,8 @@
       "packaging": 4.6,
       "delivery": 1.9
     },
-    "channel": "早餐"
+    "channel": "早餐",
+    "logoImage": "/fake-takeout/bf-jianbing.webp"
   },
   {
     "id": "jp-1",
@@ -6624,7 +6652,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/jp-1.webp"
       },
       {
         "id": "jp-1-d2",
@@ -6953,7 +6982,8 @@
       "packaging": 4.7,
       "delivery": 1.6
     },
-    "channel": "日韩料理"
+    "channel": "日韩料理",
+    "logoImage": "/fake-takeout/jp-1.webp"
   },
   {
     "id": "jp-2",
@@ -7028,7 +7058,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2.webp"
       },
       {
         "id": "jp-2-d2",
@@ -7388,7 +7419,8 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "日韩料理"
+    "channel": "日韩料理",
+    "logoImage": "/fake-takeout/jp-2.webp"
   },
   {
     "id": "pz-1",
@@ -7463,7 +7495,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/pz-1.webp"
       },
       {
         "id": "pz-1-d2",
@@ -7782,7 +7815,8 @@
       "packaging": 4.7,
       "delivery": 1.8
     },
-    "channel": "汉堡披萨"
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/pz-1.webp"
   },
   {
     "id": "pz-2",
@@ -7857,7 +7891,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/pz-2.webp"
       },
       {
         "id": "pz-2-d2",
@@ -8204,6 +8239,7 @@
       "packaging": 4.6,
       "delivery": 2.1
     },
-    "channel": "汉堡披萨"
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/pz-2.webp"
   }
 ]
