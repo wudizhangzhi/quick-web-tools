@@ -75,4 +75,4 @@ grep -nE "onClick|onSubmit|onCopy|<a [^>]*href" <改动的文件>
 **当前事件清单**
 - 核心：`hupu_parse` / `sub_convert` / `invisible_unicode_action` / `force_yes_create` / `force_yes_choice` / `wc_predict`（`{ stage, choice }`）/ `fake_takeout_order`（`{ status: 'placed' }`）
 - 二次：`hupu_share` / `sub_share` / `invisible_unicode_share` / `force_yes_post_win` / `wc_share`（`{ status: 'save_image' | 'copy_image' | 'copy_link' }`）/ `video_delogo_share`（`{ status: 'copy_command', regions }`）
-- CTA / 跳转：`fake_takeout_open`（工具菜单页 → `/wm` 体验页的进入按钮）
+- CTA / 跳转：`fake_takeout_open`（工具菜单页 → `/wm` 体验页的进入按钮）/ `fake_takeout_search`（`{ results }`，搜索提交，只报结果数不报关键词）

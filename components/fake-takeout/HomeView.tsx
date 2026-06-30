@@ -14,7 +14,17 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: 'rating', label: '评分最高' },
 ]
 
-export default function HomeView({ onSelectShop }: { onSelectShop: (shop: Shop) => void }) {
+export default function HomeView({
+  location,
+  onSelectShop,
+  onOpenSearch,
+  onOpenLocation,
+}: {
+  location: string
+  onSelectShop: (shop: Shop) => void
+  onOpenSearch: () => void
+  onOpenLocation: () => void
+}) {
   const [channel, setChannel] = useState<string | null>(null)
   const [sort, setSort] = useState<SortKey>('recommend')
 
@@ -25,17 +35,23 @@ export default function HomeView({ onSelectShop }: { onSelectShop: (shop: Shop) 
       {/* 黄色顶部 */}
       <div className="bg-[#FFD100] px-3 pb-3">
         <StatusBar dark />
-        <div className="flex items-center gap-1 px-1 pb-2 pt-1 text-sm font-medium text-gray-900">
-          <MapPin size={15} className="fill-gray-900" />
-          <span className="max-w-[60%] truncate font-bold">异次元大厦·收不到货的地方</span>
-          <ChevronDown size={15} />
-        </div>
+        <button
+          onClick={onOpenLocation}
+          className="flex max-w-full items-center gap-1 px-1 pb-2 pt-1 text-sm font-medium text-gray-900"
+        >
+          <MapPin size={15} className="flex-shrink-0 fill-gray-900" />
+          <span className="truncate font-bold">{location}</span>
+          <ChevronDown size={15} className="flex-shrink-0" />
+        </button>
         {/* 搜索框 */}
-        <div className="flex items-center rounded-full bg-white py-2 pl-3 pr-1 shadow-sm">
+        <button
+          onClick={onOpenSearch}
+          className="flex w-full items-center rounded-full bg-white py-2 pl-3 pr-1 text-left shadow-sm"
+        >
           <Search size={17} className="text-gray-400" />
           <span className="ml-2 flex-1 truncate text-sm text-gray-400">搜索「永远不会到的炸鸡」</span>
           <span className="rounded-full bg-[#FFD100] px-4 py-1 text-xs font-bold text-gray-900">搜索</span>
-        </div>
+        </button>
       </div>
 
       {/* 金刚区 */}

@@ -68,6 +68,7 @@ export default function TrackingView({
   startMs,
   address,
   onBack,
+  onHome,
 }: {
   shop: Shop
   items: CartItem[]
@@ -75,6 +76,7 @@ export default function TrackingView({
   startMs: number
   address: Address
   onBack: () => void
+  onHome: () => void
 }) {
   const [elapsed, setElapsed] = useState(0)
   const [feed, setFeed] = useState<string[]>([])
@@ -196,7 +198,7 @@ export default function TrackingView({
 
         <div className="px-2.5">
           <button
-            onClick={onBack}
+            onClick={onHome}
             className="w-full rounded-full bg-[#FFD100] py-3 text-center font-bold text-gray-900 active:scale-[0.99]"
           >
             再画一单饼

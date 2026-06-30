@@ -4,13 +4,10 @@ import { ChevronLeft, ChevronRight, MapPin, Clock, Ticket } from 'lucide-react'
 import type { Shop } from '@/lib/fake-takeout/types'
 import type { CartItem } from '@/lib/fake-takeout/cart'
 import { cartLines, feeBreakdown } from '@/lib/fake-takeout/cart'
+import type { Address } from '@/lib/fake-takeout/order'
 import DishThumb from './DishThumb'
 
-export interface Address {
-  name: string
-  phone: string
-  detail: string
-}
+export type { Address }
 
 export default function CheckoutView({
   shop,
