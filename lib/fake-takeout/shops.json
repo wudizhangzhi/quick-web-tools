@@ -1,0 +1,8487 @@
+[
+  {
+    "id": "mlt-1",
+    "name": "杨锅福麻辣烫",
+    "logo": "🍲",
+    "banner": "🌶️",
+    "rating": 4.7,
+    "monthlySales": 8632,
+    "perCapita": 32,
+    "deliveryMinutes": 35,
+    "deliveryFee": 2,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 20,
+    "distanceKm": 1.8,
+    "notice": "麻辣烫已下锅，骑手端着翻山越岭，永远在路上，先画张饼垫垫。",
+    "badges": [
+      "品质联盟",
+      "开了8年老店",
+      "月售过万"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满50减8"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（但不保证到货）"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠一瓶画饼牌矿泉水（空气版）"
+      },
+      {
+        "type": "delivery",
+        "text": "减配送费4元"
+      }
+    ],
+    "categories": [
+      {
+        "id": "mlt-1-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "mlt-1-c2",
+        "name": "荤菜系列"
+      },
+      {
+        "id": "mlt-1-c3",
+        "name": "素菜豆制品"
+      },
+      {
+        "id": "mlt-1-c4",
+        "name": "主食加料"
+      },
+      {
+        "id": "mlt-1-c5",
+        "name": "解辣饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "mlt-1-d1",
+        "categoryId": "mlt-1-c1",
+        "name": "招牌秘制麻辣烫",
+        "desc": "二十年老汤底，麻辣鲜香，据说香味能飘到隔壁省",
+        "price": 28,
+        "originalPrice": 36,
+        "monthlySales": 4210,
+        "goodRate": 98,
+        "emoji": "🍲",
+        "image": "/fake-takeout/malatang.webp",
+        "tags": [
+          "招牌",
+          "必点"
+        ]
+      },
+      {
+        "id": "mlt-1-d2",
+        "categoryId": "mlt-1-c1",
+        "name": "番茄养生麻辣烫",
+        "desc": "酸甜浓郁番茄汤底，不辣党的福音",
+        "price": 26,
+        "monthlySales": 1880,
+        "goodRate": 96,
+        "emoji": "🍅",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/mlt-1-d2.webp"
+      },
+      {
+        "id": "mlt-1-d3",
+        "categoryId": "mlt-1-c2",
+        "name": "嫩牛肉卷",
+        "desc": "薄如蝉翼，烫三秒入口即化",
+        "price": 12,
+        "monthlySales": 3105,
+        "goodRate": 97,
+        "emoji": "🥩",
+        "tags": [
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mlt-1-d3.webp"
+      },
+      {
+        "id": "mlt-1-d4",
+        "categoryId": "mlt-1-c2",
+        "name": "鲜虾滑",
+        "desc": "手打虾滑，咬下去会爆汁的那种",
+        "price": 15,
+        "originalPrice": 18,
+        "monthlySales": 2240,
+        "goodRate": 95,
+        "emoji": "🍤",
+        "image": "/fake-takeout/mlt-1-d4.webp"
+      },
+      {
+        "id": "mlt-1-d5",
+        "categoryId": "mlt-1-c2",
+        "name": "撒尿牛丸",
+        "desc": "弹牙到能拍球，咬开一口高汤",
+        "price": 10,
+        "monthlySales": 1560,
+        "goodRate": 94,
+        "emoji": "🧆",
+        "image": "/fake-takeout/mlt-1-d5.webp"
+      },
+      {
+        "id": "mlt-1-d6",
+        "categoryId": "mlt-1-c3",
+        "name": "嫩豆皮",
+        "desc": "吸饱汤汁的豆皮，一口一个满足",
+        "price": 4,
+        "monthlySales": 5120,
+        "goodRate": 96,
+        "emoji": "🟡",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/mlt-1-d6.webp"
+      },
+      {
+        "id": "mlt-1-d7",
+        "categoryId": "mlt-1-c3",
+        "name": "宽粉",
+        "desc": "Q弹爽滑的红薯宽粉，挂汤一绝",
+        "price": 5,
+        "monthlySales": 6320,
+        "goodRate": 97,
+        "emoji": "🍜",
+        "image": "/fake-takeout/mlt-1-d7.webp"
+      },
+      {
+        "id": "mlt-1-d8",
+        "categoryId": "mlt-1-c3",
+        "name": "金针菇",
+        "desc": "今天你吃的金针菇，明天还认识你",
+        "price": 4,
+        "monthlySales": 4890,
+        "goodRate": 93,
+        "emoji": "🍄",
+        "image": "/fake-takeout/mlt-1-d8.webp"
+      },
+      {
+        "id": "mlt-1-d9",
+        "categoryId": "mlt-1-c3",
+        "name": "脆皮鱼豆腐",
+        "desc": "外脆里嫩，小孩抢着吃",
+        "price": 6,
+        "monthlySales": 2010,
+        "goodRate": 95,
+        "emoji": "🍢",
+        "image": "/fake-takeout/mlt-1-d9.webp"
+      },
+      {
+        "id": "mlt-1-d10",
+        "categoryId": "mlt-1-c4",
+        "name": "加份米饭",
+        "desc": "拌上麻辣汤底，能多吃三碗",
+        "price": 2,
+        "monthlySales": 3300,
+        "goodRate": 92,
+        "emoji": "🍚",
+        "image": "/fake-takeout/mlt-1-d10.webp"
+      },
+      {
+        "id": "mlt-1-d11",
+        "categoryId": "mlt-1-c4",
+        "name": "手工油面筋",
+        "desc": "吸汤小能手，咬破满嘴鲜",
+        "price": 5,
+        "monthlySales": 1420,
+        "goodRate": 94,
+        "emoji": "🫓",
+        "image": "/fake-takeout/mlt-1-d11.webp"
+      },
+      {
+        "id": "mlt-1-d12",
+        "categoryId": "mlt-1-c5",
+        "name": "冰镇酸梅汤",
+        "desc": "解辣神器，一口浇灭满嘴的火",
+        "price": 6,
+        "originalPrice": 9,
+        "monthlySales": 2760,
+        "goodRate": 96,
+        "emoji": "🥤",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mlt-1-d12.webp"
+      },
+      {
+        "id": "mlt-1-d13",
+        "categoryId": "mlt-1-c5",
+        "name": "鲜榨橙汁",
+        "desc": "现榨真橙子，喝完继续战辣",
+        "price": 8,
+        "monthlySales": 980,
+        "goodRate": 91,
+        "emoji": "🍊",
+        "image": "/fake-takeout/mlt-1-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "等到花儿都谢了",
+        "avatar": "🌻",
+        "stars": 5,
+        "comment": "味道是真的好，老汤底香得很，就是骑手已经走了三天还在路上，我都开始自己学做了。",
+        "time": "3天前",
+        "images": [
+          "🍲",
+          "🌶️"
+        ],
+        "dishNames": [
+          "招牌秘制麻辣烫"
+        ],
+        "reply": "亲，骑手正在翻越秦岭，预计下个季度抵达，请备好板凳~"
+      },
+      {
+        "user": "饿到前胸贴后背",
+        "avatar": "😋",
+        "stars": 5,
+        "comment": "牛肉卷绝了！薄薄一片烫一下入口即化，份量也足，下次还点。",
+        "time": "昨天",
+        "dishNames": [
+          "嫩牛肉卷"
+        ]
+      },
+      {
+        "user": "望梅止渴本渴了",
+        "avatar": "🍈",
+        "stars": 4,
+        "comment": "汤底香味隔着屏幕都能闻到，可惜我闻了一周了还没等到实物，靠想象续命中。",
+        "time": "1周前",
+        "images": [
+          "🍅"
+        ]
+      },
+      {
+        "user": "宽粉爱好者老王",
+        "avatar": "🧓",
+        "stars": 5,
+        "comment": "宽粉Q弹挂汤一绝，吸溜起来巨爽，这家是我吃过最对味的。",
+        "time": "2天前",
+        "dishNames": [
+          "宽粉",
+          "嫩豆皮"
+        ]
+      },
+      {
+        "user": "画饼充饥研究员",
+        "avatar": "🥯",
+        "stars": 4,
+        "comment": "下单页面写着35分钟送达，结果我等成了这家的常驻钉子户，但味道确实顶。",
+        "time": "5天前"
+      },
+      {
+        "user": "辣度拉满刘师傅",
+        "avatar": "🔥",
+        "stars": 5,
+        "comment": "麻辣够劲，酸梅汤解辣到位，这组合谁懂啊，吃完通体舒畅。",
+        "time": "4天前",
+        "images": [
+          "🥤",
+          "🌶️"
+        ],
+        "dishNames": [
+          "招牌秘制麻辣烫",
+          "冰镇酸梅汤"
+        ]
+      },
+      {
+        "user": "永远在路上的张三",
+        "avatar": "🚴",
+        "stars": 3,
+        "comment": "味道没得说，就是配送是真慢，骑手定位显示在月球背面，建议加钱上火箭。",
+        "time": "6天前",
+        "reply": "已为骑手配备宇航服，敬请期待登月直送服务~"
+      },
+      {
+        "user": "豆皮控小美",
+        "avatar": "👧",
+        "stars": 5,
+        "comment": "豆皮吸饱汤汁太好吃了，一口一个停不下来，包装也扎实没洒。",
+        "time": "昨天",
+        "dishNames": [
+          "嫩豆皮"
+        ]
+      },
+      {
+        "user": "收不到货专业户",
+        "avatar": "📦",
+        "stars": 4,
+        "comment": "已经第三次下单了，前两次都没到货，这次居然到了，感动到哭，味道也没让我失望。",
+        "time": "1周前"
+      },
+      {
+        "user": "虾滑刺客受害者",
+        "avatar": "🍤",
+        "stars": 5,
+        "comment": "虾滑爆汁是真的，手打的就是不一样，新鲜得很，强烈推荐。",
+        "time": "2天前",
+        "images": [
+          "🍤"
+        ],
+        "dishNames": [
+          "鲜虾滑"
+        ]
+      },
+      {
+        "user": "深夜放毒达人",
+        "avatar": "🌙",
+        "stars": 5,
+        "comment": "半夜点的，香味把室友都馋醒了，份量足两个人吃刚好，赞。",
+        "time": "3天前"
+      },
+      {
+        "user": "减肥从明天开始",
+        "avatar": "🐷",
+        "stars": 4,
+        "comment": "番茄锅底酸甜开胃，本来想吃清淡点，结果加料加成了天价，但好吃认了。",
+        "time": "4天前",
+        "dishNames": [
+          "番茄养生麻辣烫"
+        ]
+      },
+      {
+        "user": "等餐等到长草",
+        "avatar": "🌱",
+        "stars": 4,
+        "comment": "店家是真用心做饭，就是这送达时间堪比修仙渡劫，建议养生等餐。",
+        "time": "5天前",
+        "images": [
+          "🍄",
+          "🟡",
+          "🍜"
+        ]
+      },
+      {
+        "user": "牛丸弹一弹",
+        "avatar": "⚽",
+        "stars": 5,
+        "comment": "撒尿牛丸咬开爆汁，弹牙到能打乒乓球，孩子吃了直呼还要。",
+        "time": "昨天",
+        "dishNames": [
+          "撒尿牛丸"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "汤底很香",
+        "count": 1024,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 876,
+        "positive": true
+      },
+      {
+        "text": "宽粉好吃",
+        "count": 543,
+        "positive": true
+      },
+      {
+        "text": "包装扎实没洒",
+        "count": 312,
+        "positive": true
+      },
+      {
+        "text": "解辣到位",
+        "count": 208,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 666,
+        "positive": false
+      },
+      {
+        "text": "骑手永远在路上",
+        "count": 489,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "美食",
+    "logoImage": "/fake-takeout/shop-mlt-1.webp"
+  },
+  {
+    "id": "mlt-2",
+    "name": "三故冒菜·总店",
+    "logo": "🥘",
+    "banner": "🍢",
+    "rating": 4.5,
+    "monthlySales": 5421,
+    "perCapita": 28,
+    "deliveryMinutes": 40,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 15,
+    "distanceKm": 2.6,
+    "notice": "三顾才尝一口，骑手三过你家门不入，冒菜永远在路上，先收画饼。",
+    "badges": [
+      "食品安全",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "discount",
+        "text": "限时5折（限你想象中的那一份）"
+      },
+      {
+        "type": "manjian",
+        "text": "满25减5"
+      },
+      {
+        "type": "gift",
+        "text": "满35赠关东煮萝卜一份"
+      }
+    ],
+    "categories": [
+      {
+        "id": "mlt-2-c1",
+        "name": "招牌冒菜"
+      },
+      {
+        "id": "mlt-2-c2",
+        "name": "关东煮"
+      },
+      {
+        "id": "mlt-2-c3",
+        "name": "丸滑荤菜"
+      },
+      {
+        "id": "mlt-2-c4",
+        "name": "蔬菜主食"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "mlt-2-d1",
+        "categoryId": "mlt-2-c1",
+        "name": "招牌牛肉冒菜",
+        "desc": "麻辣红汤现冒现捞，牛肉给得毫不手软",
+        "price": 30,
+        "originalPrice": 38,
+        "monthlySales": 3680,
+        "goodRate": 97,
+        "emoji": "🥘",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/mlt-2.webp"
+      },
+      {
+        "id": "mlt-2-d2",
+        "categoryId": "mlt-2-c1",
+        "name": "藤椒鸡杂冒菜",
+        "desc": "藤椒鲜麻上头，鸡杂脆嫩，重口党狂喜",
+        "price": 26,
+        "monthlySales": 1490,
+        "goodRate": 95,
+        "emoji": "🌿",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/mlt-2-d2.webp"
+      },
+      {
+        "id": "mlt-2-d3",
+        "categoryId": "mlt-2-c1",
+        "name": "什锦素冒菜",
+        "desc": "一锅装满各种素菜，清爽又解馋",
+        "price": 18,
+        "monthlySales": 1120,
+        "goodRate": 93,
+        "emoji": "🥗",
+        "image": "/fake-takeout/mlt-2-d3.webp"
+      },
+      {
+        "id": "mlt-2-d4",
+        "categoryId": "mlt-2-c2",
+        "name": "关东煮萝卜",
+        "desc": "炖到透亮的萝卜，吸饱昆布高汤的精华",
+        "price": 3,
+        "monthlySales": 5230,
+        "goodRate": 96,
+        "emoji": "🥬",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/mlt-2-d4.webp"
+      },
+      {
+        "id": "mlt-2-d5",
+        "categoryId": "mlt-2-c2",
+        "name": "关东煮溏心蛋",
+        "desc": "卤入味的溏心蛋，咬开还会流心",
+        "price": 4,
+        "originalPrice": 6,
+        "monthlySales": 4010,
+        "goodRate": 97,
+        "emoji": "🥚",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mlt-2-d5.webp"
+      },
+      {
+        "id": "mlt-2-d6",
+        "categoryId": "mlt-2-c2",
+        "name": "关东煮魔芋结",
+        "desc": "0脂低卡，越嚼越香的减肥伴侣",
+        "price": 3,
+        "monthlySales": 2870,
+        "goodRate": 92,
+        "emoji": "🪢",
+        "image": "/fake-takeout/mlt-2-d6.webp"
+      },
+      {
+        "id": "mlt-2-d7",
+        "categoryId": "mlt-2-c2",
+        "name": "关东煮厚切年糕",
+        "desc": "软糯拉丝，泡在高汤里能吃出幸福感",
+        "price": 5,
+        "monthlySales": 1760,
+        "goodRate": 94,
+        "emoji": "🍡",
+        "image": "/fake-takeout/mlt-2-d7.webp"
+      },
+      {
+        "id": "mlt-2-d8",
+        "categoryId": "mlt-2-c3",
+        "name": "墨鱼丸",
+        "desc": "Q弹墨鱼丸，一口一个海的味道",
+        "price": 8,
+        "monthlySales": 2340,
+        "goodRate": 95,
+        "emoji": "⚪",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/mlt-2-d8.webp"
+      },
+      {
+        "id": "mlt-2-d9",
+        "categoryId": "mlt-2-c3",
+        "name": "嫩滑午餐肉",
+        "desc": "厚切午餐肉，煎过再冒香到犯规",
+        "price": 9,
+        "monthlySales": 2980,
+        "goodRate": 96,
+        "emoji": "🥓",
+        "image": "/fake-takeout/mlt-2-d9.webp"
+      },
+      {
+        "id": "mlt-2-d10",
+        "categoryId": "mlt-2-c3",
+        "name": "鸭血",
+        "desc": "嫩到入口即化的鸭血，老饕的心头好",
+        "price": 5,
+        "monthlySales": 1610,
+        "goodRate": 93,
+        "emoji": "🟥",
+        "image": "/fake-takeout/mlt-2-d10.webp"
+      },
+      {
+        "id": "mlt-2-d11",
+        "categoryId": "mlt-2-c4",
+        "name": "时蔬拼盘",
+        "desc": "当季新鲜蔬菜，荤素搭配不长肉（理论上）",
+        "price": 7,
+        "monthlySales": 1330,
+        "goodRate": 91,
+        "emoji": "🥦",
+        "image": "/fake-takeout/mlt-2-d11.webp"
+      },
+      {
+        "id": "mlt-2-d12",
+        "categoryId": "mlt-2-c4",
+        "name": "土豆片",
+        "desc": "切得薄薄的土豆片，冒熟绵软挂汤",
+        "price": 4,
+        "monthlySales": 3450,
+        "goodRate": 94,
+        "emoji": "🥔",
+        "image": "/fake-takeout/mlt-2-d12.webp"
+      },
+      {
+        "id": "mlt-2-d13",
+        "categoryId": "mlt-2-c4",
+        "name": "白米饭",
+        "desc": "配冒菜汤汁的最佳拍档，光汤都能下一碗",
+        "price": 2,
+        "monthlySales": 2780,
+        "goodRate": 90,
+        "emoji": "🍚",
+        "image": "/fake-takeout/mlt-2-d13.webp"
+      },
+      {
+        "id": "mlt-2-d14",
+        "categoryId": "mlt-2-c4",
+        "name": "手工红薯粉",
+        "desc": "晶莹剔透的红薯粉，吸汤后嗦起来超带劲",
+        "price": 5,
+        "monthlySales": 1980,
+        "goodRate": 95,
+        "emoji": "🍜",
+        "image": "/fake-takeout/mlt-2-d14.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "冒菜上瘾林女士",
+        "avatar": "👩",
+        "stars": 5,
+        "comment": "牛肉冒菜真材实料，红汤麻辣够味，肉给得超多，绝对回购。",
+        "time": "2天前",
+        "images": [
+          "🥘"
+        ],
+        "dishNames": [
+          "招牌牛肉冒菜"
+        ]
+      },
+      {
+        "user": "纸上吃饱了",
+        "avatar": "📄",
+        "stars": 4,
+        "comment": "店名很有自知之明，我也是纸上点了一桌，骑手到现在没影，菜应该挺好吃（想象中）。",
+        "time": "4天前",
+        "reply": "感谢理解！我们的菜在平行宇宙已经送到您手上了~"
+      },
+      {
+        "user": "溏心蛋守护者",
+        "avatar": "🥚",
+        "stars": 5,
+        "comment": "关东煮溏心蛋绝绝子，咬开真的流心，卤得超入味，一次点了五个。",
+        "time": "昨天",
+        "dishNames": [
+          "关东煮溏心蛋"
+        ]
+      },
+      {
+        "user": "等单等出感情",
+        "avatar": "⏳",
+        "stars": 3,
+        "comment": "味道在线，但配送是真离谱，下单到现在我把整部剧追完了骑手还在路上。",
+        "time": "5天前",
+        "images": [
+          "🍢"
+        ]
+      },
+      {
+        "user": "藤椒上头王",
+        "avatar": "🌿",
+        "stars": 5,
+        "comment": "藤椒鸡杂麻得过瘾，鸡杂处理得很干净没腥味，重口爱好者必点。",
+        "time": "3天前",
+        "dishNames": [
+          "藤椒鸡杂冒菜"
+        ]
+      },
+      {
+        "user": "空气外卖订阅者",
+        "avatar": "💨",
+        "stars": 4,
+        "comment": "已经连续画饼七天，今天破天荒到货了，墨鱼丸弹牙好吃，感动。",
+        "time": "1周前",
+        "dishNames": [
+          "墨鱼丸"
+        ]
+      },
+      {
+        "user": "午餐肉真爱粉",
+        "avatar": "🥓",
+        "stars": 5,
+        "comment": "厚切午餐肉煎过再冒，外焦里嫩香到舔盘，份量也实在。",
+        "time": "昨天",
+        "images": [
+          "🥓",
+          "🍚"
+        ],
+        "dishNames": [
+          "嫩滑午餐肉"
+        ]
+      },
+      {
+        "user": "收货是一种奢望",
+        "avatar": "🎁",
+        "stars": 4,
+        "comment": "客观说菜做得很用心，包装防漏也到位，就是骑手定位像是在环游世界。",
+        "time": "6天前"
+      },
+      {
+        "user": "红薯粉爱好者",
+        "avatar": "🍠",
+        "stars": 5,
+        "comment": "红薯粉嗦起来太爽了，吸饱汤汁晶莹剔透，配冒菜绝配。",
+        "time": "2天前",
+        "dishNames": [
+          "手工红薯粉"
+        ]
+      },
+      {
+        "user": "萝卜炖到化",
+        "avatar": "🥬",
+        "stars": 5,
+        "comment": "关东煮萝卜炖得透透的，高汤鲜得眉毛掉，便宜又好吃。",
+        "time": "3天前",
+        "images": [
+          "🥬",
+          "🪢"
+        ],
+        "dishNames": [
+          "关东煮萝卜"
+        ]
+      },
+      {
+        "user": "在路上的第99天",
+        "avatar": "🛵",
+        "stars": 3,
+        "comment": "菜没毛病，问题是我下午点的现在还没到，建议改名永远在路上冒菜馆。",
+        "time": "4天前",
+        "reply": "亲，骑手已请假修炼缩地成寸，学成归来即刻飞奔~"
+      },
+      {
+        "user": "夜宵续命人",
+        "avatar": "🌃",
+        "stars": 5,
+        "comment": "深夜来一锅麻辣冒菜整个人都活了，份量够两人,辣度还能选,贴心。",
+        "time": "昨天"
+      },
+      {
+        "user": "魔芋减脂党",
+        "avatar": "🏃",
+        "stars": 4,
+        "comment": "魔芋结和时蔬清爽不长肉，吃得没负担，就是结账发现荤菜加超了哈哈。",
+        "time": "5天前",
+        "dishNames": [
+          "关东煮魔芋结",
+          "时蔬拼盘"
+        ]
+      },
+      {
+        "user": "鸭血鉴定师",
+        "avatar": "🩸",
+        "stars": 5,
+        "comment": "鸭血嫩到入口即化，没有一点腥气,老板用心了,五星好评。",
+        "time": "2天前",
+        "dishNames": [
+          "鸭血"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "牛肉给得足",
+        "count": 720,
+        "positive": true
+      },
+      {
+        "text": "溏心蛋流心",
+        "count": 488,
+        "positive": true
+      },
+      {
+        "text": "汤底鲜美",
+        "count": 396,
+        "positive": true
+      },
+      {
+        "text": "包装防漏",
+        "count": 254,
+        "positive": true
+      },
+      {
+        "text": "辣度可选",
+        "count": 173,
+        "positive": true
+      },
+      {
+        "text": "骑手在路上修仙",
+        "count": 521,
+        "positive": false
+      },
+      {
+        "text": "永远收不到货",
+        "count": 358,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.7,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "美食",
+    "logoImage": "/fake-takeout/shop-mlt-2.webp"
+  },
+  {
+    "id": "fc-1",
+    "name": "啃得鸡·画饼总店",
+    "logo": "🍗",
+    "banner": "🍔",
+    "rating": 4.7,
+    "monthlySales": 9876,
+    "perCapita": 32,
+    "deliveryMinutes": 35,
+    "deliveryFee": 2,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 20,
+    "distanceKm": 1.8,
+    "notice": "全家桶已出锅，骑手吮着指头在路上，永远差一公里，先画饼解馋。",
+    "badges": [
+      "开了8年老店",
+      "月售过万",
+      "食品安全"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满60减12"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元"
+      },
+      {
+        "type": "discount",
+        "text": "招牌全家桶限时5折（库存为空气）"
+      },
+      {
+        "type": "gift",
+        "text": "满40赠望梅止渴柠檬水一杯"
+      }
+    ],
+    "categories": [
+      {
+        "id": "fc-1-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "fc-1-c2",
+        "name": "限时特价"
+      },
+      {
+        "id": "fc-1-c3",
+        "name": "炸物小吃"
+      },
+      {
+        "id": "fc-1-c4",
+        "name": "汉堡主食"
+      },
+      {
+        "id": "fc-1-c5",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "fc-1-d1",
+        "categoryId": "fc-1-c1",
+        "name": "画饼超值全家桶",
+        "desc": "8块炸鸡+4个鸡翅+薯条+可乐，看着就饱，吃不吃得到看天意。",
+        "price": 59,
+        "originalPrice": 99,
+        "monthlySales": 12450,
+        "goodRate": 98,
+        "emoji": "🍗",
+        "image": "/fake-takeout/fried-chicken.webp",
+        "tags": [
+          "招牌",
+          "必点",
+          "第2件半价"
+        ]
+      },
+      {
+        "id": "fc-1-d2",
+        "categoryId": "fc-1-c1",
+        "name": "空气脆皮炸鸡腿",
+        "desc": "外酥里嫩纯靠想象，咬下去那一口空气尤其香脆。",
+        "price": 16,
+        "monthlySales": 8800,
+        "goodRate": 97,
+        "emoji": "🍗",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/fc-1-d2.webp"
+      },
+      {
+        "id": "fc-1-d3",
+        "categoryId": "fc-1-c1",
+        "name": "永远在路上鸡腿堡",
+        "desc": "厚实多汁的鸡腿堡，目前正随骑手环游城市。",
+        "price": 22,
+        "originalPrice": 28,
+        "monthlySales": 6700,
+        "goodRate": 96,
+        "emoji": "🍔",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/fc-1-d3.webp"
+      },
+      {
+        "id": "fc-1-d4",
+        "categoryId": "fc-1-c2",
+        "name": "限时特价香辣鸡翅(6块)",
+        "desc": "辣得想哭，但你大概率只能哭着等它送达。",
+        "price": 15,
+        "originalPrice": 26,
+        "monthlySales": 5400,
+        "goodRate": 95,
+        "emoji": "🍗",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/fc-1-d4.webp"
+      },
+      {
+        "id": "fc-1-d5",
+        "categoryId": "fc-1-c2",
+        "name": "望梅止渴双层牛肉堡",
+        "desc": "两片牛肉夹芝士，吃过的都说梦里很香。",
+        "price": 19,
+        "originalPrice": 32,
+        "monthlySales": 4300,
+        "goodRate": 94,
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-1-d5.webp"
+      },
+      {
+        "id": "fc-1-d6",
+        "categoryId": "fc-1-c3",
+        "name": "金黄薯条(大)",
+        "desc": "现炸金黄，凉了也别怪我，毕竟它在路上待了很久。",
+        "price": 9,
+        "monthlySales": 7600,
+        "goodRate": 96,
+        "emoji": "🍟",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/fc-1-d6.webp"
+      },
+      {
+        "id": "fc-1-d7",
+        "categoryId": "fc-1-c3",
+        "name": "洋葱圈",
+        "desc": "一圈一圈，像极了你刷新订单的次数。",
+        "price": 11,
+        "monthlySales": 3200,
+        "goodRate": 93,
+        "emoji": "🧅",
+        "image": "/fake-takeout/fc-1-d7.webp"
+      },
+      {
+        "id": "fc-1-d8",
+        "categoryId": "fc-1-c3",
+        "name": "奥尔良烤翅根",
+        "desc": "甜辣入味，香气据说能飘三公里，可惜本体飘不进你家。",
+        "price": 13,
+        "monthlySales": 2900,
+        "goodRate": 95,
+        "emoji": "🍗",
+        "image": "/fake-takeout/fc-1-d8.webp"
+      },
+      {
+        "id": "fc-1-d9",
+        "categoryId": "fc-1-c4",
+        "name": "嫩牛五方(纸上版)",
+        "desc": "经典卷饼，目前以PPT形式呈现，实物敬请期待。",
+        "price": 17,
+        "monthlySales": 3800,
+        "goodRate": 94,
+        "emoji": "🌯",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/fc-1-d9.webp"
+      },
+      {
+        "id": "fc-1-d10",
+        "categoryId": "fc-1-c4",
+        "name": "双鸡腿汉堡",
+        "desc": "两个炸鸡腿一个堡，份量管够，前提是它能到。",
+        "price": 25,
+        "originalPrice": 30,
+        "monthlySales": 2100,
+        "goodRate": 95,
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-1-d10.webp"
+      },
+      {
+        "id": "fc-1-d11",
+        "categoryId": "fc-1-c5",
+        "name": "望梅止渴柠檬可乐",
+        "desc": "清爽解腻，喝不到的时候格外解腻。",
+        "price": 7,
+        "monthlySales": 6100,
+        "goodRate": 97,
+        "emoji": "🥤",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/fc-1-d11.webp"
+      },
+      {
+        "id": "fc-1-d12",
+        "categoryId": "fc-1-c5",
+        "name": "芝士奶盖红茶",
+        "desc": "奶盖绵密，红茶醇厚，想象中已经喝完了。",
+        "price": 12,
+        "monthlySales": 2400,
+        "goodRate": 94,
+        "emoji": "🧋",
+        "image": "/fake-takeout/fc-1-d12.webp"
+      },
+      {
+        "id": "fc-1-d13",
+        "categoryId": "fc-1-c5",
+        "name": "鲜橙汁",
+        "desc": "零添加纯靠画饼，越想越甜。",
+        "price": 10,
+        "monthlySales": 1800,
+        "goodRate": 93,
+        "emoji": "🧃",
+        "image": "/fake-takeout/fc-1-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "等到花儿也谢了",
+        "avatar": "😩",
+        "stars": 4,
+        "comment": "味道是真的好，鸡腿堡咬一口爆汁，就是骑手已经在路上骑了俩小时，我快比炸鸡先凉了。",
+        "time": "3天前",
+        "dishNames": [
+          "永远在路上鸡腿堡"
+        ],
+        "images": [
+          "🍔",
+          "🍗"
+        ],
+        "reply": "亲亲骑手正在用爱发电，马上就到（的方向）❤️"
+      },
+      {
+        "user": "画饼受害者001",
+        "avatar": "🥲",
+        "stars": 5,
+        "comment": "全家桶份量真的足，一家四口吃撑，唯一缺点是我们是在梦里吃的。",
+        "time": "昨天",
+        "dishNames": [
+          "画饼超值全家桶"
+        ],
+        "images": [
+          "🍗"
+        ]
+      },
+      {
+        "user": "老顾客阿强",
+        "avatar": "😎",
+        "stars": 5,
+        "comment": "开了8年的老店了，皮脆肉嫩从没翻车，包装也扎实，给老板点赞。",
+        "time": "1周前",
+        "dishNames": [
+          "空气脆皮炸鸡腿"
+        ]
+      },
+      {
+        "user": "减肥失败选手",
+        "avatar": "🍔",
+        "stars": 5,
+        "comment": "薯条现炸是真香，量给得很大方，吃完罪恶感拉满，值了。",
+        "time": "2天前",
+        "dishNames": [
+          "金黄薯条(大)"
+        ],
+        "images": [
+          "🍟"
+        ]
+      },
+      {
+        "user": "我在收货点等你",
+        "avatar": "⏳",
+        "stars": 3,
+        "comment": "东西好吃归好吃，但配送是真的慢，订单显示'即将送达'已经显示了40分钟，我都开始怀疑人生了。",
+        "time": "5天前"
+      },
+      {
+        "user": "奥尔良铁粉",
+        "avatar": "🤤",
+        "stars": 5,
+        "comment": "烤翅根入味，甜辣比例刚好，啃得停不下来，强烈推荐。",
+        "time": "4天前",
+        "dishNames": [
+          "奥尔良烤翅根"
+        ],
+        "images": [
+          "🍗",
+          "🍗"
+        ]
+      },
+      {
+        "user": "望梅止渴本渴",
+        "avatar": "🥤",
+        "stars": 4,
+        "comment": "柠檬可乐挺解腻的，名字起得太real了，我确实只能望着订单止渴。",
+        "time": "6天前",
+        "dishNames": [
+          "望梅止渴柠檬可乐"
+        ]
+      },
+      {
+        "user": "匿名的胃",
+        "avatar": "👻",
+        "stars": 5,
+        "comment": "双层牛肉堡牛肉很厚不是那种纸片，芝士拉丝，良心店。",
+        "time": "1周前",
+        "dishNames": [
+          "望梅止渴双层牛肉堡"
+        ]
+      },
+      {
+        "user": "夜宵搭子",
+        "avatar": "🌙",
+        "stars": 4,
+        "comment": "深夜下单图个香，味道在线，就是骑手好像也睡着了，醒来才发现还没派单。",
+        "time": "昨天",
+        "reply": "骑手做了个香喷喷的梦，梦里已经送到啦~"
+      },
+      {
+        "user": "洋葱圈刺客",
+        "avatar": "🧅",
+        "stars": 5,
+        "comment": "洋葱圈外脆里甜，一口一个，配薯条绝了。",
+        "time": "3天前",
+        "dishNames": [
+          "洋葱圈",
+          "金黄薯条(大)"
+        ],
+        "images": [
+          "🧅"
+        ]
+      },
+      {
+        "user": "催单专业户",
+        "avatar": "📞",
+        "stars": 3,
+        "comment": "打了三个电话催单，骑手说快了快了，结果'快'是个时间相对论。东西到了还是热乎的，扳回一星。",
+        "time": "2天前"
+      },
+      {
+        "user": "芝士控",
+        "avatar": "🧀",
+        "stars": 5,
+        "comment": "奶盖红茶绵密好喝，甜度刚好，搭炸鸡解腻一流。",
+        "time": "4天前",
+        "dishNames": [
+          "芝士奶盖红茶"
+        ],
+        "images": [
+          "🧋"
+        ]
+      },
+      {
+        "user": "嫩牛五方信徒",
+        "avatar": "🌯",
+        "stars": 4,
+        "comment": "卷饼料给得多，酱香浓郁，就是希望下次别再以'纸上版'交付了哈哈。",
+        "time": "1周前",
+        "dishNames": [
+          "嫩牛五方(纸上版)"
+        ],
+        "reply": "实物正在赶来的路上，路有点远~"
+      },
+      {
+        "user": "周末摆烂人",
+        "avatar": "🛋️",
+        "stars": 5,
+        "comment": "鸡翅外焦里嫩，辣度适中，份量足味道顶，下次还点。",
+        "time": "5天前",
+        "dishNames": [
+          "限时特价香辣鸡翅(6块)"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "鸡肉很嫩",
+        "count": 526,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 418,
+        "positive": true
+      },
+      {
+        "text": "包装扎实",
+        "count": 302,
+        "positive": true
+      },
+      {
+        "text": "现炸够香",
+        "count": 266,
+        "positive": true
+      },
+      {
+        "text": "味道正宗",
+        "count": 189,
+        "positive": true
+      },
+      {
+        "text": "配送慢到怀疑人生",
+        "count": 233,
+        "positive": false
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 97,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/shop-fc-1.webp"
+  },
+  {
+    "id": "fc-2",
+    "name": "德克仕炸鸡",
+    "logo": "🍔",
+    "banner": "🍟",
+    "rating": 4.5,
+    "monthlySales": 5230,
+    "perCapita": 28,
+    "deliveryMinutes": 28,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 15,
+    "distanceKm": 0.9,
+    "notice": "脆皮炸鸡太香，骑手中途偷吃，于是永远送不到，补张大饼充饥。",
+    "badges": [
+      "品质联盟",
+      "蜂鸟专送",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "discount",
+        "text": "全场8.8折"
+      },
+      {
+        "type": "delivery",
+        "text": "0元配送费（省下的钱用来买希望）"
+      },
+      {
+        "type": "manjian",
+        "text": "满25减6"
+      },
+      {
+        "type": "gift",
+        "text": "满35赠鸡块一份"
+      }
+    ],
+    "categories": [
+      {
+        "id": "fc-2-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "fc-2-c2",
+        "name": "超值套餐"
+      },
+      {
+        "id": "fc-2-c3",
+        "name": "汉堡主食"
+      },
+      {
+        "id": "fc-2-c4",
+        "name": "炸物小吃"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "fc-2-d1",
+        "categoryId": "fc-2-c1",
+        "name": "收不到香辣鸡腿堡",
+        "desc": "招牌中的招牌，鸡腿厚实裹满香辣脆皮，能不能收到全凭手气。",
+        "price": 18,
+        "originalPrice": 24,
+        "monthlySales": 7200,
+        "goodRate": 97,
+        "emoji": "🍔",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/fc-2.webp"
+      },
+      {
+        "id": "fc-2-d2",
+        "categoryId": "fc-2-c1",
+        "name": "研究所秘制炸全鸡",
+        "desc": "整只现炸，外皮金黄酥脆，研究表明它正在飞向别人家。",
+        "price": 42,
+        "originalPrice": 58,
+        "monthlySales": 3100,
+        "goodRate": 96,
+        "emoji": "🍗",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/fc-2-d2.webp"
+      },
+      {
+        "id": "fc-2-d3",
+        "categoryId": "fc-2-c1",
+        "name": "空头支票牛肉芝士堡",
+        "desc": "双层牛肉双层芝士，承诺很丰满，到货很骨感。",
+        "price": 21,
+        "monthlySales": 4500,
+        "goodRate": 95,
+        "emoji": "🍔",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/fc-2-d3.webp"
+      },
+      {
+        "id": "fc-2-d4",
+        "categoryId": "fc-2-c2",
+        "name": "单人超值套餐",
+        "desc": "汉堡+薯条+可乐，一个人也要吃得像在路上一样豪华。",
+        "price": 29,
+        "originalPrice": 39,
+        "monthlySales": 5600,
+        "goodRate": 96,
+        "emoji": "🍟",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/fc-2-d4.webp"
+      },
+      {
+        "id": "fc-2-d5",
+        "categoryId": "fc-2-c2",
+        "name": "双人画饼欢享餐",
+        "desc": "两堡两饮加鸡块，适合两个人一起等。",
+        "price": 49,
+        "originalPrice": 68,
+        "monthlySales": 2300,
+        "goodRate": 94,
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-2-d5.webp"
+      },
+      {
+        "id": "fc-2-d6",
+        "categoryId": "fc-2-c3",
+        "name": "原味鸡肉汉堡",
+        "desc": "经典不出错，鸡排够大，咬下去满满都是踏实（如果到了的话）。",
+        "price": 14,
+        "monthlySales": 6100,
+        "goodRate": 95,
+        "emoji": "🍔",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/fc-2-d6.webp"
+      },
+      {
+        "id": "fc-2-d7",
+        "categoryId": "fc-2-c3",
+        "name": "培根猪柳堡",
+        "desc": "培根酥香猪柳多汁，早餐宵夜都能打。",
+        "price": 16,
+        "originalPrice": 20,
+        "monthlySales": 2800,
+        "goodRate": 94,
+        "emoji": "🥪",
+        "image": "/fake-takeout/fc-2-d7.webp"
+      },
+      {
+        "id": "fc-2-d8",
+        "categoryId": "fc-2-c3",
+        "name": "双鸡块堡",
+        "desc": "两块大鸡块夹一起，份量管饱，诚意满满。",
+        "price": 17,
+        "monthlySales": 1900,
+        "goodRate": 93,
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-2-d8.webp"
+      },
+      {
+        "id": "fc-2-d9",
+        "categoryId": "fc-2-c4",
+        "name": "黄金鸡块(9块)",
+        "desc": "一口一个停不下来，配酱更香。",
+        "price": 13,
+        "originalPrice": 18,
+        "monthlySales": 5800,
+        "goodRate": 96,
+        "emoji": "🍗",
+        "tags": [
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/fc-2-d9.webp"
+      },
+      {
+        "id": "fc-2-d10",
+        "categoryId": "fc-2-c4",
+        "name": "薯格脆",
+        "desc": "格子薯饼外脆内绵，蘸番茄酱绝配。",
+        "price": 10,
+        "monthlySales": 3300,
+        "goodRate": 94,
+        "emoji": "🍟",
+        "image": "/fake-takeout/fc-2-d10.webp"
+      },
+      {
+        "id": "fc-2-d11",
+        "categoryId": "fc-2-c4",
+        "name": "脆皮炸鸡块",
+        "desc": "裹粉厚实，嘎嘣脆，越嚼越香。",
+        "price": 12,
+        "monthlySales": 4100,
+        "goodRate": 95,
+        "emoji": "🍗",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/fc-2-d11.webp"
+      },
+      {
+        "id": "fc-2-d12",
+        "categoryId": "fc-2-c4",
+        "name": "波纹薯条",
+        "desc": "波浪造型炸得透，配可乐刷剧第一名。",
+        "price": 9,
+        "monthlySales": 2600,
+        "goodRate": 93,
+        "emoji": "🍟",
+        "image": "/fake-takeout/fc-2-d12.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "收不到的第N天",
+        "avatar": "📦",
+        "stars": 4,
+        "comment": "店名很有自知之明，东西味道是真不错，香辣鸡腿堡皮脆肉多，就是真的应了名字，等了很久。",
+        "time": "2天前",
+        "dishNames": [
+          "收不到香辣鸡腿堡"
+        ],
+        "images": [
+          "🍔"
+        ],
+        "reply": "研究所正在攻克'送达'这一世界难题，请再给我们一点时间~"
+      },
+      {
+        "user": "鸡块永动机",
+        "avatar": "🍗",
+        "stars": 5,
+        "comment": "黄金鸡块炸得火候刚好，外酥里嫩，9块根本不够吃，第二份半价直接安排。",
+        "time": "昨天",
+        "dishNames": [
+          "黄金鸡块(9块)"
+        ],
+        "images": [
+          "🍗",
+          "🍟"
+        ]
+      },
+      {
+        "user": "深夜放毒",
+        "avatar": "🌃",
+        "stars": 5,
+        "comment": "全鸡现炸是真香，外皮一咬咔嚓响，朋友来家里吃直呼专业，五星不亏。",
+        "time": "4天前",
+        "dishNames": [
+          "研究所秘制炸全鸡"
+        ]
+      },
+      {
+        "user": "空头支票本票",
+        "avatar": "📝",
+        "stars": 3,
+        "comment": "牛肉堡名字太真实了，下单时承诺28分钟，实际我等成了哲学家。味道还行，扣两星给配送。",
+        "time": "5天前",
+        "dishNames": [
+          "空头支票牛肉芝士堡"
+        ]
+      },
+      {
+        "user": "打工人午餐",
+        "avatar": "💼",
+        "stars": 5,
+        "comment": "单人套餐分量足又划算，午休点一份正好，薯条还烫嘴说明送得算快了。",
+        "time": "3天前",
+        "dishNames": [
+          "单人超值套餐"
+        ],
+        "images": [
+          "🍟"
+        ]
+      },
+      {
+        "user": "芝士拉丝爱好者",
+        "avatar": "🧀",
+        "stars": 5,
+        "comment": "双层芝士是真的拉丝，牛肉也厚，吃得很满足，包装没有压扁好评。",
+        "time": "1周前",
+        "dishNames": [
+          "空头支票牛肉芝士堡"
+        ]
+      },
+      {
+        "user": "在路上の幽灵",
+        "avatar": "👻",
+        "stars": 4,
+        "comment": "骑手定位在我家楼下转了五圈没上来，最后东西到了还是热的，玄学配送。味道顶。",
+        "time": "昨天",
+        "reply": "骑手在做绕楼有氧运动，是为了让炸鸡更香（不是）"
+      },
+      {
+        "user": "番茄酱狂魔",
+        "avatar": "🍅",
+        "stars": 5,
+        "comment": "薯格脆外面酥里面绵，蘸酱一流，小份量但很顶。",
+        "time": "6天前",
+        "dishNames": [
+          "薯格脆"
+        ],
+        "images": [
+          "🍟"
+        ]
+      },
+      {
+        "user": "早八痛苦面具",
+        "avatar": "😪",
+        "stars": 4,
+        "comment": "培根猪柳堡当早餐绝了，培根够香，就是希望配送能赶在我打卡前。",
+        "time": "2天前",
+        "dishNames": [
+          "培根猪柳堡"
+        ]
+      },
+      {
+        "user": "减脂期破功",
+        "avatar": "🏋️",
+        "stars": 5,
+        "comment": "脆皮炸鸡块嘎嘣脆，本来只想吃一块结果整盒空了，明天再练。",
+        "time": "4天前",
+        "dishNames": [
+          "脆皮炸鸡块"
+        ],
+        "images": [
+          "🍗"
+        ]
+      },
+      {
+        "user": "催单狂魔本魔",
+        "avatar": "⏰",
+        "stars": 3,
+        "comment": "全程盯着地图看骑手画饼，转了半天终于送到。东西没问题，配送是真该研究研究。",
+        "time": "3天前"
+      },
+      {
+        "user": "波纹控",
+        "avatar": "🌊",
+        "stars": 5,
+        "comment": "波纹薯条造型可爱炸得透，配可乐刷剧绝配，分量也实在。",
+        "time": "5天前",
+        "dishNames": [
+          "波纹薯条"
+        ]
+      },
+      {
+        "user": "双人份选手",
+        "avatar": "👫",
+        "stars": 4,
+        "comment": "欢享餐和对象一起吃刚刚好，鸡块汉堡都不错，就是两个人一起等更煎熬了哈哈。",
+        "time": "1周前",
+        "dishNames": [
+          "双人画饼欢享餐"
+        ],
+        "images": [
+          "🍔",
+          "🍗"
+        ]
+      },
+      {
+        "user": "放心吃认证",
+        "avatar": "✅",
+        "stars": 5,
+        "comment": "用料看得见，鸡肉新鲜没有怪味，包装干净，作为常点店稳了。",
+        "time": "6天前",
+        "dishNames": [
+          "原味鸡肉汉堡"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "现炸够脆",
+        "count": 389,
+        "positive": true
+      },
+      {
+        "text": "分量实在",
+        "count": 312,
+        "positive": true
+      },
+      {
+        "text": "性价比高",
+        "count": 278,
+        "positive": true
+      },
+      {
+        "text": "包装干净",
+        "count": 201,
+        "positive": true
+      },
+      {
+        "text": "味道顶",
+        "count": 164,
+        "positive": true
+      },
+      {
+        "text": "骑手在路上转圈",
+        "count": 176,
+        "positive": false
+      },
+      {
+        "text": "永远即将送达 88",
+        "count": 88,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.7,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/shop-fc-2.webp"
+  },
+  {
+    "id": "lsf-wangmei",
+    "name": "好换螺·总店",
+    "logo": "🍜",
+    "banner": "🌶️",
+    "rating": 4.7,
+    "monthlySales": 8632,
+    "perCapita": 26,
+    "deliveryMinutes": 35,
+    "deliveryFee": 2,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 18,
+    "distanceKm": 1.8,
+    "notice": "螺蛳粉已打包，骑手捂鼻在路上，永远到不了，先画张饼解馋。",
+    "badges": [
+      "开了8年老店",
+      "月售过万",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满50减8（减的是您的期待）"
+      },
+      {
+        "type": "discount",
+        "text": "限时5折，折扣有效期=骑手送达时间"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8，老客立等三小时"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠冰镇酸梅汤一杯（图片仅供想象）"
+      }
+    ],
+    "categories": [
+      {
+        "id": "lsf-wangmei-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "lsf-wangmei-c2",
+        "name": "限时特价"
+      },
+      {
+        "id": "lsf-wangmei-c3",
+        "name": "拌粉拌面"
+      },
+      {
+        "id": "lsf-wangmei-c4",
+        "name": "小吃配料"
+      },
+      {
+        "id": "lsf-wangmei-c5",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "lsf-wangmei-d1",
+        "categoryId": "lsf-wangmei-c1",
+        "name": "招牌臭味螺蛳粉",
+        "desc": "现熬螺蛳汤底，臭得理直气壮，鲜得明明白白",
+        "price": 18,
+        "originalPrice": 24,
+        "monthlySales": 4210,
+        "goodRate": 98,
+        "emoji": "🍜",
+        "image": "/fake-takeout/luosifen.webp",
+        "tags": [
+          "招牌",
+          "必点"
+        ]
+      },
+      {
+        "id": "lsf-wangmei-d2",
+        "categoryId": "lsf-wangmei-c1",
+        "name": "加量双倍腐竹螺蛳粉",
+        "desc": "腐竹脆到掉渣，份量足到吃撑（如果能收到）",
+        "price": 22,
+        "monthlySales": 2180,
+        "goodRate": 97,
+        "emoji": "🍜",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d2.webp"
+      },
+      {
+        "id": "lsf-wangmei-d3",
+        "categoryId": "lsf-wangmei-c1",
+        "name": "番茄不臭螺蛳粉",
+        "desc": "给不吃臭的家人留条活路，酸甜开胃",
+        "price": 20,
+        "monthlySales": 1560,
+        "goodRate": 96,
+        "emoji": "🍅",
+        "image": "/fake-takeout/lsf-wangmei-d3.webp"
+      },
+      {
+        "id": "lsf-wangmei-d4",
+        "categoryId": "lsf-wangmei-c2",
+        "name": "9.9元学生螺蛳粉",
+        "desc": "学生党专属，便宜到老板想哭",
+        "price": 9.9,
+        "originalPrice": 18,
+        "monthlySales": 3320,
+        "goodRate": 95,
+        "emoji": "🎓",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d4.webp"
+      },
+      {
+        "id": "lsf-wangmei-d5",
+        "categoryId": "lsf-wangmei-c2",
+        "name": "特价豪华全家福粉",
+        "desc": "鸭脚、卤蛋、腐竹、花生一锅端",
+        "price": 28,
+        "originalPrice": 38,
+        "monthlySales": 980,
+        "goodRate": 97,
+        "emoji": "🦆",
+        "tags": [
+          "限时特价"
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d5.webp"
+      },
+      {
+        "id": "lsf-wangmei-d6",
+        "categoryId": "lsf-wangmei-c3",
+        "name": "干捞螺蛳拌粉",
+        "desc": "没有汤的烦恼，只有拌的香，吸溜停不下来",
+        "price": 19,
+        "monthlySales": 1420,
+        "goodRate": 96,
+        "emoji": "🥢",
+        "image": "/fake-takeout/lsf-wangmei-d6.webp"
+      },
+      {
+        "id": "lsf-wangmei-d7",
+        "categoryId": "lsf-wangmei-c3",
+        "name": "麻辣猪脚拌粉",
+        "desc": "猪脚软糯脱骨，辣油拌粉香到舔碗",
+        "price": 24,
+        "monthlySales": 760,
+        "goodRate": 95,
+        "emoji": "🌶️",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d7.webp"
+      },
+      {
+        "id": "lsf-wangmei-d8",
+        "categoryId": "lsf-wangmei-c4",
+        "name": "炸蛋一个",
+        "desc": "外脆里嫩的灵魂炸蛋，泡汤更香",
+        "price": 3,
+        "monthlySales": 5210,
+        "goodRate": 99,
+        "emoji": "🥚",
+        "image": "/fake-takeout/lsf-wangmei-d8.webp"
+      },
+      {
+        "id": "lsf-wangmei-d9",
+        "categoryId": "lsf-wangmei-c4",
+        "name": "卤鸭脚两只",
+        "desc": "啃到忘记骑手还没来",
+        "price": 8,
+        "monthlySales": 2640,
+        "goodRate": 97,
+        "emoji": "🦆",
+        "image": "/fake-takeout/lsf-wangmei-d9.webp"
+      },
+      {
+        "id": "lsf-wangmei-d10",
+        "categoryId": "lsf-wangmei-c4",
+        "name": "加量腐竹（单加）",
+        "desc": "腐竹自由，加到老板肉疼",
+        "price": 4,
+        "monthlySales": 3180,
+        "goodRate": 98,
+        "emoji": "🥢",
+        "image": "/fake-takeout/lsf-wangmei-d10.webp"
+      },
+      {
+        "id": "lsf-wangmei-d11",
+        "categoryId": "lsf-wangmei-c5",
+        "name": "冰镇酸梅汤",
+        "desc": "解辣神器，望梅真能止渴",
+        "price": 6,
+        "originalPrice": 9,
+        "monthlySales": 1890,
+        "goodRate": 96,
+        "emoji": "🥤",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d11.webp"
+      },
+      {
+        "id": "lsf-wangmei-d12",
+        "categoryId": "lsf-wangmei-c5",
+        "name": "维他柠檬茶",
+        "desc": "经典配螺蛳粉，绝绝子",
+        "price": 5,
+        "monthlySales": 2240,
+        "goodRate": 95,
+        "emoji": "🍋",
+        "image": "/fake-takeout/lsf-wangmei-d12.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "饿到发慌的小张",
+        "avatar": "😋",
+        "stars": 5,
+        "comment": "下单三小时了骑手还在路上，但我相信这碗粉一定很香，毕竟看图都馋哭了。",
+        "time": "2小时前",
+        "images": [
+          "🍜",
+          "🌶️"
+        ],
+        "dishNames": [
+          "招牌臭味螺蛳粉"
+        ]
+      },
+      {
+        "user": "螺蛳粉狂魔",
+        "avatar": "🤤",
+        "stars": 5,
+        "comment": "汤底是真的鲜，臭味管够，加量腐竹脆得不行，吃完整个人通透了。",
+        "time": "昨天",
+        "dishNames": [
+          "加量双倍腐竹螺蛳粉",
+          "加量腐竹（单加）"
+        ],
+        "reply": "感谢支持！您是真收到货的幸运儿~"
+      },
+      {
+        "user": "永远在等餐",
+        "avatar": "⏳",
+        "stars": 4,
+        "comment": "骑手定位在我家楼下转了40分钟，最后显示已送达，可我家门口空空如也。望梅止渴是吧。",
+        "time": "3天前",
+        "images": [
+          "🛵"
+        ]
+      },
+      {
+        "user": "辣妹子不怕辣",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "麻辣猪脚拌粉绝了！脱骨软糯，辣油香到舔碗，唯一缺点是吃太快。",
+        "time": "1周前",
+        "dishNames": [
+          "麻辣猪脚拌粉"
+        ]
+      },
+      {
+        "user": "减肥失败户",
+        "avatar": "🍔",
+        "stars": 5,
+        "comment": "说好的减肥，结果加了双份腐竹和两只鸭脚，份量是真的足，撑到走不动。",
+        "time": "4天前",
+        "images": [
+          "🦆",
+          "🥢",
+          "🍜"
+        ]
+      },
+      {
+        "user": "佛系青年",
+        "avatar": "🧘",
+        "stars": 3,
+        "comment": "味道没得说，就是配送是真的玄学，骑手仿佛在修仙，送到时粉都坨了。",
+        "time": "5天前"
+      },
+      {
+        "user": "炸蛋爱好者",
+        "avatar": "🥚",
+        "stars": 5,
+        "comment": "炸蛋单独点了三个，外脆里嫩泡汤一绝，比粉还上头。",
+        "time": "2天前",
+        "dishNames": [
+          "炸蛋一个"
+        ],
+        "reply": "炸蛋本蛋谢谢您的厚爱！"
+      },
+      {
+        "user": "深夜放毒党",
+        "avatar": "🌙",
+        "stars": 5,
+        "comment": "凌晨点的，臭味直接把室友熏醒，但真香警告，第二天他自己点了一份。",
+        "time": "1周前",
+        "images": [
+          "🍜"
+        ]
+      },
+      {
+        "user": "酸梅汤依赖症",
+        "avatar": "🥤",
+        "stars": 4,
+        "comment": "粉太辣，全靠酸梅汤续命，望梅是真止渴，就是配送费减得不明不白。",
+        "time": "6天前",
+        "dishNames": [
+          "冰镇酸梅汤"
+        ]
+      },
+      {
+        "user": "学生党阿明",
+        "avatar": "🎓",
+        "stars": 5,
+        "comment": "9.9的学生粉良心！料一点没缩水，老板别哭，我会常来的（如果能送到）。",
+        "time": "3天前",
+        "dishNames": [
+          "9.9元学生螺蛳粉"
+        ]
+      },
+      {
+        "user": "等到天荒地老",
+        "avatar": "😭",
+        "stars": 3,
+        "comment": "从中午等到晚上，骑手头像一直在画饼，最后我自己下楼买了个包子。",
+        "time": "1周前"
+      },
+      {
+        "user": "番茄党代表",
+        "avatar": "🍅",
+        "stars": 5,
+        "comment": "不吃臭味的我点了番茄粉，酸甜开胃，给我妈点的她都说好。",
+        "time": "昨天",
+        "dishNames": [
+          "番茄不臭螺蛳粉"
+        ],
+        "reply": "番茄粉也是隐藏宝藏，懂的都懂！"
+      },
+      {
+        "user": "干捞星人",
+        "avatar": "🥢",
+        "stars": 5,
+        "comment": "干捞拌粉没有汤的负担，拌开那一刻香气炸裂，吸溜完一根不剩。",
+        "time": "4天前",
+        "dishNames": [
+          "干捞螺蛳拌粉"
+        ]
+      },
+      {
+        "user": "上班族莉莉",
+        "avatar": "💼",
+        "stars": 4,
+        "comment": "包装做得很扎实，汤和粉分开装很贴心，可惜骑手又迷路了，到手已经凉了半截。",
+        "time": "2天前",
+        "images": [
+          "📦",
+          "🍜"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "汤底够鲜",
+        "count": 1820,
+        "positive": true
+      },
+      {
+        "text": "臭味管够",
+        "count": 1456,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 1203,
+        "positive": true
+      },
+      {
+        "text": "包装扎实",
+        "count": 876,
+        "positive": true
+      },
+      {
+        "text": "炸蛋一绝",
+        "count": 654,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老 312",
+        "count": 312,
+        "positive": false
+      },
+      {
+        "text": "骑手永远在路上 198",
+        "count": 198,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "米粉面",
+    "logoImage": "/fake-takeout/shop-lsf-wangmei.webp"
+  },
+  {
+    "id": "lsf-kongqi",
+    "name": "李仙生牛肉面",
+    "logo": "🍲",
+    "banner": "🐂",
+    "rating": 4.6,
+    "monthlySales": 6240,
+    "perCapita": 29,
+    "deliveryMinutes": 40,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 20,
+    "distanceKm": 2.6,
+    "notice": "加州牛肉面熬三年，骑手端着跑成了仙，面永远在路上，到货请见画饼。",
+    "badges": [
+      "品质联盟",
+      "食品安全",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满28减6，满45减10（满的是购物车，减的是希望）"
+      },
+      {
+        "type": "delivery",
+        "text": "免配送费，因为根本送不出去"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠卤蛋一颗（存在于平行宇宙）"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元，先尝后等"
+      }
+    ],
+    "categories": [
+      {
+        "id": "lsf-kongqi-c1",
+        "name": "招牌牛肉面"
+      },
+      {
+        "id": "lsf-kongqi-c2",
+        "name": "限时特价"
+      },
+      {
+        "id": "lsf-kongqi-c3",
+        "name": "拌面系列"
+      },
+      {
+        "id": "lsf-kongqi-c4",
+        "name": "小吃卤味"
+      },
+      {
+        "id": "lsf-kongqi-c5",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "lsf-kongqi-d1",
+        "categoryId": "lsf-kongqi-c1",
+        "name": "招牌红烧牛肉面",
+        "desc": "大块牛腩炖到入口即化，汤头浓到挂勺",
+        "price": 26,
+        "originalPrice": 32,
+        "monthlySales": 3120,
+        "goodRate": 98,
+        "emoji": "🍲",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/lsf-kongqi.webp"
+      },
+      {
+        "id": "lsf-kongqi-d2",
+        "categoryId": "lsf-kongqi-c1",
+        "name": "清炖原汤牛肉面",
+        "desc": "清汤吊足12小时，鲜得眉毛掉下来",
+        "price": 28,
+        "monthlySales": 1680,
+        "goodRate": 97,
+        "emoji": "🍜",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d2.webp"
+      },
+      {
+        "id": "lsf-kongqi-d3",
+        "categoryId": "lsf-kongqi-c1",
+        "name": "双倍牛肉霸王面",
+        "desc": "肉比面多，吃完怀疑老板亏不亏",
+        "price": 36,
+        "originalPrice": 42,
+        "monthlySales": 940,
+        "goodRate": 99,
+        "emoji": "🐂",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d3.webp"
+      },
+      {
+        "id": "lsf-kongqi-d4",
+        "categoryId": "lsf-kongqi-c2",
+        "name": "12.9元单人牛肉面",
+        "desc": "肉量不缩水，价格打骨折",
+        "price": 12.9,
+        "originalPrice": 22,
+        "monthlySales": 2860,
+        "goodRate": 95,
+        "emoji": "💰",
+        "tags": [
+          "限时特价"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d4.webp"
+      },
+      {
+        "id": "lsf-kongqi-d5",
+        "categoryId": "lsf-kongqi-c2",
+        "name": "特价番茄牛腩面",
+        "desc": "番茄熬到化，牛腩软烂，酸甜开胃",
+        "price": 19.9,
+        "originalPrice": 28,
+        "monthlySales": 1240,
+        "goodRate": 96,
+        "emoji": "🍅",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d5.webp"
+      },
+      {
+        "id": "lsf-kongqi-d6",
+        "categoryId": "lsf-kongqi-c3",
+        "name": "葱油拌面",
+        "desc": "葱香逼人，拌开就是儿时的味道",
+        "price": 14,
+        "monthlySales": 1980,
+        "goodRate": 97,
+        "emoji": "🥢",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d6.webp"
+      },
+      {
+        "id": "lsf-kongqi-d7",
+        "categoryId": "lsf-kongqi-c3",
+        "name": "麻酱牛肉拌面",
+        "desc": "浓厚麻酱裹住每根面，牛肉给得豪横",
+        "price": 22,
+        "monthlySales": 1120,
+        "goodRate": 96,
+        "emoji": "🥜",
+        "image": "/fake-takeout/lsf-kongqi-d7.webp"
+      },
+      {
+        "id": "lsf-kongqi-d8",
+        "categoryId": "lsf-kongqi-c4",
+        "name": "卤牛腱拼盘",
+        "desc": "现卤现切，蘸辣椒油绝配下酒",
+        "price": 25,
+        "monthlySales": 860,
+        "goodRate": 98,
+        "emoji": "🥩",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d8.webp"
+      },
+      {
+        "id": "lsf-kongqi-d9",
+        "categoryId": "lsf-kongqi-c4",
+        "name": "卤蛋两颗",
+        "desc": "卤到入味的灵魂蛋，泡汤更香",
+        "price": 4,
+        "monthlySales": 4320,
+        "goodRate": 99,
+        "emoji": "🥚",
+        "image": "/fake-takeout/lsf-kongqi-d9.webp"
+      },
+      {
+        "id": "lsf-kongqi-d10",
+        "categoryId": "lsf-kongqi-c4",
+        "name": "凉拌黄瓜",
+        "desc": "解腻爽口，拍碎更入味",
+        "price": 7,
+        "monthlySales": 1560,
+        "goodRate": 95,
+        "emoji": "🥒",
+        "image": "/fake-takeout/lsf-kongqi-d10.webp"
+      },
+      {
+        "id": "lsf-kongqi-d11",
+        "categoryId": "lsf-kongqi-c4",
+        "name": "加量牛肉（单加）",
+        "desc": "肉控福音，加到老板报警",
+        "price": 12,
+        "monthlySales": 2240,
+        "goodRate": 98,
+        "emoji": "🐂",
+        "image": "/fake-takeout/lsf-kongqi-d11.webp"
+      },
+      {
+        "id": "lsf-kongqi-d12",
+        "categoryId": "lsf-kongqi-c5",
+        "name": "现磨豆浆",
+        "desc": "醇厚不甜腻，配面绝了",
+        "price": 5,
+        "monthlySales": 1680,
+        "goodRate": 96,
+        "emoji": "🥛",
+        "image": "/fake-takeout/lsf-kongqi-d12.webp"
+      },
+      {
+        "id": "lsf-kongqi-d13",
+        "categoryId": "lsf-kongqi-c5",
+        "name": "冰峰汽水",
+        "desc": "西北灵魂搭配，喝一口直接上头",
+        "price": 6,
+        "originalPrice": 8,
+        "monthlySales": 1340,
+        "goodRate": 95,
+        "emoji": "🥤",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "牛肉自由人",
+        "avatar": "🐂",
+        "stars": 5,
+        "comment": "双倍牛肉霸王面是真的肉比面多，吃完我都替老板算账了，良心店！",
+        "time": "昨天",
+        "images": [
+          "🐂",
+          "🍲"
+        ],
+        "dishNames": [
+          "双倍牛肉霸王面"
+        ],
+        "reply": "肉管够，您吃好就行，亏本的事我们专业！"
+      },
+      {
+        "user": "在路上的人生",
+        "avatar": "🛵",
+        "stars": 4,
+        "comment": "骑手定位绕着我小区跑了三圈，最后显示送达，我面前只有空气牛肉面（名副其实）。",
+        "time": "3天前",
+        "images": [
+          "🛵"
+        ]
+      },
+      {
+        "user": "汤头鉴定师",
+        "avatar": "🍜",
+        "stars": 5,
+        "comment": "清炖原汤是真功夫，鲜得不用放味精，喝完一滴汤都不剩。",
+        "time": "1周前",
+        "dishNames": [
+          "清炖原汤牛肉面"
+        ]
+      },
+      {
+        "user": "卤蛋永动机",
+        "avatar": "🥚",
+        "stars": 5,
+        "comment": "卤蛋入味到蛋黄都是咸香的，一口气加了四颗，比面还抢手。",
+        "time": "2天前",
+        "dishNames": [
+          "卤蛋两颗"
+        ]
+      },
+      {
+        "user": "等餐冥想中",
+        "avatar": "🧘",
+        "stars": 3,
+        "comment": "味道挺好，就是等了俩小时，期间我已经完成了一次精神顿悟，画饼大师无疑。",
+        "time": "4天前"
+      },
+      {
+        "user": "葱油控",
+        "avatar": "🥢",
+        "stars": 5,
+        "comment": "葱油拌面拌开那一下香到邻桌探头，简单但顶级，童年回来了。",
+        "time": "5天前",
+        "images": [
+          "🥢"
+        ],
+        "dishNames": [
+          "葱油拌面"
+        ]
+      },
+      {
+        "user": "西北汉子",
+        "avatar": "🌵",
+        "stars": 5,
+        "comment": "牛肉面配冰峰，绝绝子，吃出了在西安街头的感觉，份量也实在。",
+        "time": "昨天",
+        "dishNames": [
+          "招牌红烧牛肉面",
+          "冰峰汽水"
+        ]
+      },
+      {
+        "user": "永远收不到货",
+        "avatar": "📦",
+        "stars": 3,
+        "comment": "下单到现在第五次催单，客服说骑手在体验人生，我信了，毕竟免配送费。",
+        "time": "6天前"
+      },
+      {
+        "user": "麻酱真爱粉",
+        "avatar": "🥜",
+        "stars": 5,
+        "comment": "麻酱拌面浓得化不开，牛肉给得豪横，拌完碗都能舔干净。",
+        "time": "3天前",
+        "dishNames": [
+          "麻酱牛肉拌面"
+        ],
+        "reply": "麻酱我们是按盆放的，放心炫！"
+      },
+      {
+        "user": "省钱小能手",
+        "avatar": "💰",
+        "stars": 5,
+        "comment": "12.9的单人面肉一点没少，这个价格上哪找，老板你清醒一点。",
+        "time": "2天前",
+        "dishNames": [
+          "12.9元单人牛肉面"
+        ]
+      },
+      {
+        "user": "减肥第108天",
+        "avatar": "🥗",
+        "stars": 4,
+        "comment": "本来想等不到就减肥，结果两小时后真送到了，破功，但面是真香。",
+        "time": "1周前",
+        "images": [
+          "🍲",
+          "🥩"
+        ]
+      },
+      {
+        "user": "番茄控小美",
+        "avatar": "🍅",
+        "stars": 5,
+        "comment": "番茄牛腩面酸甜开胃，牛腩软烂入味，给孩子点的他喝光了汤。",
+        "time": "4天前",
+        "dishNames": [
+          "特价番茄牛腩面"
+        ]
+      },
+      {
+        "user": "夜宵党老王",
+        "avatar": "🌙",
+        "stars": 4,
+        "comment": "卤牛腱拼盘蘸辣椒油下酒一流，就是配送慢得离谱，酒都喝完了面才来。",
+        "time": "5天前",
+        "dishNames": [
+          "卤牛腱拼盘"
+        ]
+      },
+      {
+        "user": "包装强迫症",
+        "avatar": "📦",
+        "stars": 5,
+        "comment": "汤面分装、配料独立袋，包装细节满分，可惜骑手又把它送去了平行宇宙。",
+        "time": "昨天",
+        "images": [
+          "📦"
+        ],
+        "reply": "包装我们尽力了，骑手实在管不住，抱拳！"
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "牛肉给得多",
+        "count": 1640,
+        "positive": true
+      },
+      {
+        "text": "汤头浓鲜",
+        "count": 1280,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 1052,
+        "positive": true
+      },
+      {
+        "text": "卤味入味",
+        "count": 723,
+        "positive": true
+      },
+      {
+        "text": "包装用心",
+        "count": 612,
+        "positive": true
+      },
+      {
+        "text": "骑手永远在路上 264",
+        "count": 264,
+        "positive": false
+      },
+      {
+        "text": "收不到货 157",
+        "count": 157,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.9,
+      "packaging": 4.6,
+      "delivery": 1.9
+    },
+    "channel": "米粉面",
+    "logoImage": "/fake-takeout/shop-lsf-kongqi.webp"
+  },
+  {
+    "id": "mt-huabing-cha",
+    "name": "茶百到鲜茶",
+    "logo": "🧋",
+    "banner": "🧋",
+    "rating": 4.7,
+    "monthlySales": 28640,
+    "perCapita": 18,
+    "deliveryMinutes": 30,
+    "deliveryFee": 2,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 15,
+    "distanceKm": 1.2,
+    "notice": "茶百道道送不到，奶茶已封口，骑手捧着在路上，珍珠凉了，先画饼。",
+    "badges": [
+      "品质联盟",
+      "月售过万",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满50减10"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元"
+      },
+      {
+        "type": "discount",
+        "text": "招牌奶茶限时5折"
+      },
+      {
+        "type": "gift",
+        "text": "下单送精神饱腹一份"
+      }
+    ],
+    "categories": [
+      {
+        "id": "mt-cat-signature",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "mt-cat-milktea",
+        "name": "醇香奶茶"
+      },
+      {
+        "id": "mt-cat-fruit",
+        "name": "鲜果茶"
+      },
+      {
+        "id": "mt-cat-special",
+        "name": "限时特价"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "mt-huabing-cha-d1",
+        "categoryId": "mt-cat-signature",
+        "name": "招牌画饼奶茶（大）",
+        "desc": "三分糖去冰，喝一口就感觉饼画好了",
+        "price": 16,
+        "originalPrice": 22,
+        "monthlySales": 8820,
+        "goodRate": 98,
+        "emoji": "🧋",
+        "image": "/fake-takeout/milk-tea.webp",
+        "tags": [
+          "招牌",
+          "必点",
+          "第2件半价"
+        ]
+      },
+      {
+        "id": "mt-huabing-cha-d2",
+        "categoryId": "mt-cat-signature",
+        "name": "空气芝士奶盖",
+        "desc": "奶盖很厚，厚到下单后就消失了",
+        "price": 18,
+        "monthlySales": 5210,
+        "goodRate": 97,
+        "emoji": "🧋",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d2.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d3",
+        "categoryId": "mt-cat-milktea",
+        "name": "古法红糖珍珠奶茶",
+        "desc": "珍珠现煮Q弹，糖香能上头",
+        "price": 14,
+        "monthlySales": 6730,
+        "goodRate": 96,
+        "emoji": "🧋",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d3.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d4",
+        "categoryId": "mt-cat-milktea",
+        "name": "厚乳波波奶茶",
+        "desc": "厚乳打底波波管够，喝完很满足",
+        "price": 15,
+        "monthlySales": 4180,
+        "goodRate": 95,
+        "emoji": "🧋",
+        "image": "/fake-takeout/mt-huabing-cha-d4.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d5",
+        "categoryId": "mt-cat-milktea",
+        "name": "望梅止渴乌龙奶茶",
+        "desc": "乌龙茶香解腻，越想越渴",
+        "price": 13,
+        "monthlySales": 2960,
+        "goodRate": 94,
+        "emoji": "🍵",
+        "image": "/fake-takeout/mt-huabing-cha-d5.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d6",
+        "categoryId": "mt-cat-fruit",
+        "name": "满杯多肉葡萄",
+        "desc": "现剥巨峰，果肉满到溢出（图片仅供参考）",
+        "price": 19,
+        "originalPrice": 24,
+        "monthlySales": 3540,
+        "goodRate": 97,
+        "emoji": "🍇",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d6.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d7",
+        "categoryId": "mt-cat-fruit",
+        "name": "霸气芝士草莓",
+        "desc": "整颗草莓现捣，酸甜上头",
+        "price": 18,
+        "monthlySales": 2210,
+        "goodRate": 96,
+        "emoji": "🍓",
+        "image": "/fake-takeout/mt-huabing-cha-d7.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d8",
+        "categoryId": "mt-cat-fruit",
+        "name": "杨枝甘露",
+        "desc": "芒果西米西柚一杯齐活",
+        "price": 17,
+        "monthlySales": 4490,
+        "goodRate": 96,
+        "emoji": "🥭",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d8.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d9",
+        "categoryId": "mt-cat-fruit",
+        "name": "纸上柠檬茶（手打）",
+        "desc": "手打柠檬十几下，酸到清醒",
+        "price": 12,
+        "monthlySales": 5870,
+        "goodRate": 95,
+        "emoji": "🍋",
+        "image": "/fake-takeout/mt-huabing-cha-d9.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d10",
+        "categoryId": "mt-cat-special",
+        "name": "收不到货西瓜冰沙",
+        "desc": "现打西瓜冰沙，夏天救命水",
+        "price": 9,
+        "originalPrice": 16,
+        "monthlySales": 1980,
+        "goodRate": 93,
+        "emoji": "🍉",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d10.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d11",
+        "categoryId": "mt-cat-special",
+        "name": "限时白嫖布丁奶茶",
+        "desc": "焦糖布丁加奶茶，甜到忘记还没收到",
+        "price": 10,
+        "originalPrice": 15,
+        "monthlySales": 2640,
+        "goodRate": 94,
+        "emoji": "🍮",
+        "image": "/fake-takeout/mt-huabing-cha-d11.webp"
+      },
+      {
+        "id": "mt-huabing-cha-d12",
+        "categoryId": "mt-cat-milktea",
+        "name": "茉莉奶绿",
+        "desc": "茉香清爽，办公室续命首选",
+        "price": 12,
+        "monthlySales": 3320,
+        "goodRate": 95,
+        "emoji": "🍵",
+        "image": "/fake-takeout/mt-huabing-cha-d12.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "等到花儿都谢了",
+        "avatar": "🙂",
+        "stars": 5,
+        "comment": "奶茶是真好喝，珍珠Q弹，就是骑手好像在画饼的路上迷路了，等了半小时还显示在路上。味道五星，配送扣一星都算我手软。",
+        "time": "昨天",
+        "images": [
+          "🧋",
+          "🍇"
+        ],
+        "dishNames": [
+          "招牌画饼奶茶（大）",
+          "满杯多肉葡萄"
+        ]
+      },
+      {
+        "user": "在路上的张同学",
+        "avatar": "😋",
+        "stars": 5,
+        "comment": "杨枝甘露绝了，芒果给得很足不是兑水的那种，第二杯半价直接囤两杯。",
+        "time": "3天前",
+        "dishNames": [
+          "杨枝甘露"
+        ]
+      },
+      {
+        "user": "今天也没收到货",
+        "avatar": "😭",
+        "stars": 4,
+        "comment": "下单到现在骑手定位一直在原地转圈，是不是真的画饼啊老板。不过喝上之后真香，原谅你了。",
+        "time": "2天前",
+        "images": [
+          "🧋"
+        ],
+        "reply": "亲，骑手在帮您体会望梅止渴的意境，马上到～"
+      },
+      {
+        "user": "糖分依赖者",
+        "avatar": "🤤",
+        "stars": 5,
+        "comment": "红糖珍珠奶茶香到上头，珍珠现煮的能吃出来，分量足足一大杯。",
+        "time": "1周前",
+        "dishNames": [
+          "古法红糖珍珠奶茶"
+        ]
+      },
+      {
+        "user": "柠檬茶刺客",
+        "avatar": "🍋",
+        "stars": 5,
+        "comment": "手打柠檬茶是真手打，酸得我瞬间清醒，加班党狂喜。包装也扎实没漏。",
+        "time": "4天前",
+        "images": [
+          "🍋"
+        ],
+        "dishNames": [
+          "纸上柠檬茶（手打）"
+        ]
+      },
+      {
+        "user": "画饼届一哥",
+        "avatar": "🫠",
+        "stars": 3,
+        "comment": "味道没得说，但等餐体验非常画饼，从下单等到我都饿出幻觉了。建议老板给骑手配个导航。",
+        "time": "5天前"
+      },
+      {
+        "user": "奶盖控小美",
+        "avatar": "🥰",
+        "stars": 5,
+        "comment": "芝士奶盖咸甜咸甜的，搅匀了喝绝配，比某某某好喝多了。",
+        "time": "1周前",
+        "dishNames": [
+          "空气芝士奶盖"
+        ]
+      },
+      {
+        "user": "省钱小能手",
+        "avatar": "💰",
+        "stars": 5,
+        "comment": "新客立减加满减，两杯才二十出头，量大管饱良心店。就是别问什么时候到。",
+        "time": "6天前",
+        "images": [
+          "🧋",
+          "🍮"
+        ]
+      },
+      {
+        "user": "西瓜自由",
+        "avatar": "🍉",
+        "stars": 4,
+        "comment": "西瓜冰沙现打的，能喝到果肉，夏天救命。骑手送到时冰已经化了一半，算缘分吧。",
+        "time": "2天前",
+        "dishNames": [
+          "收不到货西瓜冰沙"
+        ]
+      },
+      {
+        "user": "永远的备胎奶茶",
+        "avatar": "😶",
+        "stars": 5,
+        "comment": "草莓是真草莓不是香精，整颗捣的能看见籽。复购第N次了。",
+        "time": "3天前",
+        "dishNames": [
+          "霸气芝士草莓"
+        ]
+      },
+      {
+        "user": "饿到看见饼",
+        "avatar": "🥲",
+        "stars": 4,
+        "comment": "厚乳波波奶茶波波给得多，喝到最后还有一堆。配送嘛，懂的都懂，我已经学会自我安慰了。",
+        "time": "1周前",
+        "images": [
+          "🧋"
+        ],
+        "reply": "波波管够，等待也管够，谢谢家人理解～"
+      },
+      {
+        "user": "茉莉本莉",
+        "avatar": "🌸",
+        "stars": 5,
+        "comment": "奶绿清清爽爽不齁，办公室一下午就靠它续命。包装密封很好没洒。",
+        "time": "4天前",
+        "dishNames": [
+          "茉莉奶绿"
+        ]
+      },
+      {
+        "user": "退钱侠",
+        "avatar": "😤",
+        "stars": 3,
+        "comment": "东西好喝是真的，但显示送达了我手上空空如也，这就是传说中的收不到货？打电话还说让我再等等。",
+        "time": "昨天"
+      },
+      {
+        "user": "甜党代表",
+        "avatar": "🍮",
+        "stars": 5,
+        "comment": "布丁奶茶焦糖味十足，布丁滑嫩，十块钱限时价直接闭眼冲。",
+        "time": "5天前",
+        "images": [
+          "🍮"
+        ],
+        "dishNames": [
+          "限时白嫖布丁奶茶"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "奶茶好喝",
+        "count": 1820,
+        "positive": true
+      },
+      {
+        "text": "珍珠Q弹",
+        "count": 960,
+        "positive": true
+      },
+      {
+        "text": "果肉很足",
+        "count": 740,
+        "positive": true
+      },
+      {
+        "text": "包装扎实",
+        "count": 410,
+        "positive": true
+      },
+      {
+        "text": "性价比高",
+        "count": 530,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 312,
+        "positive": false
+      },
+      {
+        "text": "永远在路上",
+        "count": 188,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "甜点饮品",
+    "logoImage": "/fake-takeout/shop-mt-huabing-cha.webp"
+  },
+  {
+    "id": "mt-konggair-coffee",
+    "name": "库笛咖啡",
+    "logo": "☕",
+    "banner": "☕",
+    "rating": 4.6,
+    "monthlySales": 15230,
+    "perCapita": 26,
+    "deliveryMinutes": 38,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 20,
+    "distanceKm": 2.4,
+    "notice": "9块9的快乐，骑手喝完在路上续命，生椰拿铁永远差一口，先画饼提神。",
+    "badges": [
+      "开了8年老店",
+      "食品安全",
+      "品质联盟"
+    ],
+    "promotions": [
+      {
+        "type": "discount",
+        "text": "美式限时5折"
+      },
+      {
+        "type": "manjian",
+        "text": "满40减8"
+      },
+      {
+        "type": "gift",
+        "text": "买甜品赠美式一杯（电子券）"
+      },
+      {
+        "type": "delivery",
+        "text": "减配送费，0元起送上门（理论上）"
+      }
+    ],
+    "categories": [
+      {
+        "id": "mt-cat-coffee",
+        "name": "精品咖啡"
+      },
+      {
+        "id": "mt-cat-dessert",
+        "name": "甜品蛋糕"
+      },
+      {
+        "id": "mt-cat-combo",
+        "name": "下午茶套餐"
+      },
+      {
+        "id": "mt-cat-deal",
+        "name": "限时特价"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "mt-air-coffee-d1",
+        "categoryId": "mt-cat-coffee",
+        "name": "空气美式",
+        "desc": "深烘豆现萃，苦中带回甘，越等越浓",
+        "price": 12,
+        "originalPrice": 20,
+        "monthlySales": 6210,
+        "goodRate": 97,
+        "emoji": "☕",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/mt-konggair-coffee.webp"
+      },
+      {
+        "id": "mt-air-coffee-d2",
+        "categoryId": "mt-cat-coffee",
+        "name": "画饼生椰拿铁",
+        "desc": "生椰乳丝滑，喝完感觉饼已经画完",
+        "price": 18,
+        "monthlySales": 7340,
+        "goodRate": 98,
+        "emoji": "☕",
+        "tags": [
+          "招牌",
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d2.webp"
+      },
+      {
+        "id": "mt-air-coffee-d3",
+        "categoryId": "mt-cat-coffee",
+        "name": "望梅止渴冰萃",
+        "desc": "冷萃8小时，清爽不酸涩",
+        "price": 16,
+        "monthlySales": 2980,
+        "goodRate": 96,
+        "emoji": "🧊",
+        "image": "/fake-takeout/mt-air-coffee-d3.webp"
+      },
+      {
+        "id": "mt-air-coffee-d4",
+        "categoryId": "mt-cat-coffee",
+        "name": "厚椰拿铁特调",
+        "desc": "椰香浓郁奶味足，一口就上瘾",
+        "price": 19,
+        "monthlySales": 3110,
+        "goodRate": 95,
+        "emoji": "🥥",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d4.webp"
+      },
+      {
+        "id": "mt-air-coffee-d5",
+        "categoryId": "mt-cat-coffee",
+        "name": "丝绒卡布奇诺",
+        "desc": "奶泡绵密，撒一层肉桂粉",
+        "price": 17,
+        "monthlySales": 1860,
+        "goodRate": 94,
+        "emoji": "☕",
+        "image": "/fake-takeout/mt-air-coffee-d5.webp"
+      },
+      {
+        "id": "mt-air-coffee-d6",
+        "categoryId": "mt-cat-dessert",
+        "name": "纸上提拉米苏",
+        "desc": "马斯卡彭手工打，咖啡酒香浓郁",
+        "price": 22,
+        "originalPrice": 28,
+        "monthlySales": 4520,
+        "goodRate": 98,
+        "emoji": "🍰",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d6.webp"
+      },
+      {
+        "id": "mt-air-coffee-d7",
+        "categoryId": "mt-cat-dessert",
+        "name": "巴斯克焦香芝士",
+        "desc": "外焦内嫩爆浆芝士，半熟口感",
+        "price": 20,
+        "monthlySales": 3680,
+        "goodRate": 97,
+        "emoji": "🧀",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d7.webp"
+      },
+      {
+        "id": "mt-air-coffee-d8",
+        "categoryId": "mt-cat-dessert",
+        "name": "收不到货熔岩可可",
+        "desc": "切开爆浆巧克力，热乎乎的（指刚出炉）",
+        "price": 18,
+        "monthlySales": 2240,
+        "goodRate": 96,
+        "emoji": "🍫",
+        "image": "/fake-takeout/mt-air-coffee-d8.webp"
+      },
+      {
+        "id": "mt-air-coffee-d9",
+        "categoryId": "mt-cat-dessert",
+        "name": "原味舒芙蕾",
+        "desc": "现烤云朵口感，颤颤巍巍像我的等待",
+        "price": 24,
+        "monthlySales": 1290,
+        "goodRate": 95,
+        "emoji": "🥞",
+        "image": "/fake-takeout/mt-air-coffee-d9.webp"
+      },
+      {
+        "id": "mt-air-coffee-d10",
+        "categoryId": "mt-cat-combo",
+        "name": "在路上下午茶套餐",
+        "desc": "拿铁一杯+提拉米苏一块，一人食刚好",
+        "price": 36,
+        "originalPrice": 44,
+        "monthlySales": 2760,
+        "goodRate": 97,
+        "emoji": "🍰",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d10.webp"
+      },
+      {
+        "id": "mt-air-coffee-d11",
+        "categoryId": "mt-cat-combo",
+        "name": "双人画饼能量套餐",
+        "desc": "两杯咖啡+两块甜品，办公室分享装",
+        "price": 58,
+        "monthlySales": 980,
+        "goodRate": 94,
+        "emoji": "☕",
+        "image": "/fake-takeout/mt-air-coffee-d11.webp"
+      },
+      {
+        "id": "mt-air-coffee-d12",
+        "categoryId": "mt-cat-deal",
+        "name": "限时白嫖燕麦拿铁",
+        "desc": "燕麦奶丝滑无负担，咖啡党早C必备",
+        "price": 9,
+        "originalPrice": 18,
+        "monthlySales": 5410,
+        "goodRate": 95,
+        "emoji": "🌾",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d12.webp"
+      },
+      {
+        "id": "mt-air-coffee-d13",
+        "categoryId": "mt-cat-deal",
+        "name": "特价手工蛋挞（2个）",
+        "desc": "葡式酥皮现烤，外酥里嫩",
+        "price": 8,
+        "originalPrice": 14,
+        "monthlySales": 3920,
+        "goodRate": 96,
+        "emoji": "🥧",
+        "image": "/fake-takeout/mt-air-coffee-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "续命靠想象",
+        "avatar": "😪",
+        "stars": 5,
+        "comment": "生椰拿铁是真的好喝，椰香不假不腻。就是骑手在路上修行了快一个钟头，我都靠闻空气提神了。",
+        "time": "昨天",
+        "images": [
+          "☕",
+          "🍰"
+        ],
+        "dishNames": [
+          "画饼生椰拿铁",
+          "纸上提拉米苏"
+        ]
+      },
+      {
+        "user": "提拉米苏狂魔",
+        "avatar": "🤩",
+        "stars": 5,
+        "comment": "提拉米苏咖啡酒味很正，马斯卡彭给得足，吃完幸福感拉满，比连锁店良心多了。",
+        "time": "3天前",
+        "dishNames": [
+          "纸上提拉米苏"
+        ]
+      },
+      {
+        "user": "八年老顾客",
+        "avatar": "🙂",
+        "stars": 5,
+        "comment": "开了八年的老店了，味道一如既往稳定。美式5折真的划算，豆子是好豆子。配送就别指望了哈哈。",
+        "time": "1周前",
+        "dishNames": [
+          "空气美式"
+        ]
+      },
+      {
+        "user": "今天也在等单",
+        "avatar": "🫠",
+        "stars": 4,
+        "comment": "甜品好吃没话说，巴斯克芝士爆浆那一下绝了。但是显示骑手在路上俩小时纹丝不动，画饼实锤。",
+        "time": "2天前",
+        "images": [
+          "🧀"
+        ],
+        "reply": "亲，骑手正在用八年功力护送您的芝士，请稍候～"
+      },
+      {
+        "user": "早C晚A打工人",
+        "avatar": "☕",
+        "stars": 5,
+        "comment": "限时燕麦拿铁九块钱拿下，丝滑不腻早上来一杯精神一整天。包装也稳，没洒。",
+        "time": "4天前",
+        "dishNames": [
+          "限时白嫖燕麦拿铁"
+        ]
+      },
+      {
+        "user": "舒芙蕾爱好者",
+        "avatar": "🥞",
+        "stars": 5,
+        "comment": "舒芙蕾现烤的，颤颤巍巍像云朵，入口即化。就是太娇贵了路上颠簸到我手里有点塌，建议堂食。",
+        "time": "5天前",
+        "images": [
+          "🥞"
+        ]
+      },
+      {
+        "user": "永远收不到的王先生",
+        "avatar": "😭",
+        "stars": 3,
+        "comment": "东西是真不错，可这配送速度是真的画饼，等到我午觉都睡醒了。味道五星，体验三星，自己平衡一下。",
+        "time": "昨天"
+      },
+      {
+        "user": "蛋挞收割机",
+        "avatar": "🥧",
+        "stars": 5,
+        "comment": "手工蛋挞两个才八块，酥皮层层掉渣，现烤的能吃出来。复购无数次。",
+        "time": "6天前",
+        "images": [
+          "🥧",
+          "☕"
+        ],
+        "dishNames": [
+          "特价手工蛋挞（2个）"
+        ]
+      },
+      {
+        "user": "冷萃党",
+        "avatar": "🧊",
+        "stars": 4,
+        "comment": "冰萃清爽不酸，夏天首选。送到的时候冰化得差不多了，骑手是不是边走边修行啊。",
+        "time": "3天前",
+        "dishNames": [
+          "望梅止渴冰萃"
+        ]
+      },
+      {
+        "user": "甜品续命中",
+        "avatar": "🍫",
+        "stars": 5,
+        "comment": "熔岩可可切开真的爆浆，巧克力浓郁不齁。配杯美式绝配，下午茶天花板。",
+        "time": "1周前",
+        "dishNames": [
+          "收不到货熔岩可可",
+          "空气美式"
+        ]
+      },
+      {
+        "user": "套餐性价比党",
+        "avatar": "💰",
+        "stars": 5,
+        "comment": "下午茶套餐一杯拿铁加一块提拉米苏才36，一个人吃刚刚好，满减下来更香。",
+        "time": "2天前",
+        "images": [
+          "☕"
+        ],
+        "dishNames": [
+          "在路上下午茶套餐"
+        ]
+      },
+      {
+        "user": "椰子精本精",
+        "avatar": "🥥",
+        "stars": 5,
+        "comment": "厚椰拿铁椰香爆棚，奶味足，喝一口就上头。包装密封做得很到位。",
+        "time": "4天前",
+        "dishNames": [
+          "厚椰拿铁特调"
+        ]
+      },
+      {
+        "user": "等单等到怀疑人生",
+        "avatar": "😤",
+        "stars": 3,
+        "comment": "显示已送达但门口空空，打电话客服让我再耐心等等，这就是空气咖啡的精髓吗？好在味道在线没生气。",
+        "time": "昨天"
+      },
+      {
+        "user": "卡布本布",
+        "avatar": "🥰",
+        "stars": 5,
+        "comment": "卡布奇诺奶泡绵密，肉桂粉点睛，喝着很治愈。老板很用心，给个好评。",
+        "time": "5天前",
+        "dishNames": [
+          "丝绒卡布奇诺"
+        ],
+        "reply": "谢谢家人，下次给您多撒一层肉桂～"
+      },
+      {
+        "user": "分享装真香",
+        "avatar": "😋",
+        "stars": 4,
+        "comment": "双人套餐和同事拼了，两杯两甜品五十八，量挺足。配送依旧画饼，我们一边等一边画自己的饼。",
+        "time": "1周前",
+        "images": [
+          "☕",
+          "🍰"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "咖啡香醇",
+        "count": 1340,
+        "positive": true
+      },
+      {
+        "text": "甜品好吃",
+        "count": 1180,
+        "positive": true
+      },
+      {
+        "text": "现做现烤",
+        "count": 620,
+        "positive": true
+      },
+      {
+        "text": "包装精致",
+        "count": 470,
+        "positive": true
+      },
+      {
+        "text": "性价比高",
+        "count": 580,
+        "positive": true
+      },
+      {
+        "text": "永远在路上",
+        "count": 266,
+        "positive": false
+      },
+      {
+        "text": "送达即空气 92",
+        "count": 92,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.9,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "甜点饮品",
+    "logoImage": "/fake-takeout/shop-mt-konggair-coffee.webp"
+  },
+  {
+    "id": "bbq-1",
+    "name": "很久以钱烧烤",
+    "logo": "🍢",
+    "rating": 4.7,
+    "monthlySales": 13862,
+    "perCapita": 58,
+    "deliveryMinutes": 35,
+    "deliveryFee": 3,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 20,
+    "distanceKm": 1.8,
+    "notice": "很久以前点的串如今还在烤，骑手举着穿街走巷，永远在路上，先啃画饼。",
+    "badges": [
+      "开了8年老店",
+      "月售过万",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满40减8，满80减15"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（饼先画上）"
+      },
+      {
+        "type": "discount",
+        "text": "招牌羊肉串限时5折"
+      },
+      {
+        "type": "gift",
+        "text": "满60赠冰镇酸梅汤一杯（理论上）"
+      }
+    ],
+    "categories": [
+      {
+        "id": "bbq-1-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "bbq-1-c2",
+        "name": "烤串经典"
+      },
+      {
+        "id": "bbq-1-c3",
+        "name": "主食小吃"
+      },
+      {
+        "id": "bbq-1-c4",
+        "name": "冰镇饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "bbq-1-d1",
+        "categoryId": "bbq-1-c1",
+        "name": "炭火烤羊肉串（10串）",
+        "desc": "现穿现烤，孜然辣椒拉满，肥瘦相间一口爆汁",
+        "price": 28,
+        "originalPrice": 38,
+        "monthlySales": 9821,
+        "goodRate": 98,
+        "emoji": "🍢",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/bbq-1.webp"
+      },
+      {
+        "id": "bbq-1-d2",
+        "categoryId": "bbq-1-c1",
+        "name": "蒜蓉烤生蚝（6只）",
+        "desc": "肥美生蚝铺满金蒜，海味十足",
+        "price": 39,
+        "originalPrice": 49,
+        "monthlySales": 4231,
+        "goodRate": 97,
+        "emoji": "🦪",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bbq-1-d2.webp"
+      },
+      {
+        "id": "bbq-1-d3",
+        "categoryId": "bbq-1-c1",
+        "name": "画饼大拼盘",
+        "desc": "羊肉牛筋鸡翅五花一网打尽，名字叫画饼是因为你只能看图",
+        "price": 88,
+        "monthlySales": 2105,
+        "goodRate": 96,
+        "emoji": "🍖",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bbq-1-d3.webp"
+      },
+      {
+        "id": "bbq-1-d4",
+        "categoryId": "bbq-1-c2",
+        "name": "烤牛筋（5串）",
+        "desc": "嚼劲十足越嚼越香，下酒一绝",
+        "price": 22,
+        "monthlySales": 3654,
+        "goodRate": 95,
+        "emoji": "🐂",
+        "image": "/fake-takeout/bbq-1-d4.webp"
+      },
+      {
+        "id": "bbq-1-d5",
+        "categoryId": "bbq-1-c2",
+        "name": "烤鸡翅（3个）",
+        "desc": "外焦里嫩，秘制酱料腌足12小时",
+        "price": 18,
+        "monthlySales": 5012,
+        "goodRate": 97,
+        "emoji": "🍗",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/bbq-1-d5.webp"
+      },
+      {
+        "id": "bbq-1-d6",
+        "categoryId": "bbq-1-c2",
+        "name": "烤五花肉（5串）",
+        "desc": "油脂在炭火上滋滋作响，香得隔壁小孩都馋",
+        "price": 25,
+        "monthlySales": 2890,
+        "goodRate": 96,
+        "emoji": "🥓",
+        "image": "/fake-takeout/bbq-1-d6.webp"
+      },
+      {
+        "id": "bbq-1-d7",
+        "categoryId": "bbq-1-c2",
+        "name": "烤韭菜（5串）",
+        "desc": "壮阳神器，配啤酒绝了",
+        "price": 12,
+        "monthlySales": 1876,
+        "goodRate": 93,
+        "emoji": "🌿",
+        "image": "/fake-takeout/bbq-1-d7.webp"
+      },
+      {
+        "id": "bbq-1-d8",
+        "categoryId": "bbq-1-c2",
+        "name": "烤金针菇",
+        "desc": "see you tomorrow，原汁原味",
+        "price": 10,
+        "monthlySales": 2233,
+        "goodRate": 94,
+        "emoji": "🍄",
+        "image": "/fake-takeout/bbq-1-d8.webp"
+      },
+      {
+        "id": "bbq-1-d9",
+        "categoryId": "bbq-1-c3",
+        "name": "新疆炒米粉",
+        "desc": "微辣过瘾，分量管饱（如果能到的话）",
+        "price": 16,
+        "monthlySales": 3421,
+        "goodRate": 95,
+        "emoji": "🍜",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bbq-1-d9.webp"
+      },
+      {
+        "id": "bbq-1-d10",
+        "categoryId": "bbq-1-c3",
+        "name": "烤馕饼",
+        "desc": "现烤酥脆，蘸料绝配，画饼店的真实饼",
+        "price": 8,
+        "monthlySales": 4102,
+        "goodRate": 96,
+        "emoji": "🫓",
+        "image": "/fake-takeout/bbq-1-d10.webp"
+      },
+      {
+        "id": "bbq-1-d11",
+        "categoryId": "bbq-1-c3",
+        "name": "孜然烤馒头片（4片）",
+        "desc": "夜宵碳水快乐，外脆里软",
+        "price": 9,
+        "monthlySales": 1567,
+        "goodRate": 92,
+        "emoji": "🍞",
+        "image": "/fake-takeout/bbq-1-d11.webp"
+      },
+      {
+        "id": "bbq-1-d12",
+        "categoryId": "bbq-1-c4",
+        "name": "冰镇酸梅汤",
+        "desc": "解腻消暑，自家熬制",
+        "price": 8,
+        "monthlySales": 6210,
+        "goodRate": 97,
+        "emoji": "🥤",
+        "image": "/fake-takeout/bbq-1-d12.webp"
+      },
+      {
+        "id": "bbq-1-d13",
+        "categoryId": "bbq-1-c4",
+        "name": "冰镇精酿啤酒",
+        "desc": "冰到透心凉，撸串黄金搭档",
+        "price": 12,
+        "originalPrice": 15,
+        "monthlySales": 4877,
+        "goodRate": 96,
+        "emoji": "🍺",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bbq-1-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "夜宵守护神",
+        "avatar": "🦉",
+        "stars": 5,
+        "comment": "下单到现在三天了，骑手定位还在隔壁城市，但羊肉串的图我已经设成壁纸了，看着也挺香的。",
+        "time": "3天前",
+        "images": [
+          "🍢",
+          "🍗"
+        ],
+        "dishNames": [
+          "炭火烤羊肉串（10串）"
+        ],
+        "reply": "亲，骑手翻山越岭只为这一口，再等等就是您的了～"
+      },
+      {
+        "user": "等到花儿也谢了",
+        "avatar": "🥀",
+        "stars": 4,
+        "comment": "永远在路上是真的，但好评是因为客服哄人是真的会哄，画的饼又大又圆。",
+        "time": "昨天"
+      },
+      {
+        "user": "老张撸串",
+        "avatar": "🧔",
+        "stars": 5,
+        "comment": "终于收到了！破天荒一次！羊肉串是真的香，肥瘦正好，孜然给得不抠，这次破例好评。",
+        "time": "1周前",
+        "images": [
+          "🍢"
+        ],
+        "dishNames": [
+          "炭火烤羊肉串（10串）",
+          "烤鸡翅（3个）"
+        ]
+      },
+      {
+        "user": "减肥从明天开始",
+        "avatar": "🐷",
+        "stars": 5,
+        "comment": "五花肉绝了，油脂香气直接拉满，配啤酒一整个升天。包装也扎实没漏油。",
+        "time": "2天前",
+        "dishNames": [
+          "烤五花肉（5串）",
+          "冰镇精酿啤酒"
+        ]
+      },
+      {
+        "user": "在路上的小王",
+        "avatar": "🚴",
+        "stars": 3,
+        "comment": "味道没得说，就是送得太慢，等到我都饿睡着了，醒来串凉了。建议堂食。",
+        "time": "4天前"
+      },
+      {
+        "user": "炭火信徒",
+        "avatar": "🔥",
+        "stars": 5,
+        "comment": "生蚝肥到流油，蒜蓉给得豪横，海味十足。这家是真有手艺。",
+        "time": "5天前",
+        "images": [
+          "🦪",
+          "🍢",
+          "🍺"
+        ],
+        "dishNames": [
+          "蒜蓉烤生蚝（6只）"
+        ]
+      },
+      {
+        "user": "画饼充饥本饥",
+        "avatar": "🎨",
+        "stars": 4,
+        "comment": "店名很有自知之明，我点的拼盘到现在还在『商家正在出餐』，但看图我已经饱了，谢谢老板的精神食粮。",
+        "time": "6天前",
+        "dishNames": [
+          "画饼大拼盘"
+        ]
+      },
+      {
+        "user": "韭菜专业户",
+        "avatar": "🌿",
+        "stars": 5,
+        "comment": "烤韭菜居然这么好吃，焦香入味，便宜大碗。下次还点。",
+        "time": "1周前",
+        "dishNames": [
+          "烤韭菜（5串）"
+        ]
+      },
+      {
+        "user": "深夜放毒",
+        "avatar": "🌙",
+        "stars": 5,
+        "comment": "炒米粉份量是真的足，一大盒吃到撑，微辣刚刚好，碳水快乐。",
+        "time": "3天前",
+        "images": [
+          "🍜"
+        ],
+        "dishNames": [
+          "新疆炒米粉"
+        ],
+        "reply": "感谢支持！吃饱才有力气等下一单～"
+      },
+      {
+        "user": "佛系等餐",
+        "avatar": "🧘",
+        "stars": 4,
+        "comment": "我已经学会了边等边修禅，等餐两小时心如止水。东西到了确实好吃，扣一星给配送。",
+        "time": "昨天"
+      },
+      {
+        "user": "馕饼脑袋",
+        "avatar": "🫓",
+        "stars": 5,
+        "comment": "烤馕外酥里软超惊喜，这才是画饼店真正的饼啊！蘸料一绝。",
+        "time": "2天前",
+        "dishNames": [
+          "烤馕饼"
+        ]
+      },
+      {
+        "user": "酸梅汤上头",
+        "avatar": "🥤",
+        "stars": 5,
+        "comment": "酸梅汤解腻神器，撸完串来一杯爽翻。自家熬的就是不一样。",
+        "time": "4天前",
+        "dishNames": [
+          "冰镇酸梅汤"
+        ]
+      },
+      {
+        "user": "收不到货联盟",
+        "avatar": "📦",
+        "stars": 3,
+        "comment": "加入收不到货联盟第88天，今天依旧没收到，但鸡翅图我已经会画了。",
+        "time": "1周前"
+      },
+      {
+        "user": "牛筋爱好者",
+        "avatar": "🦷",
+        "stars": 5,
+        "comment": "牛筋越嚼越香，下酒神器，量也给得足。这家真没让我失望（除了配送）。",
+        "time": "5天前",
+        "dishNames": [
+          "烤牛筋（5串）"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "羊肉串巨香",
+        "count": 2341,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 1876,
+        "positive": true
+      },
+      {
+        "text": "包装扎实没漏油",
+        "count": 1023,
+        "positive": true
+      },
+      {
+        "text": "孜然给得不抠",
+        "count": 765,
+        "positive": true
+      },
+      {
+        "text": "客服会哄人",
+        "count": 432,
+        "positive": true
+      },
+      {
+        "text": "永远在路上 1287",
+        "count": 1287,
+        "positive": false
+      },
+      {
+        "text": "等到天荒地老 88",
+        "count": 88,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "烧烤夜宵",
+    "logoImage": "/fake-takeout/shop-bbq-1.webp"
+  },
+  {
+    "id": "bbq-2",
+    "name": "文和有小龙虾",
+    "logo": "🦞",
+    "rating": 4.6,
+    "monthlySales": 9674,
+    "perCapita": 96,
+    "deliveryMinutes": 42,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 25,
+    "distanceKm": 3.2,
+    "notice": "文和友家小龙虾红到发紫，骑手剥着壳在路上，永远送不到，赔你画饼。",
+    "badges": [
+      "品质联盟",
+      "食品安全",
+      "月售过万"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满60减10，满120减25"
+      },
+      {
+        "type": "delivery",
+        "text": "全场免配送费（毕竟也送不到）"
+      },
+      {
+        "type": "discount",
+        "text": "蒜蓉小龙虾限时5折"
+      },
+      {
+        "type": "gift",
+        "text": "满100赠手套+围嘴一套"
+      }
+    ],
+    "categories": [
+      {
+        "id": "bbq-2-c1",
+        "name": "招牌小龙虾"
+      },
+      {
+        "id": "bbq-2-c2",
+        "name": "夜宵硬菜"
+      },
+      {
+        "id": "bbq-2-c3",
+        "name": "下饭主食"
+      },
+      {
+        "id": "bbq-2-c4",
+        "name": "解辣饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "bbq-2-d1",
+        "categoryId": "bbq-2-c1",
+        "name": "麻辣小龙虾（2斤）",
+        "desc": "红油翻滚麻辣鲜香，虾肉Q弹剥壳就上瘾",
+        "price": 128,
+        "originalPrice": 158,
+        "monthlySales": 6543,
+        "goodRate": 98,
+        "emoji": "🦞",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/bbq-2.webp"
+      },
+      {
+        "id": "bbq-2-d2",
+        "categoryId": "bbq-2-c1",
+        "name": "蒜蓉小龙虾（2斤）",
+        "desc": "金蒜铺满虾身，蒜香浓郁不辣口",
+        "price": 118,
+        "originalPrice": 148,
+        "monthlySales": 4321,
+        "goodRate": 97,
+        "emoji": "🧄",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bbq-2-d2.webp"
+      },
+      {
+        "id": "bbq-2-d3",
+        "categoryId": "bbq-2-c1",
+        "name": "十三香小龙虾（2斤）",
+        "desc": "香料层层叠叠，回味无穷",
+        "price": 122,
+        "monthlySales": 3210,
+        "goodRate": 96,
+        "emoji": "🦐",
+        "image": "/fake-takeout/bbq-2-d3.webp"
+      },
+      {
+        "id": "bbq-2-d4",
+        "categoryId": "bbq-2-c1",
+        "name": "冰镇醉虾（1斤）",
+        "desc": "花雕酒香入味，鲜到掉眉毛",
+        "price": 88,
+        "monthlySales": 1654,
+        "goodRate": 95,
+        "emoji": "🍶",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bbq-2-d4.webp"
+      },
+      {
+        "id": "bbq-2-d5",
+        "categoryId": "bbq-2-c2",
+        "name": "香辣蟹（2只）",
+        "desc": "肉质饱满，酱汁拌饭能干三碗",
+        "price": 98,
+        "monthlySales": 2109,
+        "goodRate": 96,
+        "emoji": "🦀",
+        "image": "/fake-takeout/bbq-2-d5.webp"
+      },
+      {
+        "id": "bbq-2-d6",
+        "categoryId": "bbq-2-c2",
+        "name": "炭烤生蚝（8只）",
+        "desc": "蒜蓉粉丝铺满，海味鲜香",
+        "price": 56,
+        "monthlySales": 3344,
+        "goodRate": 97,
+        "emoji": "🦪",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/bbq-2-d6.webp"
+      },
+      {
+        "id": "bbq-2-d7",
+        "categoryId": "bbq-2-c2",
+        "name": "麻辣花甲",
+        "desc": "鲜辣过瘾，吸溜一口停不下来",
+        "price": 38,
+        "monthlySales": 4012,
+        "goodRate": 95,
+        "emoji": "🐚",
+        "image": "/fake-takeout/bbq-2-d7.webp"
+      },
+      {
+        "id": "bbq-2-d8",
+        "categoryId": "bbq-2-c2",
+        "name": "干锅牛蛙",
+        "desc": "肉嫩入味，麻辣鲜香，夜宵之王",
+        "price": 68,
+        "monthlySales": 2876,
+        "goodRate": 96,
+        "emoji": "🐸",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bbq-2-d8.webp"
+      },
+      {
+        "id": "bbq-2-d9",
+        "categoryId": "bbq-2-c3",
+        "name": "虾尾拌面",
+        "desc": "用小龙虾汤汁拌面，鲜辣到舔碗",
+        "price": 22,
+        "monthlySales": 3567,
+        "goodRate": 95,
+        "emoji": "🍝",
+        "image": "/fake-takeout/bbq-2-d9.webp"
+      },
+      {
+        "id": "bbq-2-d10",
+        "categoryId": "bbq-2-c3",
+        "name": "蛋炒饭",
+        "desc": "粒粒分明镬气十足，配虾汤一绝",
+        "price": 14,
+        "monthlySales": 2890,
+        "goodRate": 93,
+        "emoji": "🍚",
+        "image": "/fake-takeout/bbq-2-d10.webp"
+      },
+      {
+        "id": "bbq-2-d11",
+        "categoryId": "bbq-2-c3",
+        "name": "油炸馒头（4个）",
+        "desc": "蘸虾汤吃，碳水炸弹谁懂啊",
+        "price": 10,
+        "monthlySales": 1987,
+        "goodRate": 94,
+        "emoji": "🍞",
+        "image": "/fake-takeout/bbq-2-d11.webp"
+      },
+      {
+        "id": "bbq-2-d12",
+        "categoryId": "bbq-2-c4",
+        "name": "鲜榨西瓜汁",
+        "desc": "解辣降火，大杯过瘾",
+        "price": 12,
+        "monthlySales": 4123,
+        "goodRate": 96,
+        "emoji": "🍉",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bbq-2-d12.webp"
+      },
+      {
+        "id": "bbq-2-d13",
+        "categoryId": "bbq-2-c4",
+        "name": "冰镇王老吉",
+        "desc": "怕上火就喝它，撸虾必备",
+        "price": 6,
+        "monthlySales": 5210,
+        "goodRate": 95,
+        "emoji": "🥫",
+        "image": "/fake-takeout/bbq-2-d13.webp"
+      },
+      {
+        "id": "bbq-2-d14",
+        "categoryId": "bbq-2-c4",
+        "name": "酸梅汤（大壶）",
+        "desc": "酸甜解腻，一壶全家分",
+        "price": 18,
+        "originalPrice": 24,
+        "monthlySales": 2341,
+        "goodRate": 96,
+        "emoji": "🥤",
+        "image": "/fake-takeout/bbq-2-d14.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "望梅止渴本渴",
+        "avatar": "🍃",
+        "stars": 5,
+        "comment": "店名诚不欺我，从下单到现在我看着小龙虾的照片已经流了三斤口水，望梅止渴是吧，渴是真的渴。",
+        "time": "2天前",
+        "images": [
+          "🦞",
+          "🧄"
+        ],
+        "dishNames": [
+          "麻辣小龙虾（2斤）"
+        ],
+        "reply": "亲，口水也是营养，先垫垫～虾在路上爬呢"
+      },
+      {
+        "user": "深夜剥虾人",
+        "avatar": "🌃",
+        "stars": 5,
+        "comment": "这次居然送到了！麻辣小龙虾个头是真大，虾黄爆满，麻辣鲜香一口上头，剥到手抽筋值了。",
+        "time": "昨天",
+        "images": [
+          "🦞",
+          "🦀",
+          "🍺"
+        ],
+        "dishNames": [
+          "麻辣小龙虾（2斤）",
+          "香辣蟹（2只）"
+        ]
+      },
+      {
+        "user": "收不到货VIP",
+        "avatar": "💎",
+        "stars": 4,
+        "comment": "已经是这家收不到货的老会员了，但每次客服都画饼画得我心服口服，虾的图也确实诱人，给四星。",
+        "time": "3天前"
+      },
+      {
+        "user": "蒜蓉一生推",
+        "avatar": "🧄",
+        "stars": 5,
+        "comment": "蒜蓉小龙虾绝绝子，金蒜铺得满满当当，蒜香浓郁还不辣，老人小孩都能吃。",
+        "time": "4天前",
+        "dishNames": [
+          "蒜蓉小龙虾（2斤）"
+        ]
+      },
+      {
+        "user": "牛蛙狂热者",
+        "avatar": "🐸",
+        "stars": 5,
+        "comment": "干锅牛蛙肉嫩到不行，麻辣入味，份量给得足足的，夜宵之王名不虚传。",
+        "time": "5天前",
+        "images": [
+          "🐸"
+        ],
+        "dishNames": [
+          "干锅牛蛙"
+        ]
+      },
+      {
+        "user": "永远在路上的虾",
+        "avatar": "🛵",
+        "stars": 3,
+        "comment": "虾很好吃，但骑手电话打过去说他也在等虾煮熟，我俩一起等，扣两星给这魔幻配送。",
+        "time": "1周前"
+      },
+      {
+        "user": "拌面星人",
+        "avatar": "🍝",
+        "stars": 5,
+        "comment": "虾尾拌面太惊艳了，用虾汤拌的面鲜辣到舔碗，碳水快乐拉满。",
+        "time": "2天前",
+        "dishNames": [
+          "虾尾拌面"
+        ]
+      },
+      {
+        "user": "花甲吸溜怪",
+        "avatar": "🐚",
+        "stars": 4,
+        "comment": "麻辣花甲个个肥美没沙子，吸溜一口爽。就是送来有点凉了，复热后还行。",
+        "time": "6天前",
+        "dishNames": [
+          "麻辣花甲"
+        ]
+      },
+      {
+        "user": "画饼鉴定师",
+        "avatar": "📝",
+        "stars": 4,
+        "comment": "作为资深画饼鉴定师，这家的饼画得有水平，图片精美文案诱人，下单两小时未发货，给个艺术分四星。",
+        "time": "昨天",
+        "reply": "感谢专业认可！我们的饼经得起鉴定，虾也快了～"
+      },
+      {
+        "user": "生蚝控",
+        "avatar": "🦪",
+        "stars": 5,
+        "comment": "炭烤生蚝蒜蓉粉丝铺满，鲜得不行，8只一下就光盘。",
+        "time": "3天前",
+        "images": [
+          "🦪"
+        ],
+        "dishNames": [
+          "炭烤生蚝（8只）"
+        ]
+      },
+      {
+        "user": "怕上火喝它",
+        "avatar": "🥫",
+        "stars": 5,
+        "comment": "撸完辣虾来罐冰王老吉，透心凉，完美。包装也都密封得很好没洒。",
+        "time": "4天前",
+        "dishNames": [
+          "冰镇王老吉",
+          "麻辣小龙虾（2斤）"
+        ]
+      },
+      {
+        "user": "等餐冥想者",
+        "avatar": "🧘",
+        "stars": 3,
+        "comment": "等了快一个小时，期间完成了一次精神出窍。东西到了味道是真的可以，就是这速度劝退。",
+        "time": "5天前"
+      },
+      {
+        "user": "西瓜汁真爱",
+        "avatar": "🍉",
+        "stars": 5,
+        "comment": "鲜榨西瓜汁解辣神器，大杯实在，吃辣虾必配。",
+        "time": "1周前",
+        "dishNames": [
+          "鲜榨西瓜汁"
+        ]
+      },
+      {
+        "user": "醉虾上头",
+        "avatar": "🍶",
+        "stars": 5,
+        "comment": "冰镇醉虾花雕香气十足，鲜甜到掉眉毛，喜欢这一口的别错过。",
+        "time": "2天前",
+        "dishNames": [
+          "冰镇醉虾（1斤）"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "虾个头大",
+        "count": 2876,
+        "positive": true
+      },
+      {
+        "text": "虾黄爆满",
+        "count": 1543,
+        "positive": true
+      },
+      {
+        "text": "蒜蓉香浓",
+        "count": 987,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 1234,
+        "positive": true
+      },
+      {
+        "text": "包装密封不洒",
+        "count": 678,
+        "positive": true
+      },
+      {
+        "text": "送到时凉了 432",
+        "count": 432,
+        "positive": false
+      },
+      {
+        "text": "永远收不到货 1056",
+        "count": 1056,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.9,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "烧烤夜宵",
+    "logoImage": "/fake-takeout/shop-bbq-2.webp"
+  },
+  {
+    "id": "hp-mlxg",
+    "name": "扒奴毛肚香锅",
+    "logo": "🌶️",
+    "rating": 4.7,
+    "monthlySales": 8620,
+    "perCapita": 48,
+    "deliveryMinutes": 35,
+    "deliveryFee": 3,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 20,
+    "distanceKm": 1.8,
+    "notice": "服务不过度，香锅是真度，牛蛙现炒好，骑手翻秦岭永远在路上，先啃画饼。",
+    "badges": [
+      "开了8年老店",
+      "月售过万",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满60减12"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（货到再减，所以基本减不到）"
+      },
+      {
+        "type": "discount",
+        "text": "每日17:00限时香锅5折"
+      },
+      {
+        "type": "delivery",
+        "text": "满40减配送费"
+      }
+    ],
+    "categories": [
+      {
+        "id": "c-signature",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "c-spicy",
+        "name": "麻辣香锅"
+      },
+      {
+        "id": "c-maocai",
+        "name": "冒菜锅"
+      },
+      {
+        "id": "c-drink",
+        "name": "解辣饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "hp-mlxg-d1",
+        "categoryId": "c-signature",
+        "name": "招牌干锅牛蛙(传说级)",
+        "desc": "麻辣鲜香，蛙腿弹牙，据说很好吃，至今无人收到验证",
+        "price": 58,
+        "originalPrice": 78,
+        "monthlySales": 3120,
+        "goodRate": 98,
+        "emoji": "🐸",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/hp-mlxg.webp"
+      },
+      {
+        "id": "hp-mlxg-d2",
+        "categoryId": "c-signature",
+        "name": "现炒麻辣香锅(永不端上桌套餐)",
+        "desc": "可选微辣到变态辣，分量足够全家吃，前提是能送到",
+        "price": 45,
+        "monthlySales": 2890,
+        "goodRate": 96,
+        "emoji": "🍲",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/hp-mlxg-d2.webp"
+      },
+      {
+        "id": "hp-mlxg-d3",
+        "categoryId": "c-spicy",
+        "name": "香辣虾球香锅",
+        "desc": "大虾去壳免剥，麻辣裹满每一颗，香到隔壁下单",
+        "price": 52,
+        "monthlySales": 1760,
+        "goodRate": 97,
+        "emoji": "🦐",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/hp-mlxg-d3.webp"
+      },
+      {
+        "id": "hp-mlxg-d4",
+        "categoryId": "c-spicy",
+        "name": "嫩牛肉麻辣香锅",
+        "desc": "牛肉滑嫩不柴，麻辣油亮，配饭一绝(饭另算)",
+        "price": 42,
+        "monthlySales": 2210,
+        "goodRate": 95,
+        "emoji": "🥩",
+        "image": "/fake-takeout/hp-mlxg-d4.webp"
+      },
+      {
+        "id": "hp-mlxg-d5",
+        "categoryId": "c-spicy",
+        "name": "土豆藕片素香锅",
+        "desc": "土豆糯藕片脆，素菜也能炒出肉味，减脂人自我安慰首选",
+        "price": 26,
+        "monthlySales": 980,
+        "goodRate": 94,
+        "emoji": "🥔",
+        "image": "/fake-takeout/hp-mlxg-d5.webp"
+      },
+      {
+        "id": "hp-mlxg-d6",
+        "categoryId": "c-spicy",
+        "name": "辣鸭脖鸭舌拼盘",
+        "desc": "啃到停不下来，越啃越上头，建议配一打饮料",
+        "price": 38,
+        "monthlySales": 760,
+        "goodRate": 93,
+        "emoji": "🦆",
+        "image": "/fake-takeout/hp-mlxg-d6.webp"
+      },
+      {
+        "id": "hp-mlxg-d7",
+        "categoryId": "c-maocai",
+        "name": "招牌冒菜锅(随心配)",
+        "desc": "二十多种食材随便选，红油翻滚，香气扑鼻(扑你家窗户的鼻)",
+        "price": 36,
+        "originalPrice": 49,
+        "monthlySales": 1540,
+        "goodRate": 96,
+        "emoji": "🍜",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/hp-mlxg-d7.webp"
+      },
+      {
+        "id": "hp-mlxg-d8",
+        "categoryId": "c-maocai",
+        "name": "肥肠冒菜锅",
+        "desc": "肥肠处理得干净无异味，软糯入味，爱的爱死",
+        "price": 40,
+        "monthlySales": 690,
+        "goodRate": 92,
+        "emoji": "🌶️",
+        "image": "/fake-takeout/hp-mlxg-d8.webp"
+      },
+      {
+        "id": "hp-mlxg-d9",
+        "categoryId": "c-maocai",
+        "name": "毛肚黄喉冒菜锅",
+        "desc": "毛肚脆爽黄喉弹牙，火锅店同款食材，冒菜价格",
+        "price": 44,
+        "monthlySales": 1020,
+        "goodRate": 95,
+        "emoji": "🍲",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/hp-mlxg-d9.webp"
+      },
+      {
+        "id": "hp-mlxg-d10",
+        "categoryId": "c-drink",
+        "name": "冰镇酸梅汤",
+        "desc": "自家熬煮，酸甜解辣，等餐时建议先冰镇好心情",
+        "price": 8,
+        "monthlySales": 2680,
+        "goodRate": 97,
+        "emoji": "🥤",
+        "image": "/fake-takeout/hp-mlxg-d10.webp"
+      },
+      {
+        "id": "hp-mlxg-d11",
+        "categoryId": "c-drink",
+        "name": "鲜打柠檬养乐多",
+        "desc": "酸爽小清新，麻辣过后的救命稻草",
+        "price": 12,
+        "monthlySales": 1430,
+        "goodRate": 96,
+        "emoji": "🍋",
+        "image": "/fake-takeout/hp-mlxg-d11.webp"
+      },
+      {
+        "id": "hp-mlxg-d12",
+        "categoryId": "c-drink",
+        "name": "冰豆奶",
+        "desc": "顺滑香甜，解辣神器，老板自封宇宙第一",
+        "price": 6,
+        "monthlySales": 1190,
+        "goodRate": 94,
+        "emoji": "🥛",
+        "image": "/fake-takeout/hp-mlxg-d12.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "等到花儿也谢了",
+        "avatar": "🌸",
+        "stars": 4,
+        "comment": "味道是真好吃，麻辣香锅香到我邻居都来敲门问。就是骑手从上周点到现在还在路上，我都快忘了点过什么了。",
+        "time": "3天前",
+        "dishNames": [
+          "招牌干锅牛蛙(传说级)"
+        ],
+        "images": [
+          "🐸",
+          "🍲"
+        ],
+        "reply": "亲，骑手正在感受人生路途，香锅有它陪着不孤单~"
+      },
+      {
+        "user": "麻辣上头怪",
+        "avatar": "🥵",
+        "stars": 5,
+        "comment": "牛蛙绝了！蛙腿弹牙，红油拌饭能炫三碗。这家是我楼下八年老店，闭眼冲。",
+        "time": "昨天",
+        "dishNames": [
+          "招牌干锅牛蛙(传说级)"
+        ]
+      },
+      {
+        "user": "饿到看蚂蚁",
+        "avatar": "🐜",
+        "stars": 3,
+        "comment": "下单提示35分钟，结果骑手定位一直在原地转圈，等到我都开始怀疑人生。味道没得说，物流像在画饼。",
+        "time": "5天前",
+        "images": [
+          "🍲"
+        ]
+      },
+      {
+        "user": "香锅永动机",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "随心配冒菜锅可以选二十多种料，毛肚脆得不行，这价格在我们这真没对手。",
+        "time": "1周前",
+        "dishNames": [
+          "毛肚黄喉冒菜锅",
+          "招牌冒菜锅(随心配)"
+        ],
+        "images": [
+          "🍜",
+          "🍲",
+          "🌶️"
+        ]
+      },
+      {
+        "user": "望梅止渴本渴",
+        "avatar": "🍑",
+        "stars": 4,
+        "comment": "酸梅汤好喝到我又点了三杯。香锅嘛……闻到香味就当吃过了，毕竟收货遥遥无期。",
+        "time": "2天前",
+        "dishNames": [
+          "冰镇酸梅汤"
+        ]
+      },
+      {
+        "user": "胖三斤计划",
+        "avatar": "🐷",
+        "stars": 5,
+        "comment": "嫩牛肉香锅分量是真足，两个人吃撑。包装也扎实，汤汁一点没洒。",
+        "time": "4天前",
+        "dishNames": [
+          "嫩牛肉麻辣香锅"
+        ]
+      },
+      {
+        "user": "蹲点等骑手",
+        "avatar": "👀",
+        "stars": 3,
+        "comment": "凌晨下单想宵夜，骑手说马上到，结果天都亮了。给三星全靠味道续命。",
+        "time": "1周前"
+      },
+      {
+        "user": "辣条退役选手",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "辣鸭脖啃得停不下来，越啃越香，配冰豆奶绝配，强烈安利。",
+        "time": "6天前",
+        "dishNames": [
+          "辣鸭脖鸭舌拼盘",
+          "冰豆奶"
+        ],
+        "images": [
+          "🦆"
+        ]
+      },
+      {
+        "user": "纸上吃饱了",
+        "avatar": "📄",
+        "stars": 4,
+        "comment": "店家说在路上，我说没关系反正我也在减肥。香味确实顶级，看图就饱。",
+        "time": "昨天",
+        "images": [
+          "🦐"
+        ],
+        "reply": "减肥成功记得回来报喜，香锅给您留着~"
+      },
+      {
+        "user": "藕粉本粉",
+        "avatar": "🥔",
+        "stars": 5,
+        "comment": "素香锅都能炒出肉香，土豆糯藕片脆，素食党的快乐你不懂。",
+        "time": "3天前",
+        "dishNames": [
+          "土豆藕片素香锅"
+        ]
+      },
+      {
+        "user": "肥肠爱好者老王",
+        "avatar": "😋",
+        "stars": 5,
+        "comment": "肥肠处理得很干净，没有一点异味，软糯入味，这家是懂肥肠的。",
+        "time": "1周前",
+        "dishNames": [
+          "肥肠冒菜锅"
+        ]
+      },
+      {
+        "user": "永远的下一单",
+        "avatar": "♾️",
+        "stars": 4,
+        "comment": "复购第八次了，每次都说在路上，但每次味道都没让我失望。建议商家给骑手配个导航。",
+        "time": "2天前",
+        "reply": "导航有的，就是骑手太享受沿途风景了~"
+      },
+      {
+        "user": "柠檬精上线",
+        "avatar": "🍋",
+        "stars": 5,
+        "comment": "柠檬养乐多酸爽到位，麻辣过后来一口直接复活。",
+        "time": "5天前",
+        "dishNames": [
+          "鲜打柠檬养乐多"
+        ]
+      },
+      {
+        "user": "夜宵不睡星人",
+        "avatar": "🌙",
+        "stars": 4,
+        "comment": "虾球香锅免剥壳太贴心了，大虾一颗顶两颗。就是别指望准时，准时宝在这是个传说。",
+        "time": "4天前",
+        "dishNames": [
+          "香辣虾球香锅"
+        ],
+        "images": [
+          "🦐",
+          "🥤"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "麻辣够味",
+        "count": 1860,
+        "positive": true
+      },
+      {
+        "text": "分量很足",
+        "count": 1420,
+        "positive": true
+      },
+      {
+        "text": "牛蛙必点",
+        "count": 990,
+        "positive": true
+      },
+      {
+        "text": "包装扎实不洒汤",
+        "count": 760,
+        "positive": true
+      },
+      {
+        "text": "解辣饮品好喝",
+        "count": 540,
+        "positive": true
+      },
+      {
+        "text": "永远在路上 312",
+        "count": 312,
+        "positive": false
+      },
+      {
+        "text": "等到天荒地老 88",
+        "count": 88,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "火锅",
+    "logoImage": "/fake-takeout/shop-hp-mlxg.webp"
+  },
+  {
+    "id": "hp-kongqi",
+    "name": "小笼砍火锅",
+    "logo": "🍲",
+    "rating": 4.6,
+    "monthlySales": 6240,
+    "perCapita": 76,
+    "deliveryMinutes": 42,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 25,
+    "distanceKm": 3.4,
+    "notice": "番茄锅底咕嘟，肥牛已下锅，骑手捧着满城跑，永远在路上，到货被砍，赠画饼。",
+    "badges": [
+      "品质联盟",
+      "食品安全",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "discount",
+        "text": "双人套餐限时5折"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠冰酸梅汤一瓶（送到的话）"
+      },
+      {
+        "type": "manjian",
+        "text": "满50减8，满100减20"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元"
+      }
+    ],
+    "categories": [
+      {
+        "id": "c-base",
+        "name": "招牌锅底"
+      },
+      {
+        "id": "c-meat",
+        "name": "涮肉拼盘"
+      },
+      {
+        "id": "c-veg",
+        "name": "涮菜素拼"
+      },
+      {
+        "id": "c-combo",
+        "name": "双人套餐"
+      },
+      {
+        "id": "c-drink",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "hp-kongqi-d1",
+        "categoryId": "c-base",
+        "name": "番茄养生锅底(咕嘟级)",
+        "desc": "整颗番茄熬煮三小时，汤头浓郁微酸，喝汤都能饱",
+        "price": 18,
+        "monthlySales": 2980,
+        "goodRate": 97,
+        "emoji": "🍅",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/hp-kongqi.webp"
+      },
+      {
+        "id": "hp-kongqi-d2",
+        "categoryId": "c-base",
+        "name": "麻辣牛油锅底",
+        "desc": "重庆配方，红油翻滚香味霸道，辣得过瘾",
+        "price": 22,
+        "monthlySales": 2410,
+        "goodRate": 96,
+        "emoji": "🌶️",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/hp-kongqi-d2.webp"
+      },
+      {
+        "id": "hp-kongqi-d3",
+        "categoryId": "c-meat",
+        "name": "雪花肥牛卷(永远在涮)",
+        "desc": "现切薄如蝉翼，三秒涮熟入口即化，可惜你涮不到",
+        "price": 32,
+        "originalPrice": 42,
+        "monthlySales": 1880,
+        "goodRate": 98,
+        "emoji": "🥩",
+        "tags": [
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/hp-kongqi-d3.webp"
+      },
+      {
+        "id": "hp-kongqi-d4",
+        "categoryId": "c-meat",
+        "name": "手打虾滑",
+        "desc": "纯虾肉手打弹牙，挤一勺一口爆汁，鲜到眉毛掉",
+        "price": 28,
+        "monthlySales": 1320,
+        "goodRate": 97,
+        "emoji": "🦐",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/hp-kongqi-d4.webp"
+      },
+      {
+        "id": "hp-kongqi-d5",
+        "categoryId": "c-meat",
+        "name": "鲜毛肚",
+        "desc": "七上八下脆爽弹牙，火锅灵魂，没它白涮",
+        "price": 30,
+        "monthlySales": 1560,
+        "goodRate": 96,
+        "emoji": "🥩",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/hp-kongqi-d5.webp"
+      },
+      {
+        "id": "hp-kongqi-d6",
+        "categoryId": "c-meat",
+        "name": "嫩鸭血",
+        "desc": "滑嫩入味久煮不老，麻辣锅的最佳拍档",
+        "price": 12,
+        "monthlySales": 870,
+        "goodRate": 94,
+        "emoji": "🍲",
+        "image": "/fake-takeout/hp-kongqi-d6.webp"
+      },
+      {
+        "id": "hp-kongqi-d7",
+        "categoryId": "c-veg",
+        "name": "时令蔬菜大拼盘",
+        "desc": "六种当季蔬菜，份量管够，涮锅解腻全靠它",
+        "price": 22,
+        "monthlySales": 1140,
+        "goodRate": 95,
+        "emoji": "🥬",
+        "image": "/fake-takeout/hp-kongqi-d7.webp"
+      },
+      {
+        "id": "hp-kongqi-d8",
+        "categoryId": "c-veg",
+        "name": "宽粉土豆双拼",
+        "desc": "宽粉吸饱汤汁，土豆软糯，碳水快乐套餐",
+        "price": 14,
+        "monthlySales": 1280,
+        "goodRate": 94,
+        "emoji": "🥔",
+        "image": "/fake-takeout/hp-kongqi-d8.webp"
+      },
+      {
+        "id": "hp-kongqi-d9",
+        "categoryId": "c-veg",
+        "name": "金针菇豆皮拼",
+        "desc": "菌香十足豆皮筋道，吸汤一绝，素食党狂喜",
+        "price": 16,
+        "monthlySales": 760,
+        "goodRate": 93,
+        "emoji": "🍄",
+        "image": "/fake-takeout/hp-kongqi-d9.webp"
+      },
+      {
+        "id": "hp-kongqi-d10",
+        "categoryId": "c-combo",
+        "name": "一人食畅涮套餐(画饼版)",
+        "desc": "锅底+肥牛+虾滑+蔬菜+主食一应俱全，一个人的仪式感",
+        "price": 58,
+        "originalPrice": 88,
+        "monthlySales": 2030,
+        "goodRate": 97,
+        "emoji": "🍲",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/hp-kongqi-d10.webp"
+      },
+      {
+        "id": "hp-kongqi-d11",
+        "categoryId": "c-combo",
+        "name": "双人浪漫鸳鸯套餐",
+        "desc": "鸳鸯锅+双拼肉+两素+两饮，约会专属，约的是空气",
+        "price": 98,
+        "originalPrice": 158,
+        "monthlySales": 940,
+        "goodRate": 96,
+        "emoji": "🍲",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/hp-kongqi-d11.webp"
+      },
+      {
+        "id": "hp-kongqi-d12",
+        "categoryId": "c-drink",
+        "name": "冰镇酸梅汤",
+        "desc": "解辣去腻，等餐必备，建议囤两瓶",
+        "price": 8,
+        "monthlySales": 2240,
+        "goodRate": 96,
+        "emoji": "🥤",
+        "image": "/fake-takeout/hp-kongqi-d12.webp"
+      },
+      {
+        "id": "hp-kongqi-d13",
+        "categoryId": "c-drink",
+        "name": "鲜榨西瓜汁",
+        "desc": "当季西瓜现榨，无添加，甜到心里",
+        "price": 14,
+        "monthlySales": 680,
+        "goodRate": 95,
+        "emoji": "🍉",
+        "image": "/fake-takeout/hp-kongqi-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "一个人的火锅",
+        "avatar": "🍲",
+        "stars": 5,
+        "comment": "番茄锅底太惊艳了，整颗番茄熬的，汤头浓到能拌饭。一人食套餐分量刚好，仪式感拉满。",
+        "time": "2天前",
+        "dishNames": [
+          "番茄养生锅底(咕嘟级)",
+          "一人食畅涮套餐(画饼版)"
+        ],
+        "images": [
+          "🍅",
+          "🍲"
+        ]
+      },
+      {
+        "user": "在路上等了三季",
+        "avatar": "🚶",
+        "stars": 4,
+        "comment": "店名诚不欺我，真的永远在涮。我点的肥牛估计还在骑手电瓶车后座吹风。味道是好的，就是要修炼耐心。",
+        "time": "4天前",
+        "dishNames": [
+          "雪花肥牛卷(永远在涮)"
+        ],
+        "reply": "亲，肥牛正在欣赏沿途夕阳，新鲜着呢~"
+      },
+      {
+        "user": "毛肚七上八下",
+        "avatar": "🥩",
+        "stars": 5,
+        "comment": "鲜毛肚脆得咔嚓响，涮锅就为这一口！品质看得见，放心吃。",
+        "time": "昨天",
+        "dishNames": [
+          "鲜毛肚"
+        ]
+      },
+      {
+        "user": "减肥从明天起",
+        "avatar": "🐷",
+        "stars": 3,
+        "comment": "等了快一个小时锅底凉了，体验打折。但虾滑是真鲜，犹豫要不要给四星。",
+        "time": "1周前",
+        "dishNames": [
+          "手打虾滑"
+        ],
+        "images": [
+          "🦐"
+        ]
+      },
+      {
+        "user": "空气也很饱",
+        "avatar": "💨",
+        "stars": 5,
+        "comment": "看着图片我就涮了一锅空气，配合想象力食用风味更佳。番茄锅底永远的神。",
+        "time": "3天前",
+        "images": [
+          "🍅",
+          "🥬",
+          "🥩"
+        ]
+      },
+      {
+        "user": "鸳鸯锅选手",
+        "avatar": "💑",
+        "stars": 5,
+        "comment": "双人套餐性价比真高，5折下来不到一百，两个人吃到扶墙。包装保温做得不错，到手还是热的(罕见)。",
+        "time": "5天前",
+        "dishNames": [
+          "双人浪漫鸳鸯套餐"
+        ]
+      },
+      {
+        "user": "宽粉控",
+        "avatar": "🍜",
+        "stars": 4,
+        "comment": "宽粉吸饱汤汁太好吃了，土豆也软糯。物流一如既往画饼，但我已经习惯了。",
+        "time": "6天前",
+        "dishNames": [
+          "宽粉土豆双拼"
+        ]
+      },
+      {
+        "user": "蹲在门口望",
+        "avatar": "👀",
+        "stars": 3,
+        "comment": "下单显示42分钟，结果骑手定位在江对岸纹丝不动。靠味道硬撑三星。",
+        "time": "1周前"
+      },
+      {
+        "user": "鸭血爱好者",
+        "avatar": "😋",
+        "stars": 5,
+        "comment": "鸭血嫩到入口即化，久煮不老，麻辣锅里捞一块满足。",
+        "time": "2天前",
+        "dishNames": [
+          "嫩鸭血"
+        ]
+      },
+      {
+        "user": "素食小清新",
+        "avatar": "🥬",
+        "stars": 5,
+        "comment": "蔬菜拼盘很新鲜，金针菇豆皮吸汤一绝，素食党在这也能吃得很满足。",
+        "time": "4天前",
+        "dishNames": [
+          "金针菇豆皮拼",
+          "时令蔬菜大拼盘"
+        ],
+        "images": [
+          "🍄",
+          "🥬"
+        ]
+      },
+      {
+        "user": "永远的回头客",
+        "avatar": "♾️",
+        "stars": 4,
+        "comment": "第N次复购，明知道送得慢还是忍不住。味道在我心里就是天花板，物流在地板。",
+        "time": "昨天",
+        "reply": "感谢宠爱，物流我们也在努力从地板往上爬~"
+      },
+      {
+        "user": "西瓜汁续命",
+        "avatar": "🍉",
+        "stars": 5,
+        "comment": "鲜榨西瓜汁是真材实料，甜而不腻，麻辣锅后来一口爽翻。",
+        "time": "3天前",
+        "dishNames": [
+          "鲜榨西瓜汁"
+        ]
+      },
+      {
+        "user": "麻辣不怕辣",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "牛油锅底香得霸道，重庆味儿正宗，辣得我边吃边吸气还停不下来。",
+        "time": "5天前",
+        "dishNames": [
+          "麻辣牛油锅底"
+        ],
+        "images": [
+          "🌶️",
+          "🥤"
+        ]
+      },
+      {
+        "user": "纸上涮锅大师",
+        "avatar": "📄",
+        "stars": 4,
+        "comment": "锅底和食材都很赞，就是骑手永远在路上。我已经学会一边等一边脑补满汉全席了。",
+        "time": "6天前"
+      },
+      {
+        "user": "深夜emo人",
+        "avatar": "🌙",
+        "stars": 4,
+        "comment": "一人食套餐治愈了我的深夜，热气腾腾很有安全感。要是能准点送达就完美了，可惜准点是奢望。",
+        "time": "2天前",
+        "dishNames": [
+          "一人食畅涮套餐(画饼版)"
+        ],
+        "images": [
+          "🍲"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "番茄锅底绝绝子",
+        "count": 1620,
+        "positive": true
+      },
+      {
+        "text": "食材新鲜",
+        "count": 1280,
+        "positive": true
+      },
+      {
+        "text": "一人食很贴心",
+        "count": 940,
+        "positive": true
+      },
+      {
+        "text": "套餐性价比高",
+        "count": 720,
+        "positive": true
+      },
+      {
+        "text": "保温做得好",
+        "count": 460,
+        "positive": true
+      },
+      {
+        "text": "永远在涮收不到 268",
+        "count": 268,
+        "positive": false
+      },
+      {
+        "text": "锅底等凉了 95",
+        "count": 95,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.9,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "火锅",
+    "logoImage": "/fake-takeout/shop-hp-kongqi.webp"
+  },
+  {
+    "id": "rice-1",
+    "name": "杨明渔黄焖鸡",
+    "logo": "🍗",
+    "banner": "🍚",
+    "rating": 4.7,
+    "monthlySales": 13620,
+    "perCapita": 23,
+    "deliveryMinutes": 35,
+    "deliveryFee": 2,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 15,
+    "distanceKm": 1.8,
+    "notice": "黄焖鸡砂锅咕嘟香，骑手端着满城修仙，米饭永远在路上，先画张饼垫垫。",
+    "badges": [
+      "开了8年老店",
+      "月售过万",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满50减12"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（货到再说）"
+      },
+      {
+        "type": "discount",
+        "text": "限时5折！限的是你这辈子收不到"
+      },
+      {
+        "type": "gift",
+        "text": "满25赠酸梅汤一杯（精神上的）"
+      }
+    ],
+    "categories": [
+      {
+        "id": "rice-1-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "rice-1-c2",
+        "name": "黄焖系列"
+      },
+      {
+        "id": "rice-1-c3",
+        "name": "盖浇饭"
+      },
+      {
+        "id": "rice-1-c4",
+        "name": "小吃"
+      },
+      {
+        "id": "rice-1-c5",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "rice-1-d1",
+        "categoryId": "rice-1-c1",
+        "name": "招牌黄焖鸡米饭（中份）",
+        "desc": "现焖嫩鸡腿肉配土豆香菇，汤汁拌饭能炫三碗",
+        "price": 22,
+        "originalPrice": 28,
+        "monthlySales": 8421,
+        "goodRate": 98,
+        "emoji": "🍗",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/rice-1.webp"
+      },
+      {
+        "id": "rice-1-d2",
+        "categoryId": "rice-1-c1",
+        "name": "画饼套餐（鸡+饮+小菜）",
+        "desc": "一套画下来管饱一星期，主打一个望梅止渴",
+        "price": 29.9,
+        "originalPrice": 39,
+        "monthlySales": 3120,
+        "goodRate": 96,
+        "emoji": "🥘",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/rice-1-d2.webp"
+      },
+      {
+        "id": "rice-1-d3",
+        "categoryId": "rice-1-c2",
+        "name": "辣味黄焖鸡米饭",
+        "desc": "二荆条小米辣下重手，辣得你忘了饭还没到",
+        "price": 24,
+        "monthlySales": 4560,
+        "goodRate": 97,
+        "emoji": "🌶️",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/rice-1-d3.webp"
+      },
+      {
+        "id": "rice-1-d4",
+        "categoryId": "rice-1-c2",
+        "name": "黄焖排骨米饭",
+        "desc": "排骨炖到脱骨，肉量实在不糊弄",
+        "price": 26,
+        "monthlySales": 2890,
+        "goodRate": 96,
+        "emoji": "🍖",
+        "image": "/fake-takeout/rice-1-d4.webp"
+      },
+      {
+        "id": "rice-1-d5",
+        "categoryId": "rice-1-c2",
+        "name": "黄焖牛肉米饭",
+        "desc": "牛腩软糯入味，配饭绝杀",
+        "price": 29,
+        "monthlySales": 1980,
+        "goodRate": 95,
+        "emoji": "🐄",
+        "image": "/fake-takeout/rice-1-d5.webp"
+      },
+      {
+        "id": "rice-1-d6",
+        "categoryId": "rice-1-c2",
+        "name": "黄焖豆腐米饭（素）",
+        "desc": "嫩豆腐吸饱汤汁，素食党的快乐",
+        "price": 18,
+        "monthlySales": 760,
+        "goodRate": 94,
+        "emoji": "🧈",
+        "image": "/fake-takeout/rice-1-d6.webp"
+      },
+      {
+        "id": "rice-1-d7",
+        "categoryId": "rice-1-c3",
+        "name": "土豆烧鸡盖浇饭",
+        "desc": "土豆吸味，鸡肉滑嫩，浇头给得不抠",
+        "price": 20,
+        "monthlySales": 3340,
+        "goodRate": 97,
+        "emoji": "🥔",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/rice-1-d7.webp"
+      },
+      {
+        "id": "rice-1-d8",
+        "categoryId": "rice-1-c3",
+        "name": "西红柿鸡蛋盖浇饭",
+        "desc": "酸甜下饭，永远的家常天花板",
+        "price": 16,
+        "monthlySales": 2670,
+        "goodRate": 96,
+        "emoji": "🍅",
+        "image": "/fake-takeout/rice-1-d8.webp"
+      },
+      {
+        "id": "rice-1-d9",
+        "categoryId": "rice-1-c3",
+        "name": "鱼香肉丝盖浇饭",
+        "desc": "酸甜微辣，木耳笋丝肉丝管够",
+        "price": 19,
+        "monthlySales": 1540,
+        "goodRate": 95,
+        "emoji": "🍚",
+        "image": "/fake-takeout/rice-1-d9.webp"
+      },
+      {
+        "id": "rice-1-d10",
+        "categoryId": "rice-1-c4",
+        "name": "空气炸蟹柳",
+        "desc": "炸得金黄酥脆，蘸点椒盐绝了",
+        "price": 9,
+        "monthlySales": 1230,
+        "goodRate": 93,
+        "emoji": "🦀",
+        "image": "/fake-takeout/rice-1-d10.webp"
+      },
+      {
+        "id": "rice-1-d11",
+        "categoryId": "rice-1-c4",
+        "name": "卤鸡爪（3只）",
+        "desc": "卤味十足，啃着等餐刚刚好",
+        "price": 8,
+        "monthlySales": 980,
+        "goodRate": 94,
+        "emoji": "🐔",
+        "image": "/fake-takeout/rice-1-d11.webp"
+      },
+      {
+        "id": "rice-1-d12",
+        "categoryId": "rice-1-c5",
+        "name": "现熬酸梅汤",
+        "desc": "解腻去火，喝完继续等下一单",
+        "price": 6,
+        "originalPrice": 9,
+        "monthlySales": 2100,
+        "goodRate": 97,
+        "emoji": "🥤",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/rice-1-d12.webp"
+      },
+      {
+        "id": "rice-1-d13",
+        "categoryId": "rice-1-c5",
+        "name": "冰镇豆浆",
+        "desc": "现磨非勾兑，配辣鸡刚好",
+        "price": 5,
+        "monthlySales": 870,
+        "goodRate": 95,
+        "emoji": "🥛",
+        "image": "/fake-takeout/rice-1-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "等到花儿都谢了",
+        "avatar": "🌸",
+        "stars": 4,
+        "comment": "鸡是真好吃，汤汁拌饭一绝，就是骑手在路上骑了40分钟还在我家小区门口转圈，我都下楼三次了。味道五星，配送扣一星。",
+        "time": "昨天",
+        "images": [
+          "🍗",
+          "🍚"
+        ],
+        "dishNames": [
+          "招牌黄焖鸡米饭（中份）"
+        ],
+        "reply": "亲骑手正在用脚步丈量这座城市，感情都是慢慢焖出来的~"
+      },
+      {
+        "user": "饿到看见幻觉",
+        "avatar": "🥵",
+        "stars": 5,
+        "comment": "下单两小时，我已经从饿到不饿再到饿，完成了一次轮回。但是！鸡腿肉真的嫩，土豆入味，等就等吧，值。",
+        "time": "3天前",
+        "images": [
+          "🍗"
+        ]
+      },
+      {
+        "user": "老顾客阿强",
+        "avatar": "💪",
+        "stars": 5,
+        "comment": "吃了三年了，份量一直很足，从没缺斤少两。老板实在人，鸡肉给得多，土豆也不是边角料。",
+        "time": "1周前",
+        "dishNames": [
+          "黄焖排骨米饭"
+        ]
+      },
+      {
+        "user": "辣到升天",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "辣味黄焖鸡是真辣，辣得我把还没到货这件事都忘了，等回过神来骑手到了。绝配。",
+        "time": "2天前",
+        "images": [
+          "🌶️",
+          "🍚"
+        ]
+      },
+      {
+        "user": "画饼充饥本饥",
+        "avatar": "🥲",
+        "stars": 3,
+        "comment": "鸡好吃是好吃，但是这个『骑手已出发』的状态挂了一个小时纹丝不动，我一度怀疑我点的是望梅止渴体验包。",
+        "time": "4天前",
+        "reply": "亲那是我们赠送的精神套餐已生效，先饱为敬哈~"
+      },
+      {
+        "user": "公司社畜小李",
+        "avatar": "💼",
+        "stars": 5,
+        "comment": "午休点的，包装很严实，汤汁一滴没洒，到手还热乎。就是这个『热乎』是我自己又热了一遍的。",
+        "time": "5天前",
+        "dishNames": [
+          "土豆烧鸡盖浇饭"
+        ]
+      },
+      {
+        "user": "西红柿厨神",
+        "avatar": "🍅",
+        "stars": 5,
+        "comment": "番茄鸡蛋盖浇饭真的家常味，酸甜刚好，鸡蛋给得多，浇头满满一勺，下饭神器。",
+        "time": "6天前",
+        "images": [
+          "🍅",
+          "🍚"
+        ]
+      },
+      {
+        "user": "凌晨还在等",
+        "avatar": "🌙",
+        "stars": 4,
+        "comment": "味道没得说，就是订单详情里那句『骑手正在火速赶来』我看了快一个小时，火速是文言文里的『慢慢』吧。",
+        "time": "1周前"
+      },
+      {
+        "user": "减肥失败案例",
+        "avatar": "🍔",
+        "stars": 5,
+        "comment": "本来说好节食的，闻到这鸡香直接破功。鸡腿肉那么大块，土豆软糯，谁顶得住啊。",
+        "time": "3天前",
+        "dishNames": [
+          "招牌黄焖鸡米饭（中份）"
+        ]
+      },
+      {
+        "user": "酸梅汤狂魔",
+        "avatar": "🥤",
+        "stars": 5,
+        "comment": "酸梅汤是真现熬的，不是冲剂那种甜腻味，解腻一流。第二杯半价直接囤两杯。",
+        "time": "2天前",
+        "images": [
+          "🥤"
+        ]
+      },
+      {
+        "user": "永远收不到货协会会长",
+        "avatar": "📦",
+        "stars": 4,
+        "comment": "作为本协会会长，我必须说这家很有觉悟，完美贯彻了『饭在路上』的精神。但鸡确实好吃，破例给四星。",
+        "time": "4天前",
+        "reply": "感谢会长认可，本店争取让全城都收不到，公平公正~"
+      },
+      {
+        "user": "豆腐爱好者",
+        "avatar": "🧈",
+        "stars": 5,
+        "comment": "素食的黄焖豆腐居然这么入味，豆腐嫩到入口即化，吸饱了汤汁，素食党终于有救了。",
+        "time": "1周前",
+        "dishNames": [
+          "黄焖豆腐米饭（素）"
+        ]
+      },
+      {
+        "user": "牛腩控",
+        "avatar": "🐄",
+        "stars": 5,
+        "comment": "黄焖牛肉炖得软烂，一点不柴，价格也实在。份量足到我一个大男人都没吃完。",
+        "time": "5天前",
+        "images": [
+          "🐄",
+          "🍖",
+          "🍚"
+        ]
+      },
+      {
+        "user": "吐槽役",
+        "avatar": "😤",
+        "stars": 3,
+        "comment": "味道是好的，但备注少放辣还是辣到我怀疑人生，差点没等到饭先被辣哭。下次祈祷他们看备注。",
+        "time": "6天前"
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "鸡肉鲜嫩",
+        "count": 1820,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 1540,
+        "positive": true
+      },
+      {
+        "text": "汤汁拌饭绝了",
+        "count": 1130,
+        "positive": true
+      },
+      {
+        "text": "包装严实没洒",
+        "count": 760,
+        "positive": true
+      },
+      {
+        "text": "价格实惠",
+        "count": 690,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 312,
+        "positive": false
+      },
+      {
+        "text": "骑手在路上转圈",
+        "count": 188,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "美食",
+    "logoImage": "/fake-takeout/shop-rice-1.webp"
+  },
+  {
+    "id": "rice-2",
+    "name": "老相鸡·总店",
+    "logo": "🍱",
+    "banner": "🥢",
+    "rating": 4.5,
+    "monthlySales": 9870,
+    "perCapita": 19,
+    "deliveryMinutes": 28,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 12,
+    "distanceKm": 0.9,
+    "notice": "红烧肉炖一夜，骑手端着溜达成老乡，饭永远在路上，到货无期，请收画饼。",
+    "badges": [
+      "品质联盟",
+      "食品安全",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "delivery",
+        "text": "0元配送费（反正也不一定送到）"
+      },
+      {
+        "type": "manjian",
+        "text": "满20减4，满35减8"
+      },
+      {
+        "type": "discount",
+        "text": "招牌盖饭限时8.8折"
+      }
+    ],
+    "categories": [
+      {
+        "id": "rice-2-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "rice-2-c2",
+        "name": "盖浇饭"
+      },
+      {
+        "id": "rice-2-c3",
+        "name": "经济套餐"
+      },
+      {
+        "id": "rice-2-c4",
+        "name": "汤品小吃"
+      },
+      {
+        "id": "rice-2-c5",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "rice-2-d1",
+        "categoryId": "rice-2-c1",
+        "name": "招牌红烧肉盖浇饭",
+        "desc": "肥而不腻入口即化，浇头铺满整碗饭",
+        "price": 21,
+        "originalPrice": 26,
+        "monthlySales": 6210,
+        "goodRate": 98,
+        "emoji": "🍖",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/rice-2.webp"
+      },
+      {
+        "id": "rice-2-d2",
+        "categoryId": "rice-2-c1",
+        "name": "望梅止渴双拼套餐",
+        "desc": "两荤一素配饭配汤，看着就饱了一半",
+        "price": 25,
+        "originalPrice": 32,
+        "monthlySales": 2340,
+        "goodRate": 96,
+        "emoji": "🍱",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/rice-2-d2.webp"
+      },
+      {
+        "id": "rice-2-d3",
+        "categoryId": "rice-2-c2",
+        "name": "宫保鸡丁盖浇饭",
+        "desc": "酸甜微辣花生脆，经典永不踩雷",
+        "price": 18,
+        "monthlySales": 4120,
+        "goodRate": 97,
+        "emoji": "🥜",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/rice-2-d3.webp"
+      },
+      {
+        "id": "rice-2-d4",
+        "categoryId": "rice-2-c2",
+        "name": "麻婆豆腐盖浇饭",
+        "desc": "麻辣鲜香，豆腐嫩滑，下饭利器",
+        "price": 15,
+        "monthlySales": 3560,
+        "goodRate": 96,
+        "emoji": "🌶️",
+        "image": "/fake-takeout/rice-2-d4.webp"
+      },
+      {
+        "id": "rice-2-d5",
+        "categoryId": "rice-2-c2",
+        "name": "青椒土豆丝盖浇饭",
+        "desc": "清爽下饭，素食也能吃两碗",
+        "price": 13,
+        "monthlySales": 1870,
+        "goodRate": 94,
+        "emoji": "🥬",
+        "image": "/fake-takeout/rice-2-d5.webp"
+      },
+      {
+        "id": "rice-2-d6",
+        "categoryId": "rice-2-c2",
+        "name": "回锅肉盖浇饭",
+        "desc": "蒜苗炒五花，咸香带点甜，巴适",
+        "price": 20,
+        "monthlySales": 2680,
+        "goodRate": 96,
+        "emoji": "🥓",
+        "image": "/fake-takeout/rice-2-d6.webp"
+      },
+      {
+        "id": "rice-2-d7",
+        "categoryId": "rice-2-c2",
+        "name": "黑椒牛柳盖浇饭",
+        "desc": "黑椒浓香牛柳嫩，洋葱垫底超香",
+        "price": 24,
+        "monthlySales": 1450,
+        "goodRate": 95,
+        "emoji": "🥩",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/rice-2-d7.webp"
+      },
+      {
+        "id": "rice-2-d8",
+        "categoryId": "rice-2-c3",
+        "name": "学生经济套餐",
+        "desc": "一荤一素加米饭，预算党福音",
+        "price": 12,
+        "originalPrice": 16,
+        "monthlySales": 5340,
+        "goodRate": 97,
+        "emoji": "🍚",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/rice-2-d8.webp"
+      },
+      {
+        "id": "rice-2-d9",
+        "categoryId": "rice-2-c3",
+        "name": "打工人能量套餐",
+        "desc": "双荤配饭配汤，干饭续命专用",
+        "price": 22,
+        "monthlySales": 2110,
+        "goodRate": 95,
+        "emoji": "🍱",
+        "image": "/fake-takeout/rice-2-d9.webp"
+      },
+      {
+        "id": "rice-2-d10",
+        "categoryId": "rice-2-c4",
+        "name": "紫菜蛋花汤",
+        "desc": "现做不勾兑，配盖饭刚刚好",
+        "price": 4,
+        "monthlySales": 3200,
+        "goodRate": 96,
+        "emoji": "🍲",
+        "image": "/fake-takeout/rice-2-d10.webp"
+      },
+      {
+        "id": "rice-2-d11",
+        "categoryId": "rice-2-c4",
+        "name": "空气糖醋里脊",
+        "desc": "外酥里嫩酸甜开胃，边等边香",
+        "price": 12,
+        "monthlySales": 1680,
+        "goodRate": 94,
+        "emoji": "🍤",
+        "image": "/fake-takeout/rice-2-d11.webp"
+      },
+      {
+        "id": "rice-2-d12",
+        "categoryId": "rice-2-c4",
+        "name": "凉拌黄瓜",
+        "desc": "蒜香清爽，解腻必备小菜",
+        "price": 6,
+        "monthlySales": 1240,
+        "goodRate": 93,
+        "emoji": "🥒",
+        "image": "/fake-takeout/rice-2-d12.webp"
+      },
+      {
+        "id": "rice-2-d13",
+        "categoryId": "rice-2-c5",
+        "name": "鲜橙多",
+        "desc": "冰镇酸甜，干完一碗饭来一瓶",
+        "price": 5,
+        "monthlySales": 1890,
+        "goodRate": 95,
+        "emoji": "🥤",
+        "image": "/fake-takeout/rice-2-d13.webp"
+      },
+      {
+        "id": "rice-2-d14",
+        "categoryId": "rice-2-c5",
+        "name": "现磨豆浆",
+        "desc": "醇厚不掺水，配套餐更香",
+        "price": 4,
+        "originalPrice": 6,
+        "monthlySales": 1020,
+        "goodRate": 95,
+        "emoji": "🥛",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/rice-2-d14.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "干饭一级选手",
+        "avatar": "🍚",
+        "stars": 5,
+        "comment": "红烧肉盖饭浇头是真的多，肥肉入口即化一点不腻，配饭炫得我直拍桌。性价比拉满。",
+        "time": "昨天",
+        "images": [
+          "🍖",
+          "🍚"
+        ],
+        "dishNames": [
+          "招牌红烧肉盖浇饭"
+        ]
+      },
+      {
+        "user": "纸上谈兵者",
+        "avatar": "📜",
+        "stars": 4,
+        "comment": "味道好评，就是这家店名取得太诚实了，我对着订单页『纸上得来』四个字看了半小时，饭才姗姗来迟。还好是真饭不是纸。",
+        "time": "2天前",
+        "reply": "亲终觉浅嘛，到手那一刻才是躬行，谢谢您亲自实践~"
+      },
+      {
+        "user": "预算只有十块",
+        "avatar": "💰",
+        "stars": 5,
+        "comment": "学生套餐12块管饱，一荤一素分量不糊弄，比食堂强多了。穷学生的救命稻草。",
+        "time": "4天前",
+        "dishNames": [
+          "学生经济套餐"
+        ]
+      },
+      {
+        "user": "在路上的第99分钟",
+        "avatar": "🛵",
+        "stars": 3,
+        "comment": "宫保鸡丁味道在线，花生很脆。但骑手定位在我楼下飘了半天就是不上来，我下去找发现他在隔壁吃面……开玩笑的，但真挺久。",
+        "time": "5天前"
+      },
+      {
+        "user": "麻辣星人",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "麻婆豆腐盖饭麻得正宗，豆腐嫩滑入味，15块这个量我服。汤汁拌饭绝了。",
+        "time": "3天前",
+        "images": [
+          "🌶️"
+        ]
+      },
+      {
+        "user": "包装强迫症",
+        "avatar": "📦",
+        "stars": 5,
+        "comment": "包装真的用心，盖饭和汤分开装，密封圈拉得紧紧的，一路骑回来一滴没洒。这点必须夸。",
+        "time": "1周前",
+        "dishNames": [
+          "黑椒牛柳盖浇饭"
+        ]
+      },
+      {
+        "user": "永远饿着的打工魂",
+        "avatar": "💼",
+        "stars": 4,
+        "comment": "打工人套餐分量够顶到下班，味道家常但稳。唯一问题是『预计28分钟送达』我等了快一小时,薛定谔的盖饭名不虚传。",
+        "time": "昨天"
+      },
+      {
+        "user": "回锅肉信徒",
+        "avatar": "🥓",
+        "stars": 5,
+        "comment": "回锅肉炒得地道，蒜苗够味五花肉不柴，咸香带甜，太巴适了。本地川菜也就这水平。",
+        "time": "6天前",
+        "images": [
+          "🥓",
+          "🍚"
+        ],
+        "dishNames": [
+          "回锅肉盖浇饭"
+        ]
+      },
+      {
+        "user": "望梅止渴体验官",
+        "avatar": "🍈",
+        "stars": 4,
+        "comment": "点了望梅止渴双拼，名字很应景因为我确实望了很久的梅。不过两荤一素是真实惠，到手后真香打脸。",
+        "time": "2天前",
+        "reply": "亲望得越久,吃得越香,这是我们的小心机~"
+      },
+      {
+        "user": "素食小清新",
+        "avatar": "🥬",
+        "stars": 5,
+        "comment": "青椒土豆丝盖饭清爽不油腻，13块的素盖饭良心了，干净又下饭。",
+        "time": "5天前",
+        "dishNames": [
+          "青椒土豆丝盖浇饭"
+        ]
+      },
+      {
+        "user": "汤汤水水",
+        "avatar": "🍲",
+        "stars": 5,
+        "comment": "紫菜蛋花汤4块钱现做的，不是那种粉冲的，配盖饭刚刚好，暖胃。",
+        "time": "3天前"
+      },
+      {
+        "user": "里脊控",
+        "avatar": "🍤",
+        "stars": 4,
+        "comment": "糖醋里脊外酥里嫩酸甜开胃，就是到我手上有点软了——毕竟在路上经历了一段漫长的旅程。味道还是可以的。",
+        "time": "1周前",
+        "images": [
+          "🍤"
+        ]
+      },
+      {
+        "user": "收不到货纪念馆馆长",
+        "avatar": "🏛️",
+        "stars": 4,
+        "comment": "本馆又收录一例经典案例：订单显示已送达，门口空无一物。后来发现放隔壁单元了……虚惊一场。饭好吃，宽容给四星。",
+        "time": "4天前"
+      },
+      {
+        "user": "豆浆党",
+        "avatar": "🥛",
+        "stars": 5,
+        "comment": "现磨豆浆醇香不掺水,第二杯半价直接加购。配宫保鸡丁绝配,这顿吃得舒坦。",
+        "time": "6天前",
+        "dishNames": [
+          "现磨豆浆",
+          "宫保鸡丁盖浇饭"
+        ]
+      },
+      {
+        "user": "深夜干饭人",
+        "avatar": "🌙",
+        "stars": 5,
+        "comment": "下班晚还能点到热乎的盖饭，份量足味道稳，老板出餐也快，就是骑手稍微慢点,但能理解,城市那么大。",
+        "time": "2天前"
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "浇头给得多",
+        "count": 1620,
+        "positive": true
+      },
+      {
+        "text": "性价比高",
+        "count": 1380,
+        "positive": true
+      },
+      {
+        "text": "包装密封好",
+        "count": 940,
+        "positive": true
+      },
+      {
+        "text": "味道家常正宗",
+        "count": 870,
+        "positive": true
+      },
+      {
+        "text": "出餐快",
+        "count": 540,
+        "positive": true
+      },
+      {
+        "text": "薛定谔的送达时间",
+        "count": 266,
+        "positive": false
+      },
+      {
+        "text": "骑手定位在楼下飘",
+        "count": 142,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.7,
+      "packaging": 4.8,
+      "delivery": 2.1
+    },
+    "channel": "美食",
+    "logoImage": "/fake-takeout/shop-rice-2.webp"
+  },
+  {
+    "id": "bf-baozi",
+    "name": "庆封包子铺",
+    "logo": "🥟",
+    "banner": "🍞",
+    "rating": 4.7,
+    "monthlySales": 8620,
+    "perCapita": 12,
+    "deliveryMinutes": 30,
+    "deliveryFee": 2,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 15,
+    "distanceKm": 1.2,
+    "notice": "现蒸大肉包热气腾腾，一笼刚出锅，骑手捧着满城窜，永远在路上凉透，先画饼。",
+    "badges": [
+      "开了8年老店",
+      "月售过万",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满50减10"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（饼已画好）"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠豆浆一杯（到货时奉上）"
+      },
+      {
+        "type": "delivery",
+        "text": "减配送费3元"
+      }
+    ],
+    "categories": [
+      {
+        "id": "bf-baozi-rec",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "bf-baozi-bao",
+        "name": "包子点心"
+      },
+      {
+        "id": "bf-baozi-zhou",
+        "name": "粥品豆浆"
+      },
+      {
+        "id": "bf-baozi-combo",
+        "name": "实惠套餐"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "bf-baozi-d1",
+        "categoryId": "bf-baozi-rec",
+        "name": "现蒸鲜肉大包",
+        "desc": "皮薄馅大，咬一口爆汁，热气糊你一脸",
+        "price": 3,
+        "originalPrice": 4,
+        "monthlySales": 9800,
+        "goodRate": 98,
+        "emoji": "🥟",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/bf-baozi.webp"
+      },
+      {
+        "id": "bf-baozi-d2",
+        "categoryId": "bf-baozi-rec",
+        "name": "三鲜灌汤包（一笼6只）",
+        "desc": "提着皮、移到碟、开个窗、喝口汤，仪式感拉满",
+        "price": 12.5,
+        "originalPrice": 16,
+        "monthlySales": 6400,
+        "goodRate": 97,
+        "emoji": "🥟",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bf-baozi-d2.webp"
+      },
+      {
+        "id": "bf-baozi-d3",
+        "categoryId": "bf-baozi-bao",
+        "name": "香菇青菜包",
+        "desc": "素得清爽，菜多到怀疑老板不要钱",
+        "price": 2.5,
+        "monthlySales": 5200,
+        "goodRate": 96,
+        "emoji": "🥬",
+        "image": "/fake-takeout/bf-baozi-d3.webp"
+      },
+      {
+        "id": "bf-baozi-d4",
+        "categoryId": "bf-baozi-bao",
+        "name": "豆沙流心包",
+        "desc": "掰开会流沙，甜而不齁，配豆浆绝了",
+        "price": 2.5,
+        "monthlySales": 3100,
+        "goodRate": 95,
+        "emoji": "🫘",
+        "image": "/fake-takeout/bf-baozi-d4.webp"
+      },
+      {
+        "id": "bf-baozi-d5",
+        "categoryId": "bf-baozi-bao",
+        "name": "酱肉大煎包（4只）",
+        "desc": "底煎得金黄焦脆，咔嚓一声你就上头了",
+        "price": 6,
+        "monthlySales": 4700,
+        "goodRate": 97,
+        "emoji": "🥟",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/bf-baozi-d5.webp"
+      },
+      {
+        "id": "bf-baozi-d6",
+        "categoryId": "bf-baozi-bao",
+        "name": "招牌小笼汤包（一笼8只）",
+        "desc": "薄到透光，汤汁锁得死死的，烫嘴预警",
+        "price": 9.9,
+        "monthlySales": 5600,
+        "goodRate": 98,
+        "emoji": "🧆",
+        "image": "/fake-takeout/bf-baozi-d6.webp"
+      },
+      {
+        "id": "bf-baozi-d7",
+        "categoryId": "bf-baozi-bao",
+        "name": "韭菜鸡蛋蒸饺（6只）",
+        "desc": "韭菜够味鸡蛋够嫩，蘸醋封神",
+        "price": 7,
+        "monthlySales": 2800,
+        "goodRate": 94,
+        "emoji": "🥟",
+        "image": "/fake-takeout/bf-baozi-d7.webp"
+      },
+      {
+        "id": "bf-baozi-d8",
+        "categoryId": "bf-baozi-zhou",
+        "name": "现磨原味豆浆",
+        "desc": "黄豆磨的，浓得能挂壁，不加水的那种",
+        "price": 3,
+        "monthlySales": 7300,
+        "goodRate": 96,
+        "emoji": "🥛",
+        "image": "/fake-takeout/bf-baozi-d8.webp"
+      },
+      {
+        "id": "bf-baozi-d9",
+        "categoryId": "bf-baozi-zhou",
+        "name": "皮蛋瘦肉粥",
+        "desc": "熬到米开花，绵到喝不出米粒，料也实在",
+        "price": 5.5,
+        "monthlySales": 3900,
+        "goodRate": 95,
+        "emoji": "🥣",
+        "image": "/fake-takeout/bf-baozi-d9.webp"
+      },
+      {
+        "id": "bf-baozi-d10",
+        "categoryId": "bf-baozi-zhou",
+        "name": "南瓜小米粥",
+        "desc": "养胃首选，甜糯暖身，老人小孩都爱",
+        "price": 4,
+        "monthlySales": 2100,
+        "goodRate": 94,
+        "emoji": "🎃",
+        "image": "/fake-takeout/bf-baozi-d10.webp"
+      },
+      {
+        "id": "bf-baozi-d11",
+        "categoryId": "bf-baozi-combo",
+        "name": "打工人能量套餐",
+        "desc": "肉包2只+豆浆1杯+茶叶蛋1个，吃饱再上工",
+        "price": 9.9,
+        "originalPrice": 13,
+        "monthlySales": 8800,
+        "goodRate": 98,
+        "emoji": "🍱",
+        "tags": [
+          "招牌",
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bf-baozi-d11.webp"
+      },
+      {
+        "id": "bf-baozi-d12",
+        "categoryId": "bf-baozi-combo",
+        "name": "全家福蒸笼套餐",
+        "desc": "鲜肉包+青菜包+小笼包+粥，一笼端上全家不抢",
+        "price": 19.9,
+        "originalPrice": 26,
+        "monthlySales": 1900,
+        "goodRate": 96,
+        "emoji": "🧺",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bf-baozi-d12.webp"
+      },
+      {
+        "id": "bf-baozi-d13",
+        "categoryId": "bf-baozi-rec",
+        "name": "卤香茶叶蛋",
+        "desc": "卤汁泡足三天，蛋黄都入味，论个买不亏",
+        "price": 1.5,
+        "monthlySales": 6700,
+        "goodRate": 97,
+        "emoji": "🥚",
+        "image": "/fake-takeout/bf-baozi-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "早八通勤选手",
+        "avatar": "🧑‍💼",
+        "stars": 5,
+        "comment": "肉包真的现蒸，咬开还烫嘴，馅给得足，就是这馅我至今没吃到，骑手说还在第三个红绿灯，我已经下班了。",
+        "time": "昨天",
+        "dishNames": [
+          "现蒸鲜肉大包"
+        ],
+        "images": [
+          "🥟",
+          "🥛"
+        ],
+        "reply": "您先饿着，包在路上保温呢～"
+      },
+      {
+        "user": "粥道中人",
+        "avatar": "🧓",
+        "stars": 5,
+        "comment": "皮蛋瘦肉粥熬得是真的绵，米都化了，料也不抠，给老人喝刚好，下次还会画第二张饼来买。",
+        "time": "3天前",
+        "dishNames": [
+          "皮蛋瘦肉粥"
+        ]
+      },
+      {
+        "user": "饿到发昏",
+        "avatar": "😵",
+        "stars": 3,
+        "comment": "味道我相信是好的，毕竟评论都这么说，但我从早上等到中午，骑手定位一直在原地画圈，建议改名画饼包子铺（doge）。",
+        "time": "2天前",
+        "reply": "亲，这名儿被您说着了，我们就是画饼包子铺呀～"
+      },
+      {
+        "user": "灌汤包鉴定师",
+        "avatar": "🧐",
+        "stars": 5,
+        "comment": "灌汤包提皮不破，汤汁满满一口，正经好吃，包装也扎实不漏汤。点赞。",
+        "time": "1周前",
+        "dishNames": [
+          "三鲜灌汤包（一笼6只）"
+        ],
+        "images": [
+          "🥟"
+        ]
+      },
+      {
+        "user": "豆浆自由",
+        "avatar": "🥛",
+        "stars": 5,
+        "comment": "豆浆是真磨的，浓！不是那种兑水的科技豆浆，喝出小时候味道了。",
+        "time": "4天前",
+        "dishNames": [
+          "现磨原味豆浆"
+        ]
+      },
+      {
+        "user": "在路上的人",
+        "avatar": "🛵",
+        "stars": 4,
+        "comment": "包子很顶饱，份量足，唯一缺点是配送，骑手好像跟我一样在生活里迷路了，永远差800米。",
+        "time": "5天前",
+        "images": [
+          "🥟",
+          "🥬",
+          "🥚"
+        ]
+      },
+      {
+        "user": "甜党代表",
+        "avatar": "🍬",
+        "stars": 5,
+        "comment": "豆沙流心包掰开真的流，甜度刚好不齁，配无糖豆浆完美。",
+        "time": "1周前",
+        "dishNames": [
+          "豆沙流心包"
+        ]
+      },
+      {
+        "user": "望梅止渴本渴",
+        "avatar": "🍐",
+        "stars": 4,
+        "comment": "茶叶蛋入味，能量套餐性价比高，就是下单时显示30分钟，结果是30个工作日的意思吧？",
+        "time": "6天前",
+        "dishNames": [
+          "打工人能量套餐",
+          "卤香茶叶蛋"
+        ],
+        "reply": "工作日不含您梦里的时间哦～"
+      },
+      {
+        "user": "煎包爱好者",
+        "avatar": "🍳",
+        "stars": 5,
+        "comment": "酱肉煎包底脆得咔嚓响，太香了，一口一个停不下来，回购第N次。",
+        "time": "昨天",
+        "dishNames": [
+          "酱肉大煎包（4只）"
+        ],
+        "images": [
+          "🥟"
+        ]
+      },
+      {
+        "user": "小区张阿姨",
+        "avatar": "👵",
+        "stars": 5,
+        "comment": "南瓜小米粥养胃又好喝，给孙子买的，干净卫生，老店就是放心。",
+        "time": "3天前",
+        "dishNames": [
+          "南瓜小米粥"
+        ]
+      },
+      {
+        "user": "收不到货专业户",
+        "avatar": "📦",
+        "stars": 3,
+        "comment": "据说很好吃，我是没福消受了，等到天荒地老包子估计都凉透发酵成新品了。给三星全凭信任。",
+        "time": "2天前"
+      },
+      {
+        "user": "全家福买家",
+        "avatar": "👨‍👩‍👧",
+        "stars": 5,
+        "comment": "全家福套餐量大管饱，一家四口早饭全包了，划算！蒸笼包装也精致，有面儿。",
+        "time": "1周前",
+        "dishNames": [
+          "全家福蒸笼套餐"
+        ],
+        "images": [
+          "🧺",
+          "🥟",
+          "🥣"
+        ]
+      },
+      {
+        "user": "夜班下班的我",
+        "avatar": "🌙",
+        "stars": 4,
+        "comment": "味道扎实份量足，热乎的时候吃确实香，可惜送到我手里已经是下一顿了，建议自提。",
+        "time": "5天前"
+      },
+      {
+        "user": "韭菜馅护卫队",
+        "avatar": "🥬",
+        "stars": 5,
+        "comment": "韭菜鸡蛋蒸饺真材实料，蘸醋一绝，吃出家的味道，好评！",
+        "time": "4天前",
+        "dishNames": [
+          "韭菜鸡蛋蒸饺（6只）"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "馅大皮薄",
+        "count": 1286,
+        "positive": true
+      },
+      {
+        "text": "豆浆现磨够浓",
+        "count": 942,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 873,
+        "positive": true
+      },
+      {
+        "text": "热乎管饱",
+        "count": 651,
+        "positive": true
+      },
+      {
+        "text": "包装扎实不漏汤",
+        "count": 488,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 312,
+        "positive": false
+      },
+      {
+        "text": "骑手永远差800米",
+        "count": 207,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "早餐",
+    "logoImage": "/fake-takeout/shop-bf-baozi.webp"
+  },
+  {
+    "id": "bf-jianbing",
+    "name": "永合豆浆煎饼",
+    "logo": "🫓",
+    "banner": "🥯",
+    "rating": 4.6,
+    "monthlySales": 7240,
+    "perCapita": 11,
+    "deliveryMinutes": 35,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 4,
+    "minOrder": 10,
+    "distanceKm": 2.3,
+    "notice": "豆浆现磨，油条现炸，骑手端着满街跑，早餐永远在路上，先画饼配豆浆喝。",
+    "badges": [
+      "品质联盟",
+      "食品安全",
+      "月售过万"
+    ],
+    "promotions": [
+      {
+        "type": "discount",
+        "text": "限时5折（折的是你的等待时长）"
+      },
+      {
+        "type": "manjian",
+        "text": "满20减4"
+      },
+      {
+        "type": "gift",
+        "text": "买煎饼赠现磨豆浆一杯"
+      }
+    ],
+    "categories": [
+      {
+        "id": "bf-jianbing-rec",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "bf-jianbing-bing",
+        "name": "煎饼果子"
+      },
+      {
+        "id": "bf-jianbing-fry",
+        "name": "油条豆浆"
+      },
+      {
+        "id": "bf-jianbing-combo",
+        "name": "超值套餐"
+      },
+      {
+        "id": "bf-jianbing-snack",
+        "name": "小吃加料"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "bf-jianbing-d1",
+        "categoryId": "bf-jianbing-rec",
+        "name": "招牌杂粮煎饼果子",
+        "desc": "双蛋加薄脆，酱料灵魂，咬下去咔咔响",
+        "price": 8,
+        "originalPrice": 10,
+        "monthlySales": 9600,
+        "goodRate": 98,
+        "emoji": "🫓",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/bf-jianbing.webp"
+      },
+      {
+        "id": "bf-jianbing-d2",
+        "categoryId": "bf-jianbing-rec",
+        "name": "现炸黄金油条（2根）",
+        "desc": "外脆里空，蓬松到能照镜子，泡豆浆绝配",
+        "price": 4,
+        "monthlySales": 8200,
+        "goodRate": 97,
+        "emoji": "🥖",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bf-jianbing-d2.webp"
+      },
+      {
+        "id": "bf-jianbing-d3",
+        "categoryId": "bf-jianbing-bing",
+        "name": "里脊肉煎饼",
+        "desc": "炸里脊厚实，刷甜面酱，肉感拉满",
+        "price": 11,
+        "originalPrice": 14,
+        "monthlySales": 4500,
+        "goodRate": 96,
+        "emoji": "🫓",
+        "tags": [
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bf-jianbing-d3.webp"
+      },
+      {
+        "id": "bf-jianbing-d4",
+        "categoryId": "bf-jianbing-bing",
+        "name": "火腿双蛋煎饼",
+        "desc": "两个鸡蛋一片火腿，量大管饱不糊弄",
+        "price": 9,
+        "monthlySales": 5300,
+        "goodRate": 95,
+        "emoji": "🍳",
+        "image": "/fake-takeout/bf-jianbing-d4.webp"
+      },
+      {
+        "id": "bf-jianbing-d5",
+        "categoryId": "bf-jianbing-bing",
+        "name": "麻辣脆爽煎饼",
+        "desc": "加一把麻辣豆皮，辣得清醒，早八提神靠它",
+        "price": 9.5,
+        "monthlySales": 2700,
+        "goodRate": 94,
+        "emoji": "🌶️",
+        "image": "/fake-takeout/bf-jianbing-d5.webp"
+      },
+      {
+        "id": "bf-jianbing-d6",
+        "categoryId": "bf-jianbing-fry",
+        "name": "现磨甜豆浆",
+        "desc": "黄豆现磨，热乎乎一大杯，温柔到胃里",
+        "price": 3,
+        "monthlySales": 7800,
+        "goodRate": 97,
+        "emoji": "🥛",
+        "image": "/fake-takeout/bf-jianbing-d6.webp"
+      },
+      {
+        "id": "bf-jianbing-d7",
+        "categoryId": "bf-jianbing-fry",
+        "name": "咸豆浆",
+        "desc": "撒虾皮榨菜油条碎，老天津人的早晨",
+        "price": 4,
+        "monthlySales": 2300,
+        "goodRate": 93,
+        "emoji": "🍜",
+        "image": "/fake-takeout/bf-jianbing-d7.webp"
+      },
+      {
+        "id": "bf-jianbing-d8",
+        "categoryId": "bf-jianbing-fry",
+        "name": "糖油饼",
+        "desc": "外焦里软带糖心，咬开会拉丝，热量警告",
+        "price": 3.5,
+        "monthlySales": 3600,
+        "goodRate": 95,
+        "emoji": "🍩",
+        "image": "/fake-takeout/bf-jianbing-d8.webp"
+      },
+      {
+        "id": "bf-jianbing-d9",
+        "categoryId": "bf-jianbing-snack",
+        "name": "加薄脆（脆到上瘾）",
+        "desc": "再多来一片，煎饼的灵魂从不嫌多",
+        "price": 1,
+        "monthlySales": 6100,
+        "goodRate": 98,
+        "emoji": "🥠",
+        "image": "/fake-takeout/bf-jianbing-d9.webp"
+      },
+      {
+        "id": "bf-jianbing-d10",
+        "categoryId": "bf-jianbing-snack",
+        "name": "加肠（火腿/烤肠）",
+        "desc": "嘎嘣脆烤肠，加一根快乐翻倍",
+        "price": 2,
+        "monthlySales": 4400,
+        "goodRate": 96,
+        "emoji": "🌭",
+        "image": "/fake-takeout/bf-jianbing-d10.webp"
+      },
+      {
+        "id": "bf-jianbing-d11",
+        "categoryId": "bf-jianbing-combo",
+        "name": "煎饼+豆浆早安套餐",
+        "desc": "招牌煎饼1份+热豆浆1杯，开工不慌",
+        "price": 9.9,
+        "originalPrice": 12,
+        "monthlySales": 8900,
+        "goodRate": 98,
+        "emoji": "🍱",
+        "tags": [
+          "招牌",
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/bf-jianbing-d11.webp"
+      },
+      {
+        "id": "bf-jianbing-d12",
+        "categoryId": "bf-jianbing-combo",
+        "name": "油条豆浆经典套餐",
+        "desc": "油条2根+甜豆浆1杯，泡着吃才是仪式",
+        "price": 6.5,
+        "originalPrice": 8,
+        "monthlySales": 5200,
+        "goodRate": 96,
+        "emoji": "🥖",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bf-jianbing-d12.webp"
+      },
+      {
+        "id": "bf-jianbing-d13",
+        "categoryId": "bf-jianbing-snack",
+        "name": "卤蛋",
+        "desc": "卤透入味，加进煎饼一口爆黄",
+        "price": 1.5,
+        "monthlySales": 3900,
+        "goodRate": 95,
+        "emoji": "🥚",
+        "image": "/fake-takeout/bf-jianbing-d13.webp"
+      },
+      {
+        "id": "bf-jianbing-d14",
+        "categoryId": "bf-jianbing-rec",
+        "name": "全家分享煎饼大卷",
+        "desc": "加长版三蛋双脆，切段分着吃，谁切谁喊香",
+        "price": 16.8,
+        "originalPrice": 22,
+        "monthlySales": 1500,
+        "goodRate": 96,
+        "emoji": "🌯",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/bf-jianbing-d14.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "薄脆狂魔",
+        "avatar": "🥠",
+        "stars": 5,
+        "comment": "薄脆是真的脆，咬一口咔咔响，酱料也调得好，煎饼天花板了。可惜我闻香识煎饼，因为它还没送到。",
+        "time": "昨天",
+        "dishNames": [
+          "招牌杂粮煎饼果子"
+        ],
+        "images": [
+          "🫓",
+          "🥛"
+        ],
+        "reply": "脆度我们负责，到货时间交给缘分～"
+      },
+      {
+        "user": "油条要现炸",
+        "avatar": "🥖",
+        "stars": 5,
+        "comment": "油条蓬松内部全是空气，泡豆浆吸饱了汁，绝绝子，比楼下那家强多了。",
+        "time": "3天前",
+        "dishNames": [
+          "现炸黄金油条（2根）",
+          "现磨甜豆浆"
+        ]
+      },
+      {
+        "user": "永远在等餐",
+        "avatar": "⏳",
+        "stars": 3,
+        "comment": "下单显示骑手已取餐，然后骑手就开启了西天取经模式，我等到都开始怀疑人生了。味道应该不错吧，我猜的。",
+        "time": "2天前",
+        "reply": "九九八十一难，第三难就是您这单啦～"
+      },
+      {
+        "user": "里脊党",
+        "avatar": "🍖",
+        "stars": 5,
+        "comment": "里脊肉煎饼肉是真的厚，不是那种纸片肉，份量足吃得很满足，包装也包得严实没漏。",
+        "time": "1周前",
+        "dishNames": [
+          "里脊肉煎饼"
+        ],
+        "images": [
+          "🫓"
+        ]
+      },
+      {
+        "user": "咸甜之争裁判",
+        "avatar": "⚖️",
+        "stars": 4,
+        "comment": "咸豆浆点对了，虾皮榨菜给得足，地道。就是配送有点慢，到手温度刚好够画饼用。",
+        "time": "5天前",
+        "dishNames": [
+          "咸豆浆"
+        ]
+      },
+      {
+        "user": "麻辣上头",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "麻辣煎饼是真的辣得清醒，早八困意瞬间消失，重口党狂喜，回购！",
+        "time": "4天前",
+        "dishNames": [
+          "麻辣脆爽煎饼"
+        ],
+        "images": [
+          "🌶️",
+          "🫓"
+        ]
+      },
+      {
+        "user": "收不到的第八天",
+        "avatar": "📭",
+        "stars": 3,
+        "comment": "实不相瞒我已经连续画饼一周了，每次都说在路上，建议给骑手配个导航或者配个翅膀。冲味道给三星。",
+        "time": "2天前"
+      },
+      {
+        "user": "糖油饼控",
+        "avatar": "🍩",
+        "stars": 5,
+        "comment": "糖油饼掰开会拉丝，外焦里糯，甜度刚好，罪恶但好吃，减肥从明天开始。",
+        "time": "6天前",
+        "dishNames": [
+          "糖油饼"
+        ],
+        "images": [
+          "🍩"
+        ]
+      },
+      {
+        "user": "早安打工魂",
+        "avatar": "🧑‍💻",
+        "stars": 5,
+        "comment": "早安套餐性价比高，9块9吃饱喝足，料足味好，老板实在。就是希望骑手也能早安一下别迟到。",
+        "time": "昨天",
+        "dishNames": [
+          "煎饼+豆浆早安套餐"
+        ]
+      },
+      {
+        "user": "望梅止渴星人",
+        "avatar": "🍐",
+        "stars": 4,
+        "comment": "闻着邻桌的香味我饿了，下单后开始望梅止渴，订单还在路上，我先靠想象吃饱了。味道是真不错。",
+        "time": "1周前",
+        "images": [
+          "🫓"
+        ]
+      },
+      {
+        "user": "加料加到底",
+        "avatar": "🌭",
+        "stars": 5,
+        "comment": "加了薄脆加了肠加了卤蛋，一套下来豪华版煎饼，吃得贼满足，份量绝对管饱。",
+        "time": "3天前",
+        "dishNames": [
+          "加薄脆（脆到上瘾）",
+          "加肠（火腿/烤肠）",
+          "卤蛋"
+        ]
+      },
+      {
+        "user": "分享装买家",
+        "avatar": "👨‍👩‍👦",
+        "stars": 5,
+        "comment": "全家分享大卷切段分着吃太香了，孩子抢着要，包装干净卫生，放心给娃吃。",
+        "time": "5天前",
+        "dishNames": [
+          "全家分享煎饼大卷"
+        ],
+        "images": [
+          "🌯",
+          "🥛"
+        ]
+      },
+      {
+        "user": "周末躺平人",
+        "avatar": "🛋️",
+        "stars": 4,
+        "comment": "味道挑不出毛病，豆浆现磨够浓，就是送得慢，我都洗漱完化好妆了它才到，建议提前一天点。",
+        "time": "4天前",
+        "dishNames": [
+          "现磨甜豆浆"
+        ]
+      },
+      {
+        "user": "煎饼测评号",
+        "avatar": "📷",
+        "stars": 5,
+        "comment": "摊得均匀火候到位，酱香脆香蛋香层次分明，本地早餐里能排前三，强烈推荐。",
+        "time": "1周前",
+        "dishNames": [
+          "招牌杂粮煎饼果子"
+        ],
+        "images": [
+          "🫓",
+          "🍳",
+          "🥠"
+        ]
+      },
+      {
+        "user": "经典油条豆浆党",
+        "avatar": "🥢",
+        "stars": 5,
+        "comment": "油条豆浆套餐就是童年味道，6块5两根油条一杯豆浆，实惠到哭，老店良心。",
+        "time": "2天前",
+        "dishNames": [
+          "油条豆浆经典套餐"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "薄脆够脆",
+        "count": 1142,
+        "positive": true
+      },
+      {
+        "text": "油条现炸蓬松",
+        "count": 906,
+        "positive": true
+      },
+      {
+        "text": "酱料够味",
+        "count": 778,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 642,
+        "positive": true
+      },
+      {
+        "text": "豆浆现磨够浓",
+        "count": 533,
+        "positive": true
+      },
+      {
+        "text": "骑手开启取经模式",
+        "count": 289,
+        "positive": false
+      },
+      {
+        "text": "到手只够画饼",
+        "count": 174,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.7,
+      "packaging": 4.6,
+      "delivery": 1.9
+    },
+    "channel": "早餐",
+    "logoImage": "/fake-takeout/shop-bf-jianbing.webp"
+  },
+  {
+    "id": "jp-1",
+    "name": "挣鲜回转寿司",
+    "logo": "🍣",
+    "banner": "🍱",
+    "rating": 4.7,
+    "monthlySales": 8624,
+    "perCapita": 68,
+    "deliveryMinutes": 35,
+    "deliveryFee": 3,
+    "deliveryFeeOriginal": 8,
+    "minOrder": 20,
+    "distanceKm": 1.8,
+    "notice": "回转寿司转得欢，转到你这就转没了，三文鱼已装盘，永远在路上，到货见画饼。",
+    "badges": [
+      "品质联盟",
+      "开了8年老店",
+      "月售过万"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满60减12"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（送达时退还）"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠味噌汤一碗（图片版）"
+      },
+      {
+        "type": "delivery",
+        "text": "减5元配送费"
+      }
+    ],
+    "categories": [
+      {
+        "id": "jp-1-rec",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "jp-1-sushi",
+        "name": "寿司刺身"
+      },
+      {
+        "id": "jp-1-fry",
+        "name": "炸物天妇罗"
+      },
+      {
+        "id": "jp-1-noodle",
+        "name": "主食拉面"
+      },
+      {
+        "id": "jp-1-drink",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "jp-1-d1",
+        "categoryId": "jp-1-rec",
+        "name": "望梅止渴三文鱼刺身",
+        "desc": "现切厚切三文鱼，看一眼就饱，吃不到更值得回味",
+        "price": 38,
+        "originalPrice": 58,
+        "monthlySales": 3210,
+        "goodRate": 98,
+        "emoji": "🍣",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/jp-1.webp"
+      },
+      {
+        "id": "jp-1-d2",
+        "categoryId": "jp-1-rec",
+        "name": "空气豪华双拼寿司盘",
+        "desc": "八贯握寿司精致摆盘，主打一个画面感",
+        "price": 49.5,
+        "originalPrice": 69,
+        "monthlySales": 1880,
+        "goodRate": 97,
+        "emoji": "🍱",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/jp-1-d2.webp"
+      },
+      {
+        "id": "jp-1-d3",
+        "categoryId": "jp-1-sushi",
+        "name": "金枪鱼大腹握寿司",
+        "desc": "入口即化，前提是它能入口",
+        "price": 28,
+        "monthlySales": 945,
+        "goodRate": 96,
+        "emoji": "🍣",
+        "image": "/fake-takeout/jp-1-d3.webp"
+      },
+      {
+        "id": "jp-1-d4",
+        "categoryId": "jp-1-sushi",
+        "name": "海胆军舰卷",
+        "desc": "鲜甜浓郁，等到的人都说好吃",
+        "price": 32,
+        "originalPrice": 42,
+        "monthlySales": 612,
+        "goodRate": 95,
+        "emoji": "🍣",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/jp-1-d4.webp"
+      },
+      {
+        "id": "jp-1-d5",
+        "categoryId": "jp-1-sushi",
+        "name": "鳗鱼烧寿司",
+        "desc": "炭火慢烤照烧汁，香气只在描述里",
+        "price": 24,
+        "monthlySales": 1456,
+        "goodRate": 94,
+        "emoji": "🍣",
+        "image": "/fake-takeout/jp-1-d5.webp"
+      },
+      {
+        "id": "jp-1-d6",
+        "categoryId": "jp-1-sushi",
+        "name": "加州反卷六贯",
+        "desc": "蟹柳牛油果黄瓜，老少咸宜想象不限",
+        "price": 19,
+        "monthlySales": 2033,
+        "goodRate": 93,
+        "emoji": "🍣",
+        "image": "/fake-takeout/jp-1-d6.webp"
+      },
+      {
+        "id": "jp-1-d7",
+        "categoryId": "jp-1-fry",
+        "name": "黄金虾天妇罗",
+        "desc": "外酥里嫩，咬下去全靠脑补的咔嚓声",
+        "price": 26,
+        "monthlySales": 1789,
+        "goodRate": 95,
+        "emoji": "🍤",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/jp-1-d7.webp"
+      },
+      {
+        "id": "jp-1-d8",
+        "categoryId": "jp-1-fry",
+        "name": "炸蔬菜拼盘",
+        "desc": "南瓜茄子青椒，健康但你收不到",
+        "price": 18,
+        "monthlySales": 534,
+        "goodRate": 92,
+        "emoji": "🍤",
+        "image": "/fake-takeout/jp-1-d8.webp"
+      },
+      {
+        "id": "jp-1-d9",
+        "categoryId": "jp-1-fry",
+        "name": "唐扬炸鸡块",
+        "desc": "日式腌制现炸，趁热吃需要时光机",
+        "price": 22,
+        "originalPrice": 30,
+        "monthlySales": 2670,
+        "goodRate": 96,
+        "emoji": "🍗",
+        "tags": [
+          "必点",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/jp-1-d9.webp"
+      },
+      {
+        "id": "jp-1-d10",
+        "categoryId": "jp-1-noodle",
+        "name": "豚骨叉烧拉面",
+        "desc": "熬足十八小时高汤，再熬十八小时配送",
+        "price": 33,
+        "monthlySales": 4120,
+        "goodRate": 97,
+        "emoji": "🍜",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/jp-1-d10.webp"
+      },
+      {
+        "id": "jp-1-d11",
+        "categoryId": "jp-1-noodle",
+        "name": "招牌海鲜炒乌冬",
+        "desc": "镬气十足，气都散在路上了",
+        "price": 27,
+        "monthlySales": 1340,
+        "goodRate": 93,
+        "emoji": "🍜",
+        "image": "/fake-takeout/jp-1-d11.webp"
+      },
+      {
+        "id": "jp-1-d12",
+        "categoryId": "jp-1-drink",
+        "name": "三得利乌龙茶",
+        "desc": "解腻去油，配你不存在的寿司刚刚好",
+        "price": 8,
+        "monthlySales": 2890,
+        "goodRate": 95,
+        "emoji": "🍵",
+        "image": "/fake-takeout/jp-1-d12.webp"
+      },
+      {
+        "id": "jp-1-d13",
+        "categoryId": "jp-1-drink",
+        "name": "桃子味气泡水",
+        "desc": "气泡满满，开瓶声请自行想象",
+        "price": 10,
+        "originalPrice": 14,
+        "monthlySales": 1102,
+        "goodRate": 94,
+        "emoji": "🥤",
+        "image": "/fake-takeout/jp-1-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "深夜不睡的鱼",
+        "avatar": "🐟",
+        "stars": 5,
+        "comment": "三文鱼是真的厚，味道一绝。就是骑手定位还在江户时代，催了三次说快到关原了。",
+        "time": "昨天",
+        "images": [
+          "🍣",
+          "🍱"
+        ],
+        "dishNames": [
+          "望梅止渴三文鱼刺身"
+        ],
+        "reply": "亲，骑手正在历史长河里逆流而上，马上就到啦~"
+      },
+      {
+        "user": "等餐选手006",
+        "avatar": "🍙",
+        "stars": 4,
+        "comment": "下单两天了还在路上，但不得不说这画饼画得是真精致，看图就有饱腹感了。",
+        "time": "3天前",
+        "images": [
+          "🍱"
+        ]
+      },
+      {
+        "user": "打工人的胃",
+        "avatar": "😮‍💨",
+        "stars": 5,
+        "comment": "拉面汤头描述得太香了，我对着图片喝了三口空气，居然有点满足。",
+        "time": "1周前",
+        "dishNames": [
+          "豚骨叉烧拉面"
+        ]
+      },
+      {
+        "user": "海胆控本控",
+        "avatar": "🦔",
+        "stars": 5,
+        "comment": "海胆军舰真的新鲜！邻居说的，因为我到现在没收到。",
+        "time": "2天前",
+        "images": [
+          "🍣",
+          "🍤",
+          "🍗"
+        ],
+        "reply": "亲，您邻居的好评我们收下了，您的餐我们也很想送达呜呜"
+      },
+      {
+        "user": "炸物爱好者",
+        "avatar": "🍤",
+        "stars": 5,
+        "comment": "虾天妇罗份量足，外壳金黄诱人，可惜只在我的想象里咔嚓作响。",
+        "time": "5天前",
+        "dishNames": [
+          "黄金虾天妇罗"
+        ]
+      },
+      {
+        "user": "随便取个名",
+        "avatar": "🍵",
+        "stars": 3,
+        "comment": "味道应该不错吧，但配送是真的离谱，骑手头像三天没动过了。",
+        "time": "4天前"
+      },
+      {
+        "user": "周末摆烂中",
+        "avatar": "🛋️",
+        "stars": 4,
+        "comment": "包装看起来很高级，乌龙茶配寿司这个搭配很懂。下次能送到再给五星。",
+        "time": "1周前",
+        "dishNames": [
+          "三得利乌龙茶"
+        ]
+      },
+      {
+        "user": "永远的备胎",
+        "avatar": "🌙",
+        "stars": 5,
+        "comment": "唐扬炸鸡第二件半价太划算了，我点了俩，等于我的想象力翻倍。",
+        "time": "昨天",
+        "images": [
+          "🍗"
+        ],
+        "dishNames": [
+          "唐扬炸鸡块"
+        ]
+      },
+      {
+        "user": "加班到天明",
+        "avatar": "💻",
+        "stars": 5,
+        "comment": "正经夸一句，菜单做得真用心，每道菜描述都让人流口水。骑手加油，我信你。",
+        "time": "6天前"
+      },
+      {
+        "user": "梅花三弄",
+        "avatar": "🌸",
+        "stars": 4,
+        "comment": "望梅止渴这个名字起得太妙了，确实越等越渴，越渴越想点。",
+        "time": "3天前",
+        "images": [
+          "🍣"
+        ]
+      },
+      {
+        "user": "干饭人本人",
+        "avatar": "🍚",
+        "stars": 5,
+        "comment": "炒乌冬看着镬气十足，虽然气都在路上散光了，但精神管饱。",
+        "time": "2天前",
+        "dishNames": [
+          "招牌海鲜炒乌冬"
+        ],
+        "reply": "亲，镬气我们已经用真空袋封好啦，就是路有点远~"
+      },
+      {
+        "user": "气泡水成瘾",
+        "avatar": "🥤",
+        "stars": 4,
+        "comment": "气泡水好评，开瓶那一下我脑补得很真实，配空气寿司绝了。",
+        "time": "1周前"
+      },
+      {
+        "user": "深海一条龙",
+        "avatar": "🐉",
+        "stars": 5,
+        "comment": "金枪鱼大腹据说入口即化，我等它入口已经等到立秋了。",
+        "time": "昨天",
+        "images": [
+          "🍣",
+          "🍱"
+        ]
+      },
+      {
+        "user": "佛系点餐",
+        "avatar": "🧘",
+        "stars": 3,
+        "comment": "味道和摆盘都挺好，就是别指望今天能吃到，调整好心态就五星。",
+        "time": "4天前"
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "刺身很新鲜",
+        "count": 326,
+        "positive": true
+      },
+      {
+        "text": "摆盘精致",
+        "count": 288,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 254,
+        "positive": true
+      },
+      {
+        "text": "汤头浓郁",
+        "count": 197,
+        "positive": true
+      },
+      {
+        "text": "画饼一流",
+        "count": 412,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 188,
+        "positive": false
+      },
+      {
+        "text": "永远在路上",
+        "count": 233,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.6
+    },
+    "channel": "日韩料理",
+    "logoImage": "/fake-takeout/shop-jp-1.webp"
+  },
+  {
+    "id": "jp-2",
+    "name": "权金诚部队锅",
+    "logo": "🍲",
+    "banner": "🍗",
+    "rating": 4.6,
+    "monthlySales": 11240,
+    "perCapita": 55,
+    "deliveryMinutes": 40,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 25,
+    "distanceKm": 2.6,
+    "notice": "部队锅咕嘟，芝士拉丝十米，骑手端着过三八线，永远送不到，赔你大饼。",
+    "badges": [
+      "蜂鸟专送",
+      "放心吃",
+      "月售过万"
+    ],
+    "promotions": [
+      {
+        "type": "discount",
+        "text": "限时5折（仅限想象时段）"
+      },
+      {
+        "type": "manjian",
+        "text": "满40减8"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠韩式泡菜一碟"
+      },
+      {
+        "type": "delivery",
+        "text": "免配送费"
+      }
+    ],
+    "categories": [
+      {
+        "id": "jp-2-rec",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "jp-2-hotpot",
+        "name": "部队锅锅物"
+      },
+      {
+        "id": "jp-2-chicken",
+        "name": "韩式炸鸡"
+      },
+      {
+        "id": "jp-2-snack",
+        "name": "主食小吃"
+      },
+      {
+        "id": "jp-2-drink",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "jp-2-d1",
+        "categoryId": "jp-2-rec",
+        "name": "招牌芝士年糕部队锅",
+        "desc": "拉丝芝士配火腿午餐肉，咕嘟声需自带音效",
+        "price": 58,
+        "originalPrice": 78,
+        "monthlySales": 4520,
+        "goodRate": 98,
+        "emoji": "🍲",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/jp-2.webp"
+      },
+      {
+        "id": "jp-2-d2",
+        "categoryId": "jp-2-rec",
+        "name": "蜂蜜黄油炸鸡半半桶",
+        "desc": "甜辣半半各一半，纠结症患者福音",
+        "price": 49,
+        "originalPrice": 65,
+        "monthlySales": 6210,
+        "goodRate": 97,
+        "emoji": "🍗",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/jp-2-d2.webp"
+      },
+      {
+        "id": "jp-2-d3",
+        "categoryId": "jp-2-hotpot",
+        "name": "辣白菜五花肉锅",
+        "desc": "酸辣开胃，热气只在屏幕这边冒",
+        "price": 52,
+        "monthlySales": 1980,
+        "goodRate": 96,
+        "emoji": "🍲",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/jp-2-d3.webp"
+      },
+      {
+        "id": "jp-2-d4",
+        "categoryId": "jp-2-hotpot",
+        "name": "海鲜嫩豆腐锅",
+        "desc": "蛤蜊虾仁满满当当，鲜到你想象不出",
+        "price": 46,
+        "monthlySales": 1320,
+        "goodRate": 95,
+        "emoji": "🍲",
+        "image": "/fake-takeout/jp-2-d4.webp"
+      },
+      {
+        "id": "jp-2-d5",
+        "categoryId": "jp-2-hotpot",
+        "name": "芝士辣炒年糕",
+        "desc": "Q弹年糕裹满酱汁，拉丝表演全靠脑补",
+        "price": 32,
+        "originalPrice": 40,
+        "monthlySales": 3410,
+        "goodRate": 96,
+        "emoji": "🍢",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/jp-2-d5.webp"
+      },
+      {
+        "id": "jp-2-d6",
+        "categoryId": "jp-2-chicken",
+        "name": "原味炸鸡全家桶",
+        "desc": "外酥里嫩八大块，趁热吃请联系时光机",
+        "price": 55,
+        "monthlySales": 2890,
+        "goodRate": 97,
+        "emoji": "🍗",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/jp-2-d6.webp"
+      },
+      {
+        "id": "jp-2-d7",
+        "categoryId": "jp-2-chicken",
+        "name": "甜辣酱炸鸡",
+        "desc": "韩剧同款酱料，舔手指环节请自行加戏",
+        "price": 42,
+        "monthlySales": 3760,
+        "goodRate": 96,
+        "emoji": "🍗",
+        "image": "/fake-takeout/jp-2-d7.webp"
+      },
+      {
+        "id": "jp-2-d8",
+        "categoryId": "jp-2-chicken",
+        "name": "炸鸡胗小食",
+        "desc": "下酒神器，香脆有嚼劲，可惜你嚼不到",
+        "price": 25,
+        "monthlySales": 870,
+        "goodRate": 93,
+        "emoji": "🍢",
+        "image": "/fake-takeout/jp-2-d8.webp"
+      },
+      {
+        "id": "jp-2-d9",
+        "categoryId": "jp-2-snack",
+        "name": "石锅拌饭",
+        "desc": "锅巴金黄香脆，搅拌仪式感拉满（在想象中）",
+        "price": 28,
+        "monthlySales": 2140,
+        "goodRate": 95,
+        "emoji": "🍚",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/jp-2-d9.webp"
+      },
+      {
+        "id": "jp-2-d10",
+        "categoryId": "jp-2-snack",
+        "name": "韩式紫菜包饭",
+        "desc": "六块装小巧精致，野餐想象专用",
+        "price": 18,
+        "monthlySales": 1560,
+        "goodRate": 94,
+        "emoji": "🍙",
+        "image": "/fake-takeout/jp-2-d10.webp"
+      },
+      {
+        "id": "jp-2-d11",
+        "categoryId": "jp-2-snack",
+        "name": "海苔肉松饭团",
+        "desc": "捏得圆滚滚，主食扛饿全靠画大饼",
+        "price": 12,
+        "originalPrice": 16,
+        "monthlySales": 990,
+        "goodRate": 92,
+        "emoji": "🍙",
+        "image": "/fake-takeout/jp-2-d11.webp"
+      },
+      {
+        "id": "jp-2-d12",
+        "categoryId": "jp-2-drink",
+        "name": "真露原味烧酒",
+        "desc": "韩剧同款绿瓶，干杯对象建议是空气",
+        "price": 22,
+        "monthlySales": 1430,
+        "goodRate": 94,
+        "emoji": "🍶",
+        "image": "/fake-takeout/jp-2-d12.webp"
+      },
+      {
+        "id": "jp-2-d13",
+        "categoryId": "jp-2-drink",
+        "name": "草莓牛奶",
+        "desc": "粉嫩香甜，配辣锅解辣，前提是有锅",
+        "price": 9,
+        "originalPrice": 13,
+        "monthlySales": 2680,
+        "goodRate": 95,
+        "emoji": "🥛",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/jp-2-d13.webp"
+      },
+      {
+        "id": "jp-2-d14",
+        "categoryId": "jp-2-drink",
+        "name": "蜂蜜柚子茶",
+        "desc": "暖胃酸甜，等餐期间用来续命刚好",
+        "price": 11,
+        "monthlySales": 760,
+        "goodRate": 93,
+        "emoji": "🍵",
+        "image": "/fake-takeout/jp-2-d14.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "追剧不眠夜",
+        "avatar": "📺",
+        "stars": 5,
+        "comment": "部队锅看着就跟韩剧里一模一样，芝士拉丝绝了。就是我对着图咽了半小时口水，骑手还在板门店谈判。",
+        "time": "昨天",
+        "images": [
+          "🍲",
+          "🍗"
+        ],
+        "dishNames": [
+          "招牌芝士年糕部队锅"
+        ],
+        "reply": "亲，骑手已签署停战协议，正火速向您赶来~"
+      },
+      {
+        "user": "炸鸡星人",
+        "avatar": "🍗",
+        "stars": 5,
+        "comment": "蜂蜜黄油半半桶简直了，香味隔着屏幕都飘出来了。下单第三天，骑手定位显示在首尔。",
+        "time": "2天前",
+        "images": [
+          "🍗",
+          "🍲"
+        ],
+        "dishNames": [
+          "蜂蜜黄油炸鸡半半桶"
+        ]
+      },
+      {
+        "user": "等到花儿谢",
+        "avatar": "🥀",
+        "stars": 4,
+        "comment": "画饼界天花板，这锅拍得太诱人了，我已经精神饱腹三天没吃饭了。",
+        "time": "3天前",
+        "images": [
+          "🍲"
+        ]
+      },
+      {
+        "user": "辣条供养人",
+        "avatar": "🌶️",
+        "stars": 5,
+        "comment": "辣炒年糕酱汁浓得能拌饭，可惜饭和年糕都还在路上谈恋爱。",
+        "time": "5天前",
+        "dishNames": [
+          "芝士辣炒年糕"
+        ],
+        "reply": "亲，它俩确实处得不错，就是不太想分开过来呜呜"
+      },
+      {
+        "user": "正经食客老王",
+        "avatar": "👨",
+        "stars": 5,
+        "comment": "认真讲，石锅拌饭锅巴部分描述得太到位了，店家文案值五星，配送扣四星。",
+        "time": "1周前",
+        "dishNames": [
+          "石锅拌饭"
+        ]
+      },
+      {
+        "user": "韩流后援会",
+        "avatar": "💜",
+        "stars": 4,
+        "comment": "真露配炸鸡这个组合太懂韩剧了，就是干杯只能跟空气碰，有点孤独。",
+        "time": "4天前",
+        "images": [
+          "🍶"
+        ]
+      },
+      {
+        "user": "深夜放毒",
+        "avatar": "🌃",
+        "stars": 5,
+        "comment": "海鲜豆腐锅料很足，蛤蜊一颗颗看得清清楚楚，馋哭了，真的哭了，因为吃不到。",
+        "time": "昨天",
+        "dishNames": [
+          "海鲜嫩豆腐锅"
+        ]
+      },
+      {
+        "user": "减肥从明天",
+        "avatar": "🏃",
+        "stars": 3,
+        "comment": "炸鸡看着不错，份量也大，就是送得太慢了，等收到我的减肥计划都执行完了。",
+        "time": "6天前"
+      },
+      {
+        "user": "包饭爱好者",
+        "avatar": "🍙",
+        "stars": 5,
+        "comment": "紫菜包饭切得整整齐齐，包装很用心，正经好评。骑手别让我等太久就行。",
+        "time": "2天前",
+        "images": [
+          "🍙"
+        ],
+        "dishNames": [
+          "韩式紫菜包饭"
+        ]
+      },
+      {
+        "user": "草莓奶昔",
+        "avatar": "🍓",
+        "stars": 5,
+        "comment": "草莓牛奶第二件半价太香了，配辣锅解辣一流，虽然锅我至今没见到。",
+        "time": "3天前",
+        "dishNames": [
+          "草莓牛奶"
+        ]
+      },
+      {
+        "user": "打工魂",
+        "avatar": "🔋",
+        "stars": 4,
+        "comment": "份量是真的足，看图就值回票价。要是能加快配送，下次直接霸王餐都行。",
+        "time": "1周前",
+        "images": [
+          "🍲",
+          "🍗",
+          "🍙"
+        ]
+      },
+      {
+        "user": "佛系等餐",
+        "avatar": "🧘‍♀️",
+        "stars": 5,
+        "comment": "甜辣炸鸡舔手指那段我自己加戏了，体验感满分。骑手我等你到地老天荒。",
+        "time": "昨天",
+        "dishNames": [
+          "甜辣酱炸鸡"
+        ],
+        "reply": "亲，您这份耐心我们裱起来挂墙上了，餐马上到~"
+      },
+      {
+        "user": "深夜emo",
+        "avatar": "🌧️",
+        "stars": 3,
+        "comment": "味道应该很顶，柚子茶续命也好喝。就是配送慢得我都emo了，扣两星给骑手提提速。",
+        "time": "5天前"
+      },
+      {
+        "user": "饭团一号",
+        "avatar": "🍘",
+        "stars": 4,
+        "comment": "饭团捏得圆滚滚很可爱，主食扛饿这点画的饼我先收下了，实物再说。",
+        "time": "4天前",
+        "images": [
+          "🍙"
+        ]
+      },
+      {
+        "user": "锅气追踪者",
+        "avatar": "♨️",
+        "stars": 5,
+        "comment": "辣白菜五花肉锅那个酸辣味，光看描述我口水就下来了，正经诱人。送达？不存在的。",
+        "time": "2天前",
+        "dishNames": [
+          "辣白菜五花肉锅"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "芝士拉丝爆赞",
+        "count": 398,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 367,
+        "positive": true
+      },
+      {
+        "text": "炸鸡外酥里嫩",
+        "count": 312,
+        "positive": true
+      },
+      {
+        "text": "韩剧同款氛围",
+        "count": 245,
+        "positive": true
+      },
+      {
+        "text": "包装精致",
+        "count": 178,
+        "positive": true
+      },
+      {
+        "text": "骑手在三八线徘徊",
+        "count": 209,
+        "positive": false
+      },
+      {
+        "text": "永远收不到货",
+        "count": 276,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.9,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "日韩料理",
+    "logoImage": "/fake-takeout/shop-jp-2.webp"
+  },
+  {
+    "id": "pz-1",
+    "name": "达没乐披萨",
+    "logo": "🍕",
+    "banner": "🍕",
+    "rating": 4.7,
+    "monthlySales": 8632,
+    "perCapita": 58,
+    "deliveryMinutes": 35,
+    "deliveryFee": 3,
+    "deliveryFeeOriginal": 6,
+    "minOrder": 20,
+    "distanceKm": 2.3,
+    "notice": "30分钟必达？我们达没了。披萨刚出炉，骑手满城飞，芝士凉了还在路上，先画饼。",
+    "badges": [
+      "品质联盟",
+      "开了8年老店",
+      "月售过万"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满30减5，满60减12"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元（饼先到，料后补）"
+      },
+      {
+        "type": "discount",
+        "text": "招牌榴莲披萨限时5折"
+      },
+      {
+        "type": "delivery",
+        "text": "减2元配送费（剩下的用诚意补）"
+      }
+    ],
+    "categories": [
+      {
+        "id": "pz-1-c1",
+        "name": "招牌推荐"
+      },
+      {
+        "id": "pz-1-c2",
+        "name": "经典披萨"
+      },
+      {
+        "id": "pz-1-c3",
+        "name": "意面焗饭"
+      },
+      {
+        "id": "pz-1-c4",
+        "name": "小吃配餐"
+      },
+      {
+        "id": "pz-1-c5",
+        "name": "饮品"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "pz-1-d1",
+        "categoryId": "pz-1-c1",
+        "name": "至尊望梅止渴披萨",
+        "desc": "六种配料堆成山，照片里管够，到手全凭想象",
+        "price": 49,
+        "originalPrice": 68,
+        "monthlySales": 3210,
+        "goodRate": 98,
+        "emoji": "🍕",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/pz-1.webp"
+      },
+      {
+        "id": "pz-1-d2",
+        "categoryId": "pz-1-c1",
+        "name": "猫山王榴莲披萨",
+        "desc": "榴莲管够爆浆，芝士拉丝能拉到楼下",
+        "price": 59,
+        "originalPrice": 88,
+        "monthlySales": 2680,
+        "goodRate": 99,
+        "emoji": "🍕",
+        "tags": [
+          "招牌",
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/pz-1-d2.webp"
+      },
+      {
+        "id": "pz-1-d3",
+        "categoryId": "pz-1-c2",
+        "name": "美式辣香肠披萨",
+        "desc": "脆边薄底，香肠铺满，辣得刚刚好",
+        "price": 42,
+        "monthlySales": 1890,
+        "goodRate": 97,
+        "emoji": "🍕",
+        "image": "/fake-takeout/pz-1-d3.webp"
+      },
+      {
+        "id": "pz-1-d4",
+        "categoryId": "pz-1-c2",
+        "name": "夏威夷菠萝披萨",
+        "desc": "甜咸党决斗现场，菠萝火腿真香警告",
+        "price": 39,
+        "monthlySales": 1320,
+        "goodRate": 94,
+        "emoji": "🍍",
+        "image": "/fake-takeout/pz-1-d4.webp"
+      },
+      {
+        "id": "pz-1-d5",
+        "categoryId": "pz-1-c2",
+        "name": "四季芝士披萨",
+        "desc": "四种芝士叠满，奶味浓到上头",
+        "price": 45,
+        "monthlySales": 960,
+        "goodRate": 96,
+        "emoji": "🧀",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/pz-1-d5.webp"
+      },
+      {
+        "id": "pz-1-d6",
+        "categoryId": "pz-1-c3",
+        "name": "黑椒牛肉意面",
+        "desc": "黑椒酱裹满每根面，牛肉粒给得不抠门",
+        "price": 32,
+        "monthlySales": 1450,
+        "goodRate": 95,
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-1-d6.webp"
+      },
+      {
+        "id": "pz-1-d7",
+        "categoryId": "pz-1-c3",
+        "name": "白汁培根蘑菇意面",
+        "desc": "奶油白汁绵密，培根蘑菇香气扑鼻",
+        "price": 34,
+        "monthlySales": 880,
+        "goodRate": 96,
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-1-d7.webp"
+      },
+      {
+        "id": "pz-1-d8",
+        "categoryId": "pz-1-c3",
+        "name": "芝士焗海鲜饭",
+        "desc": "虾仁鱿鱼铺满，芝士焗到金黄拉丝",
+        "price": 38,
+        "monthlySales": 720,
+        "goodRate": 97,
+        "emoji": "🍤",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/pz-1-d8.webp"
+      },
+      {
+        "id": "pz-1-d9",
+        "categoryId": "pz-1-c4",
+        "name": "奥尔良烤鸡翅",
+        "desc": "外焦里嫩，咬一口爆汁，配披萨绝杀",
+        "price": 18,
+        "monthlySales": 2100,
+        "goodRate": 95,
+        "emoji": "🍗",
+        "image": "/fake-takeout/pz-1-d9.webp"
+      },
+      {
+        "id": "pz-1-d10",
+        "categoryId": "pz-1-c4",
+        "name": "黄金薯角",
+        "desc": "外脆内糯，蘸番茄酱嘎嘣脆",
+        "price": 12,
+        "monthlySales": 1760,
+        "goodRate": 93,
+        "emoji": "🍟",
+        "image": "/fake-takeout/pz-1-d10.webp"
+      },
+      {
+        "id": "pz-1-d11",
+        "categoryId": "pz-1-c4",
+        "name": "芝心烤肠拼盘",
+        "desc": "三根烤肠两种蘸料，下酒解馋一把抓",
+        "price": 16,
+        "monthlySales": 540,
+        "goodRate": 92,
+        "emoji": "🌭",
+        "image": "/fake-takeout/pz-1-d11.webp"
+      },
+      {
+        "id": "pz-1-d12",
+        "categoryId": "pz-1-c5",
+        "name": "鲜榨橙汁",
+        "desc": "现榨不加水，酸甜解腻刚刚好",
+        "price": 10,
+        "monthlySales": 1230,
+        "goodRate": 94,
+        "emoji": "🍊",
+        "image": "/fake-takeout/pz-1-d12.webp"
+      },
+      {
+        "id": "pz-1-d13",
+        "categoryId": "pz-1-c5",
+        "name": "可乐(冰镇)",
+        "desc": "肥宅快乐水，配披萨天作之合",
+        "price": 6,
+        "monthlySales": 3400,
+        "goodRate": 96,
+        "emoji": "🥤",
+        "image": "/fake-takeout/pz-1-d13.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "等到花儿都谢了",
+        "avatar": "🌻",
+        "stars": 4,
+        "comment": "下单三天了，系统显示骑手还在路上，我都学会自己做披萨了。不过味道是真不错，等到的那一刻热泪盈眶。",
+        "time": "3天前",
+        "images": [
+          "🍕"
+        ],
+        "dishNames": [
+          "至尊望梅止渴披萨"
+        ]
+      },
+      {
+        "user": "芝士控本控",
+        "avatar": "🧀",
+        "stars": 5,
+        "comment": "榴莲披萨拉丝是真的猛，从沙发拉到阳台，份量也足，五星不解释。",
+        "time": "昨天",
+        "images": [
+          "🍕",
+          "🧀"
+        ],
+        "dishNames": [
+          "猫山王榴莲披萨"
+        ],
+        "reply": "亲，拉丝长度已申请吉尼斯，下次给您拉到楼下~"
+      },
+      {
+        "user": "深夜放毒选手",
+        "avatar": "🌙",
+        "stars": 5,
+        "comment": "辣香肠披萨脆底yyds，半夜吃完幸福感拉满，就是配送费有点小贵。",
+        "time": "2天前",
+        "dishNames": [
+          "美式辣香肠披萨"
+        ]
+      },
+      {
+        "user": "永远在路上的我",
+        "avatar": "🚴",
+        "stars": 3,
+        "comment": "骑手是我的精神股东，每天都在为他的位置揪心。饼好吃，就是这个等餐时长建议去申个专利。",
+        "time": "5天前"
+      },
+      {
+        "user": "菠萝披萨保卫者",
+        "avatar": "🍍",
+        "stars": 5,
+        "comment": "甜咸结合绝了，反对菠萝披萨的都给我尝尝这家再说话！",
+        "time": "1周前",
+        "dishNames": [
+          "夏威夷菠萝披萨"
+        ]
+      },
+      {
+        "user": "打工人续命中",
+        "avatar": "☕",
+        "stars": 4,
+        "comment": "黑椒牛肉意面酱汁很足，牛肉给得大方，加班吃这个还行。就是希望骑手能跑快点，凉了就没那味了。",
+        "time": "4天前",
+        "dishNames": [
+          "黑椒牛肉意面"
+        ]
+      },
+      {
+        "user": "画饼专业户",
+        "avatar": "🎨",
+        "stars": 4,
+        "comment": "店名很有自知之明，我点的料确实在我脑子里很丰盛。实物也不错啦，就是图片仅供参考这句话刻进DNA了。",
+        "time": "6天前",
+        "images": [
+          "🍕"
+        ]
+      },
+      {
+        "user": "海鲜饭真爱粉",
+        "avatar": "🍤",
+        "stars": 5,
+        "comment": "焗饭芝士拉丝绝绝子，虾仁新鲜个头大，包装也严实没漏汤，好评！",
+        "time": "2天前",
+        "dishNames": [
+          "芝士焗海鲜饭"
+        ],
+        "reply": "谢谢宝子，虾仁是我们一只一只数着放的~"
+      },
+      {
+        "user": "鸡翅刺客",
+        "avatar": "🍗",
+        "stars": 5,
+        "comment": "奥尔良鸡翅爆汁好评，一份根本不够吃，建议直接买两份。",
+        "time": "昨天",
+        "dishNames": [
+          "奥尔良烤鸡翅"
+        ]
+      },
+      {
+        "user": "薯角依赖症",
+        "avatar": "🍟",
+        "stars": 4,
+        "comment": "薯角脆是脆，到手稍微软了点(毕竟骑手走了很远的路)，蘸酱很顶。",
+        "time": "3天前"
+      },
+      {
+        "user": "理智消费的小王",
+        "avatar": "🧠",
+        "stars": 5,
+        "comment": "四季芝士披萨奶味浓郁，份量实在，性价比可以的，包装很用心没有压塌。",
+        "time": "1周前",
+        "dishNames": [
+          "四季芝士披萨"
+        ]
+      },
+      {
+        "user": "收不到货协会会长",
+        "avatar": "📦",
+        "stars": 3,
+        "comment": "作为协会会长来打卡，本以为又是收不到货系列，结果第40分钟真送到了，破防了，加一星。",
+        "time": "5天前"
+      },
+      {
+        "user": "橙汁续杯王",
+        "avatar": "🍊",
+        "stars": 4,
+        "comment": "橙汁是真现榨，不是兑水那种，配披萨解腻一流。",
+        "time": "4天前",
+        "dishNames": [
+          "鲜榨橙汁"
+        ]
+      },
+      {
+        "user": "周末瘫沙发",
+        "avatar": "🛋️",
+        "stars": 5,
+        "comment": "白汁意面奶香十足，培根给得多，周末瘫着吃幸福感爆棚。",
+        "time": "2天前",
+        "dishNames": [
+          "白汁培根蘑菇意面"
+        ],
+        "reply": "亲，瘫着吃才是正确打开方式~"
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "芝士拉丝很猛",
+        "count": 1286,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 942,
+        "positive": true
+      },
+      {
+        "text": "包装很用心",
+        "count": 668,
+        "positive": true
+      },
+      {
+        "text": "味道正宗",
+        "count": 530,
+        "positive": true
+      },
+      {
+        "text": "性价比高",
+        "count": 412,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 188,
+        "positive": false
+      },
+      {
+        "text": "骑手永远在路上",
+        "count": 96,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.8,
+      "packaging": 4.7,
+      "delivery": 1.8
+    },
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/shop-pz-1.webp"
+  },
+  {
+    "id": "pz-2",
+    "name": "豪客赖牛排",
+    "logo": "🥩",
+    "banner": "🥩",
+    "rating": 4.6,
+    "monthlySales": 5274,
+    "perCapita": 86,
+    "deliveryMinutes": 42,
+    "deliveryFee": 0,
+    "deliveryFeeOriginal": 5,
+    "minOrder": 25,
+    "distanceKm": 3.8,
+    "notice": "牛排现煎五分熟，骑手端着满城遛成铁人，菲力永远在路上，先切张画饼。",
+    "badges": [
+      "食品安全",
+      "蜂鸟专送",
+      "放心吃"
+    ],
+    "promotions": [
+      {
+        "type": "manjian",
+        "text": "满50减8，满100减20"
+      },
+      {
+        "type": "gift",
+        "text": "下单赠送红酒杯装可乐一杯"
+      },
+      {
+        "type": "discount",
+        "text": "黑椒菲力牛排限时6折"
+      },
+      {
+        "type": "new",
+        "text": "新客立减8元(刀叉先到)"
+      }
+    ],
+    "categories": [
+      {
+        "id": "pz-2-c1",
+        "name": "招牌牛排"
+      },
+      {
+        "id": "pz-2-c2",
+        "name": "经典西餐"
+      },
+      {
+        "id": "pz-2-c3",
+        "name": "意面"
+      },
+      {
+        "id": "pz-2-c4",
+        "name": "汤品沙拉"
+      },
+      {
+        "id": "pz-2-c5",
+        "name": "套餐"
+      }
+    ],
+    "dishes": [
+      {
+        "id": "pz-2-d1",
+        "categoryId": "pz-2-c1",
+        "name": "黑椒菲力牛排(画饼5分熟)",
+        "desc": "整块菲力现煎，嫩到犯规，配黑椒汁封神",
+        "price": 68,
+        "originalPrice": 98,
+        "monthlySales": 1980,
+        "goodRate": 98,
+        "emoji": "🥩",
+        "tags": [
+          "招牌",
+          "必点"
+        ],
+        "image": "/fake-takeout/pz-2.webp"
+      },
+      {
+        "id": "pz-2-d2",
+        "categoryId": "pz-2-c1",
+        "name": "西冷牛排套餐",
+        "desc": "带筋有嚼劲，配薯条意面双拼吃到撑",
+        "price": 78,
+        "originalPrice": 108,
+        "monthlySales": 1340,
+        "goodRate": 97,
+        "emoji": "🥩",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/pz-2-d2.webp"
+      },
+      {
+        "id": "pz-2-d3",
+        "categoryId": "pz-2-c1",
+        "name": "战斧大牛排",
+        "desc": "巨型战斧带骨,一刀下去满满仪式感",
+        "price": 128,
+        "monthlySales": 460,
+        "goodRate": 99,
+        "emoji": "🍖",
+        "tags": [
+          "第2件半价"
+        ],
+        "image": "/fake-takeout/pz-2-d3.webp"
+      },
+      {
+        "id": "pz-2-d4",
+        "categoryId": "pz-2-c2",
+        "name": "香煎银鳕鱼",
+        "desc": "外皮焦香内里雪白，入口即化不腥",
+        "price": 58,
+        "monthlySales": 520,
+        "goodRate": 96,
+        "emoji": "🐟",
+        "image": "/fake-takeout/pz-2-d4.webp"
+      },
+      {
+        "id": "pz-2-d5",
+        "categoryId": "pz-2-c2",
+        "name": "炸鸡腿排饭",
+        "desc": "厚切鸡腿排炸到金黄，配饭一绝",
+        "price": 36,
+        "monthlySales": 1620,
+        "goodRate": 95,
+        "emoji": "🍗",
+        "tags": [
+          "必点"
+        ],
+        "image": "/fake-takeout/pz-2-d5.webp"
+      },
+      {
+        "id": "pz-2-d6",
+        "categoryId": "pz-2-c2",
+        "name": "黑椒猪扒",
+        "desc": "猪扒嫩滑多汁，黑椒酱浓郁下饭",
+        "price": 32,
+        "monthlySales": 980,
+        "goodRate": 93,
+        "emoji": "🐖",
+        "image": "/fake-takeout/pz-2-d6.webp"
+      },
+      {
+        "id": "pz-2-d7",
+        "categoryId": "pz-2-c3",
+        "name": "经典肉酱意面",
+        "desc": "番茄肉酱熬足三小时，酸甜浓郁",
+        "price": 30,
+        "monthlySales": 1450,
+        "goodRate": 96,
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-2-d7.webp"
+      },
+      {
+        "id": "pz-2-d8",
+        "categoryId": "pz-2-c3",
+        "name": "奶油培根意面",
+        "desc": "卡邦尼经典做法，奶香浓郁裹满面条",
+        "price": 33,
+        "monthlySales": 760,
+        "goodRate": 95,
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-2-d8.webp"
+      },
+      {
+        "id": "pz-2-d9",
+        "categoryId": "pz-2-c4",
+        "name": "罗宋汤",
+        "desc": "番茄牛肉慢炖，酸甜暖胃一大碗",
+        "price": 16,
+        "monthlySales": 890,
+        "goodRate": 94,
+        "emoji": "🍲",
+        "image": "/fake-takeout/pz-2-d9.webp"
+      },
+      {
+        "id": "pz-2-d10",
+        "categoryId": "pz-2-c4",
+        "name": "凯撒沙拉",
+        "desc": "罗马生菜配培根碎，凯撒酱清爽解腻",
+        "price": 22,
+        "monthlySales": 640,
+        "goodRate": 92,
+        "emoji": "🥗",
+        "image": "/fake-takeout/pz-2-d10.webp"
+      },
+      {
+        "id": "pz-2-d11",
+        "categoryId": "pz-2-c4",
+        "name": "奶油蘑菇汤",
+        "desc": "浓郁奶香配新鲜蘑菇，配面包绝配",
+        "price": 18,
+        "monthlySales": 580,
+        "goodRate": 95,
+        "emoji": "🍄",
+        "image": "/fake-takeout/pz-2-d11.webp"
+      },
+      {
+        "id": "pz-2-d12",
+        "categoryId": "pz-2-c5",
+        "name": "双人西餐套餐",
+        "desc": "两份牛排+两份意面+汤+饮料,约会首选",
+        "price": 158,
+        "originalPrice": 218,
+        "monthlySales": 320,
+        "goodRate": 98,
+        "emoji": "🍽️",
+        "tags": [
+          "招牌"
+        ],
+        "image": "/fake-takeout/pz-2-d12.webp"
+      },
+      {
+        "id": "pz-2-d13",
+        "categoryId": "pz-2-c5",
+        "name": "单人惬意套餐",
+        "desc": "牛排+意面+汤一人份,吃饱不浪费",
+        "price": 88,
+        "monthlySales": 710,
+        "goodRate": 96,
+        "emoji": "🍽️",
+        "image": "/fake-takeout/pz-2-d13.webp"
+      },
+      {
+        "id": "pz-2-d14",
+        "categoryId": "pz-2-c5",
+        "name": "儿童欢乐餐",
+        "desc": "小份炸鸡排配薯条饮料,还送小玩具(画的)",
+        "price": 38,
+        "monthlySales": 430,
+        "goodRate": 91,
+        "emoji": "🧒",
+        "image": "/fake-takeout/pz-2-d14.webp"
+      }
+    ],
+    "reviews": [
+      {
+        "user": "牛排自由达成",
+        "avatar": "🥩",
+        "stars": 5,
+        "comment": "菲力是真的嫩，刀子一切就断，黑椒汁香到舔盘。就是从下单到吃上花了快一小时,我以为牛在路上现宰呢。",
+        "time": "2天前",
+        "images": [
+          "🥩",
+          "🍖"
+        ],
+        "dishNames": [
+          "黑椒菲力牛排(画饼5分熟)"
+        ],
+        "reply": "亲,牛确实是听到订单才开始跑的,辛苦您久等啦~"
+      },
+      {
+        "user": "饿到啃刀叉",
+        "avatar": "🍴",
+        "stars": 3,
+        "comment": "刀叉先到了半小时,牛排后到。店名诚不欺我,纸上牛排实锤。不过味道在线,原谅你了。",
+        "time": "4天前"
+      },
+      {
+        "user": "约会翻车现场",
+        "avatar": "💑",
+        "stars": 5,
+        "comment": "点了双人套餐约会,虽然等到对象都快睡着了,但摆盘很高级,红酒杯装可乐这个梗笑死,氛围拉满。",
+        "time": "1周前",
+        "images": [
+          "🍽️",
+          "🥩",
+          "🍷"
+        ],
+        "dishNames": [
+          "双人西餐套餐"
+        ]
+      },
+      {
+        "user": "战斧持有者",
+        "avatar": "🪓",
+        "stars": 5,
+        "comment": "战斧牛排仪式感爆棚,拍照发朋友圈收割一堆赞,肉质也确实顶,值这个价。",
+        "time": "3天前",
+        "dishNames": [
+          "战斧大牛排"
+        ]
+      },
+      {
+        "user": "永远收不到货",
+        "avatar": "📭",
+        "stars": 3,
+        "comment": "蹲点这家很久了,本以为又是收不到货专业户,结果第45分钟真送到了,虽然西冷有点凉,但感动到流泪。",
+        "time": "5天前",
+        "dishNames": [
+          "西冷牛排套餐"
+        ]
+      },
+      {
+        "user": "鳕鱼爱好者",
+        "avatar": "🐟",
+        "stars": 5,
+        "comment": "银鳕鱼煎得外焦里嫩,一点都不腥,这个价位很良心了,包装也防漏。",
+        "time": "昨天",
+        "dishNames": [
+          "香煎银鳕鱼"
+        ]
+      },
+      {
+        "user": "打工续命专用",
+        "avatar": "💼",
+        "stars": 4,
+        "comment": "炸鸡腿排饭份量足,鸡排厚实多汁,就是配送太慢,午休都吃不上,只能当下午茶了。",
+        "time": "2天前",
+        "dishNames": [
+          "炸鸡腿排饭"
+        ]
+      },
+      {
+        "user": "意面星人",
+        "avatar": "🍝",
+        "stars": 5,
+        "comment": "肉酱意面酸甜适中,肉酱给得很足,面条筋道,正宗好评！",
+        "time": "6天前",
+        "dishNames": [
+          "经典肉酱意面"
+        ],
+        "reply": "肉酱熬了三小时,值得您的五星~"
+      },
+      {
+        "user": "画饼界扛把子",
+        "avatar": "🎨",
+        "stars": 4,
+        "comment": "这家店深谙画饼精髓,菜单图比实物更让人有食欲,但说实话味道没翻车,良心恶搞。",
+        "time": "1周前",
+        "images": [
+          "🥩"
+        ]
+      },
+      {
+        "user": "罗宋汤忠粉",
+        "avatar": "🍲",
+        "stars": 5,
+        "comment": "罗宋汤酸甜暖胃,牛肉块给得不少,冬天喝一碗太舒服了。",
+        "time": "3天前",
+        "dishNames": [
+          "罗宋汤"
+        ]
+      },
+      {
+        "user": "减肥从明天开始",
+        "avatar": "🥗",
+        "stars": 4,
+        "comment": "凯撒沙拉挺新鲜,酱也清爽,但配着牛排吃总感觉哪里不对,哈哈。",
+        "time": "4天前",
+        "dishNames": [
+          "凯撒沙拉"
+        ]
+      },
+      {
+        "user": "在路上的第八年",
+        "avatar": "🚴",
+        "stars": 3,
+        "comment": "骑手大哥说他迷路了八年,我信了。东西到的时候我已经原谅全世界,牛排还行,加一星给坚持。",
+        "time": "5天前"
+      },
+      {
+        "user": "奶油控",
+        "avatar": "🥛",
+        "stars": 5,
+        "comment": "奶油培根意面真的香,奶味浓郁不齁,培根脆脆的,下次还点。",
+        "time": "2天前",
+        "dishNames": [
+          "奶油培根意面"
+        ],
+        "reply": "亲,卡邦尼正宗做法,谢谢认可~"
+      },
+      {
+        "user": "带娃出门难",
+        "avatar": "🧒",
+        "stars": 4,
+        "comment": "儿童餐分量适合小朋友,送的小玩具居然是画在纸上的,娃看了一脸问号,但鸡排是真的,娃吃光了。",
+        "time": "1周前",
+        "dishNames": [
+          "儿童欢乐餐"
+        ]
+      },
+      {
+        "user": "蘑菇汤真香",
+        "avatar": "🍄",
+        "stars": 5,
+        "comment": "奶油蘑菇汤浓郁好喝,配送虽慢但保温做得不错,到手还是温的,好评。",
+        "time": "昨天",
+        "dishNames": [
+          "奶油蘑菇汤"
+        ]
+      }
+    ],
+    "reviewTags": [
+      {
+        "text": "牛排很嫩",
+        "count": 1024,
+        "positive": true
+      },
+      {
+        "text": "份量很足",
+        "count": 786,
+        "positive": true
+      },
+      {
+        "text": "摆盘高级",
+        "count": 542,
+        "positive": true
+      },
+      {
+        "text": "味道正宗",
+        "count": 468,
+        "positive": true
+      },
+      {
+        "text": "保温做得好",
+        "count": 312,
+        "positive": true
+      },
+      {
+        "text": "等到天荒地老",
+        "count": 156,
+        "positive": false
+      },
+      {
+        "text": "刀叉比牛排先到",
+        "count": 74,
+        "positive": false
+      }
+    ],
+    "scores": {
+      "taste": 4.7,
+      "packaging": 4.6,
+      "delivery": 2.1
+    },
+    "channel": "汉堡披萨",
+    "logoImage": "/fake-takeout/shop-pz-2.webp"
+  }
+]

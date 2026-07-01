@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed } from 'lucide-react'
 
 const tools = [
   {
@@ -57,6 +57,13 @@ const tools = [
     icon: Eraser,
     description: '选视频、框选区域，生成 ffmpeg delogo（去水印，可控制时间段）或 crop（裁切保留区域）命令',
     color: 'bg-sky-500',
+  },
+  {
+    name: '画饼外卖',
+    href: '/tools/fake-takeout',
+    icon: UtensilsCrossed,
+    description: '假装点外卖：逛店、加购、下单，看骑手永远在路上送不到',
+    color: 'bg-orange-500',
   },
 ]
 
