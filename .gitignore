@@ -42,3 +42,8 @@ docs/plans
 
 # Fake takeout image generation temp files
 tmp/
+
+# Local agent / MCP session artifacts
+agent-tools/
+mcps/
+terminals/
