@@ -86,7 +86,14 @@ export default function CheckoutView({
         {/* 订单明细 */}
         <section className="rounded-xl bg-white p-4">
           <p className="mb-3 flex items-center gap-1.5 text-sm font-bold text-gray-900">
-            <span className="text-lg">{shop.logo}</span> {shop.name}
+            <DishThumb
+              image={shop.logoImage}
+              emoji={shop.logo}
+              alt={shop.name}
+              className="h-6 w-6 flex-shrink-0 rounded"
+              emojiClassName="text-base"
+            />
+            {shop.name}
           </p>
           <div className="space-y-2.5">
             {lines.map((line) => (

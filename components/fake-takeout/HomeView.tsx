@@ -6,6 +6,7 @@ import type { Shop } from '@/lib/fake-takeout/types'
 import { CHANNELS, SHOPS, shopsByChannel, sortShops, type SortKey } from '@/lib/fake-takeout/data'
 import StatusBar from './StatusBar'
 import ShopCard from './ShopCard'
+import ChannelIcon from './ChannelIcon'
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: 'recommend', label: '综合排序' },
@@ -66,11 +67,11 @@ export default function HomeView({
                 className="flex flex-col items-center gap-1"
               >
                 <span
-                  className={`flex h-12 w-12 items-center justify-center rounded-2xl text-2xl transition ${
+                  className={`flex h-12 w-12 items-center justify-center rounded-2xl transition ${
                     active ? 'bg-[#FFF3B0] ring-2 ring-[#FFD100]' : 'bg-[#FFF9E0]'
                   }`}
                 >
-                  {c.emoji}
+                  <ChannelIcon channelKey={c.key} className="h-7 w-7" />
                 </span>
                 <span className={`text-[11px] ${active ? 'font-bold text-gray-900' : 'text-gray-600'}`}>{c.name}</span>
               </button>

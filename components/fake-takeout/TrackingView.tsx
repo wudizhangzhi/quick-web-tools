@@ -7,6 +7,7 @@ import type { CartItem } from '@/lib/fake-takeout/cart'
 import { cartLines, total } from '@/lib/fake-takeout/cart'
 import { deliverySnapshot, type DeliveryPhase } from '@/lib/fake-takeout/delivery'
 import type { Address } from './CheckoutView'
+import DishThumb from './DishThumb'
 
 const ROUTE_D = 'M 12 16 C 30 24, 18 46, 40 52 S 70 60, 64 78 S 82 84, 86 86'
 const STEPS = ['已下单', '商家接单', '骑手取餐', '配送中', '已送达']
@@ -174,7 +175,14 @@ export default function TrackingView({
         {/* 订单信息 */}
         <div className="mx-2.5 mt-2.5 rounded-xl bg-white p-4">
           <p className="mb-3 flex items-center gap-1.5 text-sm font-bold text-gray-900">
-            <span className="text-lg">{shop.logo}</span> {shop.name}
+            <DishThumb
+              image={shop.logoImage}
+              emoji={shop.logo}
+              alt={shop.name}
+              className="h-6 w-6 flex-shrink-0 rounded"
+              emojiClassName="text-base"
+            />
+            {shop.name}
           </p>
           <div className="space-y-1.5">
             {lines.map((line) => (

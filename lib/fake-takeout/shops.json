@@ -86,7 +86,8 @@
         "emoji": "🍅",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-1-d2.webp"
       },
       {
         "id": "mlt-1-d3",
@@ -100,7 +101,8 @@
         "tags": [
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-1-d3.webp"
       },
       {
         "id": "mlt-1-d4",
@@ -111,7 +113,8 @@
         "originalPrice": 18,
         "monthlySales": 2240,
         "goodRate": 95,
-        "emoji": "🍤"
+        "emoji": "🍤",
+        "image": "/fake-takeout/mlt-1-d4.webp"
       },
       {
         "id": "mlt-1-d5",
@@ -121,7 +124,8 @@
         "price": 10,
         "monthlySales": 1560,
         "goodRate": 94,
-        "emoji": "🧆"
+        "emoji": "🧆",
+        "image": "/fake-takeout/mlt-1-d5.webp"
       },
       {
         "id": "mlt-1-d6",
@@ -134,7 +138,8 @@
         "emoji": "🟡",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-1-d6.webp"
       },
       {
         "id": "mlt-1-d7",
@@ -144,7 +149,8 @@
         "price": 5,
         "monthlySales": 6320,
         "goodRate": 97,
-        "emoji": "🍜"
+        "emoji": "🍜",
+        "image": "/fake-takeout/mlt-1-d7.webp"
       },
       {
         "id": "mlt-1-d8",
@@ -154,7 +160,8 @@
         "price": 4,
         "monthlySales": 4890,
         "goodRate": 93,
-        "emoji": "🍄"
+        "emoji": "🍄",
+        "image": "/fake-takeout/mlt-1-d8.webp"
       },
       {
         "id": "mlt-1-d9",
@@ -164,7 +171,8 @@
         "price": 6,
         "monthlySales": 2010,
         "goodRate": 95,
-        "emoji": "🍢"
+        "emoji": "🍢",
+        "image": "/fake-takeout/mlt-1-d9.webp"
       },
       {
         "id": "mlt-1-d10",
@@ -174,7 +182,8 @@
         "price": 2,
         "monthlySales": 3300,
         "goodRate": 92,
-        "emoji": "🍚"
+        "emoji": "🍚",
+        "image": "/fake-takeout/mlt-1-d10.webp"
       },
       {
         "id": "mlt-1-d11",
@@ -184,7 +193,8 @@
         "price": 5,
         "monthlySales": 1420,
         "goodRate": 94,
-        "emoji": "🫓"
+        "emoji": "🫓",
+        "image": "/fake-takeout/mlt-1-d11.webp"
       },
       {
         "id": "mlt-1-d12",
@@ -198,7 +208,8 @@
         "emoji": "🥤",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-1-d12.webp"
       },
       {
         "id": "mlt-1-d13",
@@ -208,7 +219,8 @@
         "price": 8,
         "monthlySales": 980,
         "goodRate": 91,
-        "emoji": "🍊"
+        "emoji": "🍊",
+        "image": "/fake-takeout/mlt-1-d13.webp"
       }
     ],
     "reviews": [
@@ -401,7 +413,7 @@
       "delivery": 1.6
     },
     "channel": "美食",
-    "logoImage": "/fake-takeout/malatang.webp"
+    "logoImage": "/fake-takeout/shop-mlt-1.webp"
   },
   {
     "id": "mlt-2",
@@ -481,7 +493,8 @@
         "emoji": "🌿",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-2-d2.webp"
       },
       {
         "id": "mlt-2-d3",
@@ -491,7 +504,8 @@
         "price": 18,
         "monthlySales": 1120,
         "goodRate": 93,
-        "emoji": "🥗"
+        "emoji": "🥗",
+        "image": "/fake-takeout/mlt-2-d3.webp"
       },
       {
         "id": "mlt-2-d4",
@@ -504,7 +518,8 @@
         "emoji": "🥬",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-2-d4.webp"
       },
       {
         "id": "mlt-2-d5",
@@ -518,7 +533,8 @@
         "emoji": "🥚",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-2-d5.webp"
       },
       {
         "id": "mlt-2-d6",
@@ -528,7 +544,8 @@
         "price": 3,
         "monthlySales": 2870,
         "goodRate": 92,
-        "emoji": "🪢"
+        "emoji": "🪢",
+        "image": "/fake-takeout/mlt-2-d6.webp"
       },
       {
         "id": "mlt-2-d7",
@@ -538,7 +555,8 @@
         "price": 5,
         "monthlySales": 1760,
         "goodRate": 94,
-        "emoji": "🍡"
+        "emoji": "🍡",
+        "image": "/fake-takeout/mlt-2-d7.webp"
       },
       {
         "id": "mlt-2-d8",
@@ -551,7 +569,8 @@
         "emoji": "⚪",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mlt-2-d8.webp"
       },
       {
         "id": "mlt-2-d9",
@@ -561,7 +580,8 @@
         "price": 9,
         "monthlySales": 2980,
         "goodRate": 96,
-        "emoji": "🥓"
+        "emoji": "🥓",
+        "image": "/fake-takeout/mlt-2-d9.webp"
       },
       {
         "id": "mlt-2-d10",
@@ -571,7 +591,8 @@
         "price": 5,
         "monthlySales": 1610,
         "goodRate": 93,
-        "emoji": "🟥"
+        "emoji": "🟥",
+        "image": "/fake-takeout/mlt-2-d10.webp"
       },
       {
         "id": "mlt-2-d11",
@@ -581,7 +602,8 @@
         "price": 7,
         "monthlySales": 1330,
         "goodRate": 91,
-        "emoji": "🥦"
+        "emoji": "🥦",
+        "image": "/fake-takeout/mlt-2-d11.webp"
       },
       {
         "id": "mlt-2-d12",
@@ -591,7 +613,8 @@
         "price": 4,
         "monthlySales": 3450,
         "goodRate": 94,
-        "emoji": "🥔"
+        "emoji": "🥔",
+        "image": "/fake-takeout/mlt-2-d12.webp"
       },
       {
         "id": "mlt-2-d13",
@@ -601,7 +624,8 @@
         "price": 2,
         "monthlySales": 2780,
         "goodRate": 90,
-        "emoji": "🍚"
+        "emoji": "🍚",
+        "image": "/fake-takeout/mlt-2-d13.webp"
       },
       {
         "id": "mlt-2-d14",
@@ -611,7 +635,8 @@
         "price": 5,
         "monthlySales": 1980,
         "goodRate": 95,
-        "emoji": "🍜"
+        "emoji": "🍜",
+        "image": "/fake-takeout/mlt-2-d14.webp"
       }
     ],
     "reviews": [
@@ -801,7 +826,7 @@
       "delivery": 2.1
     },
     "channel": "美食",
-    "logoImage": "/fake-takeout/mlt-2.webp"
+    "logoImage": "/fake-takeout/shop-mlt-2.webp"
   },
   {
     "id": "fc-1",
@@ -891,7 +916,8 @@
         "emoji": "🍗",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/fc-1-d2.webp"
       },
       {
         "id": "fc-1-d3",
@@ -905,7 +931,8 @@
         "emoji": "🍔",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/fc-1-d3.webp"
       },
       {
         "id": "fc-1-d4",
@@ -919,7 +946,8 @@
         "emoji": "🍗",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/fc-1-d4.webp"
       },
       {
         "id": "fc-1-d5",
@@ -930,7 +958,8 @@
         "originalPrice": 32,
         "monthlySales": 4300,
         "goodRate": 94,
-        "emoji": "🍔"
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-1-d5.webp"
       },
       {
         "id": "fc-1-d6",
@@ -943,7 +972,8 @@
         "emoji": "🍟",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/fc-1-d6.webp"
       },
       {
         "id": "fc-1-d7",
@@ -953,7 +983,8 @@
         "price": 11,
         "monthlySales": 3200,
         "goodRate": 93,
-        "emoji": "🧅"
+        "emoji": "🧅",
+        "image": "/fake-takeout/fc-1-d7.webp"
       },
       {
         "id": "fc-1-d8",
@@ -963,7 +994,8 @@
         "price": 13,
         "monthlySales": 2900,
         "goodRate": 95,
-        "emoji": "🍗"
+        "emoji": "🍗",
+        "image": "/fake-takeout/fc-1-d8.webp"
       },
       {
         "id": "fc-1-d9",
@@ -976,7 +1008,8 @@
         "emoji": "🌯",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/fc-1-d9.webp"
       },
       {
         "id": "fc-1-d10",
@@ -987,7 +1020,8 @@
         "originalPrice": 30,
         "monthlySales": 2100,
         "goodRate": 95,
-        "emoji": "🍔"
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-1-d10.webp"
       },
       {
         "id": "fc-1-d11",
@@ -1000,7 +1034,8 @@
         "emoji": "🥤",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/fc-1-d11.webp"
       },
       {
         "id": "fc-1-d12",
@@ -1010,7 +1045,8 @@
         "price": 12,
         "monthlySales": 2400,
         "goodRate": 94,
-        "emoji": "🧋"
+        "emoji": "🧋",
+        "image": "/fake-takeout/fc-1-d12.webp"
       },
       {
         "id": "fc-1-d13",
@@ -1020,7 +1056,8 @@
         "price": 10,
         "monthlySales": 1800,
         "goodRate": 93,
-        "emoji": "🧃"
+        "emoji": "🧃",
+        "image": "/fake-takeout/fc-1-d13.webp"
       }
     ],
     "reviews": [
@@ -1223,7 +1260,7 @@
       "delivery": 1.6
     },
     "channel": "汉堡披萨",
-    "logoImage": "/fake-takeout/fried-chicken.webp"
+    "logoImage": "/fake-takeout/shop-fc-1.webp"
   },
   {
     "id": "fc-2",
@@ -1310,7 +1347,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2-d2.webp"
       },
       {
         "id": "fc-2-d3",
@@ -1323,7 +1361,8 @@
         "emoji": "🍔",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2-d3.webp"
       },
       {
         "id": "fc-2-d4",
@@ -1337,7 +1376,8 @@
         "emoji": "🍟",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2-d4.webp"
       },
       {
         "id": "fc-2-d5",
@@ -1348,7 +1388,8 @@
         "originalPrice": 68,
         "monthlySales": 2300,
         "goodRate": 94,
-        "emoji": "🍔"
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-2-d5.webp"
       },
       {
         "id": "fc-2-d6",
@@ -1361,7 +1402,8 @@
         "emoji": "🍔",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2-d6.webp"
       },
       {
         "id": "fc-2-d7",
@@ -1372,7 +1414,8 @@
         "originalPrice": 20,
         "monthlySales": 2800,
         "goodRate": 94,
-        "emoji": "🥪"
+        "emoji": "🥪",
+        "image": "/fake-takeout/fc-2-d7.webp"
       },
       {
         "id": "fc-2-d8",
@@ -1382,7 +1425,8 @@
         "price": 17,
         "monthlySales": 1900,
         "goodRate": 93,
-        "emoji": "🍔"
+        "emoji": "🍔",
+        "image": "/fake-takeout/fc-2-d8.webp"
       },
       {
         "id": "fc-2-d9",
@@ -1397,7 +1441,8 @@
         "tags": [
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2-d9.webp"
       },
       {
         "id": "fc-2-d10",
@@ -1407,7 +1452,8 @@
         "price": 10,
         "monthlySales": 3300,
         "goodRate": 94,
-        "emoji": "🍟"
+        "emoji": "🍟",
+        "image": "/fake-takeout/fc-2-d10.webp"
       },
       {
         "id": "fc-2-d11",
@@ -1420,7 +1466,8 @@
         "emoji": "🍗",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/fc-2-d11.webp"
       },
       {
         "id": "fc-2-d12",
@@ -1430,7 +1477,8 @@
         "price": 9,
         "monthlySales": 2600,
         "goodRate": 93,
-        "emoji": "🍟"
+        "emoji": "🍟",
+        "image": "/fake-takeout/fc-2-d12.webp"
       }
     ],
     "reviews": [
@@ -1634,7 +1682,7 @@
       "delivery": 2.1
     },
     "channel": "汉堡披萨",
-    "logoImage": "/fake-takeout/fc-2.webp"
+    "logoImage": "/fake-takeout/shop-fc-2.webp"
   },
   {
     "id": "lsf-wangmei",
@@ -1723,7 +1771,8 @@
         "emoji": "🍜",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d2.webp"
       },
       {
         "id": "lsf-wangmei-d3",
@@ -1733,7 +1782,8 @@
         "price": 20,
         "monthlySales": 1560,
         "goodRate": 96,
-        "emoji": "🍅"
+        "emoji": "🍅",
+        "image": "/fake-takeout/lsf-wangmei-d3.webp"
       },
       {
         "id": "lsf-wangmei-d4",
@@ -1747,7 +1797,8 @@
         "emoji": "🎓",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d4.webp"
       },
       {
         "id": "lsf-wangmei-d5",
@@ -1761,7 +1812,8 @@
         "emoji": "🦆",
         "tags": [
           "限时特价"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d5.webp"
       },
       {
         "id": "lsf-wangmei-d6",
@@ -1771,7 +1823,8 @@
         "price": 19,
         "monthlySales": 1420,
         "goodRate": 96,
-        "emoji": "🥢"
+        "emoji": "🥢",
+        "image": "/fake-takeout/lsf-wangmei-d6.webp"
       },
       {
         "id": "lsf-wangmei-d7",
@@ -1784,7 +1837,8 @@
         "emoji": "🌶️",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d7.webp"
       },
       {
         "id": "lsf-wangmei-d8",
@@ -1794,7 +1848,8 @@
         "price": 3,
         "monthlySales": 5210,
         "goodRate": 99,
-        "emoji": "🥚"
+        "emoji": "🥚",
+        "image": "/fake-takeout/lsf-wangmei-d8.webp"
       },
       {
         "id": "lsf-wangmei-d9",
@@ -1804,7 +1859,8 @@
         "price": 8,
         "monthlySales": 2640,
         "goodRate": 97,
-        "emoji": "🦆"
+        "emoji": "🦆",
+        "image": "/fake-takeout/lsf-wangmei-d9.webp"
       },
       {
         "id": "lsf-wangmei-d10",
@@ -1814,7 +1870,8 @@
         "price": 4,
         "monthlySales": 3180,
         "goodRate": 98,
-        "emoji": "🥢"
+        "emoji": "🥢",
+        "image": "/fake-takeout/lsf-wangmei-d10.webp"
       },
       {
         "id": "lsf-wangmei-d11",
@@ -1828,7 +1885,8 @@
         "emoji": "🥤",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-wangmei-d11.webp"
       },
       {
         "id": "lsf-wangmei-d12",
@@ -1838,7 +1896,8 @@
         "price": 5,
         "monthlySales": 2240,
         "goodRate": 95,
-        "emoji": "🍋"
+        "emoji": "🍋",
+        "image": "/fake-takeout/lsf-wangmei-d12.webp"
       }
     ],
     "reviews": [
@@ -2031,7 +2090,7 @@
       "delivery": 1.6
     },
     "channel": "米粉面",
-    "logoImage": "/fake-takeout/luosifen.webp"
+    "logoImage": "/fake-takeout/shop-lsf-wangmei.webp"
   },
   {
     "id": "lsf-kongqi",
@@ -2120,7 +2179,8 @@
         "emoji": "🍜",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d2.webp"
       },
       {
         "id": "lsf-kongqi-d3",
@@ -2135,7 +2195,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d3.webp"
       },
       {
         "id": "lsf-kongqi-d4",
@@ -2149,7 +2210,8 @@
         "emoji": "💰",
         "tags": [
           "限时特价"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d4.webp"
       },
       {
         "id": "lsf-kongqi-d5",
@@ -2163,7 +2225,8 @@
         "emoji": "🍅",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d5.webp"
       },
       {
         "id": "lsf-kongqi-d6",
@@ -2176,7 +2239,8 @@
         "emoji": "🥢",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d6.webp"
       },
       {
         "id": "lsf-kongqi-d7",
@@ -2186,7 +2250,8 @@
         "price": 22,
         "monthlySales": 1120,
         "goodRate": 96,
-        "emoji": "🥜"
+        "emoji": "🥜",
+        "image": "/fake-takeout/lsf-kongqi-d7.webp"
       },
       {
         "id": "lsf-kongqi-d8",
@@ -2199,7 +2264,8 @@
         "emoji": "🥩",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d8.webp"
       },
       {
         "id": "lsf-kongqi-d9",
@@ -2209,7 +2275,8 @@
         "price": 4,
         "monthlySales": 4320,
         "goodRate": 99,
-        "emoji": "🥚"
+        "emoji": "🥚",
+        "image": "/fake-takeout/lsf-kongqi-d9.webp"
       },
       {
         "id": "lsf-kongqi-d10",
@@ -2219,7 +2286,8 @@
         "price": 7,
         "monthlySales": 1560,
         "goodRate": 95,
-        "emoji": "🥒"
+        "emoji": "🥒",
+        "image": "/fake-takeout/lsf-kongqi-d10.webp"
       },
       {
         "id": "lsf-kongqi-d11",
@@ -2229,7 +2297,8 @@
         "price": 12,
         "monthlySales": 2240,
         "goodRate": 98,
-        "emoji": "🐂"
+        "emoji": "🐂",
+        "image": "/fake-takeout/lsf-kongqi-d11.webp"
       },
       {
         "id": "lsf-kongqi-d12",
@@ -2239,7 +2308,8 @@
         "price": 5,
         "monthlySales": 1680,
         "goodRate": 96,
-        "emoji": "🥛"
+        "emoji": "🥛",
+        "image": "/fake-takeout/lsf-kongqi-d12.webp"
       },
       {
         "id": "lsf-kongqi-d13",
@@ -2253,7 +2323,8 @@
         "emoji": "🥤",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/lsf-kongqi-d13.webp"
       }
     ],
     "reviews": [
@@ -2447,7 +2518,7 @@
       "delivery": 1.9
     },
     "channel": "米粉面",
-    "logoImage": "/fake-takeout/lsf-kongqi.webp"
+    "logoImage": "/fake-takeout/shop-lsf-kongqi.webp"
   },
   {
     "id": "mt-huabing-cha",
@@ -2533,7 +2604,8 @@
         "emoji": "🧋",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d2.webp"
       },
       {
         "id": "mt-huabing-cha-d3",
@@ -2546,7 +2618,8 @@
         "emoji": "🧋",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d3.webp"
       },
       {
         "id": "mt-huabing-cha-d4",
@@ -2556,7 +2629,8 @@
         "price": 15,
         "monthlySales": 4180,
         "goodRate": 95,
-        "emoji": "🧋"
+        "emoji": "🧋",
+        "image": "/fake-takeout/mt-huabing-cha-d4.webp"
       },
       {
         "id": "mt-huabing-cha-d5",
@@ -2566,7 +2640,8 @@
         "price": 13,
         "monthlySales": 2960,
         "goodRate": 94,
-        "emoji": "🍵"
+        "emoji": "🍵",
+        "image": "/fake-takeout/mt-huabing-cha-d5.webp"
       },
       {
         "id": "mt-huabing-cha-d6",
@@ -2581,7 +2656,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d6.webp"
       },
       {
         "id": "mt-huabing-cha-d7",
@@ -2591,7 +2667,8 @@
         "price": 18,
         "monthlySales": 2210,
         "goodRate": 96,
-        "emoji": "🍓"
+        "emoji": "🍓",
+        "image": "/fake-takeout/mt-huabing-cha-d7.webp"
       },
       {
         "id": "mt-huabing-cha-d8",
@@ -2604,7 +2681,8 @@
         "emoji": "🥭",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d8.webp"
       },
       {
         "id": "mt-huabing-cha-d9",
@@ -2614,7 +2692,8 @@
         "price": 12,
         "monthlySales": 5870,
         "goodRate": 95,
-        "emoji": "🍋"
+        "emoji": "🍋",
+        "image": "/fake-takeout/mt-huabing-cha-d9.webp"
       },
       {
         "id": "mt-huabing-cha-d10",
@@ -2628,7 +2707,8 @@
         "emoji": "🍉",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mt-huabing-cha-d10.webp"
       },
       {
         "id": "mt-huabing-cha-d11",
@@ -2639,7 +2719,8 @@
         "originalPrice": 15,
         "monthlySales": 2640,
         "goodRate": 94,
-        "emoji": "🍮"
+        "emoji": "🍮",
+        "image": "/fake-takeout/mt-huabing-cha-d11.webp"
       },
       {
         "id": "mt-huabing-cha-d12",
@@ -2649,7 +2730,8 @@
         "price": 12,
         "monthlySales": 3320,
         "goodRate": 95,
-        "emoji": "🍵"
+        "emoji": "🍵",
+        "image": "/fake-takeout/mt-huabing-cha-d12.webp"
       }
     ],
     "reviews": [
@@ -2845,7 +2927,7 @@
       "delivery": 1.6
     },
     "channel": "甜点饮品",
-    "logoImage": "/fake-takeout/milk-tea.webp"
+    "logoImage": "/fake-takeout/shop-mt-huabing-cha.webp"
   },
   {
     "id": "mt-konggair-coffee",
@@ -2932,7 +3014,8 @@
           "招牌",
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d2.webp"
       },
       {
         "id": "mt-air-coffee-d3",
@@ -2942,7 +3025,8 @@
         "price": 16,
         "monthlySales": 2980,
         "goodRate": 96,
-        "emoji": "🧊"
+        "emoji": "🧊",
+        "image": "/fake-takeout/mt-air-coffee-d3.webp"
       },
       {
         "id": "mt-air-coffee-d4",
@@ -2955,7 +3039,8 @@
         "emoji": "🥥",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d4.webp"
       },
       {
         "id": "mt-air-coffee-d5",
@@ -2965,7 +3050,8 @@
         "price": 17,
         "monthlySales": 1860,
         "goodRate": 94,
-        "emoji": "☕"
+        "emoji": "☕",
+        "image": "/fake-takeout/mt-air-coffee-d5.webp"
       },
       {
         "id": "mt-air-coffee-d6",
@@ -2980,7 +3066,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d6.webp"
       },
       {
         "id": "mt-air-coffee-d7",
@@ -2993,7 +3080,8 @@
         "emoji": "🧀",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d7.webp"
       },
       {
         "id": "mt-air-coffee-d8",
@@ -3003,7 +3091,8 @@
         "price": 18,
         "monthlySales": 2240,
         "goodRate": 96,
-        "emoji": "🍫"
+        "emoji": "🍫",
+        "image": "/fake-takeout/mt-air-coffee-d8.webp"
       },
       {
         "id": "mt-air-coffee-d9",
@@ -3013,7 +3102,8 @@
         "price": 24,
         "monthlySales": 1290,
         "goodRate": 95,
-        "emoji": "🥞"
+        "emoji": "🥞",
+        "image": "/fake-takeout/mt-air-coffee-d9.webp"
       },
       {
         "id": "mt-air-coffee-d10",
@@ -3028,7 +3118,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d10.webp"
       },
       {
         "id": "mt-air-coffee-d11",
@@ -3038,7 +3129,8 @@
         "price": 58,
         "monthlySales": 980,
         "goodRate": 94,
-        "emoji": "☕"
+        "emoji": "☕",
+        "image": "/fake-takeout/mt-air-coffee-d11.webp"
       },
       {
         "id": "mt-air-coffee-d12",
@@ -3052,7 +3144,8 @@
         "emoji": "🌾",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/mt-air-coffee-d12.webp"
       },
       {
         "id": "mt-air-coffee-d13",
@@ -3063,7 +3156,8 @@
         "originalPrice": 14,
         "monthlySales": 3920,
         "goodRate": 96,
-        "emoji": "🥧"
+        "emoji": "🥧",
+        "image": "/fake-takeout/mt-air-coffee-d13.webp"
       }
     ],
     "reviews": [
@@ -3271,7 +3365,7 @@
       "delivery": 2.1
     },
     "channel": "甜点饮品",
-    "logoImage": "/fake-takeout/mt-konggair-coffee.webp"
+    "logoImage": "/fake-takeout/shop-mt-konggair-coffee.webp"
   },
   {
     "id": "bbq-1",
@@ -3356,7 +3450,8 @@
         "emoji": "🦪",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-1-d2.webp"
       },
       {
         "id": "bbq-1-d3",
@@ -3369,7 +3464,8 @@
         "emoji": "🍖",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-1-d3.webp"
       },
       {
         "id": "bbq-1-d4",
@@ -3379,7 +3475,8 @@
         "price": 22,
         "monthlySales": 3654,
         "goodRate": 95,
-        "emoji": "🐂"
+        "emoji": "🐂",
+        "image": "/fake-takeout/bbq-1-d4.webp"
       },
       {
         "id": "bbq-1-d5",
@@ -3392,7 +3489,8 @@
         "emoji": "🍗",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-1-d5.webp"
       },
       {
         "id": "bbq-1-d6",
@@ -3402,7 +3500,8 @@
         "price": 25,
         "monthlySales": 2890,
         "goodRate": 96,
-        "emoji": "🥓"
+        "emoji": "🥓",
+        "image": "/fake-takeout/bbq-1-d6.webp"
       },
       {
         "id": "bbq-1-d7",
@@ -3412,7 +3511,8 @@
         "price": 12,
         "monthlySales": 1876,
         "goodRate": 93,
-        "emoji": "🌿"
+        "emoji": "🌿",
+        "image": "/fake-takeout/bbq-1-d7.webp"
       },
       {
         "id": "bbq-1-d8",
@@ -3422,7 +3522,8 @@
         "price": 10,
         "monthlySales": 2233,
         "goodRate": 94,
-        "emoji": "🍄"
+        "emoji": "🍄",
+        "image": "/fake-takeout/bbq-1-d8.webp"
       },
       {
         "id": "bbq-1-d9",
@@ -3435,7 +3536,8 @@
         "emoji": "🍜",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-1-d9.webp"
       },
       {
         "id": "bbq-1-d10",
@@ -3445,7 +3547,8 @@
         "price": 8,
         "monthlySales": 4102,
         "goodRate": 96,
-        "emoji": "🫓"
+        "emoji": "🫓",
+        "image": "/fake-takeout/bbq-1-d10.webp"
       },
       {
         "id": "bbq-1-d11",
@@ -3455,7 +3558,8 @@
         "price": 9,
         "monthlySales": 1567,
         "goodRate": 92,
-        "emoji": "🍞"
+        "emoji": "🍞",
+        "image": "/fake-takeout/bbq-1-d11.webp"
       },
       {
         "id": "bbq-1-d12",
@@ -3465,7 +3569,8 @@
         "price": 8,
         "monthlySales": 6210,
         "goodRate": 97,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/bbq-1-d12.webp"
       },
       {
         "id": "bbq-1-d13",
@@ -3479,7 +3584,8 @@
         "emoji": "🍺",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-1-d13.webp"
       }
     ],
     "reviews": [
@@ -3674,7 +3780,7 @@
       "delivery": 1.6
     },
     "channel": "烧烤夜宵",
-    "logoImage": "/fake-takeout/bbq-1.webp"
+    "logoImage": "/fake-takeout/shop-bbq-1.webp"
   },
   {
     "id": "bbq-2",
@@ -3760,7 +3866,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-2-d2.webp"
       },
       {
         "id": "bbq-2-d3",
@@ -3770,7 +3877,8 @@
         "price": 122,
         "monthlySales": 3210,
         "goodRate": 96,
-        "emoji": "🦐"
+        "emoji": "🦐",
+        "image": "/fake-takeout/bbq-2-d3.webp"
       },
       {
         "id": "bbq-2-d4",
@@ -3783,7 +3891,8 @@
         "emoji": "🍶",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-2-d4.webp"
       },
       {
         "id": "bbq-2-d5",
@@ -3793,7 +3902,8 @@
         "price": 98,
         "monthlySales": 2109,
         "goodRate": 96,
-        "emoji": "🦀"
+        "emoji": "🦀",
+        "image": "/fake-takeout/bbq-2-d5.webp"
       },
       {
         "id": "bbq-2-d6",
@@ -3806,7 +3916,8 @@
         "emoji": "🦪",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-2-d6.webp"
       },
       {
         "id": "bbq-2-d7",
@@ -3816,7 +3927,8 @@
         "price": 38,
         "monthlySales": 4012,
         "goodRate": 95,
-        "emoji": "🐚"
+        "emoji": "🐚",
+        "image": "/fake-takeout/bbq-2-d7.webp"
       },
       {
         "id": "bbq-2-d8",
@@ -3829,7 +3941,8 @@
         "emoji": "🐸",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-2-d8.webp"
       },
       {
         "id": "bbq-2-d9",
@@ -3839,7 +3952,8 @@
         "price": 22,
         "monthlySales": 3567,
         "goodRate": 95,
-        "emoji": "🍝"
+        "emoji": "🍝",
+        "image": "/fake-takeout/bbq-2-d9.webp"
       },
       {
         "id": "bbq-2-d10",
@@ -3849,7 +3963,8 @@
         "price": 14,
         "monthlySales": 2890,
         "goodRate": 93,
-        "emoji": "🍚"
+        "emoji": "🍚",
+        "image": "/fake-takeout/bbq-2-d10.webp"
       },
       {
         "id": "bbq-2-d11",
@@ -3859,7 +3974,8 @@
         "price": 10,
         "monthlySales": 1987,
         "goodRate": 94,
-        "emoji": "🍞"
+        "emoji": "🍞",
+        "image": "/fake-takeout/bbq-2-d11.webp"
       },
       {
         "id": "bbq-2-d12",
@@ -3872,7 +3988,8 @@
         "emoji": "🍉",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bbq-2-d12.webp"
       },
       {
         "id": "bbq-2-d13",
@@ -3882,7 +3999,8 @@
         "price": 6,
         "monthlySales": 5210,
         "goodRate": 95,
-        "emoji": "🥫"
+        "emoji": "🥫",
+        "image": "/fake-takeout/bbq-2-d13.webp"
       },
       {
         "id": "bbq-2-d14",
@@ -3893,7 +4011,8 @@
         "originalPrice": 24,
         "monthlySales": 2341,
         "goodRate": 96,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/bbq-2-d14.webp"
       }
     ],
     "reviews": [
@@ -4088,7 +4207,7 @@
       "delivery": 2.1
     },
     "channel": "烧烤夜宵",
-    "logoImage": "/fake-takeout/bbq-2.webp"
+    "logoImage": "/fake-takeout/shop-bbq-2.webp"
   },
   {
     "id": "hp-mlxg",
@@ -4173,7 +4292,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/hp-mlxg-d2.webp"
       },
       {
         "id": "hp-mlxg-d3",
@@ -4186,7 +4306,8 @@
         "emoji": "🦐",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/hp-mlxg-d3.webp"
       },
       {
         "id": "hp-mlxg-d4",
@@ -4196,7 +4317,8 @@
         "price": 42,
         "monthlySales": 2210,
         "goodRate": 95,
-        "emoji": "🥩"
+        "emoji": "🥩",
+        "image": "/fake-takeout/hp-mlxg-d4.webp"
       },
       {
         "id": "hp-mlxg-d5",
@@ -4206,7 +4328,8 @@
         "price": 26,
         "monthlySales": 980,
         "goodRate": 94,
-        "emoji": "🥔"
+        "emoji": "🥔",
+        "image": "/fake-takeout/hp-mlxg-d5.webp"
       },
       {
         "id": "hp-mlxg-d6",
@@ -4216,7 +4339,8 @@
         "price": 38,
         "monthlySales": 760,
         "goodRate": 93,
-        "emoji": "🦆"
+        "emoji": "🦆",
+        "image": "/fake-takeout/hp-mlxg-d6.webp"
       },
       {
         "id": "hp-mlxg-d7",
@@ -4230,7 +4354,8 @@
         "emoji": "🍜",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/hp-mlxg-d7.webp"
       },
       {
         "id": "hp-mlxg-d8",
@@ -4240,7 +4365,8 @@
         "price": 40,
         "monthlySales": 690,
         "goodRate": 92,
-        "emoji": "🌶️"
+        "emoji": "🌶️",
+        "image": "/fake-takeout/hp-mlxg-d8.webp"
       },
       {
         "id": "hp-mlxg-d9",
@@ -4253,7 +4379,8 @@
         "emoji": "🍲",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/hp-mlxg-d9.webp"
       },
       {
         "id": "hp-mlxg-d10",
@@ -4263,7 +4390,8 @@
         "price": 8,
         "monthlySales": 2680,
         "goodRate": 97,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/hp-mlxg-d10.webp"
       },
       {
         "id": "hp-mlxg-d11",
@@ -4273,7 +4401,8 @@
         "price": 12,
         "monthlySales": 1430,
         "goodRate": 96,
-        "emoji": "🍋"
+        "emoji": "🍋",
+        "image": "/fake-takeout/hp-mlxg-d11.webp"
       },
       {
         "id": "hp-mlxg-d12",
@@ -4283,7 +4412,8 @@
         "price": 6,
         "monthlySales": 1190,
         "goodRate": 94,
-        "emoji": "🥛"
+        "emoji": "🥛",
+        "image": "/fake-takeout/hp-mlxg-d12.webp"
       }
     ],
     "reviews": [
@@ -4486,7 +4616,7 @@
       "delivery": 1.6
     },
     "channel": "火锅",
-    "logoImage": "/fake-takeout/hp-mlxg.webp"
+    "logoImage": "/fake-takeout/shop-hp-mlxg.webp"
   },
   {
     "id": "hp-kongqi",
@@ -4573,7 +4703,8 @@
         "emoji": "🌶️",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi-d2.webp"
       },
       {
         "id": "hp-kongqi-d3",
@@ -4588,7 +4719,8 @@
         "tags": [
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi-d3.webp"
       },
       {
         "id": "hp-kongqi-d4",
@@ -4601,7 +4733,8 @@
         "emoji": "🦐",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi-d4.webp"
       },
       {
         "id": "hp-kongqi-d5",
@@ -4614,7 +4747,8 @@
         "emoji": "🥩",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi-d5.webp"
       },
       {
         "id": "hp-kongqi-d6",
@@ -4624,7 +4758,8 @@
         "price": 12,
         "monthlySales": 870,
         "goodRate": 94,
-        "emoji": "🍲"
+        "emoji": "🍲",
+        "image": "/fake-takeout/hp-kongqi-d6.webp"
       },
       {
         "id": "hp-kongqi-d7",
@@ -4634,7 +4769,8 @@
         "price": 22,
         "monthlySales": 1140,
         "goodRate": 95,
-        "emoji": "🥬"
+        "emoji": "🥬",
+        "image": "/fake-takeout/hp-kongqi-d7.webp"
       },
       {
         "id": "hp-kongqi-d8",
@@ -4644,7 +4780,8 @@
         "price": 14,
         "monthlySales": 1280,
         "goodRate": 94,
-        "emoji": "🥔"
+        "emoji": "🥔",
+        "image": "/fake-takeout/hp-kongqi-d8.webp"
       },
       {
         "id": "hp-kongqi-d9",
@@ -4654,7 +4791,8 @@
         "price": 16,
         "monthlySales": 760,
         "goodRate": 93,
-        "emoji": "🍄"
+        "emoji": "🍄",
+        "image": "/fake-takeout/hp-kongqi-d9.webp"
       },
       {
         "id": "hp-kongqi-d10",
@@ -4669,7 +4807,8 @@
         "tags": [
           "招牌",
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi-d10.webp"
       },
       {
         "id": "hp-kongqi-d11",
@@ -4683,7 +4822,8 @@
         "emoji": "🍲",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/hp-kongqi-d11.webp"
       },
       {
         "id": "hp-kongqi-d12",
@@ -4693,7 +4833,8 @@
         "price": 8,
         "monthlySales": 2240,
         "goodRate": 96,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/hp-kongqi-d12.webp"
       },
       {
         "id": "hp-kongqi-d13",
@@ -4703,7 +4844,8 @@
         "price": 14,
         "monthlySales": 680,
         "goodRate": 95,
-        "emoji": "🍉"
+        "emoji": "🍉",
+        "image": "/fake-takeout/hp-kongqi-d13.webp"
       }
     ],
     "reviews": [
@@ -4916,7 +5058,7 @@
       "delivery": 2.1
     },
     "channel": "火锅",
-    "logoImage": "/fake-takeout/hp-kongqi.webp"
+    "logoImage": "/fake-takeout/shop-hp-kongqi.webp"
   },
   {
     "id": "rice-1",
@@ -5007,7 +5149,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/rice-1-d2.webp"
       },
       {
         "id": "rice-1-d3",
@@ -5020,7 +5163,8 @@
         "emoji": "🌶️",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/rice-1-d3.webp"
       },
       {
         "id": "rice-1-d4",
@@ -5030,7 +5174,8 @@
         "price": 26,
         "monthlySales": 2890,
         "goodRate": 96,
-        "emoji": "🍖"
+        "emoji": "🍖",
+        "image": "/fake-takeout/rice-1-d4.webp"
       },
       {
         "id": "rice-1-d5",
@@ -5040,7 +5185,8 @@
         "price": 29,
         "monthlySales": 1980,
         "goodRate": 95,
-        "emoji": "🐄"
+        "emoji": "🐄",
+        "image": "/fake-takeout/rice-1-d5.webp"
       },
       {
         "id": "rice-1-d6",
@@ -5050,7 +5196,8 @@
         "price": 18,
         "monthlySales": 760,
         "goodRate": 94,
-        "emoji": "🧈"
+        "emoji": "🧈",
+        "image": "/fake-takeout/rice-1-d6.webp"
       },
       {
         "id": "rice-1-d7",
@@ -5063,7 +5210,8 @@
         "emoji": "🥔",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/rice-1-d7.webp"
       },
       {
         "id": "rice-1-d8",
@@ -5073,7 +5221,8 @@
         "price": 16,
         "monthlySales": 2670,
         "goodRate": 96,
-        "emoji": "🍅"
+        "emoji": "🍅",
+        "image": "/fake-takeout/rice-1-d8.webp"
       },
       {
         "id": "rice-1-d9",
@@ -5083,7 +5232,8 @@
         "price": 19,
         "monthlySales": 1540,
         "goodRate": 95,
-        "emoji": "🍚"
+        "emoji": "🍚",
+        "image": "/fake-takeout/rice-1-d9.webp"
       },
       {
         "id": "rice-1-d10",
@@ -5093,7 +5243,8 @@
         "price": 9,
         "monthlySales": 1230,
         "goodRate": 93,
-        "emoji": "🦀"
+        "emoji": "🦀",
+        "image": "/fake-takeout/rice-1-d10.webp"
       },
       {
         "id": "rice-1-d11",
@@ -5103,7 +5254,8 @@
         "price": 8,
         "monthlySales": 980,
         "goodRate": 94,
-        "emoji": "🐔"
+        "emoji": "🐔",
+        "image": "/fake-takeout/rice-1-d11.webp"
       },
       {
         "id": "rice-1-d12",
@@ -5117,7 +5269,8 @@
         "emoji": "🥤",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/rice-1-d12.webp"
       },
       {
         "id": "rice-1-d13",
@@ -5127,7 +5280,8 @@
         "price": 5,
         "monthlySales": 870,
         "goodRate": 95,
-        "emoji": "🥛"
+        "emoji": "🥛",
+        "image": "/fake-takeout/rice-1-d13.webp"
       }
     ],
     "reviews": [
@@ -5314,7 +5468,7 @@
       "delivery": 1.6
     },
     "channel": "美食",
-    "logoImage": "/fake-takeout/rice-1.webp"
+    "logoImage": "/fake-takeout/shop-rice-1.webp"
   },
   {
     "id": "rice-2",
@@ -5401,7 +5555,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/rice-2-d2.webp"
       },
       {
         "id": "rice-2-d3",
@@ -5414,7 +5569,8 @@
         "emoji": "🥜",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/rice-2-d3.webp"
       },
       {
         "id": "rice-2-d4",
@@ -5424,7 +5580,8 @@
         "price": 15,
         "monthlySales": 3560,
         "goodRate": 96,
-        "emoji": "🌶️"
+        "emoji": "🌶️",
+        "image": "/fake-takeout/rice-2-d4.webp"
       },
       {
         "id": "rice-2-d5",
@@ -5434,7 +5591,8 @@
         "price": 13,
         "monthlySales": 1870,
         "goodRate": 94,
-        "emoji": "🥬"
+        "emoji": "🥬",
+        "image": "/fake-takeout/rice-2-d5.webp"
       },
       {
         "id": "rice-2-d6",
@@ -5444,7 +5602,8 @@
         "price": 20,
         "monthlySales": 2680,
         "goodRate": 96,
-        "emoji": "🥓"
+        "emoji": "🥓",
+        "image": "/fake-takeout/rice-2-d6.webp"
       },
       {
         "id": "rice-2-d7",
@@ -5457,7 +5616,8 @@
         "emoji": "🥩",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/rice-2-d7.webp"
       },
       {
         "id": "rice-2-d8",
@@ -5471,7 +5631,8 @@
         "emoji": "🍚",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/rice-2-d8.webp"
       },
       {
         "id": "rice-2-d9",
@@ -5481,7 +5642,8 @@
         "price": 22,
         "monthlySales": 2110,
         "goodRate": 95,
-        "emoji": "🍱"
+        "emoji": "🍱",
+        "image": "/fake-takeout/rice-2-d9.webp"
       },
       {
         "id": "rice-2-d10",
@@ -5491,7 +5653,8 @@
         "price": 4,
         "monthlySales": 3200,
         "goodRate": 96,
-        "emoji": "🍲"
+        "emoji": "🍲",
+        "image": "/fake-takeout/rice-2-d10.webp"
       },
       {
         "id": "rice-2-d11",
@@ -5501,7 +5664,8 @@
         "price": 12,
         "monthlySales": 1680,
         "goodRate": 94,
-        "emoji": "🍤"
+        "emoji": "🍤",
+        "image": "/fake-takeout/rice-2-d11.webp"
       },
       {
         "id": "rice-2-d12",
@@ -5511,7 +5675,8 @@
         "price": 6,
         "monthlySales": 1240,
         "goodRate": 93,
-        "emoji": "🥒"
+        "emoji": "🥒",
+        "image": "/fake-takeout/rice-2-d12.webp"
       },
       {
         "id": "rice-2-d13",
@@ -5521,7 +5686,8 @@
         "price": 5,
         "monthlySales": 1890,
         "goodRate": 95,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/rice-2-d13.webp"
       },
       {
         "id": "rice-2-d14",
@@ -5535,7 +5701,8 @@
         "emoji": "🥛",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/rice-2-d14.webp"
       }
     ],
     "reviews": [
@@ -5723,7 +5890,7 @@
       "delivery": 2.1
     },
     "channel": "美食",
-    "logoImage": "/fake-takeout/rice-2.webp"
+    "logoImage": "/fake-takeout/shop-rice-2.webp"
   },
   {
     "id": "bf-baozi",
@@ -5810,7 +5977,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bf-baozi-d2.webp"
       },
       {
         "id": "bf-baozi-d3",
@@ -5820,7 +5988,8 @@
         "price": 2.5,
         "monthlySales": 5200,
         "goodRate": 96,
-        "emoji": "🥬"
+        "emoji": "🥬",
+        "image": "/fake-takeout/bf-baozi-d3.webp"
       },
       {
         "id": "bf-baozi-d4",
@@ -5830,7 +5999,8 @@
         "price": 2.5,
         "monthlySales": 3100,
         "goodRate": 95,
-        "emoji": "🫘"
+        "emoji": "🫘",
+        "image": "/fake-takeout/bf-baozi-d4.webp"
       },
       {
         "id": "bf-baozi-d5",
@@ -5843,7 +6013,8 @@
         "emoji": "🥟",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/bf-baozi-d5.webp"
       },
       {
         "id": "bf-baozi-d6",
@@ -5853,7 +6024,8 @@
         "price": 9.9,
         "monthlySales": 5600,
         "goodRate": 98,
-        "emoji": "🧆"
+        "emoji": "🧆",
+        "image": "/fake-takeout/bf-baozi-d6.webp"
       },
       {
         "id": "bf-baozi-d7",
@@ -5863,7 +6035,8 @@
         "price": 7,
         "monthlySales": 2800,
         "goodRate": 94,
-        "emoji": "🥟"
+        "emoji": "🥟",
+        "image": "/fake-takeout/bf-baozi-d7.webp"
       },
       {
         "id": "bf-baozi-d8",
@@ -5873,7 +6046,8 @@
         "price": 3,
         "monthlySales": 7300,
         "goodRate": 96,
-        "emoji": "🥛"
+        "emoji": "🥛",
+        "image": "/fake-takeout/bf-baozi-d8.webp"
       },
       {
         "id": "bf-baozi-d9",
@@ -5883,7 +6057,8 @@
         "price": 5.5,
         "monthlySales": 3900,
         "goodRate": 95,
-        "emoji": "🥣"
+        "emoji": "🥣",
+        "image": "/fake-takeout/bf-baozi-d9.webp"
       },
       {
         "id": "bf-baozi-d10",
@@ -5893,7 +6068,8 @@
         "price": 4,
         "monthlySales": 2100,
         "goodRate": 94,
-        "emoji": "🎃"
+        "emoji": "🎃",
+        "image": "/fake-takeout/bf-baozi-d10.webp"
       },
       {
         "id": "bf-baozi-d11",
@@ -5909,7 +6085,8 @@
           "招牌",
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bf-baozi-d11.webp"
       },
       {
         "id": "bf-baozi-d12",
@@ -5923,7 +6100,8 @@
         "emoji": "🧺",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bf-baozi-d12.webp"
       },
       {
         "id": "bf-baozi-d13",
@@ -5933,7 +6111,8 @@
         "price": 1.5,
         "monthlySales": 6700,
         "goodRate": 97,
-        "emoji": "🥚"
+        "emoji": "🥚",
+        "image": "/fake-takeout/bf-baozi-d13.webp"
       }
     ],
     "reviews": [
@@ -6133,7 +6312,7 @@
       "delivery": 1.6
     },
     "channel": "早餐",
-    "logoImage": "/fake-takeout/bf-baozi.webp"
+    "logoImage": "/fake-takeout/shop-bf-baozi.webp"
   },
   {
     "id": "bf-jianbing",
@@ -6218,7 +6397,8 @@
         "emoji": "🥖",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bf-jianbing-d2.webp"
       },
       {
         "id": "bf-jianbing-d3",
@@ -6233,7 +6413,8 @@
         "tags": [
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bf-jianbing-d3.webp"
       },
       {
         "id": "bf-jianbing-d4",
@@ -6243,7 +6424,8 @@
         "price": 9,
         "monthlySales": 5300,
         "goodRate": 95,
-        "emoji": "🍳"
+        "emoji": "🍳",
+        "image": "/fake-takeout/bf-jianbing-d4.webp"
       },
       {
         "id": "bf-jianbing-d5",
@@ -6253,7 +6435,8 @@
         "price": 9.5,
         "monthlySales": 2700,
         "goodRate": 94,
-        "emoji": "🌶️"
+        "emoji": "🌶️",
+        "image": "/fake-takeout/bf-jianbing-d5.webp"
       },
       {
         "id": "bf-jianbing-d6",
@@ -6263,7 +6446,8 @@
         "price": 3,
         "monthlySales": 7800,
         "goodRate": 97,
-        "emoji": "🥛"
+        "emoji": "🥛",
+        "image": "/fake-takeout/bf-jianbing-d6.webp"
       },
       {
         "id": "bf-jianbing-d7",
@@ -6273,7 +6457,8 @@
         "price": 4,
         "monthlySales": 2300,
         "goodRate": 93,
-        "emoji": "🍜"
+        "emoji": "🍜",
+        "image": "/fake-takeout/bf-jianbing-d7.webp"
       },
       {
         "id": "bf-jianbing-d8",
@@ -6283,7 +6468,8 @@
         "price": 3.5,
         "monthlySales": 3600,
         "goodRate": 95,
-        "emoji": "🍩"
+        "emoji": "🍩",
+        "image": "/fake-takeout/bf-jianbing-d8.webp"
       },
       {
         "id": "bf-jianbing-d9",
@@ -6293,7 +6479,8 @@
         "price": 1,
         "monthlySales": 6100,
         "goodRate": 98,
-        "emoji": "🥠"
+        "emoji": "🥠",
+        "image": "/fake-takeout/bf-jianbing-d9.webp"
       },
       {
         "id": "bf-jianbing-d10",
@@ -6303,7 +6490,8 @@
         "price": 2,
         "monthlySales": 4400,
         "goodRate": 96,
-        "emoji": "🌭"
+        "emoji": "🌭",
+        "image": "/fake-takeout/bf-jianbing-d10.webp"
       },
       {
         "id": "bf-jianbing-d11",
@@ -6319,7 +6507,8 @@
           "招牌",
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/bf-jianbing-d11.webp"
       },
       {
         "id": "bf-jianbing-d12",
@@ -6333,7 +6522,8 @@
         "emoji": "🥖",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bf-jianbing-d12.webp"
       },
       {
         "id": "bf-jianbing-d13",
@@ -6343,7 +6533,8 @@
         "price": 1.5,
         "monthlySales": 3900,
         "goodRate": 95,
-        "emoji": "🥚"
+        "emoji": "🥚",
+        "image": "/fake-takeout/bf-jianbing-d13.webp"
       },
       {
         "id": "bf-jianbing-d14",
@@ -6357,7 +6548,8 @@
         "emoji": "🌯",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/bf-jianbing-d14.webp"
       }
     ],
     "reviews": [
@@ -6577,7 +6769,7 @@
       "delivery": 1.9
     },
     "channel": "早餐",
-    "logoImage": "/fake-takeout/bf-jianbing.webp"
+    "logoImage": "/fake-takeout/shop-bf-jianbing.webp"
   },
   {
     "id": "jp-1",
@@ -6668,7 +6860,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/jp-1-d2.webp"
       },
       {
         "id": "jp-1-d3",
@@ -6678,7 +6871,8 @@
         "price": 28,
         "monthlySales": 945,
         "goodRate": 96,
-        "emoji": "🍣"
+        "emoji": "🍣",
+        "image": "/fake-takeout/jp-1-d3.webp"
       },
       {
         "id": "jp-1-d4",
@@ -6692,7 +6886,8 @@
         "emoji": "🍣",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/jp-1-d4.webp"
       },
       {
         "id": "jp-1-d5",
@@ -6702,7 +6897,8 @@
         "price": 24,
         "monthlySales": 1456,
         "goodRate": 94,
-        "emoji": "🍣"
+        "emoji": "🍣",
+        "image": "/fake-takeout/jp-1-d5.webp"
       },
       {
         "id": "jp-1-d6",
@@ -6712,7 +6908,8 @@
         "price": 19,
         "monthlySales": 2033,
         "goodRate": 93,
-        "emoji": "🍣"
+        "emoji": "🍣",
+        "image": "/fake-takeout/jp-1-d6.webp"
       },
       {
         "id": "jp-1-d7",
@@ -6725,7 +6922,8 @@
         "emoji": "🍤",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/jp-1-d7.webp"
       },
       {
         "id": "jp-1-d8",
@@ -6735,7 +6933,8 @@
         "price": 18,
         "monthlySales": 534,
         "goodRate": 92,
-        "emoji": "🍤"
+        "emoji": "🍤",
+        "image": "/fake-takeout/jp-1-d8.webp"
       },
       {
         "id": "jp-1-d9",
@@ -6750,7 +6949,8 @@
         "tags": [
           "必点",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/jp-1-d9.webp"
       },
       {
         "id": "jp-1-d10",
@@ -6763,7 +6963,8 @@
         "emoji": "🍜",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/jp-1-d10.webp"
       },
       {
         "id": "jp-1-d11",
@@ -6773,7 +6974,8 @@
         "price": 27,
         "monthlySales": 1340,
         "goodRate": 93,
-        "emoji": "🍜"
+        "emoji": "🍜",
+        "image": "/fake-takeout/jp-1-d11.webp"
       },
       {
         "id": "jp-1-d12",
@@ -6783,7 +6985,8 @@
         "price": 8,
         "monthlySales": 2890,
         "goodRate": 95,
-        "emoji": "🍵"
+        "emoji": "🍵",
+        "image": "/fake-takeout/jp-1-d12.webp"
       },
       {
         "id": "jp-1-d13",
@@ -6794,7 +6997,8 @@
         "originalPrice": 14,
         "monthlySales": 1102,
         "goodRate": 94,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/jp-1-d13.webp"
       }
     ],
     "reviews": [
@@ -6983,7 +7187,7 @@
       "delivery": 1.6
     },
     "channel": "日韩料理",
-    "logoImage": "/fake-takeout/jp-1.webp"
+    "logoImage": "/fake-takeout/shop-jp-1.webp"
   },
   {
     "id": "jp-2",
@@ -7074,7 +7278,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2-d2.webp"
       },
       {
         "id": "jp-2-d3",
@@ -7087,7 +7292,8 @@
         "emoji": "🍲",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2-d3.webp"
       },
       {
         "id": "jp-2-d4",
@@ -7097,7 +7303,8 @@
         "price": 46,
         "monthlySales": 1320,
         "goodRate": 95,
-        "emoji": "🍲"
+        "emoji": "🍲",
+        "image": "/fake-takeout/jp-2-d4.webp"
       },
       {
         "id": "jp-2-d5",
@@ -7111,7 +7318,8 @@
         "emoji": "🍢",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2-d5.webp"
       },
       {
         "id": "jp-2-d6",
@@ -7124,7 +7332,8 @@
         "emoji": "🍗",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2-d6.webp"
       },
       {
         "id": "jp-2-d7",
@@ -7134,7 +7343,8 @@
         "price": 42,
         "monthlySales": 3760,
         "goodRate": 96,
-        "emoji": "🍗"
+        "emoji": "🍗",
+        "image": "/fake-takeout/jp-2-d7.webp"
       },
       {
         "id": "jp-2-d8",
@@ -7144,7 +7354,8 @@
         "price": 25,
         "monthlySales": 870,
         "goodRate": 93,
-        "emoji": "🍢"
+        "emoji": "🍢",
+        "image": "/fake-takeout/jp-2-d8.webp"
       },
       {
         "id": "jp-2-d9",
@@ -7157,7 +7368,8 @@
         "emoji": "🍚",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2-d9.webp"
       },
       {
         "id": "jp-2-d10",
@@ -7167,7 +7379,8 @@
         "price": 18,
         "monthlySales": 1560,
         "goodRate": 94,
-        "emoji": "🍙"
+        "emoji": "🍙",
+        "image": "/fake-takeout/jp-2-d10.webp"
       },
       {
         "id": "jp-2-d11",
@@ -7178,7 +7391,8 @@
         "originalPrice": 16,
         "monthlySales": 990,
         "goodRate": 92,
-        "emoji": "🍙"
+        "emoji": "🍙",
+        "image": "/fake-takeout/jp-2-d11.webp"
       },
       {
         "id": "jp-2-d12",
@@ -7188,7 +7402,8 @@
         "price": 22,
         "monthlySales": 1430,
         "goodRate": 94,
-        "emoji": "🍶"
+        "emoji": "🍶",
+        "image": "/fake-takeout/jp-2-d12.webp"
       },
       {
         "id": "jp-2-d13",
@@ -7202,7 +7417,8 @@
         "emoji": "🥛",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/jp-2-d13.webp"
       },
       {
         "id": "jp-2-d14",
@@ -7212,7 +7428,8 @@
         "price": 11,
         "monthlySales": 760,
         "goodRate": 93,
-        "emoji": "🍵"
+        "emoji": "🍵",
+        "image": "/fake-takeout/jp-2-d14.webp"
       }
     ],
     "reviews": [
@@ -7420,7 +7637,7 @@
       "delivery": 2.1
     },
     "channel": "日韩料理",
-    "logoImage": "/fake-takeout/jp-2.webp"
+    "logoImage": "/fake-takeout/shop-jp-2.webp"
   },
   {
     "id": "pz-1",
@@ -7511,7 +7728,8 @@
         "tags": [
           "招牌",
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/pz-1-d2.webp"
       },
       {
         "id": "pz-1-d3",
@@ -7521,7 +7739,8 @@
         "price": 42,
         "monthlySales": 1890,
         "goodRate": 97,
-        "emoji": "🍕"
+        "emoji": "🍕",
+        "image": "/fake-takeout/pz-1-d3.webp"
       },
       {
         "id": "pz-1-d4",
@@ -7531,7 +7750,8 @@
         "price": 39,
         "monthlySales": 1320,
         "goodRate": 94,
-        "emoji": "🍍"
+        "emoji": "🍍",
+        "image": "/fake-takeout/pz-1-d4.webp"
       },
       {
         "id": "pz-1-d5",
@@ -7544,7 +7764,8 @@
         "emoji": "🧀",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/pz-1-d5.webp"
       },
       {
         "id": "pz-1-d6",
@@ -7554,7 +7775,8 @@
         "price": 32,
         "monthlySales": 1450,
         "goodRate": 95,
-        "emoji": "🍝"
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-1-d6.webp"
       },
       {
         "id": "pz-1-d7",
@@ -7564,7 +7786,8 @@
         "price": 34,
         "monthlySales": 880,
         "goodRate": 96,
-        "emoji": "🍝"
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-1-d7.webp"
       },
       {
         "id": "pz-1-d8",
@@ -7577,7 +7800,8 @@
         "emoji": "🍤",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/pz-1-d8.webp"
       },
       {
         "id": "pz-1-d9",
@@ -7587,7 +7811,8 @@
         "price": 18,
         "monthlySales": 2100,
         "goodRate": 95,
-        "emoji": "🍗"
+        "emoji": "🍗",
+        "image": "/fake-takeout/pz-1-d9.webp"
       },
       {
         "id": "pz-1-d10",
@@ -7597,7 +7822,8 @@
         "price": 12,
         "monthlySales": 1760,
         "goodRate": 93,
-        "emoji": "🍟"
+        "emoji": "🍟",
+        "image": "/fake-takeout/pz-1-d10.webp"
       },
       {
         "id": "pz-1-d11",
@@ -7607,7 +7833,8 @@
         "price": 16,
         "monthlySales": 540,
         "goodRate": 92,
-        "emoji": "🌭"
+        "emoji": "🌭",
+        "image": "/fake-takeout/pz-1-d11.webp"
       },
       {
         "id": "pz-1-d12",
@@ -7617,7 +7844,8 @@
         "price": 10,
         "monthlySales": 1230,
         "goodRate": 94,
-        "emoji": "🍊"
+        "emoji": "🍊",
+        "image": "/fake-takeout/pz-1-d12.webp"
       },
       {
         "id": "pz-1-d13",
@@ -7627,7 +7855,8 @@
         "price": 6,
         "monthlySales": 3400,
         "goodRate": 96,
-        "emoji": "🥤"
+        "emoji": "🥤",
+        "image": "/fake-takeout/pz-1-d13.webp"
       }
     ],
     "reviews": [
@@ -7816,7 +8045,7 @@
       "delivery": 1.8
     },
     "channel": "汉堡披萨",
-    "logoImage": "/fake-takeout/pz-1.webp"
+    "logoImage": "/fake-takeout/shop-pz-1.webp"
   },
   {
     "id": "pz-2",
@@ -7906,7 +8135,8 @@
         "emoji": "🥩",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/pz-2-d2.webp"
       },
       {
         "id": "pz-2-d3",
@@ -7919,7 +8149,8 @@
         "emoji": "🍖",
         "tags": [
           "第2件半价"
-        ]
+        ],
+        "image": "/fake-takeout/pz-2-d3.webp"
       },
       {
         "id": "pz-2-d4",
@@ -7929,7 +8160,8 @@
         "price": 58,
         "monthlySales": 520,
         "goodRate": 96,
-        "emoji": "🐟"
+        "emoji": "🐟",
+        "image": "/fake-takeout/pz-2-d4.webp"
       },
       {
         "id": "pz-2-d5",
@@ -7942,7 +8174,8 @@
         "emoji": "🍗",
         "tags": [
           "必点"
-        ]
+        ],
+        "image": "/fake-takeout/pz-2-d5.webp"
       },
       {
         "id": "pz-2-d6",
@@ -7952,7 +8185,8 @@
         "price": 32,
         "monthlySales": 980,
         "goodRate": 93,
-        "emoji": "🐖"
+        "emoji": "🐖",
+        "image": "/fake-takeout/pz-2-d6.webp"
       },
       {
         "id": "pz-2-d7",
@@ -7962,7 +8196,8 @@
         "price": 30,
         "monthlySales": 1450,
         "goodRate": 96,
-        "emoji": "🍝"
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-2-d7.webp"
       },
       {
         "id": "pz-2-d8",
@@ -7972,7 +8207,8 @@
         "price": 33,
         "monthlySales": 760,
         "goodRate": 95,
-        "emoji": "🍝"
+        "emoji": "🍝",
+        "image": "/fake-takeout/pz-2-d8.webp"
       },
       {
         "id": "pz-2-d9",
@@ -7982,7 +8218,8 @@
         "price": 16,
         "monthlySales": 890,
         "goodRate": 94,
-        "emoji": "🍲"
+        "emoji": "🍲",
+        "image": "/fake-takeout/pz-2-d9.webp"
       },
       {
         "id": "pz-2-d10",
@@ -7992,7 +8229,8 @@
         "price": 22,
         "monthlySales": 640,
         "goodRate": 92,
-        "emoji": "🥗"
+        "emoji": "🥗",
+        "image": "/fake-takeout/pz-2-d10.webp"
       },
       {
         "id": "pz-2-d11",
@@ -8002,7 +8240,8 @@
         "price": 18,
         "monthlySales": 580,
         "goodRate": 95,
-        "emoji": "🍄"
+        "emoji": "🍄",
+        "image": "/fake-takeout/pz-2-d11.webp"
       },
       {
         "id": "pz-2-d12",
@@ -8016,7 +8255,8 @@
         "emoji": "🍽️",
         "tags": [
           "招牌"
-        ]
+        ],
+        "image": "/fake-takeout/pz-2-d12.webp"
       },
       {
         "id": "pz-2-d13",
@@ -8026,7 +8266,8 @@
         "price": 88,
         "monthlySales": 710,
         "goodRate": 96,
-        "emoji": "🍽️"
+        "emoji": "🍽️",
+        "image": "/fake-takeout/pz-2-d13.webp"
       },
       {
         "id": "pz-2-d14",
@@ -8036,7 +8277,8 @@
         "price": 38,
         "monthlySales": 430,
         "goodRate": 91,
-        "emoji": "🧒"
+        "emoji": "🧒",
+        "image": "/fake-takeout/pz-2-d14.webp"
       }
     ],
     "reviews": [
@@ -8240,6 +8482,6 @@
       "delivery": 2.1
     },
     "channel": "汉堡披萨",
-    "logoImage": "/fake-takeout/pz-2.webp"
+    "logoImage": "/fake-takeout/shop-pz-2.webp"
   }
 ]

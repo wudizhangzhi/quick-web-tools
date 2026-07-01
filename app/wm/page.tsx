@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description: '逛店铺、看买家秀、加购物车、填地址、下单，看骑手在地图上永远送不到你家。',
 }
 
-export default function FakeTakeoutPage() {
-  return <TakeoutApp />
+export default function FakeTakeoutPage({
+  searchParams,
+}: {
+  searchParams?: { shop?: string }
+}) {
+  return <TakeoutApp initialShopId={searchParams?.shop ?? null} />
 }

@@ -10,6 +10,8 @@ import ReviewsTab from './ReviewsTab'
 import MerchantTab from './MerchantTab'
 import CartBar from './CartBar'
 import CartSheet from './CartSheet'
+import DishThumb from './DishThumb'
+import ShareSheet from './ShareSheet'
 
 type Tab = 'menu' | 'reviews' | 'merchant'
 
@@ -32,6 +34,7 @@ export default function ShopView({
 }) {
   const [tab, setTab] = useState<Tab>('menu')
   const [sheetOpen, setSheetOpen] = useState(false)
+  const [shareOpen, setShareOpen] = useState(false)
 
   const tabs: { key: Tab; label: string }[] = [
     { key: 'menu', label: '点菜' },
@@ -49,13 +52,19 @@ export default function ShopView({
           </button>
           <div className="flex gap-3">
             <Search size={20} />
-            <Share2 size={20} />
+            <button onClick={() => setShareOpen(true)} aria-label="分享店铺" className="p-0.5">
+              <Share2 size={20} />
+            </button>
           </div>
         </div>
         <div className="mt-1 flex items-center gap-3 pb-1">
-          <span className="flex h-16 w-16 items-center justify-center rounded-xl bg-white/95 text-4xl shadow">
-            {shop.logo}
-          </span>
+          <DishThumb
+            image={shop.logoImage}
+            emoji={shop.logo}
+            alt={shop.name}
+            className="h-16 w-16 flex-shrink-0 rounded-xl shadow"
+            emojiClassName="text-4xl"
+          />
           <div className="min-w-0 flex-1 text-white">
             <h1 className="truncate text-lg font-bold">{shop.name}</h1>
             <div className="mt-0.5 flex items-center gap-1.5 text-xs">
@@ -126,6 +135,8 @@ export default function ShopView({
       <div className="absolute inset-x-0 bottom-0 z-10 px-3 pb-3">
         <CartBar shop={shop} items={items} onOpenCart={() => setSheetOpen((v) => !v)} onCheckout={onCheckout} />
       </div>
+
+      <ShareSheet shop={shop} open={shareOpen} onClose={() => setShareOpen(false)} />
     </div>
   )
 }

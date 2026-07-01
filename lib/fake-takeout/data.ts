@@ -4,7 +4,7 @@ import shopsData from './shops.json'
 /** 全部店铺（构建期由生成脚本写入 shops.json）。 */
 export const SHOPS = shopsData as unknown as Shop[]
 
-/** 首页金刚区频道。前 8 个有真实店铺，后 2 个是装饰入口（点了也没有）。 */
+/** 首页金刚区频道。前 8 个有真实店铺，后 2 个是装饰入口（点了也没有）。图标见 ChannelIcon。 */
 export const CHANNELS: HomeChannel[] = [
   { key: '美食', name: '美食', emoji: '🍱' },
   { key: '早餐', name: '早餐', emoji: '🥟' },

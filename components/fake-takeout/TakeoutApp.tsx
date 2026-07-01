@@ -34,7 +34,7 @@ interface Persisted {
   location: string
 }
 
-export default function TakeoutApp() {
+export default function TakeoutApp({ initialShopId = null }: { initialShopId?: string | null }) {
   const [view, setView] = useState<View>('home')
   const [shopId, setShopId] = useState<string | null>(null)
   const [items, setItems] = useState<CartItem[]>([])
@@ -44,6 +44,16 @@ export default function TakeoutApp() {
   const [orders, setOrders] = useState<Order[]>([])
   const [activeOrderNo, setActiveOrderNo] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
+
+  // 分享链接深链：/wm?shop=xxx
+  useEffect(() => {
+    if (!initialShopId) return
+    const target = findShop(initialShopId)
+    if (target) {
+      setShopId(target.id)
+      setView('shop')
+    }
+  }, [initialShopId])
 
   // 水合
   useEffect(() => {

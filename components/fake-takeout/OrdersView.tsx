@@ -5,7 +5,9 @@ import { ChevronRight, Bike } from 'lucide-react'
 import type { Order } from '@/lib/fake-takeout/order'
 import { deliverySnapshot } from '@/lib/fake-takeout/delivery'
 import { cartCount } from '@/lib/fake-takeout/cart'
+import { findShop } from '@/lib/fake-takeout/data'
 import StatusBar from './StatusBar'
+import DishThumb from './DishThumb'
 
 const TABS = ['全部', '待收货', '已完成']
 
@@ -71,7 +73,13 @@ export default function OrdersView({
               >
                 <div className="flex items-center justify-between border-b border-gray-50 pb-2">
                   <span className="flex items-center gap-1.5 font-medium text-gray-900">
-                    <span className="text-lg">{o.shopLogo}</span>
+                    <DishThumb
+                      image={findShop(o.shopId)?.logoImage}
+                      emoji={o.shopLogo}
+                      alt={o.shopName}
+                      className="h-6 w-6 flex-shrink-0 rounded"
+                      emojiClassName="text-base"
+                    />
                     {o.shopName}
                   </span>
                   <span className="flex items-center gap-1 text-xs font-medium text-[#FF6000]">
