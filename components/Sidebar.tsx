@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed, Gem } from 'lucide-react'
 
 const tools = [
   {
@@ -59,6 +59,12 @@ const tools = [
     href: '/tools/fake-takeout',
     icon: UtensilsCrossed,
     description: '假装点外卖，骑手永远在路上',
+  },
+  {
+    name: '爱傌仕',
+    href: '/tools/virtual-hermes',
+    icon: Gem,
+    description: '奢侈品官网体验，永远买不到',
   },
 ]
 

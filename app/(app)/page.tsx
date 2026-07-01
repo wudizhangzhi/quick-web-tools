@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed, Gem } from 'lucide-react'
 
 const tools = [
   {
@@ -64,6 +64,13 @@ const tools = [
     icon: UtensilsCrossed,
     description: '假装点外卖：逛店、加购、下单，看骑手永远在路上送不到',
     color: 'bg-orange-500',
+  },
+  {
+    name: '爱傌仕',
+    href: '/tools/virtual-hermes',
+    icon: Gem,
+    description: '奢侈品官网体验，逛店加购但永远买不到',
+    color: 'bg-amber-800',
   },
 ]
 
