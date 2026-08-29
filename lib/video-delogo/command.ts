@@ -53,7 +53,7 @@ function clampDelogoRegion(r: Region, videoW: number, videoH: number): Region {
   if (x + w > videoW - 1) w = videoW - 1 - x
   if (y + h > videoH - 1) h = videoH - 1 - y
 
-  return { x, y, w, h }
+  return { ...r, x, y, w, h }
 }
 
 // crop allows touching edges (0 or full dim). Just round + contain.
@@ -71,7 +71,7 @@ function clampCropRegion(r: Region, videoW: number, videoH: number): Region {
   if (x + w > videoW) w = videoW - x
   if (y + h > videoH) h = videoH - y
 
-  return { x, y, w, h }
+  return { ...r, x, y, w, h }
 }
 
 export function clampRegion(r: Region, videoW: number, videoH: number, mode: ToolMode = 'delogo'): Region {
