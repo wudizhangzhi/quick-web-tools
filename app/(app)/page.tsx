@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, NotebookPen } from 'lucide-react'
 
 const tools = [
   {
@@ -50,6 +50,13 @@ const tools = [
     icon: Eraser,
     description: '选视频、框选台标/水印区域，生成 ffmpeg delogo 命令拿去本地跑',
     color: 'bg-sky-500',
+  },
+  {
+    name: '桌上的纸',
+    href: '/tools/paper-desk',
+    icon: NotebookPen,
+    description: '编辑文字、挑纸张和字体，生成一张放在木桌上、能拖起来掀动的 3D 纸，保存成图片',
+    color: 'bg-amber-600',
   },
 ]
 

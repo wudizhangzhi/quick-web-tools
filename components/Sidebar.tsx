@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, NotebookPen } from 'lucide-react'
 
 const tools = [
   {
@@ -47,6 +47,12 @@ const tools = [
     href: '/tools/video-delogo',
     icon: Eraser,
     description: '框选区域生成 ffmpeg delogo 命令',
+  },
+  {
+    name: '桌上的纸',
+    href: '/tools/paper-desk',
+    icon: NotebookPen,
+    description: '写一张放在木桌上的 3D 纸',
   },
 ]
 
