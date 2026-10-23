@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed, Gem } from 'lucide-react'
+import { Video, ArrowRight, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed, Gem, NotebookPen } from 'lucide-react'
 
 const tools = [
   {
@@ -71,6 +71,13 @@ const tools = [
     icon: Gem,
     description: '奢侈品官网体验，逛店加购但永远买不到',
     color: 'bg-amber-800',
+  },
+  {
+    name: '桌上的纸',
+    href: '/tools/paper-desk',
+    icon: NotebookPen,
+    description: '写一张放在木桌上的 A4 纸，生成链接发给 TA：批准就盖章，拒绝就进碎纸机',
+    color: 'bg-amber-600',
   },
 ]
 

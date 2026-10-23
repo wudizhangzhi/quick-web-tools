@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed, Gem } from 'lucide-react'
+import { Video, Home, Menu, X, RefreshCw, EyeOff, HeartHandshake, Film, Trophy, Eraser, FileText, UtensilsCrossed, Gem, NotebookPen } from 'lucide-react'
 
 const tools = [
   {
@@ -65,6 +65,12 @@ const tools = [
     href: '/tools/virtual-hermes',
     icon: Gem,
     description: '奢侈品官网体验，永远买不到',
+  },
+  {
+    name: '桌上的纸',
+    href: '/tools/paper-desk',
+    icon: NotebookPen,
+    description: '写张纸给 TA，批准盖章或进碎纸机',
   },
 ]
 
